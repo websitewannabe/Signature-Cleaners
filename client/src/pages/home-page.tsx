@@ -72,12 +72,11 @@ export default function HomePage() {
       <section id="services" className="py-16 bg-[#F6F7EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              We provide a range of professional cleaning services to keep your
-              garments looking their best.
+            <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Experience exceptional garment care with our premium cleaning services, tailored to preserve and enhance your wardrobe.
             </p>
           </div>
 
