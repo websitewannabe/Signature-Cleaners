@@ -1,0 +1,64 @@
+To effectively utilize the AI-powered web development platform Bolt.new for creating a modern, user-friendly website and web application for Signature Cleaners, please use the following prompt:
+
+Prompt for AI Web Development Platform:
+
+"Design and develop a responsive website and web application for 'Signature Cleaners,' a local dry cleaning business. The design should reflect professionalism and trustworthiness, incorporating a cohesive color scheme and typography aligned with the company's branding. Ensure the website is mobile-friendly and adheres to ADA accessibility standards.​
+Dorik AI
++11
+DocsBot AI
++11
+Squarespace
++11
+
+Key Features:
+
+Online Scheduling System: Implement a user-friendly interface allowing customers to schedule pickups and deliveries.​
+
+Customer Portal: Develop a secure area where customers can track orders, view history, and manage preferences.​
+ai-use-cases.brainpick.ai
+
+Live Chat Support: Integrate a chat feature for real-time customer assistance.​
+
+Testimonials Section: Showcase customer reviews to build trust and credibility.​
+ai-use-cases.brainpick.ai
+
+Sitemap and Navigation:
+
+Home: Overview of services with prominent call-to-action buttons.​
+
+About Us: Company history, mission, and values.​
+
+Services: Detailed descriptions of offerings and pricing information.​
+
+Schedule Pickup: Online scheduling form.​
+Business Insider
++4
+ai-use-cases.brainpick.ai
++4
+DocsBot AI
++4
+
+Customer Portal: Access to order tracking and account management.​
+
+Testimonials: Customer reviews and feedback.​
+10Web
+
+Contact Us: Contact form, location map, and operating hours.​
+
+Design Principles:
+
+Professionalism: Clean and organized layout reflecting expertise and reliability.​
+
+Trustworthiness: Authentic images and customer testimonials to build trust.​
+
+Accessibility: Inclusive design catering to users of all abilities.​
+
+Simplicity: User-friendly interface with intuitive navigation.​
+ChatAI
++6
+FlexWasher Laundry
++6
+ai-use-cases.brainpick.ai
++6
+
+Ensure the website is optimized for performance, with fast loading times and SEO best practices implemented. Incorporate high-quality images and concise, engaging content to effectively communicate Signature Cleaners' services and values.
