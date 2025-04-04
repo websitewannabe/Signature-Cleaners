@@ -19,31 +19,36 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section
-        className="relative"
-        style={{
-          backgroundImage: 'url("/src/images/Background.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <section className="relative min-h-[80vh] flex items-center">
+        <div 
+          className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"
+          style={{
+            backgroundImage: 'url("/src/images/Background.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundBlendMode: "overlay",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Professional Dry Cleaning & Laundry Services
+          <div data-aos="fade-up" className="max-w-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+              Expert Care for Your
+              <span className="block mt-2">Finest Garments</span>
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white text-opacity-90">
-              Quality garment care with convenient pickup and delivery options
-              throughout the city.
+            <p className="mt-6 text-xl md:text-2xl text-white/90 leading-relaxed">
+              Premium dry cleaning with convenient pickup and delivery, trusted by thousands across the city.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
-                  Schedule Pickup
+                <Button className="group w-full sm:w-auto bg-[#7C1716] hover:bg-[#641211] text-white font-medium px-8 py-6 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+                  <span>
+                    Schedule Pickup
+                    <span className="block text-sm font-normal opacity-80">Takes 60 seconds</span>
+                  </span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 ml-2"
+                    className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -58,11 +63,52 @@ export default function HomePage() {
               <Link href="/services">
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-[#44633F] font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300"
+                  className="w-full sm:w-auto border-2 border-white/30 hover:border-white bg-white/10 hover:bg-white/20 text-white font-medium px-8 py-6 rounded-md backdrop-blur-sm transition-all duration-300"
                 >
-                  Our Services
+                  Explore Services
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Badges */}
+      <section className="py-12 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div data-aos="fade-up" data-aos-delay="0" className="flex items-center justify-center text-center">
+              <div>
+                <div className="mb-4 text-[#7C1716]">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">100% Satisfaction Guarantee</h3>
+                <p className="mt-2 text-neutral-600">Not happy? We'll make it right.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" className="flex items-center justify-center text-center">
+              <div>
+                <div className="mb-4 text-[#7C1716]">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Free Pickup & Delivery</h3>
+                <p className="mt-2 text-neutral-600">At your doorstep, at your convenience.</p>
+              </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" className="flex items-center justify-center text-center">
+              <div>
+                <div className="mb-4 text-[#7C1716]">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold">Next-Day Service Available</h3>
+                <p className="mt-2 text-neutral-600">Quick turnaround when you need it.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -87,35 +133,38 @@ export default function HomePage() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services &&
-                services.map((service) => (
+                services.map((service, index) => (
                   <div
                     key={service.id}
-                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100}
+                    className="group bg-white rounded-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1"
                   >
-                    <div className="h-48 bg-neutral-200">
+                    <div className="relative h-48 bg-neutral-200 overflow-hidden">
                       <img
-                        src={service.imageUrl}
+                        src={service.imageUrl || `https://source.unsplash.com/400x300/?laundry,${service.name}`}
                         alt={service.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold text-black">
+                      <h3 className="text-xl font-semibold text-black group-hover:text-[#7C1716] transition-colors duration-300">
                         {service.name}
                       </h3>
-                      <p className="mt-2 text-neutral-800">
+                      <p className="mt-2 text-neutral-600 line-clamp-2">
                         {service.description}
                       </p>
                       <div className="mt-4 flex items-center justify-between">
-                        <span className="text-black font-medium">
+                        <span className="text-[#7C1716] font-medium">
                           {service.price}
                         </span>
                         <Link href="/schedule">
-                          <span className="text-[#F9A826] hover:text-[#E89212] font-medium flex items-center">
+                          <span className="flex items-center text-neutral-700 font-medium hover:text-[#7C1716] transition-colors duration-300">
                             Schedule
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5 ml-1"
+                              className="h-5 w-5 ml-1 transition-transform duration-300 group-hover:translate-x-1"
                               viewBox="0 0 20 20"
                               fill="currentColor"
                             >
@@ -292,6 +341,15 @@ export default function HomePage() {
       </section>
 
       <Footer />
+      
+      {/* Mobile Sticky CTA */}
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-neutral-200 shadow-lg md:hidden z-50">
+        <Link href="/schedule">
+          <Button className="w-full bg-[#7C1716] hover:bg-[#641211] text-white py-4">
+            Schedule Pickup
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 }

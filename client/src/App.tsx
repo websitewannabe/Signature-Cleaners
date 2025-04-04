@@ -16,6 +16,10 @@ import CustomerAccount from "@/pages/customer-portal/account";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
 import LiveChat from "./components/live-chat";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import the CSS file
+import { useEffect } from 'react';
+
 
 function Router() {
   return (
@@ -36,6 +40,13 @@ function Router() {
 }
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out-cubic'
+    });
+  }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
