@@ -25,8 +25,8 @@ export default function HomePage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-primary to-primary-light">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="relative" style={{ backgroundImage: 'url("/src/images/Background.png")', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
           <div className="max-w-2xl">
             <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
