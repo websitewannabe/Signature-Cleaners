@@ -37,7 +37,7 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#F9A826] hover:bg-[#E89212] text-white font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
+                <Button className="w-full sm:w-auto bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
                   Schedule Pickup
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -45,7 +45,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-primary font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300">
+                <Button variant="outline" className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-[#44633F] font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300">
                   Our Services
                 </Button>
               </Link>
@@ -154,7 +154,7 @@ export default function HomePage() {
           
           <div className="mt-12 text-center">
             <Link href="/schedule">
-              <Button className="bg-primary hover:bg-primary-dark text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+              <Button className="bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
               </Button>
             </Link>
