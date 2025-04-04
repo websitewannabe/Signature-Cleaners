@@ -41,7 +41,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             {user ? (
               <>
-                <Link href="/portal" className="text-primary font-medium hover:text-primary-dark">
+                <Link href="/portal" className="text-white font-medium hover:text-neutral-200">
                   Customer Portal
                 </Link>
                 <Button 
@@ -54,7 +54,7 @@ const Header = () => {
               </>
             ) : (
               <>
-                <Link href="/auth" className="text-primary font-medium hover:text-primary-dark">
+                <Link href="/auth" className="text-white font-medium hover:text-neutral-200">
                   Customer Portal
                 </Link>
                 <Link href="/schedule">
