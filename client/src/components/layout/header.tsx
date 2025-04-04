@@ -58,7 +58,7 @@ const Header = () => {
                   Customer Portal
                 </Link>
                 <Link href="/schedule">
-                  <Button className="bg-[#F9A826] hover:bg-[#E89212] text-white">
+                  <Button className="bg-[#44633F] hover:bg-[#385233] text-white">
                     Schedule Pickup
                   </Button>
                 </Link>
@@ -102,7 +102,7 @@ const Header = () => {
                         <MobileNavLink href="/auth" label="Customer Portal" current={location === "/auth"} />
                         <div className="px-3 py-2">
                           <Link href="/schedule">
-                            <Button className="w-full justify-center bg-[#F9A826] hover:bg-[#E89212] text-white">
+                            <Button className="w-full justify-center bg-[#44633F] hover:bg-[#385233] text-white">
                               Schedule Pickup
                             </Button>
                           </Link>
