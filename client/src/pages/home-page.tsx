@@ -72,10 +72,10 @@ export default function HomePage() {
       <section id="services" className="py-16 bg-[#F6F7EB]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-xl text-neutral-800 max-w-3xl mx-auto leading-relaxed">
               Experience exceptional garment care with our premium cleaning services, tailored to preserve and enhance your wardrobe.
             </p>
           </div>
@@ -90,7 +90,7 @@ export default function HomePage() {
                 services.map((service) => (
                   <div
                     key={service.id}
-                    className="bg-neutral-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
                   >
                     <div className="h-48 bg-neutral-200">
                       <img
@@ -100,14 +100,14 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-semibold text-neutral-900">
+                      <h3 className="text-xl font-semibold text-black">
                         {service.name}
                       </h3>
-                      <p className="mt-2 text-neutral-600">
+                      <p className="mt-2 text-neutral-800">
                         {service.description}
                       </p>
                       <div className="mt-4 flex items-center justify-between">
-                        <span className="text-primary font-medium">
+                        <span className="text-black font-medium">
                           {service.price}
                         </span>
                         <Link href="/schedule">
@@ -136,7 +136,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/services">
-              <span className="inline-flex items-center text-primary hover:text-primary-dark font-medium">
+              <span className="inline-flex items-center text-black hover:text-neutral-800 font-medium">
                 View Complete Price List
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
