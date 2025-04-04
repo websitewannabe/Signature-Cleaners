@@ -15,16 +15,16 @@ const Header = () => {
   const { user, logoutMutation } = useAuth();
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-[#7C1716] shadow-md sticky top-0 z-50">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
-              <div className="h-8 w-8 bg-primary rounded-full flex items-center justify-center mr-2">
-                <span className="text-white font-bold text-sm">SC</span>
+              <div className="h-8 w-8 bg-white rounded-full flex items-center justify-center mr-2">
+                <span className="text-[#7C1716] font-bold text-sm">SC</span>
               </div>
-              <span className="text-primary font-bold text-xl">Signature Cleaners</span>
+              <span className="text-white font-bold text-xl">Signature Cleaners</span>
             </Link>
           </div>
           
@@ -70,7 +70,7 @@ const Header = () => {
           <div className="md:hidden flex items-center">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="p-2">
+                <Button variant="ghost" className="p-2 text-white hover:text-neutral-200">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
@@ -125,8 +125,8 @@ const NavLink = ({ href, label, current }: { href: string; label: string; curren
     href={href} 
     className={`font-medium px-3 py-2 border-b-2 
                 ${current 
-                  ? 'text-primary border-primary' 
-                  : 'text-neutral-600 hover:text-primary border-transparent hover:border-primary'}`}
+                  ? 'text-white border-white' 
+                  : 'text-neutral-200 hover:text-white border-transparent hover:border-white'}`}
   >
     {label}
   </Link>
