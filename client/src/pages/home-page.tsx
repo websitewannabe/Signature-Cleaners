@@ -20,7 +20,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-[#1a472a] to-[#2a5a3a]">
-        <div className="absolute inset-0 bg-[url('/src/images/pattern.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] opacity-5"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -28,7 +28,8 @@ export default function HomePage() {
               Effortless Dry Cleaning & Laundry Pickup
             </h1>
             <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-              Professional garment care with pickup and delivery across the city.
+              Professional garment care with pickup and delivery across the
+              city.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
@@ -49,7 +50,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button 
+                <Button
                   variant="outline"
                   className="w-full sm:w-auto border-2 border-white/80 hover:bg-white/10 text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
@@ -62,14 +63,18 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-[#F6F7EB] border-t-8 border-[#7C1716]">
+      <section
+        id="services"
+        className="py-16 bg-[#F6F7EB] border-t-8 border-[#7C1716]"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Services
             </h2>
             <p className="mt-4 text-xl text-neutral-800 max-w-3xl mx-auto leading-relaxed">
-              Experience exceptional garment care with our premium cleaning services, tailored to preserve and enhance your wardrobe.
+              Experience exceptional garment care with our premium cleaning
+              services, tailored to preserve and enhance your wardrobe.
             </p>
           </div>
 
