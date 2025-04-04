@@ -3,7 +3,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+import { Loader2, CheckCircle } from "lucide-react";
 
 export default function TestimonialsPage() {
   const { data: testimonials, isLoading } = useQuery({
