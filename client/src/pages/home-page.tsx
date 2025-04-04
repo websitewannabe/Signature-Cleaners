@@ -19,31 +19,24 @@ export default function HomePage() {
       <Header />
 
       {/* Hero Section */}
-      <section
-        className="relative"
-        style={{
-          backgroundImage: 'url("/src/images/Background.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-              Professional Dry Cleaning & Laundry Services
+      <section className="relative min-h-[85vh] flex items-center bg-gradient-to-br from-[#1a472a] to-[#2a5a3a]">
+        <div className="absolute inset-0 bg-[url('/src/images/pattern.svg')] opacity-5"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+              Effortless Dry Cleaning & Laundry Pickup
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-white text-opacity-90">
-              Quality garment care with convenient pickup and delivery options
-              throughout the city.
+            <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+              Professional garment care with pickup and delivery across the city.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300 flex items-center justify-center">
+                <Button className="w-full sm:w-auto bg-[#F9A826] hover:bg-[#E89212] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
                   Schedule Pickup
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 ml-2"
+                    className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -56,11 +49,11 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button
+                <Button 
                   variant="outline"
-                  className="w-full sm:w-auto bg-white hover:bg-neutral-100 text-[#44633F] font-medium px-6 py-6 rounded-md shadow-lg hover:shadow-xl transition duration-300"
+                  className="w-full sm:w-auto border-2 border-white/80 hover:bg-white/10 text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  Our Services
+                  View Services
                 </Button>
               </Link>
             </div>
