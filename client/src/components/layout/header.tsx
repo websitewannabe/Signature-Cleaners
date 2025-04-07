@@ -33,7 +33,6 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Left Navigation */}
           <nav className="hidden md:flex space-x-6 flex-1">
-            <NavLink href="/" label="HOME" current={location === "/"} />
             <NavLink
               href="/services"
               label="SERVICES"
