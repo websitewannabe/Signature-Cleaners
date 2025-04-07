@@ -46,11 +46,11 @@ const Header = () => {
           </nav>
 
           {/* Centered Logo */}
-          <Link href="/" className="flex items-center mx-6">
+          <Link href="/" className="flex items-center mx-6 pt-2">
             <img
               src="/src/images/signature-cleaners-logo.png"
               alt="Signature Cleaners"
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
