@@ -75,7 +75,7 @@ export default function AboutPage() {
             <div className="mt-10 lg:mt-0">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  src="/src/images/theTeam.jpg"
                   alt="Signature Cleaners team"
                   className="w-full h-auto"
                 />
