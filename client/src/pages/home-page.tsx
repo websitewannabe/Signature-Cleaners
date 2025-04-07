@@ -23,10 +23,10 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/src/images/interior-two.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-black leading-tight tracking-tight">
               Effortless Dry Cleaning & Laundry Pickup
             </h1>
-            <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-xl text-black/90 leading-relaxed max-w-2xl mx-auto">
               Professional garment care with pickup and delivery across the
               city.
             </p>
