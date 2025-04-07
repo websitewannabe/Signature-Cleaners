@@ -18,10 +18,10 @@ export default function ServicesPage() {
       <section className="bg-[#D8BCAB] py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#4A2512]">
               Our Services
             </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-[#4A2512] text-opacity-90 max-w-3xl mx-auto">
               Discover our comprehensive range of cleaning and garment care
               services
             </p>
