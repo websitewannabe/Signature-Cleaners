@@ -82,7 +82,7 @@ export default function HomePage() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services &&
-                services.map((service) => (
+                services.slice(0, 3).map((service) => (
                   <div
                     key={service.id}
                     className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
