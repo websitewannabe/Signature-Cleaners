@@ -32,19 +32,25 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="mt-4 text-lg text-neutral-600">
-                Since 2005, Signature Cleaners has been providing premium dry
-                cleaning and laundry services with a commitment to quality,
-                sustainability, and customer satisfaction.
+                Signature Cleaners was founded by brothers Michael and Fred
+                Rosen, who share over 40 years of experience in the dry cleaning
+                industry. With a family legacy rooted in garment care, they
+                built their business on simple values: quality service, fair
+                pricing, and a commitment to customer satisfaction.
               </p>
               <p className="mt-4 text-lg text-neutral-600">
-                Founded by the Thompson family with over 30 years of experience
-                in the garment care industry, we've built our reputation on
-                exceptional service and meticulous attention to detail.
+                Director of Operations, Mark Pollock, brings expert training in
+                stain removal and wedding gown preservation—two of our
+                specialties. Every item is treated with care, using high-end
+                equipment and eco-friendly methods. Rush orders are welcome, and
+                most items can be cleaned within 24 hours.
               </p>
               <p className="mt-4 text-lg text-neutral-600">
-                Our team of experienced professionals uses state-of-the-art
-                equipment and eco-friendly cleaning methods to ensure your
-                garments receive the best possible care.
+                As the area’s only member of the Dry Cleaning and Laundry
+                Institute, we stay ahead with the latest in fabric care. Whether
+                it's preserving a wedding gown or removing a tough stain,
+                Signature Cleaners is your trusted choice for premium garment
+                care.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-4">
