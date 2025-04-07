@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/50 shadow-lg backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -134,11 +134,11 @@ const NavLink = ({
 }) => (
   <Link
     href={href}
-    className={`font-medium tracking-wider px-3 py-2 text-black transition-all duration-200
+    className={`font-medium tracking-wider px-3 py-2 text-white transition-all duration-200
                 ${
                   current
-                    ? "border-b-2 border-black"
-                    : "hover:text-black/80 border-b-2 border-transparent hover:border-black/50"
+                    ? "border-b-2 border-white"
+                    : "hover:text-white/80 border-b-2 border-transparent hover:border-white/50"
                 }`}
   >
     {label}
