@@ -30,28 +30,43 @@ const Header = () => {
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex justify-between items-center h-20 gap-8">
-          {/* Desktop Navigation - Left */}
-          <nav className="hidden md:flex space-x-6 flex-1">
-            <NavLink href="/" label="HOME" current={location === "/"} />
-            <NavLink href="/services" label="SERVICES" current={location === "/services"} />
-            <NavLink href="/about" label="ABOUT US" current={location === "/about"} />
-          </nav>
-
-          {/* Logo - Center */}
-          <Link href="/" className="flex items-center justify-center">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <Link href="/" className="flex items-center">
             <img
               src="/src/images/signature-cleaners-logo.png"
               alt="Signature Cleaners"
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
           </Link>
 
-          {/* Desktop Navigation - Right */}
-          <nav className="hidden md:flex space-x-6 flex-1 justify-end">
-            <NavLink href="/testimonials" label="TESTIMONIALS" current={location === "/testimonials"} />
-            <NavLink href="/contact" label="CONTACT" current={location === "/contact"} />
-            <div className="flex items-center">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8">
+            <NavLink href="/" label="HOME" current={location === "/"} />
+            <NavLink
+              href="/services"
+              label="SERVICES"
+              current={location === "/services"}
+            />
+            <NavLink
+              href="/about"
+              label="ABOUT US"
+              current={location === "/about"}
+            />
+            <NavLink
+              href="/testimonials"
+              label="TESTIMONIALS"
+              current={location === "/testimonials"}
+            />
+            <NavLink
+              href="/contact"
+              label="CONTACT"
+              current={location === "/contact"}
+            />
+          </nav>
+
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
             <Link href="/schedule">
               <Button className="bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6">
                 Request Pickup
