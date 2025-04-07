@@ -63,16 +63,13 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section
-        id="services"
-        className="py-16 bg-[#790003]"
-      >
+      <section id="services" className="py-16 bg-[#790003]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-neutral-800 max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-xl text-neutral-800 text-white max-w-3xl mx-auto leading-relaxed">
               Experience exceptional garment care with our premium cleaning
               services, tailored to preserve and enhance your wardrobe.
             </p>
@@ -134,7 +131,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/services">
-              <span className="inline-flex items-center text-black hover:text-neutral-800 font-medium">
+              <span className="inline-flex items-center text-white hover:text-neutral-800 font-medium">
                 View Complete Price List
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
