@@ -33,7 +33,7 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#44633F] hover:bg-[#385233] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
+                <Button className="w-full sm:w-auto bg-[#44633F] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:bg-[#44633F]/10 transition-all duration-300 flex items-center justify-center group">
                   Schedule Pickup
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function HomePage() {
               <Link href="/services">
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto border-2 border-[#44633F] bg-white hover:bg-[#44633F]/10 text-[#44633F] font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full sm:w-auto border-2 border-[#44633F] bg-white text-[#44633F] font-semibold px-8 py-6 rounded-xl shadow-lg transition-all duration-300"
                 >
                   View Services
                 </Button>
