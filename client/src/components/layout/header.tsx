@@ -32,7 +32,7 @@ const Header = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-20">
           {/* Left Navigation */}
-          <nav className="hidden md:flex space-x-6 flex-1">
+          <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
             <NavLink
               href="/services"
               label="SERVICES"
@@ -46,7 +46,7 @@ const Header = () => {
           </nav>
 
           {/* Centered Logo */}
-          <Link href="/" className="flex items-center mx-4">
+          <Link href="/" className="flex items-center mx-6">
             <img
               src="/src/images/signature-cleaners-logo.png"
               alt="Signature Cleaners"
@@ -55,7 +55,7 @@ const Header = () => {
           </Link>
 
           {/* Right Navigation and CTA */}
-          <div className="hidden md:flex items-center justify-end space-x-6 flex-1">
+          <div className="hidden md:flex items-center justify-center space-x-8 flex-1 text-lg">
             <NavLink
               href="/testimonials"
               label="TESTIMONIALS"
