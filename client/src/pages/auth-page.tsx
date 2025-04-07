@@ -97,7 +97,7 @@ export default function AuthPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-black/35 backdrop-blur-sm">
+    <div className="min-h-screen flex flex-col">
       <Header />
 
       <div className="flex-1 py-12 mt-24">
