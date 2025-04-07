@@ -83,7 +83,8 @@ export default function SchedulePage() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: "There was a problem scheduling your pickup. Please try again.",
+        description:
+          "There was a problem scheduling your pickup. Please try again.",
         variant: "destructive",
       });
     },
@@ -101,10 +102,12 @@ export default function SchedulePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-primary py-16">
+      <section className="bg-[#007976] py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">Schedule a Pickup</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
+              Schedule a Pickup
+            </h1>
             <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
               Book a convenient time for us to collect your garments.
             </p>
@@ -118,20 +121,35 @@ export default function SchedulePage() {
           {isSuccess ? (
             <div className="bg-green-50 border border-green-200 rounded-lg p-8 max-w-3xl mx-auto text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                <svg
+                  className="h-8 w-8 text-green-600"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-green-800 mb-2">Pickup Scheduled Successfully!</h2>
+              <h2 className="text-2xl font-bold text-green-800 mb-2">
+                Pickup Scheduled Successfully!
+              </h2>
               <p className="text-green-700 mb-4">
-                Thank you for scheduling a pickup with Signature Cleaners. We'll be there at your selected time.
+                Thank you for scheduling a pickup with Signature Cleaners. We'll
+                be there at your selected time.
               </p>
               <p className="text-green-700 mb-6">
-                Your confirmation number: <span className="font-bold">{confirmationNumber}</span>
+                Your confirmation number:{" "}
+                <span className="font-bold">{confirmationNumber}</span>
               </p>
               <div className="space-y-4">
-                <Button 
-                  onClick={() => setIsSuccess(false)} 
+                <Button
+                  onClick={() => setIsSuccess(false)}
                   className="bg-primary hover:bg-primary-dark text-white"
                 >
                   Schedule Another Pickup
@@ -141,7 +159,10 @@ export default function SchedulePage() {
           ) : (
             <div className="bg-neutral-50 rounded-lg shadow-md p-6 md:p-8 max-w-3xl mx-auto">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form
+                  onSubmit={form.handleSubmit(onSubmit)}
+                  className="space-y-6"
+                >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormField
                       control={form.control}
@@ -164,7 +185,11 @@ export default function SchedulePage() {
                         <FormItem>
                           <FormLabel>Phone Number</FormLabel>
                           <FormControl>
-                            <Input type="tel" placeholder="(555) 123-4567" {...field} />
+                            <Input
+                              type="tel"
+                              placeholder="(555) 123-4567"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -178,7 +203,11 @@ export default function SchedulePage() {
                         <FormItem>
                           <FormLabel>Email Address</FormLabel>
                           <FormControl>
-                            <Input type="email" placeholder="john@example.com" {...field} />
+                            <Input
+                              type="email"
+                              placeholder="john@example.com"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -192,7 +221,10 @@ export default function SchedulePage() {
                         <FormItem>
                           <FormLabel>Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="123 Main St, Anytown, ST" {...field} />
+                            <Input
+                              placeholder="123 Main St, Anytown, ST"
+                              {...field}
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -216,10 +248,18 @@ export default function SchedulePage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="dry-cleaning">Dry Cleaning</SelectItem>
-                            <SelectItem value="wash-fold">Wash & Fold</SelectItem>
-                            <SelectItem value="alterations">Alterations & Repairs</SelectItem>
-                            <SelectItem value="multiple">Multiple Services</SelectItem>
+                            <SelectItem value="dry-cleaning">
+                              Dry Cleaning
+                            </SelectItem>
+                            <SelectItem value="wash-fold">
+                              Wash & Fold
+                            </SelectItem>
+                            <SelectItem value="alterations">
+                              Alterations & Repairs
+                            </SelectItem>
+                            <SelectItem value="multiple">
+                              Multiple Services
+                            </SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -235,11 +275,7 @@ export default function SchedulePage() {
                         <FormItem>
                           <FormLabel>Pickup Date</FormLabel>
                           <FormControl>
-                            <Input
-                              type="date"
-                              min={today}
-                              {...field}
-                            />
+                            <Input type="date" min={today} {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -262,9 +298,15 @@ export default function SchedulePage() {
                               </SelectTrigger>
                             </FormControl>
                             <SelectContent>
-                              <SelectItem value="morning">Morning (8AM - 12PM)</SelectItem>
-                              <SelectItem value="afternoon">Afternoon (12PM - 5PM)</SelectItem>
-                              <SelectItem value="evening">Evening (5PM - 8PM)</SelectItem>
+                              <SelectItem value="morning">
+                                Morning (8AM - 12PM)
+                              </SelectItem>
+                              <SelectItem value="afternoon">
+                                Afternoon (12PM - 5PM)
+                              </SelectItem>
+                              <SelectItem value="evening">
+                                Evening (5PM - 8PM)
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                           <FormMessage />
@@ -302,7 +344,7 @@ export default function SchedulePage() {
                         Scheduling...
                       </>
                     ) : (
-                      'Schedule Pickup'
+                      "Schedule Pickup"
                     )}
                   </Button>
                 </form>
@@ -317,7 +359,9 @@ export default function SchedulePage() {
         <section className="py-16 bg-neutral-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-neutral-900">How It Works</h2>
+              <h2 className="text-3xl font-bold text-neutral-900">
+                How It Works
+              </h2>
               <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
                 Our simple pickup and delivery process
               </p>
@@ -328,32 +372,48 @@ export default function SchedulePage() {
                 <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
                   <span className="text-primary text-2xl font-bold">1</span>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900">Schedule</h3>
-                <p className="mt-2 text-neutral-600">Book your pickup online or by phone</p>
+                <h3 className="text-xl font-semibold text-neutral-900">
+                  Schedule
+                </h3>
+                <p className="mt-2 text-neutral-600">
+                  Book your pickup online or by phone
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
                   <span className="text-primary text-2xl font-bold">2</span>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
-                <p className="mt-2 text-neutral-600">We collect your garments from your door</p>
+                <h3 className="text-xl font-semibold text-neutral-900">
+                  Pickup
+                </h3>
+                <p className="mt-2 text-neutral-600">
+                  We collect your garments from your door
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
                   <span className="text-primary text-2xl font-bold">3</span>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
-                <p className="mt-2 text-neutral-600">Your items receive expert care</p>
+                <h3 className="text-xl font-semibold text-neutral-900">
+                  Clean
+                </h3>
+                <p className="mt-2 text-neutral-600">
+                  Your items receive expert care
+                </p>
               </div>
 
               <div className="text-center">
                 <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
                   <span className="text-primary text-2xl font-bold">4</span>
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900">Deliver</h3>
-                <p className="mt-2 text-neutral-600">We return your fresh, clean garments</p>
+                <h3 className="text-xl font-semibold text-neutral-900">
+                  Deliver
+                </h3>
+                <p className="mt-2 text-neutral-600">
+                  We return your fresh, clean garments
+                </p>
               </div>
             </div>
           </div>
