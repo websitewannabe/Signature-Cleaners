@@ -26,7 +26,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-white font-bold text-xl tracking-tight">Signature Cleaners</span>
+            <img src="/src/images/signature-cleaners-logo.jpg" alt="Signature Cleaners" className="h-12 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
