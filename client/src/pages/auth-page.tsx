@@ -100,7 +100,21 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <div className="flex-1 py-12 mt-24">
+      {/* Hero Section */}
+      <section className="bg-[#D8BCAB] py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#4A2512]">
+              Customer Portal
+            </h1>
+            <p className="mt-4 text-xl text-[#4A2512] text-opacity-90 max-w-3xl mx-auto">
+              Sign in to manage your orders and preferences
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="flex-1 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Form Section */}
