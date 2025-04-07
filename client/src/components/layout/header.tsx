@@ -2,7 +2,12 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const Header = () => {
@@ -19,23 +24,45 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? "bg-[#661111] shadow-lg" : "bg-transparent"
-    }`}>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-[#661111] shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img src="/src/images/signature-cleaners-logo.jpg" alt="Signature Cleaners" className="h-12 w-auto" />
+            <img
+              src="/src/images/signature-cleaners-logo.png"
+              alt="Signature Cleaners"
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <NavLink href="/" label="HOME" current={location === "/"} />
-            <NavLink href="/services" label="SERVICES" current={location === "/services"} />
-            <NavLink href="/about" label="ABOUT US" current={location === "/about"} />
-            <NavLink href="/testimonials" label="TESTIMONIALS" current={location === "/testimonials"} />
-            <NavLink href="/contact" label="CONTACT" current={location === "/contact"} />
+            <NavLink
+              href="/services"
+              label="SERVICES"
+              current={location === "/services"}
+            />
+            <NavLink
+              href="/about"
+              label="ABOUT US"
+              current={location === "/about"}
+            />
+            <NavLink
+              href="/testimonials"
+              label="TESTIMONIALS"
+              current={location === "/testimonials"}
+            />
+            <NavLink
+              href="/contact"
+              label="CONTACT"
+              current={location === "/contact"}
+            />
           </nav>
 
           {/* CTA Button */}
@@ -51,17 +78,40 @@ const Header = () => {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" className="p-2 text-white hover:text-white/80">
+                <Button
+                  variant="ghost"
+                  className="p-2 text-white hover:text-white/80"
+                >
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="bg-[#661111] text-white">
                 <div className="py-4 flex flex-col gap-4">
-                  <MobileNavLink href="/" label="HOME" current={location === "/"} />
-                  <MobileNavLink href="/services" label="SERVICES" current={location === "/services"} />
-                  <MobileNavLink href="/about" label="ABOUT US" current={location === "/about"} />
-                  <MobileNavLink href="/testimonials" label="TESTIMONIALS" current={location === "/testimonials"} />
-                  <MobileNavLink href="/contact" label="CONTACT" current={location === "/contact"} />
+                  <MobileNavLink
+                    href="/"
+                    label="HOME"
+                    current={location === "/"}
+                  />
+                  <MobileNavLink
+                    href="/services"
+                    label="SERVICES"
+                    current={location === "/services"}
+                  />
+                  <MobileNavLink
+                    href="/about"
+                    label="ABOUT US"
+                    current={location === "/about"}
+                  />
+                  <MobileNavLink
+                    href="/testimonials"
+                    label="TESTIMONIALS"
+                    current={location === "/testimonials"}
+                  />
+                  <MobileNavLink
+                    href="/contact"
+                    label="CONTACT"
+                    current={location === "/contact"}
+                  />
                   <div className="pt-4 mt-4 border-t border-white/20">
                     <Link href="/schedule">
                       <Button className="w-full bg-[#44633F] hover:bg-[#385233] text-white">
@@ -79,26 +129,46 @@ const Header = () => {
   );
 };
 
-const NavLink = ({ href, label, current }: { href: string; label: string; current: boolean }) => (
-  <Link 
-    href={href} 
+const NavLink = ({
+  href,
+  label,
+  current,
+}: {
+  href: string;
+  label: string;
+  current: boolean;
+}) => (
+  <Link
+    href={href}
     className={`font-medium tracking-wider px-3 py-2 text-white transition-all duration-200
-                ${current 
-                  ? 'border-b-2 border-white' 
-                  : 'hover:text-white/80 border-b-2 border-transparent hover:border-white/50'}`}
+                ${
+                  current
+                    ? "border-b-2 border-white"
+                    : "hover:text-white/80 border-b-2 border-transparent hover:border-white/50"
+                }`}
   >
     {label}
   </Link>
 );
 
-const MobileNavLink = ({ href, label, current }: { href: string; label: string; current: boolean }) => (
+const MobileNavLink = ({
+  href,
+  label,
+  current,
+}: {
+  href: string;
+  label: string;
+  current: boolean;
+}) => (
   <SheetClose asChild>
-    <Link 
-      href={href} 
+    <Link
+      href={href}
       className={`block px-3 py-2 text-lg font-medium tracking-wider transition-colors
-                 ${current 
-                   ? 'text-white bg-white/10' 
-                   : 'text-white/80 hover:text-white hover:bg-white/5'}`}
+                 ${
+                   current
+                     ? "text-white bg-white/10"
+                     : "text-white/80 hover:text-white hover:bg-white/5"
+                 }`}
     >
       {label}
     </Link>
