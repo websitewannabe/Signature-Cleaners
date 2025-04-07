@@ -160,11 +160,11 @@ const NavLink = ({
 }) => (
   <Link
     href={href}
-    className={`font-medium tracking-wider px-3 py-2 text-black transition-all duration-200
+    className={`font-medium tracking-wider px-3 py-2 text-white transition-all duration-200
                 ${
                   current
-                    ? "border-b-2 border-black"
-                    : "hover:text-black/80 border-b-2 border-transparent hover:border-black/50"
+                    ? "border-b-2 border-white"
+                    : "hover:text-white/80 border-b-2 border-transparent hover:border-white/50"
                 }`}
   >
     {label}
