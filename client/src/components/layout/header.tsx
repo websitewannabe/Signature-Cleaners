@@ -62,6 +62,11 @@ const Header = () => {
               current={location === "/testimonials"}
             />
             <NavLink
+              href="/faq"
+              label="FAQ"
+              current={location === "/faq"}
+            />
+            <NavLink
               href="/contact"
               label="CONTACT"
               current={location === "/contact"}

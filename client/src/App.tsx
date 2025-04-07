@@ -16,6 +16,8 @@ import CustomerAccount from "@/pages/customer-portal/account";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
 import LiveChat from "./components/live-chat";
+// Added import for FaqPage
+import FaqPage from "@/pages/faq-page"; // You'll need to create this component
 
 function Router() {
   return (
@@ -30,6 +32,7 @@ function Router() {
       <ProtectedRoute path="/portal" component={CustomerPortal} />
       <ProtectedRoute path="/portal/orders" component={CustomerOrders} />
       <ProtectedRoute path="/portal/account" component={CustomerAccount} />
+      <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
       <Route component={NotFound} />
     </Switch>
   );
