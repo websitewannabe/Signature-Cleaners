@@ -71,14 +71,6 @@ const Header = () => {
               label="CONTACT"
               current={location === "/contact"}
             />
-            <a
-              href="https://account.mydrycleaner.com/SIGNATUREPA/#/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium tracking-wider px-3 py-2 text-black transition-all duration-200 hover:text-black/80 border-b-2 border-transparent hover:border-black/50"
-            >
-              CUSTOMER PORTAL
-            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -119,14 +111,6 @@ const Header = () => {
                     label="CONTACT"
                     current={location === "/contact"}
                   />
-                  <a
-                    href="https://account.mydrycleaner.com/SIGNATUREPA/#/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block px-3 py-2 text-lg font-medium tracking-wider transition-colors text-white/80 hover:text-white hover:bg-white/5"
-                  >
-                    CUSTOMER PORTAL
-                  </a>
                   <div className="pt-4 mt-4 border-t border-white/20">
                     <Link href="/schedule">
                       <Button className="w-full bg-[#44633F] hover:bg-[#385233] text-white">
