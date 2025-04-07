@@ -66,11 +66,6 @@ const Header = () => {
               label="CONTACT"
               current={location === "/contact"}
             />
-            <Link href="/schedule">
-              <Button className="bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6">
-                Request Pickup
-              </Button>
-            </Link>
           </div>
 
           {/* Mobile menu button */}
