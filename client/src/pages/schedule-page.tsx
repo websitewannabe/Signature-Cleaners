@@ -335,7 +335,7 @@ export default function SchedulePage() {
 
                   <Button
                     type="submit"
-                    className="w-full bg-[#F9A826] hover:bg-[#E89212] text-white font-medium py-3"
+                    className="w-full bg-[#790003] hover:bg-[#5a0002] text-white font-medium py-3"
                     disabled={scheduleMutation.isPending}
                   >
                     {scheduleMutation.isPending ? (
