@@ -16,12 +16,6 @@ const Header = () => {
   const [isOpaque, setIsOpaque] = useState(false);
 
   useEffect(() => {
-    // Always opaque on auth page
-    if (location === "/auth") {
-      setIsOpaque(true);
-      return;
-    }
-
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsOpaque(scrollPosition > 0);
@@ -37,7 +31,11 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
+        location === "/auth"
+          ? "bg-white shadow-sm"
+          : isOpaque
+          ? "bg-black/35 shadow-lg backdrop-blur-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
