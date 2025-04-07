@@ -31,17 +31,8 @@ const Header = () => {
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <img
-              src="/src/images/signature-cleaners-logo.png"
-              alt="Signature Cleaners"
-              className="h-16 w-auto"
-            />
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* Left Navigation */}
+          <nav className="hidden md:flex space-x-6 flex-1">
             <NavLink href="/" label="HOME" current={location === "/"} />
             <NavLink
               href="/services"
@@ -53,6 +44,19 @@ const Header = () => {
               label="ABOUT US"
               current={location === "/about"}
             />
+          </nav>
+
+          {/* Centered Logo */}
+          <Link href="/" className="flex items-center mx-4">
+            <img
+              src="/src/images/signature-cleaners-logo.png"
+              alt="Signature Cleaners"
+              className="h-16 w-auto"
+            />
+          </Link>
+
+          {/* Right Navigation and CTA */}
+          <div className="hidden md:flex items-center justify-end space-x-6 flex-1">
             <NavLink
               href="/testimonials"
               label="TESTIMONIALS"
@@ -63,10 +67,6 @@ const Header = () => {
               label="CONTACT"
               current={location === "/contact"}
             />
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center">
             <Link href="/schedule">
               <Button className="bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6">
                 Request Pickup
