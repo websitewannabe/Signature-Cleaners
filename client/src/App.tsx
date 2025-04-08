@@ -41,7 +41,6 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <Router />
-        <LiveChat />
         <Toaster />
       </AuthProvider>
     </QueryClientProvider>
