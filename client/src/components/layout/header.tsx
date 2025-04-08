@@ -56,22 +56,23 @@ const Header = () => {
               <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-8">
                 <div className="py-2">
                   {[
-                    { name: 'Dry Cleaning', path: '/services' },
-                    { name: 'Wash & Fold', path: '/services/wash-fold' },
-                    { name: 'Alterations & Tailoring', path: '/services' },
-                    { name: 'Interior Cleaning', path: '/services' },
-                    { name: 'Cleaning Household Items', path: '/services' },
-                    { name: 'Wedding Gowns', path: '/services' },
-                    { name: 'Suede & Leather Cleaning', path: '/services' },
-                    { name: 'Shoe Repair', path: '/services' },
-                    { name: 'Folding Dress Shirt Services', path: '/services' }
+                    'Delivery',
+                    'Alterations & Tailoring',
+                    'Interior Cleaning',
+                    'Cleaning Household Items',
+                    'Dry Cleaning',
+                    'Wedding Gowns',
+                    'Suede & Leather Cleaning',
+                    'Shoe Repair',
+                    'Wash & Fold',
+                    'Folding Dress Shirt Services'
                   ].map((service) => (
                     <Link
-                      key={service.name}
-                      href={service.path}
+                      key={service}
+                      href="/services"
                       className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
                     >
-                      {service.name}
+                      {service}
                     </Link>
                   ))}
                 </div>
@@ -95,12 +96,6 @@ const Header = () => {
 
           {/* Right Navigation and CTA */}
           <div className="hidden md:flex items-center justify-center space-x-8 flex-1 text-lg">
-            <NavLink
-              href="/testimonials"
-              label="TESTIMONIALS"
-              current={location === "/testimonials"}
-            />
-            <NavLink href="/faq" label="FAQ" current={location === "/faq"} />
             <NavLink
               href="/contact"
               label="CONTACT"
@@ -162,11 +157,6 @@ const Header = () => {
                     href="/about"
                     label="ABOUT US"
                     current={location === "/about"}
-                  />
-                  <MobileNavLink
-                    href="/testimonials"
-                    label="TESTIMONIALS"
-                    current={location === "/testimonials"}
                   />
                   <MobileNavLink
                     href="/contact"
