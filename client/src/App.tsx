@@ -17,6 +17,8 @@ import { AuthProvider } from "./hooks/use-auth";
 import LiveChat from "./components/live-chat";
 // Added import for FaqPage
 import FaqPage from "@/pages/faq-page"; // You'll need to create this component
+import AuthPage from "@/pages/auth-page"; //New Auth Page
+
 
 function Router() {
   return (
@@ -28,6 +30,7 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
+      <Route path="/auth" component={AuthPage} /> {/* Added Auth route */}
       <Route component={NotFound} />
     </Switch>
   );
