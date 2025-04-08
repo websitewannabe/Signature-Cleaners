@@ -16,12 +16,6 @@ const Header = () => {
   const [isOpaque, setIsOpaque] = useState(false);
 
   useEffect(() => {
-    // Always opaque on auth page
-    if (location === "/auth") {
-      setIsOpaque(true);
-      return;
-    }
-
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsOpaque(scrollPosition > 0);
