@@ -61,22 +61,20 @@ export default function TestimonialsPage() {
                         </div>
                       ))}
                     </div>
-                    <div className="flex flex-col h-full">
-                      <p className="text-neutral-600 mb-auto italic flex-grow">
-                        "{testimonial.content}"
-                      </p>
-                      <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
-                        <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                          {testimonial.name.charAt(0)}
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-neutral-900 line-clamp-1">
-                            {testimonial.name}
-                          </h4>
-                          <p className="text-sm text-neutral-500">
-                            {testimonial.role}
-                          </p>
-                        </div>
+                    <p className="text-neutral-600 mb-4 italic">
+                      "{testimonial.content}"
+                    </p>
+                    <div className="flex items-center">
+                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-neutral-900">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-sm text-neutral-500">
+                          {testimonial.role}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -98,24 +96,20 @@ export default function TestimonialsPage() {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-auto italic flex-grow">
-                    "I was in a very tight spot with needed my uniform dry cleaned
-                    in less than 2 days. Not only did they get it done within a
-                    few hours, but they were amazing to talk to while I was in
-                    there. I highly recommend them and wouldn’t take my uniforms
-                    anywhere else!"
-                  </p>
-                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
-                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                      D
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900">
-                        Dan Divalerio
-                      </h4>
-                      <p className="text-sm text-neutral-500">Customer</p>
-                    </div>
+                <p className="text-neutral-600 mb-4 italic">
+                  "My wedding dress had a tough stain that two other cleaners
+                  couldn't remove. Signature Cleaners not only removed it but
+                  restored the dress to look like new. Absolutely impressed!"
+                </p>
+                <div className="flex items-center">
+                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                    J
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">
+                      Jennifer Parks
+                    </h4>
+                    <p className="text-sm text-neutral-500">Recent Bride</p>
                   </div>
                 </div>
               </div>
@@ -138,23 +132,22 @@ export default function TestimonialsPage() {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-auto italic flex-grow">
-                    "Took my husband's clothes in, that he needed in a pinch, for
-                    work. They got them cleaned and pressed quickly. Price was
-                    more than reasonable. Best of all there was no trace of the
-                    ink stains left when done. And, the staff were all friendly.""
-                  </p>
-                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
-                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                      M
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900">
-                        Mary Beth McDowell
-                      </h4>
-                      <p className="text-sm text-neutral-500">Customer</p>
-                    </div>
+                <p className="text-neutral-600 mb-4 italic">
+                  "As a business owner with multiple suits, I need reliable
+                  cleaning. Signature Cleaners' pickup service and consistent
+                  quality have made them my go-to for the past 3 years."
+                </p>
+                <div className="flex items-center">
+                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                    D
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">
+                      David Chen
+                    </h4>
+                    <p className="text-sm text-neutral-500">
+                      Local Business Owner
+                    </p>
                   </div>
                 </div>
               </div>
@@ -164,7 +157,7 @@ export default function TestimonialsPage() {
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}
-                      className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
+                      className={`text-${i < 4 ? "[#F9A826]" : "neutral-300"}`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -177,23 +170,20 @@ export default function TestimonialsPage() {
                     </div>
                   ))}
                 </div>
-                <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-auto italic flex-grow">
-                    "The customer service was absolutely amazing. I needed to have
-                    a suit jacket repaired and cleaned, with short lead time. They
-                    came through with high quality - on time! I highly recommend
-                    their service "
-                  </p>
-                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
-                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                      M
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900">
-                        Mark Schulz
-                      </h4>
-                      <p className="text-sm text-neutral-500">Customer</p>
-                    </div>
+                <p className="text-neutral-600 mb-4 italic">
+                  "The alterations service is top-notch. They adjusted several
+                  dresses for me that now fit perfectly. Their pricing is
+                  reasonable and the turnaround time is quick."
+                </p>
+                <div className="flex items-center">
+                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                    L
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-neutral-900">
+                      Lisa Rodriguez
+                    </h4>
+                    <p className="text-sm text-neutral-500">Regular Customer</p>
                   </div>
                 </div>
               </div>
