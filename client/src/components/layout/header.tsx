@@ -43,7 +43,7 @@ const Header = () => {
               label="MY ACCOUNT"
               current={location === "/auth"}
             />
-            <div className="relative group">
+            <div className="relative group inline-flex">
               <NavLink
                 href="/services"
                 label="SERVICES"
