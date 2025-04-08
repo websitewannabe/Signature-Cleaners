@@ -35,7 +35,7 @@ const Header = () => {
       }`}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-32">
           {/* Left Navigation */}
           <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
             <NavLink
