@@ -43,11 +43,37 @@ const Header = () => {
               label="MY ACCOUNT"
               current={location === "/auth"}
             />
-            <NavLink
-              href="/services"
-              label="SERVICES"
-              current={location === "/services"}
-            />
+            <div className="relative group">
+              <NavLink
+                href="/services"
+                label="SERVICES"
+                current={location === "/services"}
+              />
+              <div className="absolute left-0 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-1">
+                <div className="py-2">
+                  {[
+                    'Delivery',
+                    'Alterations & Tailoring',
+                    'Interior Cleaning',
+                    'Cleaning Household Items',
+                    'Dry Cleaning',
+                    'Wedding Gowns',
+                    'Suede & Leather Cleaning',
+                    'Shoe Repair',
+                    'Wash & Fold',
+                    'Folding Dress Shirt Services'
+                  ].map((service) => (
+                    <Link
+                      key={service}
+                      href="/services"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                    >
+                      {service}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <NavLink
               href="/about"
               label="ABOUT US"
@@ -102,11 +128,33 @@ const Header = () => {
                     label="MY ACCOUNT"
                     current={location === "/auth"}
                   />
-                  <MobileNavLink
-                    href="/services"
-                    label="SERVICES"
-                    current={location === "/services"}
-                  />
+                  <div className="border-b border-white/10">
+                    <MobileNavLink
+                      href="/services"
+                      label="SERVICES"
+                      current={location === "/services"}
+                    />
+                    {[
+                      'Delivery',
+                      'Alterations & Tailoring',
+                      'Interior Cleaning',
+                      'Cleaning Household Items',
+                      'Dry Cleaning',
+                      'Wedding Gowns',
+                      'Suede & Leather Cleaning',
+                      'Shoe Repair',
+                      'Wash & Fold',
+                      'Folding Dress Shirt Services'
+                    ].map((service) => (
+                      <Link
+                        key={service}
+                        href="/services"
+                        className="block px-6 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5"
+                      >
+                        {service}
+                      </Link>
+                    ))}
+                  </div>
                   <MobileNavLink
                     href="/about"
                     label="ABOUT US"
