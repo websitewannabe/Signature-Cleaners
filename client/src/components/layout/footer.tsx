@@ -18,18 +18,30 @@ const Footer = () => {
               Old Fashioned Service. Guaranteed.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-neutral-300 hover:text-white">
+              <a 
+                href="https://www.facebook.com/signaturecleaners"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-300 hover:text-white"
+              >
                 <span className="sr-only">Facebook</span>
                 <Facebook />
               </a>
               <a
-                href="https://www.facebook.com/signaturecleaners"
+                href="https://www.instagram.com/signaturedoylestown/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-neutral-300 hover:text-white"
               >
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a href="#" className="text-neutral-300 hover:text-white">
+              <a 
+                href="https://x.com/i/flow/login?redirect_after_login=%2Fsignatureclean"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-300 hover:text-white"
+              >
                 <span className="sr-only">Twitter</span>
                 <Twitter />
               </a>
