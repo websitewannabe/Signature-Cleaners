@@ -64,17 +64,19 @@ export default function TestimonialsPage() {
                     <p className="text-neutral-600 mb-4 italic">
                       "{testimonial.content}"
                     </p>
-                    <div className="flex items-center">
-                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                        {testimonial.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-neutral-900">
-                          {testimonial.name}
-                        </h4>
-                        <p className="text-sm text-neutral-500">
-                          {testimonial.role}
-                        </p>
+                    <div className="mt-auto pt-4">
+                      <div className="flex items-center">
+                        <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-neutral-900 line-clamp-1">
+                            {testimonial.name}
+                          </h4>
+                          <p className="text-sm text-neutral-500">
+                            {testimonial.role}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
