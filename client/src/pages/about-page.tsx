@@ -9,20 +9,6 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-[#23282F] py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              About Signature Cleaners
-            </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              Our story, mission, and commitment to quality garment care
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* About Content */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
