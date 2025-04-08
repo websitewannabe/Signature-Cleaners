@@ -11,7 +11,7 @@ const Footer = () => {
               <img
                 src="/src/images/signature-cleaners-logo.png"
                 alt="Signature Cleaners"
-                className="h-12 w-auto"
+                className="h-20 w-auto"
               />
             </div>
             <p className="text-neutral-300 mb-4">
