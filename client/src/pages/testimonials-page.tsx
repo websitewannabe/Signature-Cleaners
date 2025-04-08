@@ -42,35 +42,37 @@ export default function TestimonialsPage() {
                 testimonials.map((testimonial) => (
                   <div
                     key={testimonial.id}
-                    className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300"
+                    className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col h-full"
                   >
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <div
-                          key={i}
-                          className={`text-${i < testimonial.rating ? "[#F9A826]" : "neutral-300"}`}
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
+                    <div className="flex-grow">
+                      <div className="flex items-center mb-4">
+                        {[...Array(5)].map((_, i) => (
+                          <div
+                            key={i}
+                            className={`text-${i < testimonial.rating ? "[#F9A826]" : "neutral-300"}`}
                           >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        </div>
-                      ))}
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-5 w-5"
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                          </div>
+                        ))}
+                      </div>
+                      <p className="text-neutral-600 italic">
+                        "{testimonial.content}"
+                      </p>
                     </div>
-                    <p className="text-neutral-600 mb-4 italic">
-                      "{testimonial.content}"
-                    </p>
-                    <div className="mt-auto pt-4">
+                    <div className="mt-6 pt-4 border-t border-neutral-100">
                       <div className="flex items-center">
                         <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                           {testimonial.name.charAt(0)}
                         </div>
                         <div>
-                          <h4 className="font-semibold text-neutral-900 line-clamp-1">
+                          <h4 className="font-semibold text-neutral-900">
                             {testimonial.name}
                           </h4>
                           <p className="text-sm text-neutral-500">
@@ -83,111 +85,123 @@ export default function TestimonialsPage() {
                 ))}
 
               {/* Additional testimonials since we only have 3 from the API */}
-              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <div key={i} className="text-[#F9A826]">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-neutral-600 mb-4 italic">
-                  "I was in a very tight spot with needed my uniform dry cleaned
-                  in less than 2 days. Not only did they get it done within a
-                  few hours, but they were amazing to talk to while I was in
-                  there. I highly recommend them and wouldn’t take my uniforms
-                  anywhere else!"
-                </p>
-                <div className="flex items-center">
-                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    D
+              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="flex items-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div key={i} className="text-[#F9A826]">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">
-                      Dan Divalerio
-                    </h4>
-                    <p className="text-sm text-neutral-500">Customer</p>
+                  <p className="text-neutral-600 mb-4 italic">
+                    "I was in a very tight spot with needed my uniform dry cleaned
+                    in less than 2 days. Not only did they get it done within a
+                    few hours, but they were amazing to talk to while I was in
+                    there. I highly recommend them and wouldn’t take my uniforms
+                    anywhere else!"
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-neutral-100">
+                  <div className="flex items-center">
+                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                      D
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-neutral-900">
+                        Dan Divalerio
+                      </h4>
+                      <p className="text-sm text-neutral-500">Customer</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="flex items-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
                       >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-neutral-600 mb-4 italic">
-                  "Took my husband's clothes in, that he needed in a pinch, for
-                  work. They got them cleaned and pressed quickly. Price was
-                  more than reasonable. Best of all there was no trace of the
-                  ink stains left when done. And, the staff were all friendly.""
-                </p>
-                <div className="flex items-center">
-                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    M
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">
-                      Mary Beth McDowell
-                    </h4>
-                    <p className="text-sm text-neutral-500">Customer</p>
+                  <p className="text-neutral-600 mb-4 italic">
+                    "Took my husband's clothes in, that he needed in a pinch, for
+                    work. They got them cleaned and pressed quickly. Price was
+                    more than reasonable. Best of all there was no trace of the
+                    ink stains left when done. And, the staff were all friendly.""
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-neutral-100">
+                  <div className="flex items-center">
+                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                      M
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-neutral-900">
+                        Mary Beth McDowell
+                      </h4>
+                      <p className="text-sm text-neutral-500">Customer</p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
+              <div className="bg-white border border-neutral-200 rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex flex-col h-full">
+                <div className="flex-grow">
+                  <div className="flex items-center mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <div
+                        key={i}
+                        className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
                       >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-neutral-600 mb-4 italic">
-                  "The customer service was absolutely amazing. I needed to have
-                  a suit jacket repaired and cleaned, with short lead time. They
-                  came through with high quality - on time! I highly recommend
-                  their service "
-                </p>
-                <div className="flex items-center">
-                  <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    M
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-5 w-5"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    ))}
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-neutral-900">
-                      Mark Schulz
-                    </h4>
-                    <p className="text-sm text-neutral-500">Customer</p>
+                  <p className="text-neutral-600 mb-4 italic">
+                    "The customer service was absolutely amazing. I needed to have
+                    a suit jacket repaired and cleaned, with short lead time. They
+                    came through with high quality - on time! I highly recommend
+                    their service "
+                  </p>
+                </div>
+                <div className="mt-6 pt-4 border-t border-neutral-100">
+                  <div className="flex items-center">
+                    <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                      M
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-neutral-900">
+                        Mark Schulz
+                      </h4>
+                      <p className="text-sm text-neutral-500">Customer</p>
+                    </div>
                   </div>
                 </div>
               </div>
