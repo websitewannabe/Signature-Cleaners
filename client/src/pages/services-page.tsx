@@ -17,11 +17,11 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="bg-[#23282F] py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mt-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Our Services
             </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
+            <p className="mt-6 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
               Discover our comprehensive range of cleaning and garment care
               services
             </p>
