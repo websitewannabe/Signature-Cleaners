@@ -18,7 +18,8 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      setIsOpaque(scrollPosition > 0);
+      const isHomeOrServices = location === "/" || location === "/services";
+      setIsOpaque(isHomeOrServices ? scrollPosition > 0 : true);
     };
 
     // Initial check
@@ -28,9 +29,14 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
 
+  const isHomeOrServices = location === "/" || location === "/services";
+  const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
+    isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
+  }`;
+
   return (
     <header
-      className="fixed top-0 w-full z-50 transition-all duration-300 bg-black/35 shadow-lg backdrop-blur-sm"
+      className={headerStyles}
     >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-32">
