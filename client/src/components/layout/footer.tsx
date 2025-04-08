@@ -7,13 +7,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <div className="flex items-center mb-4">
-              <div className="h-8 w-8 bg-white rounded-full flex items-center justify-center mr-2">
-                <span className="text-primary font-bold text-sm">SC</span>
-              </div>
-              <span className="text-white font-bold text-xl">
-                Signature Cleaners
-              </span>
+            <div className="mb-4">
+              <img
+                src="/src/images/signature-cleaners-logo.png"
+                alt="Signature Cleaners"
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-neutral-300 mb-4">
               Professional dry cleaning and laundry services with free pickup
