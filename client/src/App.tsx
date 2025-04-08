@@ -9,7 +9,6 @@ import AboutPage from "@/pages/about-page";
 import TestimonialsPage from "@/pages/testimonials-page";
 import ContactPage from "@/pages/contact-page";
 import SchedulePage from "@/pages/schedule-page";
-import AuthPage from "@/pages/auth-page";
 import CustomerPortal from "@/pages/customer-portal";
 import CustomerOrders from "@/pages/customer-portal/orders";
 import CustomerAccount from "@/pages/customer-portal/account";
@@ -28,10 +27,6 @@ function Router() {
       <Route path="/testimonials" component={TestimonialsPage} />
       <Route path="/contact" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
-      <Route path="/auth" component={AuthPage} />
-      <ProtectedRoute path="/portal" component={CustomerPortal} />
-      <ProtectedRoute path="/portal/orders" component={CustomerOrders} />
-      <ProtectedRoute path="/portal/account" component={CustomerAccount} />
       <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
       <Route component={NotFound} />
     </Switch>
