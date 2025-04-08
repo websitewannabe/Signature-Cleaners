@@ -1,5 +1,16 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display');
+  font-display: swap;
+}
+
+.font-sf-pro {
+  font-family: 'SF Pro Display', 'Inter', system-ui, sans-serif;
+}
+
 @tailwind utilities;
 
 @layer base {
