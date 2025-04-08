@@ -327,7 +327,7 @@ export default function AboutPage() {
             <Link href="/schedule">
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-white hover:bg-[#E89212] text-black"
+                className="w-full sm:w-auto bg-white hover:bg-[#F6AE2D] text-black"
               >
                 Schedule a Pickup
               </Button>

@@ -67,7 +67,7 @@ export default function ServicesPage() {
                         <Link href="/schedule">
                           <Button
                             size="sm"
-                            className="bg-[#790003] hover:bg-[#5a0002] text-white"
+                            className="bg-[#790003] hover:bg-[#F6AE2D] text-white"
                           >
                             Schedule
                           </Button>
@@ -161,9 +161,12 @@ export default function ServicesPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">Locations We Pick Up & Deliver</h2>
+            <h2 className="text-3xl font-bold text-neutral-900">
+              Locations We Pick Up & Deliver
+            </h2>
             <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
-              We service the following areas in Bucks County and surrounding regions
+              We service the following areas in Bucks County and surrounding
+              regions
             </p>
           </div>
 
@@ -221,7 +224,7 @@ export default function ServicesPage() {
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-white hover:bg-[#E89212] text-black px-8"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-8"
             >
               Schedule a Pickup
             </Button>

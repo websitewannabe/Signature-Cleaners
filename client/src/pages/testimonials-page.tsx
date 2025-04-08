@@ -102,11 +102,11 @@ export default function TestimonialsPage() {
                     ))}
                   </div>
                   <p className="text-neutral-600 mb-4 italic">
-                    "I was in a very tight spot with needed my uniform dry cleaned
-                    in less than 2 days. Not only did they get it done within a
-                    few hours, but they were amazing to talk to while I was in
-                    there. I highly recommend them and wouldn’t take my uniforms
-                    anywhere else!"
+                    "I was in a very tight spot with needed my uniform dry
+                    cleaned in less than 2 days. Not only did they get it done
+                    within a few hours, but they were amazing to talk to while I
+                    was in there. I highly recommend them and wouldn’t take my
+                    uniforms anywhere else!"
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-neutral-100">
@@ -144,10 +144,11 @@ export default function TestimonialsPage() {
                     ))}
                   </div>
                   <p className="text-neutral-600 mb-4 italic">
-                    "Took my husband's clothes in, that he needed in a pinch, for
-                    work. They got them cleaned and pressed quickly. Price was
-                    more than reasonable. Best of all there was no trace of the
-                    ink stains left when done. And, the staff were all friendly.""
+                    "Took my husband's clothes in, that he needed in a pinch,
+                    for work. They got them cleaned and pressed quickly. Price
+                    was more than reasonable. Best of all there was no trace of
+                    the ink stains left when done. And, the staff were all
+                    friendly.""
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-neutral-100">
@@ -185,10 +186,10 @@ export default function TestimonialsPage() {
                     ))}
                   </div>
                   <p className="text-neutral-600 mb-4 italic">
-                    "The customer service was absolutely amazing. I needed to have
-                    a suit jacket repaired and cleaned, with short lead time. They
-                    came through with high quality - on time! I highly recommend
-                    their service "
+                    "The customer service was absolutely amazing. I needed to
+                    have a suit jacket repaired and cleaned, with short lead
+                    time. They came through with high quality - on time! I
+                    highly recommend their service "
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-neutral-100">
@@ -267,7 +268,7 @@ export default function TestimonialsPage() {
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-white hover:bg-[#E89212] text-black"
+              className="bg-white hover:bg-[#F6AE2D] text-black"
             >
               Schedule Your First Pickup
             </Button>

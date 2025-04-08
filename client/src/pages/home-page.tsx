@@ -25,7 +25,9 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-              Effortless Dry Cleaning & Laundry Pickup
+              Care for Your Clothes.
+              <br />
+              Convenience for You.
             </h1>
             <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
               Old Fashioned Service. Guaranteed.
@@ -211,7 +213,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/schedule">
-              <Button className="bg-[#790003] hover:bg-[#385233] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
               </Button>
             </Link>

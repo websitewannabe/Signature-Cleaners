@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/src/images/signature-cleaners-logo.png"
+                src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
                 className="h-20 w-auto"
               />
@@ -18,7 +18,7 @@ const Footer = () => {
               Old Fashioned Service. Guaranteed.
             </p>
             <div className="flex space-x-4">
-              <a 
+              <a
                 href="https://www.facebook.com/signaturecleaners"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -36,7 +36,7 @@ const Footer = () => {
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
-              <a 
+              <a
                 href="https://x.com/i/flow/login?redirect_after_login=%2Fsignatureclean"
                 target="_blank"
                 rel="noopener noreferrer"
