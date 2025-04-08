@@ -55,7 +55,7 @@ export default function AboutPage() {
 
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-primary font-bold text-2xl">15+</div>
+                  <div className="text-primary font-bold text-2xl">20+</div>
                   <div className="text-neutral-600">Years of Experience</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -75,7 +75,7 @@ export default function AboutPage() {
             <div className="mt-10 lg:mt-0">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  src="/src/images/theTeam.jpg"
                   alt="Signature Cleaners team"
                   className="w-full h-auto"
                 />
@@ -255,6 +255,64 @@ export default function AboutPage() {
               role="Customer Experience Director"
               bio="Michael leads our customer service team and develops innovative ways to enhance the Signature Cleaners experience."
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Locations Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900">
+              Locations We Pick Up & Deliver
+            </h2>
+            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+              We service the following areas in Bucks County and surrounding
+              regions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
+              {/* Placeholder for Google Maps - Replace with actual map component */}
+              <div className="h-full w-full bg-neutral-200 flex items-center justify-center">
+                <span className="text-neutral-500">Service Area Map</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Buckingham</p>
+                  <p className="text-neutral-900">Carversville</p>
+                  <p className="text-neutral-900">Chalfont</p>
+                  <p className="text-neutral-900">Doylestown</p>
+                  <p className="text-neutral-900">Dublin</p>
+                  <p className="text-neutral-900">Fountainville</p>
+                  <p className="text-neutral-900">Furlong</p>
+                  <p className="text-neutral-900">Holland</p>
+                  <p className="text-neutral-900">Ivyland</p>
+                  <p className="text-neutral-900">Jamison</p>
+                  <p className="text-neutral-900">Lahaska</p>
+                  <p className="text-neutral-900">Morrisville</p>
+                  <p className="text-neutral-900">New Hope</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Newtown</p>
+                  <p className="text-neutral-900">Ottsville</p>
+                  <p className="text-neutral-900">Perkasie</p>
+                  <p className="text-neutral-900">Pipersville</p>
+                  <p className="text-neutral-900">Point Pleasant</p>
+                  <p className="text-neutral-900">Richboro</p>
+                  <p className="text-neutral-900">Southampton</p>
+                  <p className="text-neutral-900">Trevose</p>
+                  <p className="text-neutral-900">Warminster</p>
+                  <p className="text-neutral-900">Warrington</p>
+                  <p className="text-neutral-900">Washington Crossing</p>
+                  <p className="text-neutral-900">Yardley</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
