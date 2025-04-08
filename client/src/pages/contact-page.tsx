@@ -187,11 +187,9 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
                       <p className="text-neutral-600">
-                        123 Main Street
+                        1456 Ferry Road #10
                         <br />
-                        Suite 456
-                        <br />
-                        Anytown, ST 12345
+                        Doylestown, PA 18901
                       </p>
                     </div>
                   </div>
@@ -199,7 +197,7 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
-                      <p className="text-neutral-600">(555) 123-4567</p>
+                      <p className="text-neutral-600">(215) 345-1470</p>
                     </div>
                   </div>
 
@@ -207,7 +205,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
                       <p className="text-neutral-600">
-                        info@signaturecleaners.com
+                        customerservice@mysignaturecleaners.com
                       </p>
                     </div>
                   </div>
@@ -220,13 +218,13 @@ export default function ContactPage() {
                   <div className="flex justify-between">
                     <p className="text-neutral-600">Monday - Friday</p>
                     <p className="text-neutral-700 font-medium">
-                      7:00 AM - 8:00 PM
+                      7:00 AM - 6:00 PM
                     </p>
                   </div>
                   <div className="flex justify-between">
                     <p className="text-neutral-600">Saturday</p>
                     <p className="text-neutral-700 font-medium">
-                      8:00 AM - 6:00 PM
+                      8:00 AM - 3:00 PM
                     </p>
                   </div>
                   <div className="flex justify-between">
@@ -235,11 +233,62 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-              <div className="bg-white rounded-lg shadow-md overflow-hidden h-64">
-                {/* Replace with actual map component */}
-                <div className="h-full w-full bg-neutral-200 flex items-center justify-center">
-                  <span className="text-neutral-500">Interactive Map</span>
+      {/* Locations Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-neutral-900">
+              Locations We Pick Up & Deliver
+            </h2>
+            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+              We service the following areas in Bucks County and surrounding
+              regions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
+              {/* Placeholder for Google Maps - Replace with actual map component */}
+              <div className="h-full w-full bg-neutral-200 flex items-center justify-center">
+                <span className="text-neutral-500">Service Area Map</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Buckingham</p>
+                  <p className="text-neutral-900">Carversville</p>
+                  <p className="text-neutral-900">Chalfont</p>
+                  <p className="text-neutral-900">Doylestown</p>
+                  <p className="text-neutral-900">Dublin</p>
+                  <p className="text-neutral-900">Fountainville</p>
+                  <p className="text-neutral-900">Furlong</p>
+                  <p className="text-neutral-900">Holland</p>
+                  <p className="text-neutral-900">Ivyland</p>
+                  <p className="text-neutral-900">Jamison</p>
+                  <p className="text-neutral-900">Lahaska</p>
+                  <p className="text-neutral-900">Morrisville</p>
+                  <p className="text-neutral-900">New Hope</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Newtown</p>
+                  <p className="text-neutral-900">Ottsville</p>
+                  <p className="text-neutral-900">Perkasie</p>
+                  <p className="text-neutral-900">Pipersville</p>
+                  <p className="text-neutral-900">Point Pleasant</p>
+                  <p className="text-neutral-900">Richboro</p>
+                  <p className="text-neutral-900">Southampton</p>
+                  <p className="text-neutral-900">Trevose</p>
+                  <p className="text-neutral-900">Warminster</p>
+                  <p className="text-neutral-900">Warrington</p>
+                  <p className="text-neutral-900">Washington Crossing</p>
+                  <p className="text-neutral-900">Yardley</p>
                 </div>
               </div>
             </div>
