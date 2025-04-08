@@ -42,23 +42,25 @@ export default function ServicesPage() {
                 services.map((service) => (
                   <div
                     key={service.id}
-                    className="bg-white border border-neutral-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+                    className="bg-white border border-neutral-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col h-full"
                   >
-                    <div className="h-48 bg-neutral-200">
+                    <div className="h-48 bg-neutral-200 flex-shrink-0">
                       <img
                         src={service.imageUrl}
                         alt={service.name}
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-neutral-900">
-                        {service.name}
-                      </h3>
-                      <p className="mt-2 text-neutral-600">
-                        {service.description}
-                      </p>
-                      <div className="mt-4 flex items-center justify-between">
+                    <div className="p-6 flex flex-col flex-grow">
+                      <div className="flex-grow">
+                        <h3 className="text-xl font-semibold text-neutral-900">
+                          {service.name}
+                        </h3>
+                        <p className="mt-2 text-neutral-600">
+                          {service.description}
+                        </p>
+                      </div>
+                      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
                         <span className="text-primary font-medium">
                           {service.price}
                         </span>
