@@ -65,7 +65,7 @@ export default function ServicesPage() {
                         <Link href="/schedule">
                           <Button
                             size="sm"
-                            className="bg-[#F9A826] hover:bg-[#E89212] text-white"
+                            className="bg-[#790003] hover:bg-[#5a0002] text-white"
                           >
                             Schedule
                           </Button>
