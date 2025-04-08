@@ -64,7 +64,7 @@ const Header = () => {
           {/* Centered Logo */}
           <Link href="/" className="flex items-center mx-6 pt-2">
             <img
-              src="/src/images/signature-cleaners-logo.png"
+              src="/src/images/signature-cleaners-logo-white.png"
               alt="Signature Cleaners"
               className="h-20 w-auto"
             />
@@ -77,11 +77,7 @@ const Header = () => {
               label="TESTIMONIALS"
               current={location === "/testimonials"}
             />
-            <NavLink
-              href="/faq"
-              label="FAQ"
-              current={location === "/faq"}
-            />
+            <NavLink href="/faq" label="FAQ" current={location === "/faq"} />
             <NavLink
               href="/contact"
               label="CONTACT"
