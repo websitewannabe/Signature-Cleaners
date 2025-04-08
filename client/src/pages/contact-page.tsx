@@ -71,21 +71,6 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-[#23282F] py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Contact Us
-            </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              We're here to answer your questions and provide assistance. Reach
-              out to us through any of the channels below.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Info & Form */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
