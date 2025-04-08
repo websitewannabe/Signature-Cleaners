@@ -100,7 +100,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-[#4DA1A9] mb-4">
+              <div className="text-[#790003] mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12"
@@ -127,7 +127,7 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-[#4DA1A9] mb-4">
+              <div className="text-[#790003] mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12"
@@ -154,7 +154,7 @@ export default function AboutPage() {
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="text-[#4DA1A9] mb-4">
+              <div className="text-[#790003] mb-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-12 w-12"
