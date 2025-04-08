@@ -10,28 +10,28 @@ export default function AboutPage() {
       <Header />
 
       {/* About Content */}
-      <section className="py-40">
+      <section className="py-40 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
                 Our Story
               </h2>
-              <p className="mt-4 text-lg text-neutral-600">
+              <p className="mt-4 text-lg text-white/80">
                 Signature Cleaners was founded by brothers Michael and Fred
                 Rosen, who share over 40 years of experience in the dry cleaning
                 industry. With a family legacy rooted in garment care, they
                 built their business on simple values: quality service, fair
                 pricing, and a commitment to customer satisfaction.
               </p>
-              <p className="mt-4 text-lg text-neutral-600">
+              <p className="mt-4 text-lg text-white/80">
                 Director of Operations, Mark Pollock, brings expert training in
                 stain removal and wedding gown preservation—two of our
                 specialties. Every item is treated with care, using high-end
                 equipment and eco-friendly methods. Rush orders are welcome, and
                 most items can be cleaned within 24 hours.
               </p>
-              <p className="mt-4 text-lg text-neutral-600">
+              <p className="mt-4 text-lg text-white/80">
                 As the area’s only member of the Dry Cleaning and Laundry
                 Institute, we stay ahead with the latest in fabric care. Whether
                 it's preserving a wedding gown or removing a tough stain,
