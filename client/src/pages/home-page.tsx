@@ -28,8 +28,7 @@ export default function HomePage() {
               Effortless Dry Cleaning & Laundry Pickup
             </h1>
             <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
-              Professional garment care with pickup and delivery across the
-              city.
+              Old Fashioned Service. Guaranteed.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
