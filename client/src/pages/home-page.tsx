@@ -106,7 +106,7 @@ export default function HomePage() {
                           {service.price}
                         </span>
                         <Link href="/schedule">
-                          <span className="text-[#F9A826] hover:text-[#E89212] font-medium flex items-center">
+                          <span className="text-[#790003] hover:text-[#5a0002] font-medium flex items-center">
                             Schedule
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
