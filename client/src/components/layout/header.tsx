@@ -42,11 +42,6 @@ const Header = () => {
         <div className="flex justify-between items-center h-32">
           {/* Left Navigation */}
           <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
-            <NavLink
-              href="/auth"
-              label="MY ACCOUNT"
-              current={location === "/auth"}
-            />
             <div className="relative group inline-flex">
               <NavLink
                 href="/services"
@@ -96,6 +91,11 @@ const Header = () => {
 
           {/* Right Navigation and CTA */}
           <div className="hidden md:flex items-center justify-center space-x-8 flex-1 text-lg">
+            <NavLink
+              href="/auth"
+              label="MY ACCOUNT"
+              current={location === "/auth"}
+            />
             <NavLink
               href="/contact"
               label="CONTACT"
