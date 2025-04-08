@@ -102,7 +102,7 @@ export default function SchedulePage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#424B4D] py-28">
+      <section className="bg-[#23282F] py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
