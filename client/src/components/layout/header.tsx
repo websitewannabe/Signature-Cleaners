@@ -45,9 +45,9 @@ const Header = () => {
           {/* Left Navigation */}
           <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
             <NavLink
-              href="/portal/account"
+              href="/auth"
               label="MY ACCOUNT"
-              current={location === "/portal/account"}
+              current={location === "/auth"}
             />
             <NavLink
               href="/services"
@@ -104,9 +104,9 @@ const Header = () => {
                     current={location === "/"}
                   />
                   <MobileNavLink
-                    href="/portal/account"
+                    href="/auth"
                     label="MY ACCOUNT"
-                    current={location === "/portal/account"}
+                    current={location === "/auth"}
                   />
                   <MobileNavLink
                     href="/services"
