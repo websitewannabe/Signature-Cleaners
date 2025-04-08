@@ -93,14 +93,14 @@ export default function HomePage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-6 flex flex-col h-full">
+                    <div className="p-6">
                       <h3 className="text-xl font-semibold text-black">
                         {service.name}
                       </h3>
-                      <p className="mt-2 text-neutral-800 flex-grow">
+                      <p className="mt-2 text-neutral-800">
                         {service.description}
                       </p>
-                      <div className="mt-6 flex items-center justify-between">
+                      <div className="mt-4 flex items-center justify-between">
                         <span className="text-black font-medium">
                           {service.price}
                         </span>
