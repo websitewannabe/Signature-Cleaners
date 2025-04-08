@@ -20,7 +20,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">
-        <div className="absolute inset-0 bg-[url('/src/images/interior-two.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/interior.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -33,7 +33,7 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#77878B] hover:bg-[#F6AE2D] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
+                <Button className="w-full sm:w-auto bg-[#790003] hover:bg-[#F6AE2D] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
                   Schedule Pickup
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function HomePage() {
               <Link href="/services">
                 <Button
                   variant="outline"
-                  className="w-full sm:w-auto bg-white hover:text-black font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group"
+                  className="w-full sm:w-auto bg-white hover:text-black font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:text-white hover:bg-[#790003] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group"
                 >
                   View Services
                 </Button>
@@ -131,7 +131,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/services">
-              <span className="inline-flex items-center text-white hover:text-neutral-800 font-medium">
+              <span className="inline-flex items-center text-white hover:shadow-lg font-medium">
                 View Complete Price List
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +212,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/schedule">
-              <Button className="bg-[#44633F] hover:bg-[#385233] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+              <Button className="bg-[#790003] hover:bg-[#385233] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
               </Button>
             </Link>

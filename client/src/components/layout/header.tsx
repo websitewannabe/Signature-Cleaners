@@ -64,7 +64,7 @@ const Header = () => {
           {/* Centered Logo */}
           <Link href="/" className="flex items-center mx-6 pt-2">
             <img
-              src={isOpaque ? "/src/images/signature-cleaners-logo-white.png" : "/src/images/signature-cleaners-logo.png"}
+              src="/src/images/signature-cleaners-logo-white.png"
               alt="Signature Cleaners"
               className="h-20 w-auto"
             />
