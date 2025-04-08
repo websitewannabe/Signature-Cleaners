@@ -260,7 +260,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16">
+      <section className="bg-[#790003] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Experience the Signature Cleaners Difference
@@ -269,7 +269,7 @@ export default function AboutPage() {
             <Link href="/schedule">
               <Button
                 size="lg"
-                className="w-full sm:w-auto bg-[#F9A826] hover:bg-[#E89212] text-white"
+                className="w-full sm:w-auto bg-white hover:bg-[#E89212] text-black"
               >
                 Schedule a Pickup
               </Button>

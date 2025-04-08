@@ -156,7 +156,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16">
+      <section className="bg-[#790003] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Experience Premium Cleaning?
@@ -164,7 +164,7 @@ export default function ServicesPage() {
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-[#F9A826] hover:bg-[#E89212] text-white px-8"
+              className="bg-white hover:bg-[#E89212] text-black px-8"
             >
               Schedule a Pickup
             </Button>

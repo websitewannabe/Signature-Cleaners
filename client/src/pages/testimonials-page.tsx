@@ -230,7 +230,7 @@ export default function TestimonialsPage() {
                   <GuaranteeItem text="On-time pickup and delivery or your next order is discounted" />
                 </ul>
                 <Link href="/contact">
-                  <Button className="bg-primary hover:bg-primary-dark text-white">
+                  <Button className="bg-[#790003] hover:bg-primary-dark text-white">
                     Contact Us With Questions
                   </Button>
                 </Link>
@@ -241,7 +241,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16">
+      <section className="bg-[#790003] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Join Our Happy Customers Today
@@ -249,7 +249,7 @@ export default function TestimonialsPage() {
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-[#F9A826] hover:bg-[#E89212] text-white"
+              className="bg-white hover:bg-[#E89212] text-black"
             >
               Schedule Your First Pickup
             </Button>
