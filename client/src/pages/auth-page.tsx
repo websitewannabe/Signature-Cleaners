@@ -19,21 +19,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* Hero Section */}
-      <section className="bg-[#23282F] py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              My Account
-            </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              Manage your dry cleaning services and preferences
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div className="flex-1 py-16 bg-neutral-50">
+      <div className="flex-1 py-28 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Login Section */}
