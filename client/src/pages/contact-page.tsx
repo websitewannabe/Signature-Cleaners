@@ -19,6 +19,12 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2, Mail, MapPin, Phone } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function ContactPage() {
   const { toast } = useToast();
@@ -296,44 +302,107 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">
-              Frequently Asked Questions
-            </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
-              Find answers to our most commonly asked questions
-            </p>
-          </div>
+      {/* FAQ Content */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How do I sign up?</AccordionTrigger>
+              <AccordionContent>
+                Click here or Call (215) 345-1470 – Include your sign up form
+                with your name, address and phone number on your first order
+                indicating that you signed up online.
+              </AccordionContent>
+            </AccordionItem>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <FaqItem
-              question="How soon can I get my clothes back?"
-              answer="Our standard turnaround time is 48 hours. We also offer express service with same-day or next-day options for an additional fee."
-            />
-            <FaqItem
-              question="Do you offer pickup and delivery services?"
-              answer="Yes, we offer free pickup and delivery for orders over $30 within our service area. You can schedule these services through our website or by phone."
-            />
-            <FaqItem
-              question="How do I pay for my orders?"
-              answer="We accept all major credit cards, cash, and digital payment methods. You can also set up automatic billing through your customer portal account."
-            />
-            <FaqItem
-              question="What if I'm not satisfied with the cleaning?"
-              answer="We offer a 100% satisfaction guarantee. If you're not completely happy with our service, please contact us within 3 days and we'll make it right."
-            />
-            <FaqItem
-              question="Can you handle delicate or specialty items?"
-              answer="Yes, we specialize in handling delicate fabrics, wedding dresses, formal wear, and other specialty items that require extra care."
-            />
-            <FaqItem
-              question="Do you use eco-friendly cleaning methods?"
-              answer="Yes, we use environmentally friendly cleaning methods and solvents that are both effective and better for the environment."
-            />
-          </div>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                Where are my clothes picked up and delivered?
+              </AccordionTrigger>
+              <AccordionContent>
+                We will pick up and deliver your clothes to your home, your
+                office or to the concierge in your building.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Is there a minimum order?</AccordionTrigger>
+              <AccordionContent>
+                No need to wait for a full bag of dirty clothes, we will pick up
+                and deliver any amount.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What do I put my clothes in?</AccordionTrigger>
+              <AccordionContent>
+                Call us and we will deliver 2 Signature Cleaners bags with name
+                tags to your designated drop off location.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-5">
+              <AccordionTrigger>
+                Do I have to be there when the pickup and delivery is made?
+              </AccordionTrigger>
+              <AccordionContent>
+                No our route driver will pick up and deliver your clothes at
+                your pre-determined location.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-6">
+              <AccordionTrigger>
+                When will my clothes be picked up or dropped off?
+              </AccordionTrigger>
+              <AccordionContent>
+                We pick up and deliver twice a week. However, household items,
+                repairs, leather and specialty items may take longer.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-7">
+              <AccordionTrigger>What about the holidays?</AccordionTrigger>
+              <AccordionContent>
+                We will inform you about any changes in our pickup and delivery
+                service during the holidays.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-8">
+              <AccordionTrigger>
+                What do I do about special requests?
+              </AccordionTrigger>
+              <AccordionContent>
+                Place the garment in a separate plastic bag with a detailed note
+                explaining your request.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-9">
+              <AccordionTrigger>Do you do alterations?</AccordionTrigger>
+              <AccordionContent>
+                Yes. For alterations, pin the instructions to the garment that
+                needs alterations. Return times can vary depending on the
+                complexity of the alteration.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-10">
+              <AccordionTrigger>How do I pay for the service?</AccordionTrigger>
+              <AccordionContent>
+                Your dry cleaning will be charged automatically to your American
+                express, Visa. Master card or Discover Card.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-11">
+              <AccordionTrigger>
+                How do you keep my credit card safe?
+              </AccordionTrigger>
+              <AccordionContent>
+                We use the latest encryption and authentication services for all
+                our web transactions so that your credit card information
+                remains safe. If you prefer, just give us a call at (877)
+                779-1269 and we can assist you via phone.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 

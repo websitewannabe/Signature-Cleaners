@@ -15,8 +15,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-neutral-300 mb-4">
-              Professional dry cleaning and laundry services with free pickup
-              and delivery.
+              Old Fashioned Service. Guaranteed.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-neutral-300 hover:text-white">
@@ -167,9 +166,9 @@ const Footer = () => {
                   />
                 </svg>
                 <span>
-                  123 Main Street, Suite 456
+                  1456 Ferry Road #10
                   <br />
-                  Anytown, ST 12345
+                  Doylestown, PA 18901
                 </span>
               </li>
               <li className="flex items-center">
@@ -187,7 +186,7 @@ const Footer = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>(555) 123-4567</span>
+                <span>(215) 345-1470</span>
               </li>
               <li className="flex items-center">
                 <svg
@@ -204,7 +203,7 @@ const Footer = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span>info@signaturecleaners.com</span>
+                <span>customerservice@mysignaturecleaners.com</span>
               </li>
             </ul>
             <div className="mt-4">
