@@ -62,10 +62,10 @@ export default function TestimonialsPage() {
                       ))}
                     </div>
                     <div className="flex flex-col h-full">
-                      <p className="text-neutral-600 mb-4 italic flex-grow">
+                      <p className="text-neutral-600 mb-auto italic flex-grow">
                         "{testimonial.content}"
                       </p>
-                      <div className="flex items-center mt-auto">
+                      <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
                         <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                           {testimonial.name.charAt(0)}
                         </div>
@@ -99,14 +99,14 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-4 italic flex-grow">
+                  <p className="text-neutral-600 mb-auto italic flex-grow">
                     "I was in a very tight spot with needed my uniform dry cleaned
                     in less than 2 days. Not only did they get it done within a
                     few hours, but they were amazing to talk to while I was in
                     there. I highly recommend them and wouldn’t take my uniforms
                     anywhere else!"
                   </p>
-                  <div className="flex items-center mt-auto">
+                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
                     <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                       D
                     </div>
@@ -139,13 +139,13 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-4 italic flex-grow">
+                  <p className="text-neutral-600 mb-auto italic flex-grow">
                     "Took my husband's clothes in, that he needed in a pinch, for
                     work. They got them cleaned and pressed quickly. Price was
                     more than reasonable. Best of all there was no trace of the
                     ink stains left when done. And, the staff were all friendly.""
                   </p>
-                  <div className="flex items-center mt-auto">
+                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
                     <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                       M
                     </div>
@@ -178,13 +178,13 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <div className="flex flex-col h-full">
-                  <p className="text-neutral-600 mb-4 italic flex-grow">
+                  <p className="text-neutral-600 mb-auto italic flex-grow">
                     "The customer service was absolutely amazing. I needed to have
                     a suit jacket repaired and cleaned, with short lead time. They
                     came through with high quality - on time! I highly recommend
                     their service "
                   </p>
-                  <div className="flex items-center mt-auto">
+                  <div className="flex items-center mt-4 pt-4 border-t border-neutral-100">
                     <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                       M
                     </div>
