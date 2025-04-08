@@ -51,23 +51,23 @@ const Header = () => {
               <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-8">
                 <div className="py-2">
                   {[
-                    'Delivery',
-                    'Alterations & Tailoring',
-                    'Interior Cleaning',
-                    'Cleaning Household Items',
-                    'Dry Cleaning',
-                    'Wedding Gowns',
-                    'Suede & Leather Cleaning',
-                    'Shoe Repair',
-                    'Wash & Fold',
-                    'Folding Dress Shirt Services'
+                    { name: 'Delivery', path: '/services' },
+                    { name: 'Alterations & Tailoring', path: '/services' },
+                    { name: 'Interior Cleaning', path: '/services' },
+                    { name: 'Cleaning Household Items', path: '/services' },
+                    { name: 'Dry Cleaning', path: '/services' },
+                    { name: 'Wedding Gowns', path: '/services' },
+                    { name: 'Suede & Leather Cleaning', path: '/services' },
+                    { name: 'Shoe Repair', path: '/services' },
+                    { name: 'Wash & Fold', path: '/services/wash-fold' },
+                    { name: 'Folding Dress Shirt Services', path: '/services' }
                   ].map((service) => (
                     <Link
-                      key={service}
-                      href="/services"
+                      key={service.name}
+                      href={service.path}
                       className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
                     >
-                      {service}
+                      {service.name}
                     </Link>
                   ))}
                 </div>
@@ -133,23 +133,23 @@ const Header = () => {
                       current={location === "/services"}
                     />
                     {[
-                      'Delivery',
-                      'Alterations & Tailoring',
-                      'Interior Cleaning',
-                      'Cleaning Household Items',
-                      'Dry Cleaning',
-                      'Wedding Gowns',
-                      'Suede & Leather Cleaning',
-                      'Shoe Repair',
-                      'Wash & Fold',
-                      'Folding Dress Shirt Services'
+                      { name: 'Delivery', path: '/services' },
+                      { name: 'Alterations & Tailoring', path: '/services' },
+                      { name: 'Interior Cleaning', path: '/services' },
+                      { name: 'Cleaning Household Items', path: '/services' },
+                      { name: 'Dry Cleaning', path: '/services' },
+                      { name: 'Wedding Gowns', path: '/services' },
+                      { name: 'Suede & Leather Cleaning', path: '/services' },
+                      { name: 'Shoe Repair', path: '/services' },
+                      { name: 'Wash & Fold', path: '/services/wash-fold' },
+                      { name: 'Folding Dress Shirt Services', path: '/services' }
                     ].map((service) => (
                       <Link
-                        key={service}
-                        href="/services"
+                        key={service.name}
+                        href={service.path}
                         className="block px-6 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5"
                       >
-                        {service}
+                        {service.name}
                       </Link>
                     ))}
                   </div>
