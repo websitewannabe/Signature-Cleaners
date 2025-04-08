@@ -51,23 +51,11 @@ export default function AuthPage() {
                 <CardDescription>Create a new account and save $10 on your first order</CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" type="text" placeholder="Enter your full name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-email">Email</Label>
-                    <Input id="signup-email" type="email" placeholder="Enter your email" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="signup-password">Password</Label>
-                    <Input id="signup-password" type="password" placeholder="Create a password" />
-                  </div>
+                <a href="https://account.mydrycleaner.com/SIGNATUREPA/#/customer-signup" className="block">
                   <Button className="w-full bg-[#F9A826] hover:bg-[#E89212] text-white">
                     Create Account
                   </Button>
-                </form>
+                </a>
               </CardContent>
             </Card>
           </div>
