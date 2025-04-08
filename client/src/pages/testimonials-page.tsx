@@ -97,19 +97,21 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <p className="text-neutral-600 mb-4 italic">
-                  "My wedding dress had a tough stain that two other cleaners
-                  couldn't remove. Signature Cleaners not only removed it but
-                  restored the dress to look like new. Absolutely impressed!"
+                  "I was in a very tight spot with needed my uniform dry cleaned
+                  in less than 2 days. Not only did they get it done within a
+                  few hours, but they were amazing to talk to while I was in
+                  there. I highly recommend them and wouldn’t take my uniforms
+                  anywhere else!"
                 </p>
                 <div className="flex items-center">
                   <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    J
+                    D
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-900">
-                      Jennifer Parks
+                      Dan Divalerio
                     </h4>
-                    <p className="text-sm text-neutral-500">Recent Bride</p>
+                    <p className="text-sm text-neutral-500">Customer</p>
                   </div>
                 </div>
               </div>
@@ -133,21 +135,20 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <p className="text-neutral-600 mb-4 italic">
-                  "As a business owner with multiple suits, I need reliable
-                  cleaning. Signature Cleaners' pickup service and consistent
-                  quality have made them my go-to for the past 3 years."
+                  "Took my husband's clothes in, that he needed in a pinch, for
+                  work. They got them cleaned and pressed quickly. Price was
+                  more than reasonable. Best of all there was no trace of the
+                  ink stains left when done. And, the staff were all friendly.""
                 </p>
                 <div className="flex items-center">
                   <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    D
+                    M
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-900">
-                      David Chen
+                      Mary Beth McDowell
                     </h4>
-                    <p className="text-sm text-neutral-500">
-                      Local Business Owner
-                    </p>
+                    <p className="text-sm text-neutral-500">Customer</p>
                   </div>
                 </div>
               </div>
@@ -157,7 +158,7 @@ export default function TestimonialsPage() {
                   {[...Array(5)].map((_, i) => (
                     <div
                       key={i}
-                      className={`text-${i < 4 ? "[#F9A826]" : "neutral-300"}`}
+                      className={`text-${i < 5 ? "[#F9A826]" : "neutral-300"}`}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -171,19 +172,20 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <p className="text-neutral-600 mb-4 italic">
-                  "The alterations service is top-notch. They adjusted several
-                  dresses for me that now fit perfectly. Their pricing is
-                  reasonable and the turnaround time is quick."
+                  "The customer service was absolutely amazing. I needed to have
+                  a suit jacket repaired and cleaned, with short lead time. They
+                  came through with high quality - on time! I highly recommend
+                  their service "
                 </p>
                 <div className="flex items-center">
                   <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                    L
+                    M
                   </div>
                   <div>
                     <h4 className="font-semibold text-neutral-900">
-                      Lisa Rodriguez
+                      Mark Schulz
                     </h4>
-                    <p className="text-sm text-neutral-500">Regular Customer</p>
+                    <p className="text-sm text-neutral-500">Customer</p>
                   </div>
                 </div>
               </div>
