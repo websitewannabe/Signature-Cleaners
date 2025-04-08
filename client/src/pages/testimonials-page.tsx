@@ -15,13 +15,13 @@ export default function TestimonialsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-[#D8BCAB] py-28">
+      <section className="bg-[#424B4D] py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-[#4A2512]">
+            <h1 className="text-4xl md:text-5xl font-bold text-white">
               Customer Testimonials
             </h1>
-            <p className="mt-4 text-xl text-[#4A2512] text-opacity-90 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
               See what our customers have to say about their experience with
               Signature Cleaners
             </p>
