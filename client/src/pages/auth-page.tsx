@@ -37,7 +37,7 @@ export default function AuthPage() {
               </CardHeader>
               <CardContent>
                 <a href="https://account.mydrycleaner.com/SIGNATUREPA/#/login" className="block">
-                  <Button className="w-full bg-primary hover:bg-primary/90">
+                  <Button className="w-full bg-[#790003] hover:bg-[#5a0002] text-white">
                     Log In or Pay Bill
                   </Button>
                 </a>
@@ -52,7 +52,7 @@ export default function AuthPage() {
               </CardHeader>
               <CardContent>
                 <a href="https://account.mydrycleaner.com/SIGNATUREPA/#/customer-signup" className="block">
-                  <Button className="w-full bg-[#F9A826] hover:bg-[#E89212] text-white">
+                  <Button className="w-full bg-[#790003] hover:bg-[#5a0002] text-white">
                     Create Account
                   </Button>
                 </a>
