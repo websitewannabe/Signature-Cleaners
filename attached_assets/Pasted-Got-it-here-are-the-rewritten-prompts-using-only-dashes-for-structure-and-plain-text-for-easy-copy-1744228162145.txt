@@ -1,0 +1,59 @@
+Got it — here are the rewritten prompts using only dashes for structure and plain text for easy copy-paste.
+
+---
+
+**Prompt 2A: Rebuild the Header Layout Structure**
+
+Rebuild the `header.tsx` file from scratch using a clean flex layout.
+
+- The header should have three sections:
+  - Left section: the logo
+  - Center section: the main navigation
+  - Right section: the account and contact links
+
+- In the left section:
+  - Add the Signature Cleaners logo
+  - Make the logo link to "/"
+
+- In the center section:
+  - Add a Home icon that links to "/"
+  - Add a SERVICES link that routes to "/services"
+  - Add an ABOUT US link that routes to "/about"
+  - For now, do not include the dropdown, just make the SERVICES link functional
+
+- In the right section:
+  - Add a CONTACT link that routes to "/contact"
+  - Add a MY ACCOUNT link that routes to "/auth"
+
+- Make sure the layout is done using Flexbox
+- Each section should be spaced evenly and vertically centered
+- Use Tailwind classes to match the existing header design including background transparency, scroll shadow, and blur
+
+---
+
+**Prompt 2B: Add Services Dropdown and Mobile Navigation**
+
+Now build on the header layout created in the previous step by adding the dropdown menu and mobile nav.
+
+- Add a hoverable dropdown to the SERVICES link
+- The dropdown should include links to the following paths:
+  - Delivery → "/delivery"
+  - Alterations & Tailoring → "/alteration-tailoring"
+  - Interior Cleaning → "/interior-cleaning"
+  - Clean Household Items → "/clean-household-items"
+  - Dry Cleaning → "/dry-cleaning"
+  - Wedding Gowns → "/wedding-gown"
+  - Suede & Leather Cleaning → "/suede-leather-cleaning"
+  - Shoe Repair → "/shoe-repair"
+  - Wash & Fold → "/services/wash-fold"
+  - Folding Dress Shirt Services → "/services/folding-dress-shirt"
+
+- Add a mobile navigation menu using the `Sheet` component
+- The mobile menu should include all main links, in the same order as desktop
+- Inside the mobile menu, place CONTACT before MY ACCOUNT
+- The services dropdown items should be shown as regular links in the mobile view
+- Make sure everything is responsive and styled like the rest of the site (dark background, white text, hover effects)
+
+---
+
+Let me know if you want these converted to JSX or Tailwind snippets too.
