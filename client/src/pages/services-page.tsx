@@ -62,6 +62,30 @@ export default function ServicesPage() {
                         <p className="text-neutral-600 line-clamp-3">
                           {service.description}
                         </p>
+                        {(() => {
+                          const serviceRoutes = {
+                            "Valet Pick Up & Delivery": "/delivery-page",
+                            "Alterations & Tailoring": "/alteration-tailoring-page",
+                            "Interior Cleaning": "/interior-cleaning-page",
+                            "Cleaning of Household Items": "/clean-household-items-page",
+                            "Professional Dry Cleaners": "/dry-cleaning-page",
+                            "Wedding Gowns": "/wedding-gown-page",
+                            "Suede & Leather Cleaning": "/suede-leather-cleaning",
+                            "Shoe Repair": "/shoe-repair",
+                            "Wash & Fold": "/wash-fold-page",
+                            "Folding Dress Shirt Services": "/folding-dress-shirt-page"
+                          };
+                          return (
+                            <Link href={serviceRoutes[service.name] || "/services"} className="block mt-4">
+                              <Button 
+                                variant="outline"
+                                className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                              >
+                                Learn More
+                              </Button>
+                            </Link>
+                          );
+                        })()}
                       </div>
                       <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
                         <span className="text-[#790003] font-semibold text-lg">
