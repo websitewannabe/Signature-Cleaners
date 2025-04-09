@@ -18,7 +18,10 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const isTransparentPage = location === "/" || location === "/services" || location === "/wash-fold";
+      const isTransparentPage =
+        location === "/" ||
+        location === "/services" ||
+        location === "/services/wash-fold";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
@@ -29,15 +32,14 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
 
-  const isTransparentPage = location === "/" || location === "/services" || location === "/wash-fold";
+  const isTransparentPage =
+    location === "/" || location === "/services" || location === "/wash-fold";
   const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
     isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
   }`;
 
   return (
-    <header
-      className={headerStyles}
-    >
+    <header className={headerStyles}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex justify-between items-center h-24">
           {/* Left Navigation */}
@@ -51,16 +53,16 @@ const Header = () => {
               <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-8">
                 <div className="py-2">
                   {[
-                    { name: 'Delivery', path: '/services' },
-                    { name: 'Alterations & Tailoring', path: '/services' },
-                    { name: 'Interior Cleaning', path: '/services' },
-                    { name: 'Cleaning Household Items', path: '/services' },
-                    { name: 'Dry Cleaning', path: '/services' },
-                    { name: 'Wedding Gowns', path: '/services' },
-                    { name: 'Suede & Leather Cleaning', path: '/services' },
-                    { name: 'Shoe Repair', path: '/services' },
-                    { name: 'Wash & Fold', path: '/services/wash-fold' },
-                    { name: 'Folding Dress Shirt Services', path: '/services' }
+                    { name: "Delivery", path: "/services" },
+                    { name: "Alterations & Tailoring", path: "/services" },
+                    { name: "Interior Cleaning", path: "/services" },
+                    { name: "Cleaning Household Items", path: "/services" },
+                    { name: "Dry Cleaning", path: "/services" },
+                    { name: "Wedding Gowns", path: "/services" },
+                    { name: "Suede & Leather Cleaning", path: "/services" },
+                    { name: "Shoe Repair", path: "/services" },
+                    { name: "Wash & Fold", path: "/services/wash-fold" },
+                    { name: "Folding Dress Shirt Services", path: "/services" },
                   ].map((service) => (
                     <Link
                       key={service.name}
@@ -135,16 +137,19 @@ const Header = () => {
                       current={location === "/services"}
                     />
                     {[
-                      { name: 'Delivery', path: '/services' },
-                      { name: 'Alterations & Tailoring', path: '/services' },
-                      { name: 'Interior Cleaning', path: '/services' },
-                      { name: 'Cleaning Household Items', path: '/services' },
-                      { name: 'Dry Cleaning', path: '/services' },
-                      { name: 'Wedding Gowns', path: '/services' },
-                      { name: 'Suede & Leather Cleaning', path: '/services' },
-                      { name: 'Shoe Repair', path: '/services' },
-                      { name: 'Wash & Fold', path: '/services/wash-fold' },
-                      { name: 'Folding Dress Shirt Services', path: '/services' }
+                      { name: "Delivery", path: "/services" },
+                      { name: "Alterations & Tailoring", path: "/services" },
+                      { name: "Interior Cleaning", path: "/services" },
+                      { name: "Cleaning Household Items", path: "/services" },
+                      { name: "Dry Cleaning", path: "/services" },
+                      { name: "Wedding Gowns", path: "/services" },
+                      { name: "Suede & Leather Cleaning", path: "/services" },
+                      { name: "Shoe Repair", path: "/services" },
+                      { name: "Wash & Fold", path: "/services/wash-fold" },
+                      {
+                        name: "Folding Dress Shirt Services",
+                        path: "/services",
+                      },
                     ].map((service) => (
                       <Link
                         key={service.name}
