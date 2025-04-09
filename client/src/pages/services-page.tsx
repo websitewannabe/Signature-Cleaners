@@ -1,15 +1,93 @@
-import { useQuery } from "@tanstack/react-query";
+
 import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
+
+const services = [
+  {
+    id: 1,
+    name: "Valet Pick Up & Delivery",
+    description: "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
+    imageUrl: "/src/images/delivery.gif",
+    price: "Free Delivery",
+    href: "/delivery-page"
+  },
+  {
+    id: 2,
+    name: "Alterations & Tailoring",
+    description: "Expert alterations and tailoring services to ensure your garments fit perfectly. From simple hemming to complex restructuring.",
+    imageUrl: "/src/images/tailoring.gif",
+    price: "From $14.99",
+    href: "/alteration-tailoring-page"
+  },
+  {
+    id: 3,
+    name: "Interior Cleaning",
+    description: "Professional cleaning services for your home's interior textiles, including curtains, upholstery, and more.",
+    imageUrl: "/src/images/interior-cleaning.gif",
+    price: "From $29.99",
+    href: "/interior-cleaning-page"
+  },
+  {
+    id: 4,
+    name: "Cleaning of Household Items",
+    description: "Comprehensive cleaning solutions for household items including comforters, blankets, and decorative pieces.",
+    imageUrl: "/src/images/household-items.gif",
+    price: "From $24.99",
+    href: "/clean-household-items-page"
+  },
+  {
+    id: 5,
+    name: "Professional Dry Cleaners",
+    description: "State-of-the-art dry cleaning services for all your delicate and special garments, ensuring the highest quality care.",
+    imageUrl: "/src/images/cleaners.gif",
+    price: "From $6.99",
+    href: "/dry-cleaning-page"
+  },
+  {
+    id: 6,
+    name: "Wedding Gowns",
+    description: "Specialized cleaning and preservation services for wedding gowns, ensuring your precious memories last a lifetime.",
+    imageUrl: "/src/images/wedding-gown.gif",
+    price: "From $99.99",
+    href: "/wedding-gown-page"
+  },
+  {
+    id: 7,
+    name: "Suede & Leather Cleaning",
+    description: "Expert cleaning and care for your suede and leather items, maintaining their look and extending their life.",
+    imageUrl: "/src/images/leather-care.gif",
+    price: "From $39.99",
+    href: "/suede-leather-cleaning"
+  },
+  {
+    id: 8,
+    name: "Shoe Repair",
+    description: "Professional shoe repair and restoration services to keep your footwear looking and feeling like new.",
+    imageUrl: "/src/images/shoe-repair.gif",
+    price: "From $25.99",
+    href: "/shoe-repair"
+  },
+  {
+    id: 9,
+    name: "Wash & Fold",
+    description: "Convenient wash and fold service for your everyday laundry needs, saving you time and effort.",
+    imageUrl: "/src/images/wash-fold.gif",
+    price: "$2.99/lb",
+    href: "/wash-fold-page"
+  },
+  {
+    id: 10,
+    name: "Folding Dress Shirt Services",
+    description: "Professional laundering and pressing services for dress shirts, ensuring a crisp, professional appearance.",
+    imageUrl: "/src/images/cleaners.gif",
+    price: "From $3.99",
+    href: "/folding-dress-shirt-page"
+  }
+];
 
 export default function ServicesPage() {
-  const { data: services, isLoading } = useQuery({
-    queryKey: ["/api/services"],
-  });
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -34,77 +112,54 @@ export default function ServicesPage() {
       {/* Services */}
       <section className="py-16 bg-[#090A0C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {isLoading ? (
-            <div className="flex justify-center items-center py-12">
-              <Loader2 className="h-8 w-8 animate-spin text-primary" />
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services &&
-                services.map((service) => (
-                  <div
-                    key={service.id}
-                    className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
-                  >
-                    <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                      <img
-                        src={service.imageUrl}
-                        alt={service.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col flex-grow">
-                      <div className="flex-grow space-y-3">
-                        <h3 className="text-xl font-semibold text-neutral-900">
-                          {service.name}
-                        </h3>
-                        <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                        <p className="text-neutral-600 line-clamp-3">
-                          {service.description}
-                        </p>
-                        {(() => {
-                          const serviceRoutes = {
-                            "Valet Pick Up & Delivery": "/delivery-page",
-                            "Alterations & Tailoring": "/alteration-tailoring-page",
-                            "Interior Cleaning": "/interior-cleaning-page",
-                            "Cleaning of Household Items": "/clean-household-items-page",
-                            "Professional Dry Cleaners": "/dry-cleaning-page",
-                            "Wedding Gowns": "/wedding-gown-page",
-                            "Suede & Leather Cleaning": "/suede-leather-cleaning",
-                            "Shoe Repair": "/shoe-repair",
-                            "Wash & Fold": "/wash-fold-page",
-                            "Folding Dress Shirt Services": "/folding-dress-shirt-page"
-                          };
-                          return (
-                            <Link href={serviceRoutes[service.name] || "/services"} className="block mt-4">
-                              <Button 
-                                variant="outline"
-                                className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                              >
-                                Learn More
-                              </Button>
-                            </Link>
-                          );
-                        })()}
-                      </div>
-                      <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                        <span className="text-[#790003] font-semibold text-lg">
-                          {service.price}
-                        </span>
-                        <Link
-                          href="/schedule"
-                          className="w-full sm:w-auto sm:ml-auto"
-                        >
-                          <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                            Book Now
-                          </Button>
-                        </Link>
-                      </div>
-                    </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
+              >
+                <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                  <img
+                    src={service.imageUrl}
+                    alt={service.name}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex-grow space-y-3">
+                    <h3 className="text-xl font-semibold text-neutral-900">
+                      {service.name}
+                    </h3>
+                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                    <p className="text-neutral-600 line-clamp-3">
+                      {service.description}
+                    </p>
+                    <Link href={service.href} className="block mt-4">
+                      <Button 
+                        variant="outline"
+                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                      >
+                        Learn More
+                      </Button>
+                    </Link>
                   </div>
-                ))}
-            </div>
-          )}
+                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                    <span className="text-[#790003] font-semibold text-lg">
+                      {service.price}
+                    </span>
+                    <Link
+                      href="/schedule"
+                      className="w-full sm:w-auto sm:ml-auto"
+                    >
+                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                        Book Now
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
