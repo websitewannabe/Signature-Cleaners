@@ -41,9 +41,47 @@ const Header = () => {
             <Link href="/" className="hover:text-white/80 py-2">
               Home
             </Link>
-            <Link href="/services" className="hover:text-white/80 py-2">
-              Services
-            </Link>
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent">Services</NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                    <div className="grid gap-3 p-4 w-[400px]">
+                      <Link href="/delivery-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Valet Pick Up & Delivery
+                      </Link>
+                      <Link href="/alteration-tailoring-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Alterations & Tailoring
+                      </Link>
+                      <Link href="/interior-cleaning-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Interior Cleaning
+                      </Link>
+                      <Link href="/clean-household-items-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Cleaning of Household Items
+                      </Link>
+                      <Link href="/dry-cleaning-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Professional Dry Cleaners
+                      </Link>
+                      <Link href="/wedding-gown-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Wedding Gowns
+                      </Link>
+                      <Link href="/suede-leather-cleaning" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Suede & Leather Cleaning
+                      </Link>
+                      <Link href="/shoe-repair" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Shoe Repair
+                      </Link>
+                      <Link href="/wash-fold-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Wash & Fold
+                      </Link>
+                      <Link href="/folding-dress-shirt-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                        Folding Dress Shirt Services
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             <Link href="/about" className="hover:text-white/80 py-2">
               About Us
             </Link>
