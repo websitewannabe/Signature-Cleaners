@@ -31,7 +31,7 @@ const Header = () => {
               <img
                 src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className="h-14 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
           </div>
