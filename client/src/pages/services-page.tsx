@@ -7,83 +7,93 @@ const services = [
   {
     id: 1,
     name: "Valet Pick Up & Delivery",
-    description: "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
+    description:
+      "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
     imageUrl: "/src/images/delivery.gif",
     price: "Free Delivery",
-    href: "/delivery-page"
+    href: "/delivery",
   },
   {
     id: 2,
     name: "Alterations & Tailoring",
-    description: "Expert alterations and tailoring services to ensure your garments fit perfectly. From simple hemming to complex restructuring.",
+    description:
+      "Expert alterations and tailoring services to ensure your garments fit perfectly. From simple hemming to complex restructuring.",
     imageUrl: "/src/images/tailoring.gif",
     price: "From $14.99",
-    href: "/alteration-tailoring-page"
+    href: "/alteration-tailoring",
   },
   {
     id: 3,
     name: "Interior Cleaning",
-    description: "Professional cleaning services for your home's interior textiles, including curtains, upholstery, and more.",
+    description:
+      "Professional cleaning services for your home's interior textiles, including curtains, upholstery, and more.",
     imageUrl: "/src/images/interior-cleaning.gif",
     price: "From $29.99",
-    href: "/interior-cleaning-page"
+    href: "/interior-cleaning",
   },
   {
     id: 4,
     name: "Cleaning of Household Items",
-    description: "Comprehensive cleaning solutions for household items including comforters, blankets, and decorative pieces.",
+    description:
+      "Comprehensive cleaning solutions for household items including comforters, blankets, and decorative pieces.",
     imageUrl: "/src/images/household-items.gif",
     price: "From $24.99",
-    href: "/clean-household-items-page"
+    href: "/clean-household-items",
   },
   {
     id: 5,
     name: "Professional Dry Cleaners",
-    description: "State-of-the-art dry cleaning services for all your delicate and special garments, ensuring the highest quality care.",
+    description:
+      "State-of-the-art dry cleaning services for all your delicate and special garments, ensuring the highest quality care.",
     imageUrl: "/src/images/cleaners.gif",
     price: "From $6.99",
-    href: "/dry-cleaning-page"
+    href: "/dry-cleaning",
   },
   {
     id: 6,
     name: "Wedding Gowns",
-    description: "Specialized cleaning and preservation services for wedding gowns, ensuring your precious memories last a lifetime.",
+    description:
+      "Specialized cleaning and preservation services for wedding gowns, ensuring your precious memories last a lifetime.",
     imageUrl: "/src/images/wedding-gown.gif",
     price: "From $99.99",
-    href: "/wedding-gown-page"
+    href: "/wedding-gown",
   },
   {
     id: 7,
     name: "Suede & Leather Cleaning",
-    description: "Expert cleaning and care for your suede and leather items, maintaining their look and extending their life.",
+    description:
+      "Expert cleaning and care for your suede and leather items, maintaining their look and extending their life.",
     imageUrl: "/src/images/leather-care.gif",
     price: "From $39.99",
-    href: "/suede-leather-cleaning-page" //Corrected href
+    href: "/suede-leather-cleaning", //Corrected href
   },
   {
     id: 8,
     name: "Shoe Repair",
-    description: "Professional shoe repair and restoration services to keep your footwear looking and feeling like new.",
+    description:
+      "Professional shoe repair and restoration services to keep your footwear looking and feeling like new.",
     imageUrl: "/src/images/shoe-repair.gif",
     price: "From $25.99",
-    href: "/shoe-repair-page" //Corrected href
+    href: "/shoe-repair", //Corrected href
   },
   {
     id: 9,
     name: "Wash & Fold",
-    description: "Convenient wash and fold service for your everyday laundry needs, saving you time and effort.",
+    description:
+      "Convenient wash and fold service for your everyday laundry needs, saving you time and effort.",
     imageUrl: "/src/images/wash-fold.gif",
     price: "$2.99/lb",
-    href: "/wash-fold-page"
+    href: "/wash-fold",
   },
   {
     id: 10,
     name: "Folding Dress Shirt Services",
-    description: "Professional laundering and pressing services for dress shirts, ensuring a crisp, professional appearance.",
+    description:
+      "Professional laundering and pressing services for dress shirts, ensuring a crisp, professional appearance.",
     imageUrl: "/src/images/cleaners.gif",
     price: "From $3.99",
-    href: "/folding-dress-shirt-page"
-  }
+    href: "/folding-dress-shirt",
+  },
 ];
 
 export default function ServicesPage() {
@@ -134,7 +144,7 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
                     <Link href={service.href} className="block mt-4">
-                      <Button 
+                      <Button
                         variant="outline"
                         className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
                       >
