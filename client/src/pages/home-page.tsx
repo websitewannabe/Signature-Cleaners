@@ -238,9 +238,11 @@ export default function HomePage() {
               <Loader2 className="h-8 w-8 animate-spin text-white" />
             </div>
           ) : (
-            <div className="grid md:grid-cols-3 gap-6">
-              {testimonials &&
-                testimonials.map((testimonial) => (
+            <div className="relative">
+              <div className="overflow-hidden">
+                <div className="flex transition-transform duration-500 ease-out space-x-6">
+                  {testimonials &&
+                    testimonials.map((testimonial, index) => (
                   <div
                     key={testimonial.id}
                     className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full"
@@ -284,6 +286,34 @@ export default function HomePage() {
                     </div>
                   </div>
                 ))}
+                </div>
+              </div>
+              <button 
+                onClick={() => {
+                  const container = document.querySelector('#testimonials .flex');
+                  if (container) {
+                    container.scrollLeft -= 400;
+                  }
+                }}
+                className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button 
+                onClick={() => {
+                  const container = document.querySelector('#testimonials .flex');
+                  if (container) {
+                    container.scrollLeft += 400;
+                  }
+                }}
+                className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-3 rounded-full"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
           )}
         </div>
