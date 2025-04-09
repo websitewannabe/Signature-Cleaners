@@ -1,14 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Home } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isOpaque, setIsOpaque] = useState(false);
@@ -49,35 +41,9 @@ const Header = () => {
             <Link href="/" className="hover:text-white/80 py-2">
               Home
             </Link>
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent">Services</NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                    <div className="grid grid-cols-2 gap-3 p-4 w-[500px]">
-                      <Link href="/dry-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
-                        Dry Cleaning
-                      </Link>
-                      <Link href="/wash-fold" className="block p-2 hover:bg-neutral-100 rounded">
-                        Wash & Fold
-                      </Link>
-                      <Link href="/alteration-tailoring" className="block p-2 hover:bg-neutral-100 rounded">
-                        Alterations & Tailoring
-                      </Link>
-                      <Link href="/wedding-gown" className="block p-2 hover:bg-neutral-100 rounded">
-                        Wedding Gowns
-                      </Link>
-                      <Link href="/suede-leather-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
-                        Suede & Leather
-                      </Link>
-                      <Link href="/shoe-repair" className="block p-2 hover:bg-neutral-100 rounded">
-                        Shoe Repair
-                      </Link>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+            <Link href="/services" className="hover:text-white/80 py-2">
+              Services
+            </Link>
             <Link href="/about" className="hover:text-white/80 py-2">
               About Us
             </Link>
