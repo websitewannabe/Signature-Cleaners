@@ -22,22 +22,20 @@ const Header = () => {
   return (
     <header className={headerStyles}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-20">
           {/* Left Section - Logo */}
-          <div className="flex-1">
+          <div className="w-1/4 flex justify-start">
             <Link href="/" className="flex-shrink-0">
               <img
                 src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className={`h-24 w-auto transition-all duration-300 ${
-                  isOpaque ? "scale-90" : "scale-100"
-                }`}
+                className="h-20 w-auto transition-all duration-300"
               />
             </Link>
           </div>
 
           {/* Center Section - Navigation */}
-          <nav className="flex items-center space-x-8 flex-1 justify-center text-lg">
+          <nav className="flex items-center justify-center space-x-8 w-2/4 text-lg">
             <Link
               href="/"
               className="flex items-center px-3 py-2 text-white hover:text-white/80"
@@ -59,7 +57,7 @@ const Header = () => {
           </nav>
 
           {/* Right Section - Contact & Account */}
-          <div className="flex items-center justify-end space-x-8 flex-1 text-lg">
+          <div className="w-1/4 flex justify-end space-x-8 text-lg">
             <Link
               href="/contact"
               className="text-white hover:text-white/80 font-medium tracking-wider"
