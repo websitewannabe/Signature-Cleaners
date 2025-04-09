@@ -50,7 +50,7 @@ function Router() {
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
       <Route path="/auth" component={AuthPage} /> {/* Added Auth route */}
-      <Route path="/delivery-page" component={DeliveryPage} /> {/* Added Delivery page route */}
+      <Route path="/delivery" component={DeliveryPage} /> {/* Added Delivery page route */}
       <Route component={NotFound} />
     </Switch>
   );
