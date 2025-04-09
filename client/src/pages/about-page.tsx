@@ -12,11 +12,11 @@ export default function AboutPage() {
       {/* About Content */}
       <section className="py-40 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+            Our Story
+          </h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div>
-              <h2 className="text-4xl md:text-6xl font-bold text-white text-center mt-8 mb-12">
-                Our Story
-              </h2>
               <p className="mt-4 text-lg text-white/80">
                 Signature Cleaners was founded on simple principles: provide a
                 quality product, deliver excellent customer service, and offer
