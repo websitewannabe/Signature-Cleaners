@@ -42,32 +42,32 @@ export default function ServicesPage() {
                 services.map((service) => (
                   <div
                     key={service.id}
-                    className="bg-white border border-neutral-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col h-full"
+                    className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
                   >
-                    <div className="h-48 bg-neutral-200 flex-shrink-0">
+                    <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
                       <img
                         src={service.imageUrl}
                         alt={service.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
-                      <div className="flex-grow">
+                      <div className="flex-grow space-y-3">
                         <h3 className="text-xl font-semibold text-neutral-900">
                           {service.name}
                         </h3>
-                        <p className="mt-2 text-neutral-600">
+                        <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                        <p className="text-neutral-600 line-clamp-3">
                           {service.description}
                         </p>
                       </div>
-                      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                        <span className="text-primary font-medium">
+                      <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                        <span className="text-[#790003] font-semibold text-lg">
                           {service.price}
                         </span>
-                        <Link href="/schedule">
+                        <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
                           <Button
-                            size="sm"
-                            className="bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                            className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300"
                           >
                             Book Now
                           </Button>
