@@ -62,7 +62,7 @@ const Header = () => {
                     { name: "Suede & Leather Cleaning", path: "/services" },
                     { name: "Shoe Repair", path: "/services" },
                     { name: "Wash & Fold", path: "/services/wash-fold" },
-                    { name: "Folding Dress Shirt Services", path: "/services" },
+                    { name: "Folding Dress Shirt Services", path: "/services/folding-dress-shirt" },
                   ].map((service) => (
                     <Link
                       key={service.name}
