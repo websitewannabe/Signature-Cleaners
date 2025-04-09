@@ -32,7 +32,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="flex justify-center items-center py-12">
@@ -67,10 +67,11 @@ export default function ServicesPage() {
                         <span className="text-[#790003] font-semibold text-lg">
                           {service.price}
                         </span>
-                        <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
-                          <Button
-                            className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300"
-                          >
+                        <Link
+                          href="/schedule"
+                          className="w-full sm:w-auto sm:ml-auto"
+                        >
+                          <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
                             Book Now
                           </Button>
                         </Link>
@@ -84,7 +85,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Price List */}
-      <section className="py-16 bg-neutral-50">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-neutral-900">Price List</h2>
