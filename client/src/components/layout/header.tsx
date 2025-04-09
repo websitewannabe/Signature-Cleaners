@@ -62,7 +62,7 @@ const Header = () => {
                 <div className="py-2">
                   {[
                     { name: "Delivery", path: "/services" },
-                    { name: "Alterations & Tailoring", path: "/services" },
+                    { name: "Alterations & Tailoring", path: "/alteration-tailoring" },
                     { name: "Interior Cleaning", path: "/interior-cleaning" },
                     { name: "Clean Household Items", path: "/clean-household-items" },
                     { name: "Dry Cleaning", path: "/dry-cleaning" },
