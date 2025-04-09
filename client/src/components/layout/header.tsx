@@ -23,6 +23,7 @@ const Header = () => {
         location === "/services" ||
         location === "/services/wash-fold" ||
         location === "/services/folding-dress-shirt" ||
+        location === "/shoe-repair" ||
         location === "/about";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };

@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ export default function ShoeRepairPage() {
 
       {/* Hero Section */}
       <section className="relative py-28">
-        <div className="absolute inset-0 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/shoe-repair.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
@@ -19,7 +18,8 @@ export default function ShoeRepairPage() {
               Professional Shoe Repair
             </h1>
             <p className="mt-6 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              Expert shoe repair and restoration services to extend the life of your favorite footwear
+              Expert shoe repair and restoration services to extend the life of
+              your favorite footwear
             </p>
           </div>
         </div>
@@ -34,7 +34,10 @@ export default function ShoeRepairPage() {
                 Expert Shoe Repair Services
               </h2>
               <p className="text-lg text-neutral-600 mb-6">
-                Our skilled craftsmen provide comprehensive shoe repair services to restore and extend the life of your footwear. From resoling to heel replacement, we handle all types of repairs with precision and care.
+                Our skilled craftsmen provide comprehensive shoe repair services
+                to restore and extend the life of your footwear. From resoling
+                to heel replacement, we handle all types of repairs with
+                precision and care.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -108,7 +111,9 @@ export default function ShoeRepairPage() {
                   <span className="font-semibold">From $25.99</span>
                 </div>
                 <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Full Sole Replacement</span>
+                  <span className="text-neutral-600">
+                    Full Sole Replacement
+                  </span>
                   <span className="font-semibold">From $45.99</span>
                 </div>
                 <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
