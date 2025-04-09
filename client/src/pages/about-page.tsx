@@ -311,31 +311,22 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#790003] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA Section */}
+      <section className="relative py-16">
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/70"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Experience the Signature Cleaners Difference
+            Ready to simplify your laundry routine?
           </h2>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/schedule">
-              <Button
-                size="lg"
-                className="w-full sm:w-auto bg-white hover:bg-[#F6AE2D] text-black"
-              >
-                Schedule a Pickup
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white/10"
-              >
-                Contact Us
-              </Button>
-            </Link>
-          </div>
+          <Link href="/schedule">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-8"
+            >
+              Schedule a Pickup
+            </Button>
+          </Link>
         </div>
       </section>
 
