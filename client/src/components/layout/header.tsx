@@ -8,8 +8,7 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import { Menu, Home } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const [location] = useLocation();
@@ -52,28 +51,9 @@ const Header = () => {
   return (
     <header className={headerStyles}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center h-24">
-          {/* Logo */}
-          <Link href="/" className="flex items-center mr-8">
-            <img
-              src="/src/images/signature-cleaners-logo-white.png"
-              alt="Signature Cleaners"
-              className={`h-24 w-auto transition-all duration-300 ${
-                isOpaque ? "scale-90" : "scale-100"
-              }`}
-            />
-          </Link>
-
-          {/* Center Navigation */}
+        <div className="flex justify-between items-center h-24">
+          {/* Left Navigation */}
           <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link href="/" className="flex items-center px-3 py-2 text-white hover:text-white/80">
-                  <Home className="h-5 w-5" aria-label="Home" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>Home</TooltipContent>
-            </Tooltip>
             <div className="relative group inline-flex">
               <NavLink
                 href="/services"
@@ -124,19 +104,28 @@ const Header = () => {
             />
           </nav>
 
-          
+          {/* Centered Logo */}
+          <Link href="/" className="flex items-center mx-6 pt-4">
+            <img
+              src="/src/images/signature-cleaners-logo-white.png"
+              alt="Signature Cleaners"
+              className={`h-24 w-auto transition-all duration-300 ${
+                isOpaque ? "scale-90" : "scale-100"
+              }`}
+            />
+          </Link>
 
           {/* Right Navigation and CTA */}
           <div className="hidden md:flex items-center justify-center space-x-8 flex-1 text-lg">
             <NavLink
-              href="/contact"
-              label="CONTACT"
-              current={location === "/contact"}
-            />
-            <NavLink
               href="/auth"
               label="MY ACCOUNT"
               current={location === "/auth"}
+            />
+            <NavLink
+              href="/contact"
+              label="CONTACT"
+              current={location === "/contact"}
             />
           </div>
 
@@ -157,16 +146,6 @@ const Header = () => {
                     href="/"
                     label="HOME"
                     current={location === "/"}
-                  />
-                  <MobileNavLink
-                    href="/"
-                    label="HOME"
-                    current={location === "/"}
-                  />
-                  <MobileNavLink
-                    href="/contact"
-                    label="CONTACT"
-                    current={location === "/contact"}
                   />
                   <MobileNavLink
                     href="/auth"
