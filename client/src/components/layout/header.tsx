@@ -20,56 +20,42 @@ const Header = () => {
   }`;
 
   return (
-    <header className={headerStyles}>
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-20">
-          {/* Left Section - Logo */}
-          <div className="flex items-center flex-shrink-0">
-            <Link href="/" className="flex-shrink-0">
+    <header className="bg-black/60 backdrop-blur-sm w-full fixed top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex h-20 items-center justify-between">
+          {/* Left: Logo */}
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center space-x-2">
               <img
                 src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className="h-16 w-auto transition-all duration-300"
+                className="h-14 w-auto"
               />
             </Link>
           </div>
 
-          {/* Center Section - Navigation */}
-          <nav className="flex items-center justify-center flex-grow space-x-8 text-lg">
-            <Link
-              href="/"
-              className="flex items-center px-3 py-2 text-white hover:text-white/80"
-            >
-              <Home className="h-5 w-5" aria-label="Home" />
+          {/* Center: Nav Links */}
+          <nav className="hidden md:flex items-center space-x-8 text-white text-sm font-medium">
+            <Link href="/" className="hover:text-white/80">
+              Home
             </Link>
-            <Link
-              href="/services"
-              className="text-white hover:text-white/80 font-medium tracking-wider"
-            >
-              SERVICES
+            <Link href="/services" className="hover:text-white/80">
+              Services
             </Link>
-            <Link
-              href="/about"
-              className="text-white hover:text-white/80 font-medium tracking-wider"
-            >
-              ABOUT US
+            <Link href="/about" className="hover:text-white/80">
+              About Us
+            </Link>
+            <Link href="/contact" className="hover:text-white/80">
+              Contact
+            </Link>
+            <Link href="/auth" className="hover:text-white/80">
+              My Account
             </Link>
           </nav>
 
-          {/* Right Section - Contact & Account */}
-          <div className="flex items-center space-x-8">
-            <Link
-              href="/contact"
-              className="text-white hover:text-white/80 font-medium tracking-wider"
-            >
-              CONTACT
-            </Link>
-            <Link
-              href="/auth"
-              className="text-white hover:text-white/80 font-medium tracking-wider"
-            >
-              MY ACCOUNT
-            </Link>
+          {/* Right: Optional - Mobile Menu or CTA */}
+          <div className="md:hidden">
+            {/* Your mobile menu trigger here (Sheet, hamburger icon, etc.) */}
           </div>
         </div>
       </div>
