@@ -62,7 +62,7 @@ const Header = () => {
                     { name: "Dry Cleaning", path: "/services" },
                     { name: "Wedding Gowns", path: "/services" },
                     { name: "Suede & Leather Cleaning", path: "/services" },
-                    { name: "Shoe Repair", path: "/services" },
+                    { name: "Shoe Repair", path: "/shoe-repair" },
                     { name: "Wash & Fold", path: "/services/wash-fold" },
                     {
                       name: "Folding Dress Shirt Services",
@@ -149,7 +149,7 @@ const Header = () => {
                       { name: "Dry Cleaning", path: "/services" },
                       { name: "Wedding Gowns", path: "/services" },
                       { name: "Suede & Leather Cleaning", path: "/services" },
-                      { name: "Shoe Repair", path: "/services" },
+                      { name: "Shoe Repair", path: "/shoe-repair" },
                       { name: "Wash & Fold", path: "/services/wash-fold" },
                       {
                         name: "Folding Dress Shirt Services",
