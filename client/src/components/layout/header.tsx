@@ -29,6 +29,7 @@ const Header = () => {
         location === "/about" ||
         location === "/dry-cleaning" ||
         location === "/clean-household-items" ||
+        location === "/alteration-tailoring" ||
         location === "/interior-cleaning";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
@@ -62,9 +63,15 @@ const Header = () => {
                 <div className="py-2">
                   {[
                     { name: "Delivery", path: "/services" },
-                    { name: "Alterations & Tailoring", path: "/alteration-tailoring" },
+                    {
+                      name: "Alterations & Tailoring",
+                      path: "/alteration-tailoring",
+                    },
                     { name: "Interior Cleaning", path: "/interior-cleaning" },
-                    { name: "Clean Household Items", path: "/clean-household-items" },
+                    {
+                      name: "Clean Household Items",
+                      path: "/clean-household-items",
+                    },
                     { name: "Dry Cleaning", path: "/dry-cleaning" },
                     { name: "Wedding Gowns", path: "/wedding-gown" },
                     {
@@ -154,7 +161,10 @@ const Header = () => {
                       { name: "Delivery", path: "/services" },
                       { name: "Alterations & Tailoring", path: "/services" },
                       { name: "Interior Cleaning", path: "/interior-cleaning" },
-                      { name: "Clean Household Items", path: "/clean-household-items" },
+                      {
+                        name: "Clean Household Items",
+                        path: "/clean-household-items",
+                      },
                       { name: "Dry Cleaning", path: "/dry-cleaning" },
                       { name: "Wedding Gowns", path: "/wedding-gown" },
                       { name: "Suede & Leather Cleaning", path: "/services" },
