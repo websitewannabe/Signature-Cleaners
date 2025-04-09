@@ -42,13 +42,10 @@ export default function ServicesPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services &&
                 services.map((service) => (
-                  <Link
+                  <div
                     key={service.id}
-                    href={service.name === "Valet Pick Up & Delivery" ? "/delivery" : "/schedule"}
+                    className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
                   >
-                    <div
-                      className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
-                    >
                     <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
                       <img
                         src={service.imageUrl}
@@ -80,7 +77,7 @@ export default function ServicesPage() {
                         </Link>
                       </div>
                     </div>
-                  </Link>
+                  </div>
                 ))}
             </div>
           )}
