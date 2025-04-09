@@ -37,20 +37,20 @@ const Header = () => {
           </div>
 
           {/* Center: Nav Links */}
-          <nav className="hidden md:flex items-center space-x-8 text-white text-sm font-medium">
-            <Link href="/" className="hover:text-white/80">
+          <nav className="hidden md:flex items-center space-x-12 text-white text-lg font-medium">
+            <Link href="/" className="hover:text-white/80 py-2">
               Home
             </Link>
-            <Link href="/services" className="hover:text-white/80">
+            <Link href="/services" className="hover:text-white/80 py-2">
               Services
             </Link>
-            <Link href="/about" className="hover:text-white/80">
+            <Link href="/about" className="hover:text-white/80 py-2">
               About Us
             </Link>
-            <Link href="/contact" className="hover:text-white/80">
+            <Link href="/contact" className="hover:text-white/80 py-2">
               Contact
             </Link>
-            <Link href="/auth" className="hover:text-white/80">
+            <Link href="/auth" className="hover:text-white/80 py-2">
               My Account
             </Link>
           </nav>
