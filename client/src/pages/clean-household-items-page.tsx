@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ export default function CleanHouseholdItemsPage() {
 
       {/* Hero Section */}
       <section className="relative py-28">
-        <div className="absolute inset-0 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
@@ -34,7 +33,9 @@ export default function CleanHouseholdItemsPage() {
                 Expert Care for Your Home Items
               </h2>
               <p className="text-lg text-neutral-600 mb-6">
-                Trust our expert cleaning service for your valuable household items. We use specialized cleaning techniques and gentle yet effective solutions to restore and protect your home textiles.
+                Trust our expert cleaning service for your valuable household
+                items. We use specialized cleaning techniques and gentle yet
+                effective solutions to restore and protect your home textiles.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -104,7 +105,9 @@ export default function CleanHouseholdItemsPage() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Comforters (Any Size)</span>
+                  <span className="text-neutral-600">
+                    Comforters (Any Size)
+                  </span>
                   <span className="font-semibold">From $29.99</span>
                 </div>
                 <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
