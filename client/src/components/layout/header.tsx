@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Home, Menu } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -9,16 +8,11 @@ import {
   SheetTrigger,
   SheetClose,
 } from "@/components/ui/sheet";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { Menu } from "lucide-react";
 
 const Header = () => {
   const [location] = useLocation();
+  const { user, logoutMutation } = useAuth();
   const [isOpaque, setIsOpaque] = useState(false);
 
   useEffect(() => {
@@ -41,11 +35,15 @@ const Header = () => {
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
+    // Initial check
     handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
 
+  const isTransparentPage =
+    location === "/" || location === "/services" || location === "/wash-fold";
   const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
     isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
   }`;
@@ -53,76 +51,52 @@ const Header = () => {
   return (
     <header className={headerStyles}>
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="flex items-center justify-between h-24">
-          {/* Left - Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/">
-              <img
-                src="/src/images/signature-cleaners-logo-white.png"
-                alt="Signature Cleaners"
-                className={`h-24 w-auto transition-all duration-300 ${
-                  isOpaque ? "scale-90" : "scale-100"
-                }`}
+        <div className="flex justify-between items-center h-24">
+          {/* Left Navigation */}
+          <nav className="hidden md:flex space-x-8 flex-1 justify-center text-lg">
+            <div className="relative group inline-flex">
+              <NavLink
+                href="/services"
+                label="SERVICES"
+                current={location === "/services"}
               />
-            </Link>
-          </div>
-
-          {/* Center - Navigation */}
-          <nav className="hidden md:flex items-center gap-x-8">
-            <Link
-              href="/"
-              className="flex items-center px-3 py-2 text-white hover:text-white/80"
-              aria-label="Home"
-            >
-              <Home className="h-5 w-5" />
-            </Link>
-
-            <NavigationMenu>
-              <NavigationMenuList>
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10">
-                    SERVICES
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-64 bg-black/90 backdrop-blur-sm p-2">
-                      {[
-                        { name: "Delivery", path: "/delivery" },
-                        {
-                          name: "Alterations & Tailoring",
-                          path: "/alteration-tailoring",
-                        },
-                        { name: "Interior Cleaning", path: "/interior-cleaning" },
-                        {
-                          name: "Clean Household Items",
-                          path: "/clean-household-items",
-                        },
-                        { name: "Dry Cleaning", path: "/dry-cleaning" },
-                        { name: "Wedding Gowns", path: "/wedding-gown" },
-                        {
-                          name: "Suede & Leather Cleaning",
-                          path: "/suede-leather-cleaning",
-                        },
-                        { name: "Shoe Repair", path: "/shoe-repair" },
-                        { name: "Wash & Fold", path: "/services/wash-fold" },
-                        {
-                          name: "Folding Dress Shirt Services",
-                          path: "/services/folding-dress-shirt",
-                        },
-                      ].map((service) => (
-                        <Link
-                          key={service.path}
-                          href={service.path}
-                          className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors rounded-md"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
-
+              <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-8">
+                <div className="py-2">
+                  {[
+                    { name: "Delivery", path: "/delivery" },
+                    {
+                      name: "Alterations & Tailoring",
+                      path: "/alteration-tailoring",
+                    },
+                    { name: "Interior Cleaning", path: "/interior-cleaning" },
+                    {
+                      name: "Clean Household Items",
+                      path: "/clean-household-items",
+                    },
+                    { name: "Dry Cleaning", path: "/dry-cleaning" },
+                    { name: "Wedding Gowns", path: "/wedding-gown" },
+                    {
+                      name: "Suede & Leather Cleaning",
+                      path: "/suede-leather-cleaning",
+                    },
+                    { name: "Shoe Repair", path: "/shoe-repair" },
+                    { name: "Wash & Fold", path: "/services/wash-fold" },
+                    {
+                      name: "Folding Dress Shirt Services",
+                      path: "/services/folding-dress-shirt",
+                    },
+                  ].map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.path}
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10 transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
             <NavLink
               href="/about"
               label="ABOUT US"
@@ -130,21 +104,32 @@ const Header = () => {
             />
           </nav>
 
-          {/* Right - Contact & Account */}
-          <div className="hidden md:flex items-center gap-x-8">
-            <NavLink
-              href="/contact"
-              label="CONTACT"
-              current={location === "/contact"}
+          {/* Centered Logo */}
+          <Link href="/" className="flex items-center mx-6 pt-4">
+            <img
+              src="/src/images/signature-cleaners-logo-white.png"
+              alt="Signature Cleaners"
+              className={`h-24 w-auto transition-all duration-300 ${
+                isOpaque ? "scale-90" : "scale-100"
+              }`}
             />
+          </Link>
+
+          {/* Right Navigation and CTA */}
+          <div className="hidden md:flex items-center justify-center space-x-8 flex-1 text-lg">
             <NavLink
               href="/auth"
               label="MY ACCOUNT"
               current={location === "/auth"}
             />
+            <NavLink
+              href="/contact"
+              label="CONTACT"
+              current={location === "/contact"}
+            />
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile menu button */}
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
@@ -161,6 +146,11 @@ const Header = () => {
                     href="/"
                     label="HOME"
                     current={location === "/"}
+                  />
+                  <MobileNavLink
+                    href="/auth"
+                    label="MY ACCOUNT"
+                    current={location === "/auth"}
                   />
                   <div className="border-b border-white/10">
                     <MobileNavLink
@@ -187,7 +177,7 @@ const Header = () => {
                       },
                     ].map((service) => (
                       <Link
-                        key={service.path}
+                        key={service.name}
                         href={service.path}
                         className="block px-6 py-2 text-sm text-white/80 hover:text-white hover:bg-white/5"
                       >
@@ -205,11 +195,13 @@ const Header = () => {
                     label="CONTACT"
                     current={location === "/contact"}
                   />
-                  <MobileNavLink
-                    href="/auth"
-                    label="MY ACCOUNT"
-                    current={location === "/auth"}
-                  />
+                  <div className="pt-4 mt-4 border-t border-white/20">
+                    <Link href="/schedule">
+                      <Button className="w-full bg-[#44633F] hover:bg-[#385233] text-white">
+                        Request Pickup
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>
