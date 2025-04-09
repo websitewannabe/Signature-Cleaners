@@ -24,18 +24,18 @@ const Header = () => {
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between h-20">
           {/* Left Section - Logo */}
-          <div className="w-1/4 flex justify-start">
+          <div className="flex items-center flex-shrink-0">
             <Link href="/" className="flex-shrink-0">
               <img
                 src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className="h-20 w-auto transition-all duration-300"
+                className="h-16 w-auto transition-all duration-300"
               />
             </Link>
           </div>
 
           {/* Center Section - Navigation */}
-          <nav className="flex items-center justify-center space-x-8 w-2/4 text-lg">
+          <nav className="flex items-center justify-center flex-grow space-x-8 text-lg">
             <Link
               href="/"
               className="flex items-center px-3 py-2 text-white hover:text-white/80"
@@ -57,7 +57,7 @@ const Header = () => {
           </nav>
 
           {/* Right Section - Contact & Account */}
-          <div className="w-1/4 flex justify-end space-x-8 text-lg">
+          <div className="flex items-center space-x-8">
             <Link
               href="/contact"
               className="text-white hover:text-white/80 font-medium tracking-wider"
