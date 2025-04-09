@@ -9,7 +9,7 @@ const services = [
     name: "Valet Pick Up & Delivery",
     description:
       "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
-    imageUrl: "/src/images/delivery.gif",
+    imageUrl: "/src/images/Delivery-car.png",
     price: "Free Delivery",
     href: "/delivery",
   },
