@@ -27,6 +27,7 @@ import LiveChat from "./components/live-chat";
 // Added import for FaqPage
 import FaqPage from "@/pages/faq-page"; // You'll need to create this component
 import AuthPage from "@/pages/auth-page"; //New Auth Page
+import DeliveryPage from "@/pages/delivery-page"; // Added import for DeliveryPage
 
 
 function Router() {
@@ -49,6 +50,7 @@ function Router() {
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
       <Route path="/auth" component={AuthPage} /> {/* Added Auth route */}
+      <Route path="/delivery-page" component={DeliveryPage} /> {/* Added Delivery page route */}
       <Route component={NotFound} />
     </Switch>
   );

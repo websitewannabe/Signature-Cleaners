@@ -30,7 +30,8 @@ const Header = () => {
         location === "/dry-cleaning" ||
         location === "/clean-household-items" ||
         location === "/alteration-tailoring" ||
-        location === "/interior-cleaning";
+        location === "/interior-cleaning" ||
+        location === "/delivery";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
@@ -62,7 +63,7 @@ const Header = () => {
               <div className="absolute left-1/2 -translate-x-1/2 hidden group-hover:block w-64 bg-black/90 backdrop-blur-sm rounded-md overflow-hidden shadow-lg mt-8">
                 <div className="py-2">
                   {[
-                    { name: "Delivery", path: "/services" },
+                    { name: "Delivery", path: "/delivery" },
                     {
                       name: "Alterations & Tailoring",
                       path: "/alteration-tailoring",
@@ -158,8 +159,8 @@ const Header = () => {
                       current={location === "/services"}
                     />
                     {[
-                      { name: "Delivery", path: "/services" },
-                      { name: "Alterations & Tailoring", path: "/services" },
+                      { name: "Delivery", path: "/delivery" },
+                      { name: "Alterations & Tailoring", path: "/alteration-tailoring" },
                       { name: "Interior Cleaning", path: "/interior-cleaning" },
                       {
                         name: "Clean Household Items",
@@ -167,12 +168,12 @@ const Header = () => {
                       },
                       { name: "Dry Cleaning", path: "/dry-cleaning" },
                       { name: "Wedding Gowns", path: "/wedding-gown" },
-                      { name: "Suede & Leather Cleaning", path: "/services" },
+                      { name: "Suede & Leather Cleaning", path: "/suede-leather-cleaning" },
                       { name: "Shoe Repair", path: "/shoe-repair" },
                       { name: "Wash & Fold", path: "/services/wash-fold" },
                       {
                         name: "Folding Dress Shirt Services",
-                        path: "/services",
+                        path: "/services/folding-dress-shirt",
                       },
                     ].map((service) => (
                       <Link
