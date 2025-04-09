@@ -1,6 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Home } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 const Header = () => {
   const [isOpaque, setIsOpaque] = useState(false);
@@ -46,36 +54,24 @@ const Header = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent">Services</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                    <div className="grid gap-3 p-4 w-[400px]">
-                      <Link href="/delivery-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Valet Pick Up & Delivery
+                    <div className="grid grid-cols-2 gap-3 p-4 w-[500px]">
+                      <Link href="/dry-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
+                        Dry Cleaning
                       </Link>
-                      <Link href="/alteration-tailoring-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Alterations & Tailoring
-                      </Link>
-                      <Link href="/interior-cleaning-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Interior Cleaning
-                      </Link>
-                      <Link href="/clean-household-items-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Cleaning of Household Items
-                      </Link>
-                      <Link href="/dry-cleaning-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Professional Dry Cleaners
-                      </Link>
-                      <Link href="/wedding-gown-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Wedding Gowns
-                      </Link>
-                      <Link href="/suede-leather-cleaning" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Suede & Leather Cleaning
-                      </Link>
-                      <Link href="/shoe-repair" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Shoe Repair
-                      </Link>
-                      <Link href="/wash-fold-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
+                      <Link href="/wash-fold" className="block p-2 hover:bg-neutral-100 rounded">
                         Wash & Fold
                       </Link>
-                      <Link href="/folding-dress-shirt-page" className="block p-2 hover:bg-neutral-100 rounded text-black">
-                        Folding Dress Shirt Services
+                      <Link href="/alteration-tailoring" className="block p-2 hover:bg-neutral-100 rounded">
+                        Alterations & Tailoring
+                      </Link>
+                      <Link href="/wedding-gown" className="block p-2 hover:bg-neutral-100 rounded">
+                        Wedding Gowns
+                      </Link>
+                      <Link href="/suede-leather-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
+                        Suede & Leather
+                      </Link>
+                      <Link href="/shoe-repair" className="block p-2 hover:bg-neutral-100 rounded">
+                        Shoe Repair
                       </Link>
                     </div>
                   </NavigationMenuContent>
