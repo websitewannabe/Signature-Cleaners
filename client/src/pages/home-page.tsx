@@ -90,50 +90,68 @@ export default function HomePage() {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services &&
-                services.slice(0, 3).map((service) => (
-                  <div
-                    key={service.id}
-                    className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col h-full"
-                  >
-                    <div className="h-48 bg-neutral-200 flex-shrink-0">
-                      <img
-                        src={service.imageUrl}
-                        alt={service.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-semibold text-black">
-                        {service.name}
-                      </h3>
-                      <p className="mt-2 text-neutral-800 flex-grow">
-                        {service.description}
-                      </p>
-                      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                        <span className="text-black font-medium">
-                          {service.price}
-                        </span>
-                        <Link href="/schedule">
-                          <span className="text-[#790003] hover:text-[#5a0002] font-medium flex items-center">
-                            Schedule
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="h-5 w-5 ml-1"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          </span>
-                        </Link>
+                services.slice(0, 3).map((service) => {
+                  const serviceRoute = {
+                    "Valet Pick Up & Delivery": "/delivery",
+                    "Alterations & Tailoring": "/alteration-tailoring",
+                    "Interior Cleaning": "/interior-cleaning",
+                    "Cleaning of Household Items": "/clean-household-items",
+                    "Professional Dry Cleaners": "/dry-cleaning",
+                    "Wedding Gowns": "/wedding-gown",
+                    "Suede & Leather Cleaning": "/suede-leather-cleaning",
+                    "Shoe Repair": "/shoe-repair",
+                    "Wash & Fold": "/wash-fold",
+                    "Folding Dress Shirt Services": "/folding-dress-shirt"
+                  }[service.name] || "/services";
+
+                  return (
+                    <Link 
+                      key={service.id}
+                      href={serviceRoute}
+                      className="block group"
+                      role="link"
+                      aria-label={`View ${service.name} service details`}
+                    >
+                      <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col h-full">
+                        <div className="h-48 bg-neutral-200 flex-shrink-0">
+                          <img
+                            src={service.imageUrl}
+                            alt={service.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="p-6 flex flex-col flex-grow">
+                          <h3 className="text-xl font-semibold text-black">
+                            {service.name}
+                          </h3>
+                          <p className="mt-2 text-neutral-800 flex-grow">
+                            {service.description}
+                          </p>
+                          <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
+                            <span className="text-black font-medium">
+                              {service.price}
+                            </span>
+                            <span className="text-[#790003] group-hover:text-[#5a0002] font-medium flex items-center">
+                              View Details
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5 ml-1 transform group-hover:translate-x-1 transition-transform"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                                  clipRule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                ))}
+                    </Link>
+                  );
+                })}
             </div>
           )}
 
