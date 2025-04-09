@@ -1,4 +1,3 @@
-
 import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -59,7 +58,7 @@ const services = [
     description: "Expert cleaning and care for your suede and leather items, maintaining their look and extending their life.",
     imageUrl: "/src/images/leather-care.gif",
     price: "From $39.99",
-    href: "/suede-leather-cleaning"
+    href: "/suede-leather-cleaning-page" //Corrected href
   },
   {
     id: 8,
@@ -67,7 +66,7 @@ const services = [
     description: "Professional shoe repair and restoration services to keep your footwear looking and feeling like new.",
     imageUrl: "/src/images/shoe-repair.gif",
     price: "From $25.99",
-    href: "/shoe-repair"
+    href: "/shoe-repair-page" //Corrected href
   },
   {
     id: 9,
