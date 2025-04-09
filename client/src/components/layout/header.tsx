@@ -26,7 +26,8 @@ const Header = () => {
         location === "/shoe-repair" ||
         location === "/suede-leather-cleaning" ||
         location === "/wedding-gown" ||
-        location === "/about";
+        location === "/about" ||
+        location === "/dry-cleaning";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
@@ -62,7 +63,7 @@ const Header = () => {
                     { name: "Alterations & Tailoring", path: "/services" },
                     { name: "Interior Cleaning", path: "/services" },
                     { name: "Cleaning Household Items", path: "/services" },
-                    { name: "Dry Cleaning", path: "/services" },
+                    { name: "Dry Cleaning", path: "/dry-cleaning" },
                     { name: "Wedding Gowns", path: "/wedding-gown" },
                     {
                       name: "Suede & Leather Cleaning",
@@ -152,7 +153,7 @@ const Header = () => {
                       { name: "Alterations & Tailoring", path: "/services" },
                       { name: "Interior Cleaning", path: "/services" },
                       { name: "Cleaning Household Items", path: "/services" },
-                      { name: "Dry Cleaning", path: "/services" },
+                      { name: "Dry Cleaning", path: "/dry-cleaning" },
                       { name: "Wedding Gowns", path: "/wedding-gown" },
                       { name: "Suede & Leather Cleaning", path: "/services" },
                       { name: "Shoe Repair", path: "/shoe-repair" },
