@@ -8,6 +8,7 @@ import ServicesPage from "@/pages/services-page";
 import WashFoldPage from "@/pages/wash-fold-page";
 import FoldingDressShirtPage from "@/pages/folding-dress-shirt-page";
 import ShoeRepairPage from "@/pages/shoe-repair-page";
+import SuedeLeatherCleaningPage from "@/pages/suede-leather-cleaning-page";
 import AboutPage from "@/pages/about-page";
 import TestimonialsPage from "@/pages/testimonials-page";
 import ContactPage from "@/pages/contact-page";
@@ -31,6 +32,7 @@ function Router() {
       <Route path="/services/wash-fold" component={WashFoldPage} />
       <Route path="/services/folding-dress-shirt" component={FoldingDressShirtPage} />
         <Route path="/shoe-repair" component={ShoeRepairPage} />
+      <Route path="/suede-leather-cleaning" component={SuedeLeatherCleaningPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/testimonials" component={TestimonialsPage} />
       <Route path="/contact" component={ContactPage} />

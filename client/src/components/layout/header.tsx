@@ -62,7 +62,7 @@ const Header = () => {
                     { name: "Cleaning Household Items", path: "/services" },
                     { name: "Dry Cleaning", path: "/services" },
                     { name: "Wedding Gowns", path: "/services" },
-                    { name: "Suede & Leather Cleaning", path: "/services" },
+                    { name: "Suede & Leather Cleaning", path: "/suede-leather-cleaning" },
                     { name: "Shoe Repair", path: "/shoe-repair" },
                     { name: "Wash & Fold", path: "/services/wash-fold" },
                     {
