@@ -9,6 +9,7 @@ import WashFoldPage from "@/pages/wash-fold-page";
 import FoldingDressShirtPage from "@/pages/folding-dress-shirt-page";
 import ShoeRepairPage from "@/pages/shoe-repair-page";
 import SuedeLeatherCleaningPage from "@/pages/suede-leather-cleaning-page";
+import InteriorCleaningPage from "@/pages/interior-cleaning-page";
 import WeddingGownPage from "@/pages/wedding-gown-page";
 import DryCleaningPage from "@/pages/dry-cleaning-page";
 import CleanHouseholdItemsPage from "@/pages/clean-household-items-page";
@@ -36,6 +37,7 @@ function Router() {
       <Route path="/services/folding-dress-shirt" component={FoldingDressShirtPage} />
         <Route path="/shoe-repair" component={ShoeRepairPage} />
       <Route path="/suede-leather-cleaning" component={SuedeLeatherCleaningPage} />
+      <Route path="/interior-cleaning" component={InteriorCleaningPage} />
       <Route path="/wedding-gown" component={WeddingGownPage} />
       <Route path="/dry-cleaning" component={DryCleaningPage} />
       <Route path="/clean-household-items" component={CleanHouseholdItemsPage} />

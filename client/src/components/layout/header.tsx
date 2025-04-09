@@ -28,7 +28,8 @@ const Header = () => {
         location === "/wedding-gown" ||
         location === "/about" ||
         location === "/dry-cleaning" ||
-        location === "/clean-household-items";
+        location === "/clean-household-items" ||
+        location === "/interior-cleaning";
       setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
@@ -62,7 +63,7 @@ const Header = () => {
                   {[
                     { name: "Delivery", path: "/services" },
                     { name: "Alterations & Tailoring", path: "/services" },
-                    { name: "Interior Cleaning", path: "/services" },
+                    { name: "Interior Cleaning", path: "/interior-cleaning" },
                     { name: "Clean Household Items", path: "/clean-household-items" },
                     { name: "Dry Cleaning", path: "/dry-cleaning" },
                     { name: "Wedding Gowns", path: "/wedding-gown" },
@@ -152,7 +153,7 @@ const Header = () => {
                     {[
                       { name: "Delivery", path: "/services" },
                       { name: "Alterations & Tailoring", path: "/services" },
-                      { name: "Interior Cleaning", path: "/services" },
+                      { name: "Interior Cleaning", path: "/interior-cleaning" },
                       { name: "Clean Household Items", path: "/clean-household-items" },
                       { name: "Dry Cleaning", path: "/dry-cleaning" },
                       { name: "Wedding Gowns", path: "/wedding-gown" },
