@@ -10,6 +10,25 @@ export default function ServicesPage() {
     queryKey: ["/api/services"],
   });
 
+import { Truck, Scissors, ShoppingBag, Home, Shirt } from "lucide-react";
+
+const getServiceIcon = (serviceName: string) => {
+  const iconClass = "w-5 h-5 text-[#790003]";
+  switch (serviceName.toLowerCase()) {
+    case "valet pick up & delivery":
+      return <Truck className={iconClass} />;
+    case "alterations & tailoring":
+      return <Scissors className={iconClass} />;
+    case "interior cleaning":
+      return <Home className={iconClass} />;
+    case "dry cleaning":
+      return <Shirt className={iconClass} />;
+    default:
+      return <ShoppingBag className={iconClass} />;
+  }
+};
+
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -37,37 +56,44 @@ export default function ServicesPage() {
               <Loader2 className="h-8 w-8 animate-spin text-primary" />
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div 
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            >
               {services &&
-                services.map((service) => (
+                services.map((service, index) => (
                   <div
                     key={service.id}
-                    className="bg-white border border-neutral-200 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300 flex flex-col h-full"
+                    className="group bg-white border border-neutral-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 hover:bg-[#F6AE2D]/5 transition-all duration-300 flex flex-col h-full animate-fadeIn"
+                    style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    <div className="h-48 bg-neutral-200 flex-shrink-0">
+                    <div className="relative h-48 bg-neutral-200 flex-shrink-0 overflow-hidden">
                       <img
                         src={service.imageUrl}
                         alt={service.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       />
+                      <div className="absolute top-3 right-3 bg-[#790003] text-white px-3 py-1 rounded-full rotate-2 shadow-md">
+                        <span className="font-medium">{service.price}</span>
+                      </div>
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
                       <div className="flex-grow">
-                        <h3 className="text-xl font-semibold text-neutral-900">
-                          {service.name}
-                        </h3>
-                        <p className="mt-2 text-neutral-600">
+                        <div className="flex items-center gap-2 mb-3">
+                          {getServiceIcon(service.name)}
+                          <h3 className="text-xl font-semibold text-neutral-900">
+                            {service.name}
+                          </h3>
+                        </div>
+                        <div className="w-16 h-0.5 bg-[#790003]/20 mb-3"></div>
+                        <p className="text-neutral-600">
                           {service.description}
                         </p>
                       </div>
-                      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between">
-                        <span className="text-primary font-medium">
-                          {service.price}
-                        </span>
-                        <Link href="/schedule">
+                      <div className="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-end">
+                        <Link href="/schedule" className="w-full">
                           <Button
-                            size="sm"
-                            className="bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                            size="default"
+                            className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white rounded-full transition-colors duration-300"
                           >
                             Book Now
                           </Button>
