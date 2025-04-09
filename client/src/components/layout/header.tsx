@@ -18,8 +18,8 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      const isHomeOrServices = location === "/" || location === "/services";
-      setIsOpaque(isHomeOrServices ? scrollPosition > 0 : true);
+      const isTransparentPage = location === "/" || location === "/services" || location === "/wash-fold";
+      setIsOpaque(isTransparentPage ? scrollPosition > 0 : true);
     };
 
     // Initial check
@@ -29,7 +29,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location]);
 
-  const isHomeOrServices = location === "/" || location === "/services";
+  const isTransparentPage = location === "/" || location === "/services" || location === "/wash-fold";
   const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
     isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
   }`;
