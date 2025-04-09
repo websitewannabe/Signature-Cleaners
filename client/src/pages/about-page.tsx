@@ -18,25 +18,33 @@ export default function AboutPage() {
                 Our Story
               </h2>
               <p className="mt-4 text-lg text-white/80">
-                Signature Cleaners was founded by brothers Michael and Fred
-                Rosen, who share over 40 years of experience in the dry cleaning
-                industry. With a family legacy rooted in garment care, they
-                built their business on simple values: quality service, fair
-                pricing, and a commitment to customer satisfaction.
+                Signature Cleaners was founded on simple principles: provide a
+                quality product, deliver excellent customer service, and offer
+                fair pricing. With decades of experience in the industry, the
+                team brings a deep understanding of fabric care and stain
+                removal, including specialties like wedding gown cleaning and
+                preservation. Every garment is treated with personal care and
+                attention using top-of-the-line equipment to ensure the highest
+                standards of cleanliness and presentation.
               </p>
               <p className="mt-4 text-lg text-white/80">
-                Director of Operations, Mark Pollock, brings expert training in
-                stain removal and wedding gown preservation—two of our
-                specialties. Every item is treated with care, using high-end
-                equipment and eco-friendly methods. Rush orders are welcome, and
-                most items can be cleaned within 24 hours.
+                Signature Cleaners welcomes rush orders and never makes promises
+                they can’t keep. Most items can be turned around in under 24
+                hours, and if more time is needed, customers are notified
+                immediately. Wedding gowns are preserved using museum-quality
+                techniques designed to maintain their condition for years to
+                come—ensuring that cherished garments stay as beautiful as the
+                day they were worn.
               </p>
               <p className="mt-4 text-lg text-white/80">
-                As the area’s only member of the Dry Cleaning and Laundry
-                Institute, we stay ahead with the latest in fabric care. Whether
-                it's preserving a wedding gown or removing a tough stain,
-                Signature Cleaners is your trusted choice for premium garment
-                care.
+                As the only member of the Dry Cleaning and Laundry Institute in
+                the area, Signature Cleaners stays current on the latest fabrics
+                and care methods. The team is always seeking new ways to improve
+                their services, from adopting more efficient equipment to
+                refining cleaning techniques. With three convenient locations,
+                Signature Cleaners offers a full range of garment care
+                services—from dry cleaning and tailoring to stain removal and
+                shoe repair—with unmatched reliability and results.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-4">

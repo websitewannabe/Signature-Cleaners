@@ -69,7 +69,7 @@ export default function ServicesPage() {
                             size="sm"
                             className="bg-[#790003] hover:bg-[#F6AE2D] text-white"
                           >
-                            Schedule
+                            Book Now
                           </Button>
                         </Link>
                       </div>
