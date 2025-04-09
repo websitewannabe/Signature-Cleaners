@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -11,7 +10,7 @@ export default function SuedeLeatherCleaningPage() {
 
       {/* Hero Section */}
       <section className="relative py-28">
-        <div className="absolute inset-0 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/leather-care.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
@@ -34,7 +33,10 @@ export default function SuedeLeatherCleaningPage() {
                 Professional Leather & Suede Care
               </h2>
               <p className="text-lg text-neutral-600 mb-6">
-                Our specialized cleaning service is designed to restore and protect your valuable leather and suede items. We use industry-leading techniques and products to ensure the best possible care for your garments.
+                Our specialized cleaning service is designed to restore and
+                protect your valuable leather and suede items. We use
+                industry-leading techniques and products to ensure the best
+                possible care for your garments.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
