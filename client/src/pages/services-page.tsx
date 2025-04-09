@@ -32,7 +32,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 bg-black">
+      <section className="py-16 bg-[#090A0C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading ? (
             <div className="flex justify-center items-center py-12">
@@ -218,11 +218,13 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-[#790003] py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* CTA Section */}
+      <section className="relative py-16">
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/70"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Experience Premium Cleaning?
+            Ready to simplify your laundry routine?
           </h2>
           <Link href="/schedule">
             <Button
