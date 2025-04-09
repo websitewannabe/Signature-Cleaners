@@ -26,12 +26,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="flex h-20 items-center justify-between">
           {/* Left: Logo */}
-          <div className="flex items-center pl-4 -mb-2">
+          <div className="flex items-center pl-0 -mb-2">
             <Link href="/" className="flex items-center space-x-2">
               <img
                 src="/src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className="h-24 w-auto"
+                className="h-18 w-auto"
               />
             </Link>
           </div>
