@@ -90,9 +90,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {" "}
+            {/* Changed to lg:grid-cols-4 */}
             {/* Dry Cleaning */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
                 <img
                   src="/src/images/cleaners.gif"
                   alt="Professional Dry Cleaners"
@@ -136,6 +140,8 @@ export default function HomePage() {
             {/* Wash & Fold */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
                 <img
                   src="/src/images/wash-fold.gif"
                   alt="Wash & Fold"
@@ -179,6 +185,8 @@ export default function HomePage() {
             {/* Wedding Gowns */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
                 <img
                   src="/src/images/wedding-gown.gif"
                   alt="Wedding Gowns"
@@ -222,6 +230,8 @@ export default function HomePage() {
             {/* Household Items */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
                 <img
                   src="/src/images/household-items.gif"
                   alt="Household Items"
@@ -535,6 +545,8 @@ export default function HomePage() {
                 No need to wait for a full bag of dirty clothes, we will pick up
                 and deliver any amount.
               </AccordionContent>
+            </AccordionItem>
+
             <AccordionItem value="item-10">
               <AccordionTrigger>How do I pay for the service?</AccordionTrigger>
               <AccordionContent>
