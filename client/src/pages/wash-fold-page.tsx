@@ -11,8 +11,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function WashFoldPage() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  
+  const services = [
+    {
+      name: 'Regular Wash',
+      details: "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean."
+    },
+    {
+      name: 'Delicates',
+      details: "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care."
+    },
+    {
+      name: 'Bedding',
+      details: "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish."
+    },
+    {
+      name: 'Towels',
+      details: "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup."
+    }
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -100,38 +121,55 @@ export default function WashFoldPage() {
                   </span>
                 </li>
               </ul>
-              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Regular Wash</span>
+              <div className="space-y-6">
+                <div className="grid grid-cols-4 gap-6">
+                  {[
+                    {
+                      name: 'Regular Wash',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />,
+                      details: "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean."
+                    },
+                    {
+                      name: 'Delicates',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
+                      details: "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care."
+                    },
+                    {
+                      name: 'Bedding',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />,
+                      details: "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish."
+                    },
+                    {
+                      name: 'Towels',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />,
+                      details: "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup."
+                    }
+                  ].map((service, index) => (
+                    <button 
+                      key={index}
+                      onClick={() => {
+                        if (selectedService === service.name) {
+                          setSelectedService(null);
+                        } else {
+                          setSelectedService(service.name);
+                        }
+                      }}
+                      className="text-center focus:outline-none"
+                    >
+                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
+                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          {service.icon}
+                        </svg>
+                      </div>
+                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-48' : 'max-h-0'}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white/90">
+                    {selectedService && services.find(s => s.name === selectedService)?.details}
                   </div>
-                  <span className="block mt-2 text-sm text-white/90">Delicates</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Bedding</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Towels</span>
                 </div>
               </div>
               <Link href="/schedule">
