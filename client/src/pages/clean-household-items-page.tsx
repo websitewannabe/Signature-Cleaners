@@ -54,7 +54,7 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-gray-300">
                     Specialized cleaning for delicate materials
                   </span>
                 </li>
@@ -72,7 +72,7 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-gray-300">
                     Stain removal and deep cleaning
                   </span>
                 </li>
@@ -90,7 +90,7 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-gray-300">
                     Professional handling and packaging
                   </span>
                 </li>
