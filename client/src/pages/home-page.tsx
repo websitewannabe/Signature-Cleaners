@@ -94,7 +94,7 @@ export default function HomePage() {
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
                 <img
-                  src="/src/images/cleaners.gif"
+                  src="[url('/src/images/cleaners.gif')]"
                   alt="Professional Dry Cleaners"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -137,7 +137,7 @@ export default function HomePage() {
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
                 <img
-                  src="/src/images/wash-fold.gif"
+                  src="[url('/src/images/wash-fold.gif')]"
                   alt="Wash & Fold"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -180,7 +180,7 @@ export default function HomePage() {
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
                 <img
-                  src="/src/images/wedding-gown.gif"
+                  src="[url('/src/images/wedding-gown.gif')]"
                   alt="Wedding Gowns"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -223,7 +223,7 @@ export default function HomePage() {
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
                 <img
-                  src="/src/images/household-items.gif"
+                  src="[url('/src/images/household-items.gif')]"
                   alt="Household Items"
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
@@ -238,10 +238,7 @@ export default function HomePage() {
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
-                  <Link
-                    href="/clean-household-items"
-                    className="block"
-                  >
+                  <Link href="/clean-household-items" className="block">
                     <Button
                       variant="outline"
                       className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"

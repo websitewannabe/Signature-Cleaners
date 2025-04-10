@@ -69,7 +69,7 @@ export default function AboutPage() {
             <div className="mt-10 lg:mt-0">
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/src/images/theTeam.jpg"
+                  src="[url('/src/images/theTeam.jpg')]"
                   alt="Signature Cleaners team"
                   className="w-full h-auto"
                 />

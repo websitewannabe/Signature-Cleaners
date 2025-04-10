@@ -9,7 +9,7 @@ const services = [
     name: "Valet Pick Up & Delivery",
     description:
       "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
-    imageUrl: "./src/images/delivery.gif",
+    imageUrl: "[url('./src/images/delivery.gif')]",
     price: "Free Delivery",
     href: "/delivery",
   },
@@ -18,7 +18,7 @@ const services = [
     name: "Alterations & Tailoring",
     description:
       "Expert alterations and tailoring services to ensure your garments fit perfectly. From simple hemming to complex restructuring.",
-    imageUrl: "/src/images/tailoring.gif",
+    imageUrl: "[url('/src/images/tailoring.gif')]",
     price: "From $14.99",
     href: "/alteration-tailoring",
   },
@@ -27,7 +27,7 @@ const services = [
     name: "Interior Cleaning",
     description:
       "Professional cleaning services for your home's interior textiles, including curtains, upholstery, and more.",
-    imageUrl: "/src/images/interior-cleaning.gif",
+    imageUrl: "[url('/src/images/interior-cleaning.gif')]",
     price: "From $29.99",
     href: "/interior-cleaning",
   },
