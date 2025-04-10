@@ -92,12 +92,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                <img
-                  src="[url('/src/images/cleaners.gif')]"
-                  alt="Professional Dry Cleaners"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -135,12 +130,7 @@ export default function HomePage() {
             </div>
             {/* Wash & Fold */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                <img
-                  src="[url('/src/images/wash-fold.gif')]"
-                  alt="Wash & Fold"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -178,12 +168,7 @@ export default function HomePage() {
             </div>
             {/* Wedding Gowns */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                <img
-                  src="[url('/src/images/wedding-gown.gif')]"
-                  alt="Wedding Gowns"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -221,12 +206,7 @@ export default function HomePage() {
             </div>
             {/* Household Items */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                <img
-                  src="[url('/src/images/household-items.gif')]"
-                  alt="Household Items"
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+              <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
