@@ -165,7 +165,7 @@ export default function ServicesPage() {
                       <Link href={service.href} className="block mt-4">
                         <Button
                           variant="outline"
-                          className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                          className="w-full h-10 border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 font-medium"
                         >
                           Learn More
                         </Button>
