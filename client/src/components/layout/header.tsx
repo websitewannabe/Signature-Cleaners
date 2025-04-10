@@ -54,7 +54,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium">Services</NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                    <div className="grid grid-cols-2 gap-3 p-4 w-[500px]">
+                    <div className="grid grid-cols-2 gap-3 p-4 w-[600px]">
                       <Link href="/dry-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
                         Dry Cleaning
                       </Link>
@@ -72,6 +72,18 @@ const Header = () => {
                       </Link>
                       <Link href="/shoe-repair" className="block p-2 hover:bg-neutral-100 rounded">
                         Shoe Repair
+                      </Link>
+                      <Link href="/clean-household-items" className="block p-2 hover:bg-neutral-100 rounded">
+                        Cleaning of Household Items
+                      </Link>
+                      <Link href="/interior-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
+                        Interior Cleaning
+                      </Link>
+                      <Link href="/folding-dress-shirt" className="block p-2 hover:bg-neutral-100 rounded">
+                        Folding Dress Shirt Services
+                      </Link>
+                      <Link href="/delivery" className="block p-2 hover:bg-neutral-100 rounded">
+                        Delivery
                       </Link>
                     </div>
                   </NavigationMenuContent>
