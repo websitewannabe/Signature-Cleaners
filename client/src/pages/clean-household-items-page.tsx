@@ -31,10 +31,10 @@ export default function CleanHouseholdItemsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Expert Care for Your Home Items
               </h2>
-              <p className="text-lg text-neutral-600 mb-6">
+              <p className="text-lg text-white/90 mb-6">
                 Trust our expert cleaning service for your valuable household
                 items. We use specialized cleaning techniques and gentle yet
                 effective solutions to restore and protect your home textiles.
@@ -42,7 +42,7 @@ export default function CleanHouseholdItemsPage() {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -54,13 +54,13 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white/90">
                     Specialized cleaning for delicate materials
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -72,13 +72,13 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white/90">
                     Stain removal and deep cleaning
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -90,7 +90,7 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white/90">
                     Professional handling and packaging
                   </span>
                 </li>
