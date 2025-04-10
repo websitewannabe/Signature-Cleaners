@@ -46,8 +46,8 @@ const Header = () => {
 
           {/* Center: Nav Links */}
           <nav className="hidden md:flex items-center space-x-12 text-white text-lg font-medium">
-            <Link href="/" className="hover:text-white/80 py-2">
-              Home
+            <Link href="/" className="hover:text-white/80 py-2 flex items-center">
+              <Home className="w-5 h-5" />
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
