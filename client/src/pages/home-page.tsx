@@ -158,7 +158,7 @@ export default function HomePage() {
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
-                  <Link href="/wash-fold" className="block mt-4">
+                  <Link href="/wash-fold-page" className="block mt-4">
                     <Button
                       variant="outline"
                       className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
