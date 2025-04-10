@@ -276,8 +276,8 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {/* Delivery */}
               <Link href="/delivery" className="group flex flex-col items-center">
-                <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110" aria-label="Delivery Service">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110" aria-label="Delivery Service">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
                   </svg>
                 </div>
