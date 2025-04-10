@@ -146,13 +146,12 @@ export default function ServicesPage() {
                   key={service.id}
                   className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
                 >
-                  <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                    <img
-                      src={service.imageUrl}
-                      alt={service.name}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                  </div>
+                  <div 
+                    className="h-52 bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${service.imageUrl})` }}
+                    role="img"
+                    aria-label={service.name}
+                  />
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="flex-grow space-y-3">
                       <h3 className="text-xl font-semibold text-neutral-900">
