@@ -84,8 +84,191 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {" "}
-            {/* Changed to lg:grid-cols-4 */}
+            {/* Delivery */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Delivery</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Free pickup and delivery service for your convenience.</p>
+                  <Link href="/delivery" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">Free</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Folding Dress Shirt Services */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Folding Dress Shirt</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Professional dress shirt folding and pressing services.</p>
+                  <Link href="/folding-dress-shirt" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">From $3.99</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Interior Cleaning */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Interior Cleaning</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Professional cleaning for your home's interior textiles.</p>
+                  <Link href="/interior-cleaning" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">From $29.99</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Suede & Leather */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v12m-8-6h16" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Suede & Leather</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Expert cleaning for suede and leather items.</p>
+                  <Link href="/suede-leather-cleaning" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">From $39.99</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Alterations & Tailoring */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243zm8.486-8.486a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Alterations & Tailoring</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Expert alterations and tailoring services.</p>
+                  <Link href="/alteration-tailoring" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">From $14.99</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Shoe Repair */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden flex items-center justify-center">
+                <div className="bg-[#790003] rounded-full p-6 w-24 h-24 flex items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h18v18H3V3zm4 4h10v10H7V7z" />
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">Shoe Repair</h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">Professional shoe repair and restoration services.</p>
+                  <Link href="/shoe-repair" className="block mt-4">
+                    <Button variant="outline" className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">From $25.99</span>
+                  <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
             {/* Dry Cleaning */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
@@ -311,8 +494,7 @@ export default function HomePage() {
               <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
                 <span className="text-primary text-3xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">
-                Schedule
+              <h3 className="text-xl font-semibold text-neutral-900">              Schedule
               </h3>
               <p className="mt-2 text-neutral-600">
                 Book your pickup online or by phone
