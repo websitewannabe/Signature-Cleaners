@@ -132,52 +132,57 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
-              >
-                <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
-                  <img
-                    src={service.imageUrl}
-                    alt={service.name}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex-grow space-y-3">
-                    <h3 className="text-xl font-semibold text-neutral-900">
-                      {service.name}
-                    </h3>
-                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                    <p className="text-neutral-600 line-clamp-3">
-                      {service.description}
-                    </p>
-                    <Link href={service.href} className="block mt-4">
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+            {services
+              .filter(service => 
+                ["Professional Dry Cleaners", "Wash & Fold", "Wedding Gowns", "Cleaning of Household Items"]
+                .includes(service.name)
+              )
+              .map((service) => (
+                <div
+                  key={service.id}
+                  className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
+                >
+                  <div className="h-52 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={service.imageUrl}
+                      alt={service.name}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <div className="flex-grow space-y-3">
+                      <h3 className="text-xl font-semibold text-neutral-900">
+                        {service.name}
+                      </h3>
+                      <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                      <p className="text-neutral-600 line-clamp-3">
+                        {service.description}
+                      </p>
+                      <Link href={service.href} className="block mt-4">
+                        <Button
+                          variant="outline"
+                          className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                        >
+                          Learn More
+                        </Button>
+                      </Link>
+                    </div>
+                    <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                      <span className="text-[#790003] font-semibold text-lg">
+                        {service.price}
+                      </span>
+                      <Link
+                        href="/schedule"
+                        className="w-full sm:w-auto sm:ml-auto"
                       >
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                    <span className="text-[#790003] font-semibold text-lg">
-                      {service.price}
-                    </span>
-                    <Link
-                      href="/schedule"
-                      className="w-full sm:w-auto sm:ml-auto"
-                    >
-                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                        Book Now
-                      </Button>
-                    </Link>
+                        <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                          Book Now
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
 
           {/* Service Category Icons */}
