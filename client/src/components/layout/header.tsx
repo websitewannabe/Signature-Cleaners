@@ -38,10 +38,10 @@ const Header = () => {
           {/* Left: Logo */}
           <div className="flex items-center -ml-2 -mb-2">
             <Link href="/" className="flex items-center space-x-2">
-              <img
-                src="./src/images/signature-cleaners-logo-white.png"
-                alt="Signature Cleaners"
-                className="h-16 w-auto"
+              <div 
+                className="h-16 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                role="img"
+                aria-label="Signature Cleaners"
               />
             </Link>
           </div>
