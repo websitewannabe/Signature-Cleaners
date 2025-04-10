@@ -83,167 +83,193 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"> {/* Changed to lg:grid-cols-4 */}
-              {/* Dry Cleaning */}
-              <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-                <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden"> {/* Changed height */}
-                  <img
-                    src="/src/images/cleaners.gif"
-                    alt="Professional Dry Cleaners"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex-grow space-y-3">
-                    <h3 className="text-xl font-semibold text-neutral-900">
-                      Professional Dry Cleaning
-                    </h3>
-                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                    <p className="text-neutral-600 line-clamp-3">
-                      State-of-the-art dry cleaning services for all your delicate and special garments, ensuring the highest quality care.
-                    </p>
-                    <Link href="/dry-cleaning-page" className="block mt-4">
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                    <span className="text-[#790003] font-semibold text-lg">
-                      From $6.99
-                    </span>
-                    <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
-                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                        Book Now
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {" "}
+            {/* Changed to lg:grid-cols-4 */}
+            {/* Dry Cleaning */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
+                <img
+                  src="/src/images/cleaners.gif"
+                  alt="Professional Dry Cleaners"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
               </div>
-
-              {/* Wash & Fold */}
-              <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-                <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden"> {/* Changed height */}
-                  <img
-                    src="/src/images/wash-fold.gif"
-                    alt="Wash & Fold"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    Professional Dry Cleaning
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">
+                    State-of-the-art dry cleaning services for all your delicate
+                    and special garments, ensuring the highest quality care.
+                  </p>
+                  <Link href="/dry-cleaning-page" className="block mt-4">
+                    <Button
+                      variant="outline"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex-grow space-y-3">
-                    <h3 className="text-xl font-semibold text-neutral-900">
-                      Wash & Fold
-                    </h3>
-                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                    <p className="text-neutral-600 line-clamp-3">
-                      Convenient wash and fold service for your everyday laundry needs, saving you time and effort.
-                    </p>
-                    <Link href="/wash-fold-page" className="block mt-4">
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                    <span className="text-[#790003] font-semibold text-lg">
-                      $2.99/lb
-                    </span>
-                    <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
-                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                        Book Now
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Wedding Gowns */}
-              <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-                <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden"> {/* Changed height */}
-                  <img
-                    src="/src/images/wedding-gown.gif"
-                    alt="Wedding Gowns"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex-grow space-y-3">
-                    <h3 className="text-xl font-semibold text-neutral-900">
-                      Wedding Gowns
-                    </h3>
-                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                    <p className="text-neutral-600 line-clamp-3">
-                      Specialized cleaning and preservation services for wedding gowns, ensuring your precious memories last a lifetime.
-                    </p>
-                    <Link href="/wedding-gown-page" className="block mt-4">
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                    <span className="text-[#790003] font-semibold text-lg">
-                      From $99.99
-                    </span>
-                    <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
-                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                        Book Now
-                      </Button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-
-              {/* Household Items */}
-              <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-                <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden"> {/* Changed height */}
-                  <img
-                    src="/src/images/household-items.gif"
-                    alt="Household Items"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex-grow space-y-3">
-                    <h3 className="text-xl font-semibold text-neutral-900">
-                      Cleaning of Household Items
-                    </h3>
-                    <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                    <p className="text-neutral-600 line-clamp-3">
-                      Comprehensive cleaning solutions for household items including comforters, blankets, and decorative pieces.
-                    </p>
-                    <Link href="/clean-household-items-page" className="block mt-4">
-                      <Button
-                        variant="outline"
-                        className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                      >
-                        Learn More
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                    <span className="text-[#790003] font-semibold text-lg">
-                      From $24.99
-                    </span>
-                    <Link href="/schedule" className="w-full sm:w-auto sm:ml-auto">
-                      <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
-                        Book Now
-                      </Button>
-                    </Link>
-                  </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">
+                    From $6.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
+            {/* Wash & Fold */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
+                <img
+                  src="/src/images/wash-fold.gif"
+                  alt="Wash & Fold"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    Wash & Fold
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">
+                    Convenient wash and fold service for your everyday laundry
+                    needs, saving you time and effort.
+                  </p>
+                  <Link href="/wash-fold-page" className="block mt-4">
+                    <Button
+                      variant="outline"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">
+                    $2.99/lb
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Wedding Gowns */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
+                <img
+                  src="/src/images/wedding-gown.gif"
+                  alt="Wedding Gowns"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    Wedding Gowns
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">
+                    Specialized cleaning and preservation services for wedding
+                    gowns, ensuring your precious memories last a lifetime.
+                  </p>
+                  <Link href="/wedding-gown-page" className="block mt-4">
+                    <Button
+                      variant="outline"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">
+                    From $99.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Household Items */}
+            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-neutral-200 flex-shrink-0 overflow-hidden">
+                {" "}
+                {/* Changed height */}
+                <img
+                  src="/src/images/household-items.gif"
+                  alt="Household Items"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow space-y-3">
+                  <h3 className="text-xl font-semibold text-neutral-900">
+                    Cleaning of Household Items
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
+                  <p className="text-neutral-600 line-clamp-3">
+                    Comprehensive cleaning solutions for household items
+                    including comforters, blankets, and decorative pieces.
+                  </p>
+                  <Link
+                    href="/clean-household-items-page"
+                    className="block mt-4"
+                  >
+                    <Button
+                      variant="outline"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                    >
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-[#790003] font-semibold text-lg">
+                    From $24.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-12 text-center">
             <Link href="/services">
@@ -337,7 +363,7 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 bg-[#7C1716]">
+      <section id="testimonials" className="py-16 bg-[#121317]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white">
