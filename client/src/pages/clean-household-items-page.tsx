@@ -248,17 +248,17 @@ export default function CleanHouseholdItemsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-16">
+      <section className="relative py-24">
         <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to refresh your home items?
           </h2>
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-white hover:bg-[#F6AE2D] text-black px-8"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
             >
               Schedule a Pickup
             </Button>
