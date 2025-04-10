@@ -86,7 +86,7 @@ const Header = () => {
                         <div>Dry Cleaning</div>
                       </Link>
                       <Link
-                        href="/wash-fold-page"
+                        href="/wash-fold"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <svg
@@ -219,7 +219,7 @@ const Header = () => {
                         <div>Interior Cleaning</div>
                       </Link>
                       <Link
-                        href="/folding-dress-shirt-page"
+                        href="/folding-dress-shirt"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <svg
