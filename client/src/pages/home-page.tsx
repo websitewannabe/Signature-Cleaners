@@ -113,7 +113,7 @@ export default function HomePage() {
                     State-of-the-art dry cleaning services for all your delicate
                     and special garments, ensuring the highest quality care.
                   </p>
-                  <Link href="/dry-cleaning-page" className="block mt-4">
+                  <Link href="/dry-cleaning" className="block mt-4">
                     <Button
                       variant="outline"
                       className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
@@ -158,7 +158,7 @@ export default function HomePage() {
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
-                  <Link href="/wash-fold-page" className="block mt-4">
+                  <Link href="/wash-fold" className="block mt-4">
                     <Button
                       variant="outline"
                       className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
@@ -203,7 +203,7 @@ export default function HomePage() {
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
-                  <Link href="/wedding-gown-page" className="block mt-4">
+                  <Link href="/wedding-gown" className="block mt-4">
                     <Button
                       variant="outline"
                       className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
@@ -249,7 +249,7 @@ export default function HomePage() {
                     including comforters, blankets, and decorative pieces.
                   </p>
                   <Link
-                    href="/clean-household-items-page"
+                    href="/clean-household-items"
                     className="block mt-4"
                   >
                     <Button
