@@ -67,13 +67,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img
-                  src="[url('/src/images/theTeam.jpg')]"
-                  alt="Signature Cleaners team"
-                  className="w-full h-auto"
-                />
-              </div>
+              <div 
+              className="h-[600px] w-full bg-[url('/src/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
+              role="img"
+              aria-label="Signature Cleaners team"
+            />
             </div>
           </div>
         </div>
