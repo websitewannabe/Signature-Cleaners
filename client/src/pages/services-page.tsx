@@ -9,7 +9,7 @@ const services = [
     name: "Valet Pick Up & Delivery",
     description:
       "Enjoy hassle-free dry cleaning with Signature Cleaners' free pick-up and delivery service. We'll collect and return your garments right to your doorstep.",
-    imageUrl: "/src/images/delivery.gif",
+    imageUrl: "./src/images/delivery.gif",
     price: "Free Delivery",
     href: "/delivery",
   },
@@ -512,7 +512,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('./src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/70"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">

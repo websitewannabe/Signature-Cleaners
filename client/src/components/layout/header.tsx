@@ -39,7 +39,7 @@ const Header = () => {
           <div className="flex items-center -ml-2 -mb-2">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/src/images/signature-cleaners-logo-white.png"
+                src="./src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
                 className="h-16 w-auto"
               />
