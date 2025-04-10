@@ -162,10 +162,10 @@ export default function ServicesPage() {
                       <p className="text-neutral-600 line-clamp-3">
                         {service.description}
                       </p>
-                      <Link href={service.href} className="block mt-4">
+                      <Link href={service.href} className="block">
                         <Button
                           variant="outline"
-                          className="w-full h-10 border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 font-medium"
+                          className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
                         >
                           Learn More
                         </Button>
