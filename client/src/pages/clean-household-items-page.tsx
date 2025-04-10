@@ -13,7 +13,7 @@ export default function CleanHouseholdItemsPage() {
       {/* Hero Section */}
       <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
@@ -31,10 +31,10 @@ export default function CleanHouseholdItemsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Expert Care for Your Home Items
               </h2>
-              <p className="text-lg text-neutral-600 mb-6">
+              <p className="text-lg text-white mb-6">
                 Trust our expert cleaning service for your valuable household
                 items. We use specialized cleaning techniques and gentle yet
                 effective solutions to restore and protect your home textiles.
@@ -42,7 +42,7 @@ export default function CleanHouseholdItemsPage() {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -54,13 +54,13 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white">
                     Specialized cleaning for delicate materials
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -72,13 +72,13 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white">
                     Stain removal and deep cleaning
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -90,7 +90,7 @@ export default function CleanHouseholdItemsPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white">
                     Professional handling and packaging
                   </span>
                 </li>
@@ -102,30 +102,30 @@ export default function CleanHouseholdItemsPage() {
               </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
-              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
+              <h3 className="text-2xl font-semibold text-white mb-6">
                 Contact Us
               </h3>
               <form className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label className="block text-sm font-medium text-white mb-1">
                     Name
                   </label>
                   <Input placeholder="Your name" className="w-full" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label className="block text-sm font-medium text-white mb-1">
                     Email
                   </label>
                   <Input type="email" placeholder="your@email.com" className="w-full" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label className="block text-sm font-medium text-white mb-1">
                     Phone
                   </label>
                   <Input type="tel" placeholder="(555) 123-4567" className="w-full" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                  <label className="block text-sm font-medium text-white mb-1">
                     Message
                   </label>
                   <Textarea 
@@ -145,7 +145,7 @@ export default function CleanHouseholdItemsPage() {
       {/* CTA Section */}
       <section className="relative py-16">
         <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-[#790003]/80"></div>
+        <div className="absolute inset-0 bg-black"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl font-bold text-white mb-6">
             Ready to refresh your home items?
