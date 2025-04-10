@@ -11,8 +11,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function WeddingGownPage() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -100,38 +102,85 @@ export default function WeddingGownPage() {
                   </span>
                 </li>
               </ul>
-              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Inspection</span>
+              {/* Service Icons with Dynamic Dropdown */}
+              <div className="space-y-6 mt-8 mb-8">
+                <div className="grid grid-cols-4 gap-6">
+                  {[
+                    {
+                      name: 'Inspection',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
+                      details: "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation."
+                    },
+                    {
+                      name: 'Cleaning',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
+                      details: "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown."
+                    },
+                    {
+                      name: 'Documentation',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />,
+                      details: "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind."
+                    },
+                    {
+                      name: 'Preservation',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />,
+                      details: "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time."
+                    }
+                  ].map((service, index) => (
+                    <button 
+                      key={index}
+                      onClick={() => {
+                        if (selectedService === service.name) {
+                          setSelectedService(null);
+                        } else {
+                          setSelectedService(service.name);
+                        }
+                      }}
+                      className="text-center focus:outline-none"
+                    >
+                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
+                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          {service.icon}
+                        </svg>
+                      </div>
+                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                    </svg>
+                
+                {/* Dynamic Dropdown */}
+                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
+                    {selectedService && [
+                      'Inspection',
+                      'Cleaning',
+                      'Documentation',
+                      'Preservation'
+                    ].map(name => {
+                      if (name === selectedService) {
+                        const service = [
+                          {
+                            name: 'Inspection',
+                            details: "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation."
+                          },
+                          {
+                            name: 'Cleaning',
+                            details: "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown."
+                          },
+                          {
+                            name: 'Documentation',
+                            details: "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind."
+                          },
+                          {
+                            name: 'Preservation',
+                            details: "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time."
+                          }
+                        ].find(s => s.name === name);
+                        return service?.details;
+                      }
+                      return null;
+                    }).filter(Boolean)}
                   </div>
-                  <span className="block mt-2 text-sm text-white/90">Cleaning</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Documentation</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Preservation</span>
                 </div>
               </div>
               <Link href="/schedule">
