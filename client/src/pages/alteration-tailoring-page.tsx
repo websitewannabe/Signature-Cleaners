@@ -2,6 +2,14 @@
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Link } from "wouter";
 
 export default function AlterationTailoringPage() {
@@ -10,7 +18,7 @@ export default function AlterationTailoringPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-28">
+      <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/src/images/tailoring.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -26,22 +34,22 @@ export default function AlterationTailoringPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6">
                 Professional Tailoring Services
               </h2>
-              <p className="text-lg text-neutral-600 mb-6">
-                Our expert tailors provide precise alterations and custom fitting services
-                to ensure your garments look and feel perfect. From simple hemming to
-                complete garment reconstruction, we handle every detail with care.
+              <p className="text-lg text-white/90 mb-6">
+                Trust our expert tailors for precise alterations and custom fitting services.
+                We handle everything from simple hemming to complete garment reconstruction
+                with meticulous attention to detail.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -53,13 +61,13 @@ export default function AlterationTailoringPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
+                  <span className="ml-3 text-white/90">
                     Expert measurements and fitting
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -71,13 +79,13 @@ export default function AlterationTailoringPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
-                    Quick turnaround times available
+                  <span className="ml-3 text-white/90">
+                    Custom garment adjustments
                   </span>
                 </li>
                 <li className="flex items-start">
                   <svg
-                    className="h-6 w-6 text-primary mt-1 flex-shrink-0"
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -89,56 +97,147 @@ export default function AlterationTailoringPage() {
                       d="M5 13l4 4L19 7"
                     />
                   </svg>
-                  <span className="ml-3 text-neutral-600">
-                    Satisfaction guaranteed
+                  <span className="ml-3 text-white/90">
+                    Professional finishing
                   </span>
                 </li>
               </ul>
+              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.8 12a9 9 0 10-11.6 0" />
+                    </svg>
+                  </div>
+                  <span className="block mt-2 text-sm text-white/90">Hemming</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                  <span className="block mt-2 text-sm text-white/90">Resizing</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                    </svg>
+                  </div>
+                  <span className="block mt-2 text-sm text-white/90">Fitting</span>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <span className="block mt-2 text-sm text-white/90">Repairs</span>
+                </div>
+              </div>
               <Link href="/schedule">
                 <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white px-8 py-6">
-                  Schedule Consultation
+                  Schedule Service
                 </Button>
               </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
-                Service Pricing
+                Contact Us
               </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Hem Pants/Skirt</span>
-                  <span className="font-semibold">From $15</span>
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Name
+                  </label>
+                  <Input placeholder="Your name" className="w-full" />
                 </div>
-                <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Take in/Let out Waist</span>
-                  <span className="font-semibold">From $25</span>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Email
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="your@email.com"
+                    className="w-full"
+                  />
                 </div>
-                <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Zipper Replacement</span>
-                  <span className="font-semibold">From $20</span>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Phone
+                  </label>
+                  <Input
+                    type="tel"
+                    placeholder="(555) 123-4567"
+                    className="w-full"
+                  />
                 </div>
-                <div className="flex justify-between items-center pb-2 border-b border-neutral-200">
-                  <span className="text-neutral-600">Custom Alterations</span>
-                  <span className="font-semibold">By Quote</span>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Message
+                  </label>
+                  <Textarea
+                    placeholder="Tell us about your alteration needs..."
+                    className="min-h-[100px] w-full"
+                  />
                 </div>
-              </div>
+                <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How long do alterations take?</AccordionTrigger>
+              <AccordionContent>
+                Standard alterations typically take 3-5 business days. Rush service is
+                available for an additional fee. Complex alterations may require more time.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Do I need an appointment for fittings?</AccordionTrigger>
+              <AccordionContent>
+                While walk-ins are welcome, we recommend scheduling an appointment for
+                fittings to ensure dedicated attention from our tailors.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger>What types of garments do you alter?</AccordionTrigger>
+              <AccordionContent>
+                We work on all types of clothing including suits, dresses, formal wear,
+                casual wear, and leather garments.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="relative py-16">
+      <section className="relative py-24">
         <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to perfect your fit?
           </h2>
           <Link href="/schedule">
             <Button
               size="lg"
-              className="bg-white hover:bg-[#F6AE2D] text-black px-8"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
             >
               Schedule a Fitting
             </Button>
