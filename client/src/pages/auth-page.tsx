@@ -9,6 +9,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -95,6 +101,63 @@ export default function AuthPage() {
           </div>
         </div>
       </div>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <Accordion type="single" collapsible className="space-y-4">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How do I sign up?</AccordionTrigger>
+              <AccordionContent>
+                Click here or Call (215) 345-1470 – Include your sign up form
+                with your name, address and phone number on your first order
+                indicating that you signed up online.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-2">
+              <AccordionTrigger>
+                Where are my clothes picked up and delivered?
+              </AccordionTrigger>
+              <AccordionContent>
+                We will pick up and deliver your clothes to your home, your
+                office or to the concierge in your building.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Is there a minimum order?</AccordionTrigger>
+              <AccordionContent>
+                No need to wait for a full bag of dirty clothes, we will pick up
+                and deliver any amount.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-10">
+              <AccordionTrigger>How do I pay for the service?</AccordionTrigger>
+              <AccordionContent>
+                Your dry cleaning will be charged automatically to your American
+                express, Visa. Master card or Discover Card.
+              </AccordionContent>
+            </AccordionItem>
+
+            <AccordionItem value="item-11">
+              <AccordionTrigger>
+                How do you keep my credit card safe?
+              </AccordionTrigger>
+              <AccordionContent>
+                We use the latest encryption and authentication services for all
+                our web transactions so that your credit card information
+                remains safe. If you prefer, just give us a call at (877)
+                779-1269 and we can assist you via phone.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
 
       <Footer />
     </div>
