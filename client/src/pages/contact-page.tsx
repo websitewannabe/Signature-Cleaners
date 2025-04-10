@@ -74,6 +74,7 @@ export default function ContactPage() {
       {/* Contact Info & Form */}
       <section className="py-40 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Contact Us</h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
             <div>
               <div className="bg-white rounded-lg shadow-md p-6">
