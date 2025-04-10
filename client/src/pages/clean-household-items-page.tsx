@@ -103,27 +103,35 @@ export default function CleanHouseholdItemsPage() {
               </ul>
               <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8" />
-                  </svg>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8" />
+                    </svg>
+                  </div>
                   <span className="block mt-2 text-sm text-white/90">Comforters</span>
                 </div>
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                  </div>
                   <span className="block mt-2 text-sm text-white/90">Curtains</span>
                 </div>
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                    </svg>
+                  </div>
                   <span className="block mt-2 text-sm text-white/90">Rugs</span>
                 </div>
                 <div className="text-center">
-                  <svg className="w-12 h-12 mx-auto text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
+                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
                   <span className="block mt-2 text-sm text-white/90">Blankets</span>
                 </div>
               </div>
