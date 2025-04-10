@@ -11,8 +11,29 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function AlterationTailoringPage() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
+  
+  const services = [
+    {
+      name: 'Hemming',
+      details: "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish."
+    },
+    {
+      name: 'Resizing',
+      details: "Whether you've sized up or down, we expertly resize garments to ensure a perfect, flattering fit."
+    },
+    {
+      name: 'Fitting',
+      details: "Our tailors specialize in accurate body measurements and advanced fitting techniques for custom results."
+    },
+    {
+      name: 'Repairs',
+      details: "From torn seams to broken zippers, we restore your clothing with high-quality, durable repairs."
+    }
+  ];
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -102,39 +123,61 @@ export default function AlterationTailoringPage() {
                   </span>
                 </li>
               </ul>
-              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.8 12a9 9 0 10-11.6 0" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Hemming</span>
+              {/* Service Icons with Dynamic Dropdown */}
+              <div className="space-y-6 mt-8 mb-8">
+                <div className="grid grid-cols-4 gap-6">
+                  {[
+                    {
+                      name: 'Hemming',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M17.8 12a9 9 0 10-11.6 0" />,
+                      details: "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish."
+                    },
+                    {
+                      name: 'Resizing',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />,
+                      details: "Whether you've sized up or down, we expertly resize garments to ensure a perfect, flattering fit."
+                    },
+                    {
+                      name: 'Fitting',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />,
+                      details: "Our tailors specialize in accurate body measurements and advanced fitting techniques for custom results."
+                    },
+                    {
+                      name: 'Repairs',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
+                      details: "From torn seams to broken zippers, we restore your clothing with high-quality, durable repairs."
+                    }
+                  ].map((service, index) => (
+                    <button 
+                      key={index}
+                      onClick={() => {
+                        if (selectedService === service.name) {
+                          setSelectedService(null);
+                        } else {
+                          setSelectedService(service.name);
+                        }
+                      }}
+                      className="text-center focus:outline-none"
+                    >
+                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
+                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          {service.icon}
+                        </svg>
+                      </div>
+                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+                
+                {/* Dynamic Dropdown */}
+                <div 
+                  className={`overflow-hidden transition-all duration-300 ${
+                    selectedService ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                  }`}
+                >
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
+                    {selectedService && services.find(s => s.name === selectedService)?.details}
                   </div>
-                  <span className="block mt-2 text-sm text-white/90">Resizing</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Fitting</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Repairs</span>
                 </div>
               </div>
               <Link href="/schedule">
