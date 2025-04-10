@@ -61,8 +61,7 @@ const Header = () => {
                     <div className="grid grid-cols-2 gap-3 p-4 w-[600px] text-xs">
                       <Link href="/dry-cleaning" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-5v5m-4-5v5M4 16l4.5-4.5L10 16m4-6l-4.5 4.5L10 10m4-6l-4.5 4.5L10 4" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                         </svg>
                         <div>Dry Cleaning</div>
                       </Link>
@@ -74,29 +73,25 @@ const Header = () => {
                       </Link>
                       <Link href="/alteration-tailoring" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 15v-1m4-4h-4m4 4v-1m-4 4H8m4-4v-1m-4-4h-4m-1-1h11m-11 0v11m0-11v11m0-11v11m-4 4v-1m4-4h-4"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                         </svg>
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link href="/wedding-gown" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 10h.01M15 10h.01M9 16h6" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link href="/suede-leather-cleaning" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 13l9-9m-9 9l9 9m-9-9v11m9-11v11"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>Suede & Leather</div>
                       </Link>
                       <Link href="/shoe-repair" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.5 5.11l7 12.277 5-5.093"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                         </svg>
                         <div>Shoe Repair</div>
                       </Link>
@@ -108,22 +103,19 @@ const Header = () => {
                       </Link>
                       <Link href="/interior-cleaning" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                         </svg>
                         <div>Interior Cleaning</div>
                       </Link>
                       <Link href="/folding-dress-shirt" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h12a2 2 0 012 2v8z"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 11l7-7 7 7M5 19l7-7 7 7" />
                         </svg>
                         <div>Folding Dress Shirt Services</div>
                       </Link>
                       <Link href="/delivery" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          {/* Replace with appropriate icon */}
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <div>Delivery</div>
                       </Link>
