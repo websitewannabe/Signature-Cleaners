@@ -52,7 +52,11 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium">Services</NavigationMenuTrigger>
+                  <div className="flex items-center">
+                    <Link href="/services" className="mr-2">
+                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium">Services</NavigationMenuTrigger>
+                    </Link>
+                  </div>
                   <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
                     <div className="grid grid-cols-2 gap-3 p-4 w-[600px]">
                       <Link href="/dry-cleaning" className="block p-2 hover:bg-neutral-100 rounded">
