@@ -58,7 +58,7 @@ const Header = () => {
                     </Link>
                   </div>
                   <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                    <div className="grid grid-cols-2 gap-3 p-4 w-[600px]">
+                    <div className="grid grid-cols-2 gap-3 p-4 w-[600px] text-xs">
                       <Link href="/dry-cleaning" className="flex items-center p-2 hover:bg-neutral-100 rounded">
                         <svg className="w-5 h-5 mr-2 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           {/* Replace with appropriate icon */}
