@@ -9,7 +9,7 @@ export default function CleanHouseholdItemsPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-28">
+      <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
