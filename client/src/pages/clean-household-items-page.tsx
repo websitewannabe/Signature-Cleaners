@@ -27,7 +27,7 @@ export default function CleanHouseholdItemsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -116,19 +116,27 @@ export default function CleanHouseholdItemsPage() {
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Email
                   </label>
-                  <Input type="email" placeholder="your@email.com" className="w-full" />
+                  <Input
+                    type="email"
+                    placeholder="your@email.com"
+                    className="w-full"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Phone
                   </label>
-                  <Input type="tel" placeholder="(555) 123-4567" className="w-full" />
+                  <Input
+                    type="tel"
+                    placeholder="(555) 123-4567"
+                    className="w-full"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Message
                   </label>
-                  <Textarea 
+                  <Textarea
                     placeholder="Tell us about your household items..."
                     className="min-h-[100px] w-full"
                   />
