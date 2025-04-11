@@ -11,8 +11,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function ShoeRepairPage() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -100,38 +102,78 @@ export default function ShoeRepairPage() {
                   </span>
                 </li>
               </ul>
-              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Heels</span>
+              <div className="space-y-6 mt-8 mb-8">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {[
+                    {
+                      name: 'Heels',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />,
+                      details: "We specialize in heel repair and replacement for all types of shoes, restoring stability, comfort, and appearance."
+                    },
+                    {
+                      name: 'Soles',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />,
+                      details: "Worn-out soles are replaced with durable materials to extend the life of your shoes and improve traction."
+                    },
+                    {
+                      name: 'Polish',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />,
+                      details: "Our polishing service restores shine, color, and softness to your footwear with premium finishing products."
+                    },
+                    {
+                      name: 'Stretching',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />,
+                      details: "Tight shoes? We offer professional stretching to improve fit without damaging the material or structure."
+                    }
+                  ].map((service) => (
+                    <button
+                      key={service.name}
+                      onClick={() => {
+                        if (selectedService === service.name) {
+                          setSelectedService(null);
+                        } else {
+                          setSelectedService(service.name);
+                        }
+                      }}
+                      className="text-center focus:outline-none"
+                    >
+                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${
+                        selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'
+                      }`}>
+                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          {service.icon}
+                        </svg>
+                      </div>
+                      <span className={`block mt-2 text-sm text-white/90 transition-all duration-300 ${
+                        selectedService === service.name ? 'font-bold' : ''
+                      }`}>
+                        {service.name}
+                      </span>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
+                
+                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-48' : 'max-h-0'}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white/90">
+                    {selectedService && [
+                      {
+                        name: 'Heels',
+                        details: "We specialize in heel repair and replacement for all types of shoes, restoring stability, comfort, and appearance."
+                      },
+                      {
+                        name: 'Soles',
+                        details: "Worn-out soles are replaced with durable materials to extend the life of your shoes and improve traction."
+                      },
+                      {
+                        name: 'Polish',
+                        details: "Our polishing service restores shine, color, and softness to your footwear with premium finishing products."
+                      },
+                      {
+                        name: 'Stretching',
+                        details: "Tight shoes? We offer professional stretching to improve fit without damaging the material or structure."
+                      }
+                    ].find(s => s.name === selectedService)?.details}
                   </div>
-                  <span className="block mt-2 text-sm text-white/90">Soles</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Polish</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Stretching</span>
                 </div>
               </div>
               <Link href="/schedule">
