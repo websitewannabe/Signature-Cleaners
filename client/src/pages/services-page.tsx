@@ -146,7 +146,7 @@ export default function ServicesPage() {
                   key={service.id}
                   className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden"
                 >
-                  <div 
+                  <div
                     className="h-52 bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"
                     style={{ backgroundImage: `url(${service.imageUrl})` }}
                     role="img"
