@@ -10,8 +10,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
+import { useState } from "react";
 
 export default function CleanHouseholdItemsPage() {
+  const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -101,38 +103,84 @@ export default function CleanHouseholdItemsPage() {
                   </span>
                 </li>
               </ul>
-              <div className="grid grid-cols-4 gap-6 mt-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Comforters</span>
+              <div className="space-y-6 mt-8 mb-8">
+                <div className="grid grid-cols-4 gap-6">
+                  {[
+                    {
+                      name: 'Comforters',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8" />,
+                      details: "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness."
+                    },
+                    {
+                      name: 'Curtains',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />,
+                      details: "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape."
+                    },
+                    {
+                      name: 'Rugs',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />,
+                      details: "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy."
+                    },
+                    {
+                      name: 'Blankets',
+                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />,
+                      details: "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability."
+                    }
+                  ].map((service, index) => (
+                    <button 
+                      key={index}
+                      onClick={() => {
+                        if (selectedService === service.name) {
+                          setSelectedService(null);
+                        } else {
+                          setSelectedService(service.name);
+                        }
+                      }}
+                      className="text-center focus:outline-none"
+                    >
+                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
+                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          {service.icon}
+                        </svg>
+                      </div>
+                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                    </button>
+                  ))}
                 </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                    </svg>
+                
+                {/* Dynamic Dropdown */}
+                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
+                    {selectedService && [
+                      'Comforters',
+                      'Curtains',
+                      'Rugs',
+                      'Blankets'
+                    ].map(name => {
+                      if (name === selectedService) {
+                        const service = [
+                          {
+                            name: 'Comforters',
+                            details: "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness."
+                          },
+                          {
+                            name: 'Curtains',
+                            details: "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape."
+                          },
+                          {
+                            name: 'Rugs',
+                            details: "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy."
+                          },
+                          {
+                            name: 'Blankets',
+                            details: "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability."
+                          }
+                        ].find(s => s.name === name);
+                        return service?.details;
+                      }
+                      return null;
+                    })}
                   </div>
-                  <span className="block mt-2 text-sm text-white/90">Curtains</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Rugs</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto">
-                    <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                    </svg>
-                  </div>
-                  <span className="block mt-2 text-sm text-white/90">Blankets</span>
                 </div>
               </div>
               <Link href="/schedule">
