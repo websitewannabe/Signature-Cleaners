@@ -148,7 +148,7 @@ export default function ServicesPage() {
                 >
                   <div
                     className="h-52 bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${service.imageUrl})` }}
+                    style={{ backgroundImage: `url(${service.imageUrl.replace(/[\[\]']/g, '')})` }}
                     role="img"
                     aria-label={service.name}
                   />
