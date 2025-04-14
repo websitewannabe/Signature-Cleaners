@@ -31,19 +31,14 @@ import DeliveryPage from "@/pages/delivery-page"; // Added import for DeliveryPa
 function Router() {
   return (
     <Switch>
-      <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
         <Route path="/" component={HomePage} />
         <Route path="/services" component={ServicesPage} />
         <Route path="/wash-fold" component={WashFoldPage} />
         <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
         <Route path="/shoe-repair" component={ShoeRepairPage} />
-      
-      <Route path="/wedding-gown" component={WeddingGownPage} />
+        <Route path="/wedding-gown" component={WeddingGownPage} />
         <Route path="/dry-cleaning" component={DryCleaningPage} />
-        <Route
-          path="/clean-household-items"
-          component={CleanHouseholdItemsPage}
-        />
+        <Route path="/clean-household-items" component={CleanHouseholdItemsPage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/testimonials" component={TestimonialsPage} />
         <Route path="/contact" component={ContactPage} />
@@ -51,9 +46,8 @@ function Router() {
         <Route path="/faq" component={FaqPage} />
         <Route path="/auth" component={AuthPage} />
         <Route path="/delivery" component={DeliveryPage} />
-        <Route component={NotFound} />
-      </Suspense>
-    </Switch>
+        <Route path="/:rest*" component={NotFound} />
+      </Switch>
   );
 }
 
