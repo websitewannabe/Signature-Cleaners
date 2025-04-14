@@ -162,7 +162,7 @@ export default function ServicesPage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
                       Book Now
                     </Button>
                   </Link>
@@ -199,7 +199,7 @@ export default function ServicesPage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
                       Book Now
                     </Button>
                   </Link>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
                       Book Now
                     </Button>
                   </Link>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
                       Book Now
                     </Button>
                   </Link>

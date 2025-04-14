@@ -24,13 +24,13 @@ const Header = () => {
   }, []);
 
   const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
-    isOpaque ? "bg-black/35 shadow-lg backdrop-blur-sm" : "bg-transparent"
+    isOpaque ? "bg-navy/90 shadow-lg backdrop-blur-sm" : "bg-transparent"
   }`;
 
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        isOpaque ? "bg-black/60 backdrop-blur-sm" : "bg-transparent"
+        isOpaque ? "bg-navy/90 backdrop-blur-sm" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
