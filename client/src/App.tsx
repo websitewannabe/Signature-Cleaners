@@ -32,28 +32,29 @@ import DeliveryPage from "@/pages/delivery-page"; // Added import for DeliveryPa
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={HomePage} />
-      <Route path="/services" component={ServicesPage} />
-      <Route path="/wash-fold" component={WashFoldPage} />
-      <Route path="/folding-dress-shirt" component={FoldingDressShirtPage} />
-      <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
-      <Route path="/shoe-repair" component={ShoeRepairPage} />
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+        <Route path="/" component={HomePage} />
+        <Route path="/services" component={ServicesPage} />
+        <Route path="/wash-fold" component={WashFoldPage} />
+        <Route path="/folding-dress-shirt" component={FoldingDressShirtPage} />
+        <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
+        <Route path="/shoe-repair" component={ShoeRepairPage} />
       
       <Route path="/wedding-gown" component={WeddingGownPage} />
-      <Route path="/dry-cleaning" component={DryCleaningPage} />
-      <Route
-        path="/clean-household-items"
-        component={CleanHouseholdItemsPage}
-      />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/testimonials" component={TestimonialsPage} />
-      <Route path="/contact" component={ContactPage} />
-      <Route path="/schedule" component={SchedulePage} />
-      <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
-      <Route path="/auth" component={AuthPage} /> {/* Added Auth route */}
-      <Route path="/delivery" component={DeliveryPage} />{" "}
-      {/* Added Delivery page route */}
-      <Route component={NotFound} />
+        <Route path="/dry-cleaning" component={DryCleaningPage} />
+        <Route
+          path="/clean-household-items"
+          component={CleanHouseholdItemsPage}
+        />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/testimonials" component={TestimonialsPage} />
+        <Route path="/contact" component={ContactPage} />
+        <Route path="/schedule" component={SchedulePage} />
+        <Route path="/faq" component={FaqPage} />
+        <Route path="/auth" component={AuthPage} />
+        <Route path="/delivery" component={DeliveryPage} />
+        <Route component={NotFound} />
+      </Suspense>
     </Switch>
   );
 }
