@@ -47,19 +47,19 @@ const Header = () => {
           </div>
 
           {/* Center: Nav Links */}
-          <nav className="hidden md:flex items-center space-x-12 text-white text-lg font-medium">
+          <nav className="hidden md:flex items-center justify-center flex-1 gap-12 text-white text-lg font-medium">
             <Link
               href="/"
-              className="hover:text-white/80 py-2 flex items-center"
+              className="hover:text-white/80 h-10 flex items-center"
             >
               <Home className="w-5 h-5" />
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <div className="flex items-center">
-                    <Link href="/services" className="mr-2">
-                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium">
+                  <div className="flex items-center h-10">
+                    <Link href="/services">
+                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium h-10 flex items-center">
                         Services
                       </NavigationMenuTrigger>
                     </Link>
@@ -204,13 +204,13 @@ const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/about" className="hover:text-white/80 py-2">
+            <Link href="/about" className="hover:text-white/80 h-10 flex items-center">
               About Us
             </Link>
-            <Link href="/contact" className="hover:text-white/80 py-2">
+            <Link href="/contact" className="hover:text-white/80 h-10 flex items-center">
               Contact
             </Link>
-            <Link href="/auth" className="hover:text-white/80 py-2">
+            <Link href="/auth" className="hover:text-white/80 h-10 flex items-center">
               My Account
             </Link>
           </nav>
