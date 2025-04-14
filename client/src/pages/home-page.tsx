@@ -18,41 +18,20 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
-import { lazy, Suspense } from 'react';
-import HeroSection from '@/components/home/hero-section';
-
-const ServicesSection = lazy(() => import('@/components/home/services-section'));
-const TestimonialsSection = lazy(() => import('@/components/home/testimonials-section'));
-const FaqSection = lazy(() => import('@/components/home/faq-section'));
-
-const LoadingSpinner = () => (
-  <div className="min-h-[400px] flex items-center justify-center">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#790003]"></div>
-  </div>
-);
-
 export default function HomePage() {
+  const { data: services, isLoading: isLoadingServices } = useQuery({
+    queryKey: ["/api/services"],
+  });
+
+  const { data: testimonials, isLoading: isLoadingTestimonials } = useQuery({
+    queryKey: ["/api/testimonials"],
+  });
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <HeroSection />
-      
-      <Suspense fallback={<LoadingSpinner />}>
-        <ServicesSection />
-      </Suspense>
 
-      <Suspense fallback={<LoadingSpinner />}>
-        <TestimonialsSection />
-      </Suspense>
-
-      <Suspense fallback={<LoadingSpinner />}>
-        <FaqSection />
-      </Suspense>
-
-      <Footer />
-    </div>
-  );
-}
+      {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">
         <div className="absolute inset-0 bg-[url('/src/images/interior.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-transparent"></div>
@@ -113,7 +92,8 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -150,7 +130,8 @@ export default function HomePage() {
             </div>
             {/* Wash & Fold */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -187,7 +168,8 @@ export default function HomePage() {
             </div>
             {/* Wedding Gowns */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -224,7 +206,8 @@ export default function HomePage() {
             </div>
             {/* Household Items */}
             <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105">
+              </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-neutral-900">
@@ -293,7 +276,92 @@ export default function HomePage() {
                 </span>
               </Link>
 
-              
+              {/* Folding Dress Shirt */}
+              <Link
+                href="/folding-dress-shirt"
+                className="group flex flex-col items-center"
+              >
+                <div
+                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  aria-label="Folding Dress Shirt Service"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                    />
+                  </svg>
+                </div>
+                <span className="mt-2 text-white text-sm font-medium">
+                  Shirt Service
+                </span>
+              </Link>
+
+              {/* Interior Cleaning */}
+              <Link
+                href="/interior-cleaning"
+                className="group flex flex-col items-center"
+              >
+                <div
+                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  aria-label="Interior Cleaning Service"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                    />
+                  </svg>
+                </div>
+                <span className="mt-2 text-white text-sm font-medium">
+                  Interior
+                </span>
+              </Link>
+
+              {/* Suede & Leather */}
+              <Link
+                href="/suede-leather-cleaning"
+                className="group flex flex-col items-center"
+              >
+                <div
+                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  aria-label="Suede and Leather Cleaning Service"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-10 w-10 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                    />
+                  </svg>
+                </div>
+                <span className="mt-2 text-white text-sm font-medium">
+                  Leather Care
+                </span>
+              </Link>
 
               {/* Alterations & Tailoring */}
               <Link
@@ -360,6 +428,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+
           <div className="mt-12 text-center">
             <Link href="/services">
               <span className="inline-flex items-center text-white hover:shadow-lg font-medium">
