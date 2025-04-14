@@ -175,11 +175,6 @@ export default function DryCleaningPage() {
                   </div>
                 </div>
               </div>
-              <Link href="/schedule">
-                <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white px-8 py-6">
-                  Schedule Service
-                </Button>
-              </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
