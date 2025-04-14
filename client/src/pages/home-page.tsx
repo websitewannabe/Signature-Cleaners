@@ -18,20 +18,41 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
+import { lazy, Suspense } from 'react';
+import HeroSection from '@/components/home/hero-section';
+
+const ServicesSection = lazy(() => import('@/components/home/services-section'));
+const TestimonialsSection = lazy(() => import('@/components/home/testimonials-section'));
+const FaqSection = lazy(() => import('@/components/home/faq-section'));
+
+const LoadingSpinner = () => (
+  <div className="min-h-[400px] flex items-center justify-center">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#790003]"></div>
+  </div>
+);
+
 export default function HomePage() {
-  const { data: services, isLoading: isLoadingServices } = useQuery({
-    queryKey: ["/api/services"],
-  });
-
-  const { data: testimonials, isLoading: isLoadingTestimonials } = useQuery({
-    queryKey: ["/api/testimonials"],
-  });
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
+      <HeroSection />
+      
+      <Suspense fallback={<LoadingSpinner />}>
+        <ServicesSection />
+      </Suspense>
 
-      {/* Hero Section */}
+      <Suspense fallback={<LoadingSpinner />}>
+        <TestimonialsSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSpinner />}>
+        <FaqSection />
+      </Suspense>
+
+      <Footer />
+    </div>
+  );
+}
       <section className="relative min-h-[85vh] flex items-center">
         <div className="absolute inset-0 bg-[url('/src/images/interior.jpg')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-transparent"></div>
