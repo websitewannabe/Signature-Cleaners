@@ -343,10 +343,6 @@ export default function ServicesPage() {
                 </span>
               </Link>
 
-              
-
-              
-
               {/* Alterations & Tailoring */}
               <Link
                 href="/alteration-tailoring"
