@@ -85,15 +85,7 @@ const services = [
     price: "$2.99/lb",
     href: "/wash-fold",
   },
-  {
-    id: 10,
-    name: "Folding Dress Shirt Services",
-    description:
-      "Professional laundering and pressing services for dress shirts, ensuring a crisp, professional appearance.",
-    imageUrl: "/src/images/cleaners.gif",
-    price: "From $3.99",
-    href: "/folding-dress-shirt",
-  },
+  
 ];
 
 export default function ServicesPage() {
