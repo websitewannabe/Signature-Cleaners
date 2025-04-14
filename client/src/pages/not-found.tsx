@@ -8,9 +8,9 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow flex items-center justify-center bg-gray-50">
+      <main className="flex-grow flex items-center justify-center bg-gray-50 py-16">
         <Card className="w-full max-w-md mx-4">
-          <CardContent className="pt-6">
+          <CardContent className="pt-6 pb-4">
             <div className="flex mb-4 gap-2">
               <AlertCircle className="h-8 w-8 text-red-500" />
               <h1 className="text-2xl font-bold text-gray-900">404 Page Not Found</h1>
