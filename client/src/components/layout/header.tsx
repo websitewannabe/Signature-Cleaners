@@ -142,25 +142,7 @@ const Header = () => {
                         </svg>
                         <div>Wedding Gowns</div>
                       </Link>
-                      <Link
-                        href="/suede-leather-cleaning"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
-                      >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
-                        <div>Suede & Leather</div>
-                      </Link>
+                      
                       <Link
                         href="/shoe-repair"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
