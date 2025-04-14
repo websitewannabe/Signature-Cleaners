@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -15,24 +14,28 @@ import { useState } from "react";
 
 export default function WashFoldPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  
+
   const services = [
     {
-      name: 'Regular Wash',
-      details: "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean."
+      name: "Regular Wash",
+      details:
+        "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
     },
     {
-      name: 'Delicates',
-      details: "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care."
+      name: "Delicates",
+      details:
+        "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care.",
     },
     {
-      name: 'Bedding',
-      details: "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish."
+      name: "Bedding",
+      details:
+        "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish.",
     },
     {
-      name: 'Towels',
-      details: "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup."
-    }
+      name: "Towels",
+      details:
+        "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup.",
+    },
   ];
   return (
     <div className="min-h-screen flex flex-col">
@@ -63,7 +66,10 @@ export default function WashFoldPage() {
                 Professional Laundry Service
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Our expert wash and fold service delivers pristine results for your everyday garments. We use premium detergents and precise temperature controls to ensure your clothes receive the best care possible.
+                Our expert wash and fold service delivers pristine results for
+                your everyday garments. We use premium detergents and precise
+                temperature controls to ensure your clothes receive the best
+                care possible.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -125,27 +131,59 @@ export default function WashFoldPage() {
                 <div className="grid grid-cols-4 gap-6">
                   {[
                     {
-                      name: 'Regular Wash',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />,
-                      details: "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean."
+                      name: "Regular Wash",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+                        />
+                      ),
+                      details:
+                        "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
                     },
                     {
-                      name: 'Delicates',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
-                      details: "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care."
+                      name: "Delicates",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                        />
+                      ),
+                      details:
+                        "We use fabric-safe, fragrance-free detergents and low-agitation methods to clean your most delicate garments with care.",
                     },
                     {
-                      name: 'Bedding',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />,
-                      details: "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish."
+                      name: "Bedding",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4"
+                        />
+                      ),
+                      details:
+                        "Sheets, pillowcases, and duvet covers are washed separately to ensure a fresh, soft, and hygienic finish.",
                     },
                     {
-                      name: 'Towels',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />,
-                      details: "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup."
-                    }
+                      name: "Towels",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
+                        />
+                      ),
+                      details:
+                        "Towels are laundered for absorbency and fluffiness, using softeners only when needed to avoid buildup.",
+                    },
                   ].map((service, index) => (
-                    <button 
+                    <button
                       key={index}
                       onClick={() => {
                         if (selectedService === service.name) {
@@ -156,27 +194,34 @@ export default function WashFoldPage() {
                       }}
                       className="text-center focus:outline-none"
                     >
-                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
-                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div
+                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
+                      >
+                        <svg
+                          className="w-12 h-12 text-[#790003]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
                           {service.icon}
                         </svg>
                       </div>
-                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                      <span className="block mt-2 text-sm text-white/90">
+                        {service.name}
+                      </span>
                     </button>
                   ))}
                 </div>
-                
-                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-48' : 'max-h-0'}`}>
+
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${selectedService ? "max-h-48" : "max-h-0"}`}
+                >
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white/90">
-                    {selectedService && services.find(s => s.name === selectedService)?.details}
+                    {selectedService &&
+                      services.find((s) => s.name === selectedService)?.details}
                   </div>
                 </div>
               </div>
-              <Link href="/schedule">
-                <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white px-8 py-6">
-                  Schedule Service
-                </Button>
-              </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
@@ -227,41 +272,72 @@ export default function WashFoldPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>How does the service work?</AccordionTrigger>
-              <AccordionContent>
-                Simply schedule a pickup, and we'll collect your laundry. We'll sort, wash, dry, and fold your items according to their care instructions and deliver them back to you fresh and clean.
-              </AccordionContent>
-            </AccordionItem>
+      {/* How It Works Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+              How It Works
+            </h2>
+            <p className="mt-4 text-xl text-neutral-600 max-w-3xl mx-auto">
+              Our convenient process makes it easy to get your clothes cleaned
+              without disrupting your schedule.
+            </p>
+          </div>
 
-            <AccordionItem value="item-2">
-              <AccordionTrigger>What is the turnaround time?</AccordionTrigger>
-              <AccordionContent>
-                Standard turnaround time is 24-48 hours. We also offer same-day and next-day service for an additional fee.
-              </AccordionContent>
-            </AccordionItem>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Schedule
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                Book your pickup online or by phone
+              </p>
+            </div>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger>How is the pricing calculated?</AccordionTrigger>
-              <AccordionContent>
-                Our wash & fold service is priced by the pound. Special items like comforters and heavy blankets are priced per piece.
-              </AccordionContent>
-            </AccordionItem>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
+              <p className="mt-2 text-neutral-600">
+                We collect your garments from your door
+              </p>
+            </div>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger>Do you provide bags for laundry?</AccordionTrigger>
-              <AccordionContent>
-                Yes, we provide complimentary laundry bags to all our regular customers for convenient collection and delivery.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
+              <p className="mt-2 text-neutral-600">
+                Your items receive expert care
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Deliver
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                We return your fresh, clean garments
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/schedule">
+              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+                Get Started Now
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

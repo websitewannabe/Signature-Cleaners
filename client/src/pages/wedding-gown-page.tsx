@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -44,7 +43,10 @@ export default function WeddingGownPage() {
                 Professional Wedding Gown Care
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Trust our expert preservation service to protect your precious wedding gown. We use specialized techniques and premium materials to ensure your dress maintains its beauty for generations to come.
+                Trust our expert preservation service to protect your precious
+                wedding gown. We use specialized techniques and premium
+                materials to ensure your dress maintains its beauty for
+                generations to come.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -107,27 +109,59 @@ export default function WeddingGownPage() {
                 <div className="grid grid-cols-4 gap-6">
                   {[
                     {
-                      name: 'Inspection',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
-                      details: "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation."
+                      name: "Inspection",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      ),
+                      details:
+                        "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation.",
                     },
                     {
-                      name: 'Cleaning',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
-                      details: "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown."
+                      name: "Cleaning",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                        />
+                      ),
+                      details:
+                        "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown.",
                     },
                     {
-                      name: 'Documentation',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />,
-                      details: "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind."
+                      name: "Documentation",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                        />
+                      ),
+                      details:
+                        "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind.",
                     },
                     {
-                      name: 'Preservation',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />,
-                      details: "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time."
-                    }
+                      name: "Preservation",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                        />
+                      ),
+                      details:
+                        "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time.",
+                    },
                   ].map((service, index) => (
-                    <button 
+                    <button
                       key={index}
                       onClick={() => {
                         if (selectedService === service.name) {
@@ -138,56 +172,69 @@ export default function WeddingGownPage() {
                       }}
                       className="text-center focus:outline-none"
                     >
-                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
-                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div
+                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
+                      >
+                        <svg
+                          className="w-12 h-12 text-[#790003]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
                           {service.icon}
                         </svg>
                       </div>
-                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                      <span className="block mt-2 text-sm text-white/90">
+                        {service.name}
+                      </span>
                     </button>
                   ))}
                 </div>
-                
+
                 {/* Dynamic Dropdown */}
-                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${selectedService ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                >
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
-                    {selectedService && [
-                      'Inspection',
-                      'Cleaning',
-                      'Documentation',
-                      'Preservation'
-                    ].map(name => {
-                      if (name === selectedService) {
-                        const service = [
-                          {
-                            name: 'Inspection',
-                            details: "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation."
-                          },
-                          {
-                            name: 'Cleaning',
-                            details: "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown."
-                          },
-                          {
-                            name: 'Documentation',
-                            details: "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind."
-                          },
-                          {
-                            name: 'Preservation',
-                            details: "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time."
+                    {selectedService &&
+                      [
+                        "Inspection",
+                        "Cleaning",
+                        "Documentation",
+                        "Preservation",
+                      ]
+                        .map((name) => {
+                          if (name === selectedService) {
+                            const service = [
+                              {
+                                name: "Inspection",
+                                details:
+                                  "Every gown begins with a detailed inspection to assess fabric, stitching, and embellishments to guide safe preservation.",
+                              },
+                              {
+                                name: "Cleaning",
+                                details:
+                                  "We use delicate, fabric-safe cleaning techniques to remove stains, oils, and residues without damaging the gown.",
+                              },
+                              {
+                                name: "Documentation",
+                                details:
+                                  "High-resolution photos and condition notes are recorded before and after treatment for your peace of mind.",
+                              },
+                              {
+                                name: "Preservation",
+                                details:
+                                  "Your gown is carefully packaged using museum-quality materials to prevent yellowing, oxidation, and damage over time.",
+                              },
+                            ].find((s) => s.name === name);
+                            return service?.details;
                           }
-                        ].find(s => s.name === name);
-                        return service?.details;
-                      }
-                      return null;
-                    }).filter(Boolean)}
+                          return null;
+                        })
+                        .filter(Boolean)}
                   </div>
                 </div>
               </div>
-              <Link href="/schedule">
-                <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white px-8 py-6">
-                  Schedule Service
-                </Button>
-              </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
@@ -238,41 +285,72 @@ export default function WeddingGownPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>How long does the preservation process take?</AccordionTrigger>
-              <AccordionContent>
-                The complete preservation process typically takes 2-3 weeks to ensure thorough cleaning and proper preservation.
-              </AccordionContent>
-            </AccordionItem>
+      {/* How It Works Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+              How It Works
+            </h2>
+            <p className="mt-4 text-xl text-neutral-600 max-w-3xl mx-auto">
+              Our convenient process makes it easy to get your clothes cleaned
+              without disrupting your schedule.
+            </p>
+          </div>
 
-            <AccordionItem value="item-2">
-              <AccordionTrigger>What preservation method do you use?</AccordionTrigger>
-              <AccordionContent>
-                We use museum-quality materials and techniques, including acid-free tissue paper and specialized preservation boxes.
-              </AccordionContent>
-            </AccordionItem>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Schedule
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                Book your pickup online or by phone
+              </p>
+            </div>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Can you remove tough stains?</AccordionTrigger>
-              <AccordionContent>
-                Yes, our experts can remove most stains including wine, dirt, and grass. We recommend bringing your gown in as soon as possible after the wedding.
-              </AccordionContent>
-            </AccordionItem>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
+              <p className="mt-2 text-neutral-600">
+                We collect your garments from your door
+              </p>
+            </div>
 
-            <AccordionItem value="item-4">
-              <AccordionTrigger>How should I store my preserved gown?</AccordionTrigger>
-              <AccordionContent>
-                Store your preserved gown in a cool, dry place away from direct sunlight. Avoid storing in basements or attics where temperature and humidity fluctuate.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
+              <p className="mt-2 text-neutral-600">
+                Your items receive expert care
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Deliver
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                We return your fresh, clean garments
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/schedule">
+              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+                Get Started Now
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

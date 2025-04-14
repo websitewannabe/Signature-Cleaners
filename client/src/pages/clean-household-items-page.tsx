@@ -107,27 +107,59 @@ export default function CleanHouseholdItemsPage() {
                 <div className="grid grid-cols-4 gap-6">
                   {[
                     {
-                      name: 'Comforters',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8" />,
-                      details: "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness."
+                      name: "Comforters",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8"
+                        />
+                      ),
+                      details:
+                        "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness.",
                     },
                     {
-                      name: 'Curtains',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />,
-                      details: "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape."
+                      name: "Curtains",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                        />
+                      ),
+                      details:
+                        "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape.",
                     },
                     {
-                      name: 'Rugs',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />,
-                      details: "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy."
+                      name: "Rugs",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                        />
+                      ),
+                      details:
+                        "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
                     },
                     {
-                      name: 'Blankets',
-                      icon: <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />,
-                      details: "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability."
-                    }
+                      name: "Blankets",
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                        />
+                      ),
+                      details:
+                        "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability.",
+                    },
                   ].map((service, index) => (
-                    <button 
+                    <button
                       key={index}
                       onClick={() => {
                         if (selectedService === service.name) {
@@ -138,56 +170,64 @@ export default function CleanHouseholdItemsPage() {
                       }}
                       className="text-center focus:outline-none"
                     >
-                      <div className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? 'scale-110 ring-2 ring-[#F6AE2D]' : 'hover:scale-105'}`}>
-                        <svg className="w-12 h-12 text-[#790003]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <div
+                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
+                      >
+                        <svg
+                          className="w-12 h-12 text-[#790003]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
                           {service.icon}
                         </svg>
                       </div>
-                      <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+                      <span className="block mt-2 text-sm text-white/90">
+                        {service.name}
+                      </span>
                     </button>
                   ))}
                 </div>
-                
+
                 {/* Dynamic Dropdown */}
-                <div className={`overflow-hidden transition-all duration-300 ${selectedService ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${selectedService ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}
+                >
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-white/90">
-                    {selectedService && [
-                      'Comforters',
-                      'Curtains',
-                      'Rugs',
-                      'Blankets'
-                    ].map(name => {
-                      if (name === selectedService) {
-                        const service = [
-                          {
-                            name: 'Comforters',
-                            details: "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness."
-                          },
-                          {
-                            name: 'Curtains',
-                            details: "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape."
-                          },
-                          {
-                            name: 'Rugs',
-                            details: "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy."
-                          },
-                          {
-                            name: 'Blankets',
-                            details: "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability."
+                    {selectedService &&
+                      ["Comforters", "Curtains", "Rugs", "Blankets"].map(
+                        (name) => {
+                          if (name === selectedService) {
+                            const service = [
+                              {
+                                name: "Comforters",
+                                details:
+                                  "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness.",
+                              },
+                              {
+                                name: "Curtains",
+                                details:
+                                  "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape.",
+                              },
+                              {
+                                name: "Rugs",
+                                details:
+                                  "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
+                              },
+                              {
+                                name: "Blankets",
+                                details:
+                                  "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability.",
+                              },
+                            ].find((s) => s.name === name);
+                            return service?.details;
                           }
-                        ].find(s => s.name === name);
-                        return service?.details;
-                      }
-                      return null;
-                    })}
+                          return null;
+                        },
+                      )}
                   </div>
                 </div>
               </div>
-              <Link href="/schedule">
-                <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white px-8 py-6">
-                  Schedule Service
-                </Button>
-              </Link>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
@@ -238,60 +278,72 @@ export default function CleanHouseholdItemsPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
-            Frequently Asked Questions
-          </h2>
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="item-1">
-              <AccordionTrigger>How do I sign up?</AccordionTrigger>
-              <AccordionContent>
-                Click here or Call (215) 345-1470 – Include your sign up form
-                with your name, address and phone number on your first order
-                indicating that you signed up online.
-              </AccordionContent>
-            </AccordionItem>
+      {/* How It Works Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+              How It Works
+            </h2>
+            <p className="mt-4 text-xl text-neutral-600 max-w-3xl mx-auto">
+              Our convenient process makes it easy to get your clothes cleaned
+              without disrupting your schedule.
+            </p>
+          </div>
 
-            <AccordionItem value="item-2">
-              <AccordionTrigger>
-                Where are my clothes picked up and delivered?
-              </AccordionTrigger>
-              <AccordionContent>
-                We will pick up and deliver your clothes to your home, your
-                office or to the concierge in your building.
-              </AccordionContent>
-            </AccordionItem>
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Schedule
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                Book your pickup online or by phone
+              </p>
+            </div>
 
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Is there a minimum order?</AccordionTrigger>
-              <AccordionContent>
-                No need to wait for a full bag of dirty clothes, we will pick up
-                and deliver any amount.
-              </AccordionContent>
-            </AccordionItem>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
+              <p className="mt-2 text-neutral-600">
+                We collect your garments from your door
+              </p>
+            </div>
 
-            <AccordionItem value="item-10">
-              <AccordionTrigger>How do I pay for the service?</AccordionTrigger>
-              <AccordionContent>
-                Your dry cleaning will be charged automatically to your American
-                express, Visa. Master card or Discover Card.
-              </AccordionContent>
-            </AccordionItem>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
+              <p className="mt-2 text-neutral-600">
+                Your items receive expert care
+              </p>
+            </div>
 
-            <AccordionItem value="item-11">
-              <AccordionTrigger>
-                How do you keep my credit card safe?
-              </AccordionTrigger>
-              <AccordionContent>
-                We use the latest encryption and authentication services for all
-                our web transactions so that your credit card information
-                remains safe. If you prefer, just give us a call at (877)
-                779-1269 and we can assist you via phone.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">4</span>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900">
+                Deliver
+              </h3>
+              <p className="mt-2 text-neutral-600">
+                We return your fresh, clean garments
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/schedule">
+              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+                Get Started Now
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

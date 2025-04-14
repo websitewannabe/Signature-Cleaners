@@ -1,0 +1,62 @@
+Usage	Color Description	HEX Code
+Primary Background	Deep Navy	#0A1F44
+Secondary Background	Warm Ivory / Soft Taupe	#F8F5F0
+Accent Color	Gold (luxury detail)	#D4AF37
+Text (Primary)	Charcoal / Very Dark Gray	#1D1D1D
+Text (Light on Dark BG)	Ivory/White	#F8F5F0
+Call-to-Action (CTA)	Burgundy / Deep Red	#5E0B15
+Divider/Neutral Elements	Light Taupe	#E9E4DC
+🧭 Where to Implement the Changes on the Home Page
+1. Header/Nav Area
+Background: Use Deep Navy (#0A1F44) for the nav bar background to instantly elevate the feel.
+
+Text & Links: Switch to Ivory (#F8F5F0) for clean contrast. Use Gold (#D4AF37) for hover effects or accents (e.g., underlines, icons).
+
+2. Hero Section
+Background Overlay or Filter: Apply a subtle Deep Navy or Burgundy tint overlay on the hero image to give it depth and continuity.
+
+Headline Text: Use Ivory or Gold, depending on the image contrast.
+
+Buttons:
+
+Primary CTA (e.g., “Schedule Pickup”): Burgundy (#5E0B15) with white or ivory text.
+
+Secondary CTA: Gold outline or text on transparent background, or a soft taupe background.
+
+3. Services Section
+Background: Use Ivory or very light Taupe (#F8F5F0 or #E9E4DC) instead of black.
+
+Card Headers or Prices: Use Deep Navy for headings and Burgundy or Gold for “From $” labels.
+
+Buttons: Burgundy with gold text on hover.
+
+4. How It Works
+Background: Light Taupe (#E9E4DC) to separate it from the hero and service sections.
+
+Icons and Step Numbers: Gold with Navy or Charcoal text for labels.
+
+5. Testimonial Section
+Background: Deep Navy (#0A1F44), with text in Ivory and highlight stars or names in Gold.
+
+Card: Use a white or ivory base with soft drop shadows and clean lines.
+
+6. FAQ Section
+Background: Stick with Ivory or Taupe for a clean, editorial feel.
+
+Accents (e.g., arrows or expand lines): Use Deep Navy or Gold.
+
+7. Footer
+Background: Deep Navy.
+
+Text: Ivory (#F8F5F0) with links highlighted in Gold or Burgundy on hover.
+
+Icons and Newsletter field: Accent with Gold or Burgundy borders and soft shadows.
+
+✨ Tips to Maximize Luxury Feel
+White space is key — allow sections to breathe.
+
+Use thin, elegant fonts for navigation and footers.
+
+Keep icons and lines minimal — more space, less clutter.
+
+Make CTAs feel like invitations, not buttons — elegant borders, subtle transitions.
