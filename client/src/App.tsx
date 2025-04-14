@@ -7,6 +7,7 @@ const NotFound = lazy(() => import("@/pages/not-found"));
 const HomePage = lazy(() => import("@/pages/home-page"));
 const ServicesPage = lazy(() => import("@/pages/services-page"));
 const WashFoldPage = lazy(() => import("@/pages/wash-fold-page"));
+const FoldingDressShirtPage = lazy(() => import("@/pages/folding-dress-shirt-page"));
 const ShoeRepairPage = lazy(() => import("@/pages/shoe-repair-page"));
 const AlterationTailoringPage = lazy(() => import("@/pages/alteration-tailoring-page"));
 
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/" component={HomePage} />
       <Route path="/services" component={ServicesPage} />
       <Route path="/wash-fold" component={WashFoldPage} />
+      <Route path="/folding-dress-shirt" component={FoldingDressShirtPage} />
       <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
       <Route path="/shoe-repair" component={ShoeRepairPage} />
       
