@@ -426,13 +426,13 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-[#F8F5F0]">
+      <section id="testimonials" className="py-20 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-[#0A1F44] mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#FFFFFF] mb-4">
               What Our Customers Say
             </h2>
-            <p className="mt-4 text-xl text-[#1D1D1D]/80 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-[#FFFFFF]/80 max-w-3xl mx-auto">
               Discover why our customers trust us with their garments.
             </p>
           </div>
@@ -452,15 +452,18 @@ export default function HomePage() {
               <CarouselContent>
                 {testimonials &&
                   testimonials.map((testimonial) => (
-                    <CarouselItem key={testimonial.id} className="md:basis-1/3 px-4">
-                      <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
+                    <CarouselItem
+                      key={testimonial.id}
+                      className="md:basis-1/3 px-4"
+                    >
+                      <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
                         <div className="flex-grow">
-                          <div className="text-[#5E0B15] text-4xl mb-6">"</div>
+                          <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
                           <div className="flex items-center mb-4">
                             {[...Array(5)].map((_, i) => (
                               <div
                                 key={i}
-                                className={`text-${i < testimonial.rating ? "[#D4AF37]" : "neutral-300"}`}
+                                className={`text-${i < testimonial.rating ? "[#790003]" : "neutral-300"}`}
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -502,10 +505,13 @@ export default function HomePage() {
               </div>
             </Carousel>
           )}
-          
+
           <div className="mt-12 text-center">
             <Link href="/testimonials">
-              <Button variant="outline" className="px-8 py-6 text-lg font-medium border-2 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300 rounded-xl">
+              <Button
+                variant="outline"
+                className="px-8 py-6 text-lg font-medium border-2 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300 rounded-xl"
+              >
                 View All Testimonials
               </Button>
             </Link>
