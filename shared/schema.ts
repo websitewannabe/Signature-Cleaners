@@ -67,12 +67,7 @@ export const contacts = pgTable("contacts", {
   resolved: boolean("resolved").default(false),
 });
 
-export const insertContactSchema = createInsertSchema(contacts).pick({
-  name: true,
-  email: true,
-  subject: true,
-  message: true,
-});
+// Contact schema is already defined above
 
 // Service schema
 export const services = pgTable("services", {
