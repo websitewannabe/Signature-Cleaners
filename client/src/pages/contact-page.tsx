@@ -20,13 +20,12 @@ import {
 } from "@/components/ui/accordion";
 
 export default function ContactPage() {
-
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
 
       {/* Contact Info & Form */}
-      <section className="py-40 bg-[#022349]">
+      <section className="py-40 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
             Contact Us
@@ -35,36 +34,44 @@ export default function ContactPage() {
             <div>
               <div className="bg-white rounded-lg shadow-md p-6">
                 <form className="space-y-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Your Name</label>
-                  <Input placeholder="John Doe" />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Your Name
+                    </label>
+                    <Input placeholder="John Doe" />
+                  </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email Address</label>
-                  <Input type="email" placeholder="john@example.com" />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Email Address
+                    </label>
+                    <Input type="email" placeholder="john@example.com" />
+                  </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Subject</label>
-                  <Input placeholder="How can we help you?" />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Subject
+                    </label>
+                    <Input placeholder="How can we help you?" />
+                  </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
-                  <Textarea
-                    placeholder="Please provide details about your inquiry..."
-                    className="min-h-[120px]"
-                  />
-                </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">
+                      Message
+                    </label>
+                    <Textarea
+                      placeholder="Please provide details about your inquiry..."
+                      className="min-h-[120px]"
+                    />
+                  </div>
 
-                <Button
-                  type="button"
-                  className="w-full bg-primary hover:bg-primary-dark"
-                >
-                  Send Message
-                </Button>
-              </form>
+                  <Button
+                    type="button"
+                    className="w-full bg-primary hover:bg-primary-dark"
+                  >
+                    Send Message
+                  </Button>
+                </form>
               </div>
             </div>
 
