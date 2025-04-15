@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { type InsertContact, insertContactSchema } from "@shared/schema";
+import { type InsertContact } from "@shared/schema";
+import { z } from "zod";
+
+const insertContactSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  subject: z.string().min(1, "Subject is required"),
+  message: z.string().min(1, "Message is required"),
+});
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
