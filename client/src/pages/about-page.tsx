@@ -12,12 +12,12 @@ export default function AboutPage() {
       {/* About Content */}
       <section className="py-40 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
             Our Story
           </h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div>
-              <p className="mt-4 text-lg text-black/80">
+              <p className="mt-4 text-lg text-white/80">
                 Signature Cleaners was founded on simple principles: provide a
                 quality product, deliver excellent customer service, and offer
                 fair pricing. With decades of experience in the industry, the
@@ -27,7 +27,7 @@ export default function AboutPage() {
                 attention using top-of-the-line equipment to ensure the highest
                 standards of cleanliness and presentation.
               </p>
-              <p className="mt-4 text-lg text-black/80">
+              <p className="mt-4 text-lg text-white/80">
                 Signature Cleaners welcomes rush orders and never makes promises
                 they can’t keep. Most items can be turned around in under 24
                 hours, and if more time is needed, customers are notified
@@ -36,7 +36,7 @@ export default function AboutPage() {
                 come—ensuring that cherished garments stay as beautiful as the
                 day they were worn.
               </p>
-              <p className="mt-4 text-lg text-black/80">
+              <p className="mt-4 text-lg text-white/80">
                 As the only member of the Dry Cleaning and Laundry Institute in
                 the area, Signature Cleaners stays current on the latest fabrics
                 and care methods. The team is always seeking new ways to improve
