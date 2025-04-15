@@ -85,7 +85,7 @@ export default function HomePage() {
                     and special garments, ensuring the highest quality care.
                   </p>
                   <Link href="/dry-cleaning" className="block">
-                    <Button className="w-full bg-[#181818] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
