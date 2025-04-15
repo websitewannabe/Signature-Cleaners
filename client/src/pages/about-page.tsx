@@ -10,7 +10,7 @@ export default function AboutPage() {
       <Header />
 
       {/* About Content */}
-      <section className="py-40 bg-[#121317]">
+      <section className="py-40 bg-[#022349]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
             Our Story
@@ -67,11 +67,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <div 
-              className="h-[600px] w-full bg-[url('/src/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
-              role="img"
-              aria-label="Signature Cleaners team"
-            />
+              <div
+                className="h-[600px] w-full bg-[url('/src/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
+                role="img"
+                aria-label="Signature Cleaners team"
+              />
             </div>
           </div>
         </div>

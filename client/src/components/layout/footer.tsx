@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-navy text-ivory py-12">
+    <footer className="bg-[#022349] text-ivory py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -207,7 +207,10 @@ const Footer = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="break-words overflow-hidden" style={{ wordBreak: 'break-word', hyphens: 'auto' }}>
+                <span
+                  className="break-words overflow-hidden"
+                  style={{ wordBreak: "break-word", hyphens: "auto" }}
+                >
                   customerservice@mysignaturecleaners.com
                 </span>
               </li>

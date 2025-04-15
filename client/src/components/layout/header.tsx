@@ -24,7 +24,7 @@ const Header = () => {
   }, []);
 
   const headerStyles = `fixed top-0 w-full z-50 transition-all duration-300 ${
-    isOpaque ? "bg-navy/90 shadow-lg backdrop-blur-sm" : "bg-transparent"
+    isOpaque ? "bg-[#022349]/90 shadow-lg backdrop-blur-sm" : "bg-transparent"
   }`;
 
   return (
@@ -38,7 +38,7 @@ const Header = () => {
           {/* Left: Logo */}
           <div className="flex items-center -ml-2 -mb-2">
             <Link href="/" className="flex items-center space-x-2">
-              <div 
+              <div
                 className="h-16 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
                 role="img"
                 aria-label="Signature Cleaners"
@@ -204,10 +204,16 @@ const Header = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/about" className="hover:text-white/80 h-10 flex items-center">
+            <Link
+              href="/about"
+              className="hover:text-white/80 h-10 flex items-center"
+            >
               About Us
             </Link>
-            <Link href="/contact" className="hover:text-white/80 h-10 flex items-center">
+            <Link
+              href="/contact"
+              className="hover:text-white/80 h-10 flex items-center"
+            >
               Contact
             </Link>
           </nav>

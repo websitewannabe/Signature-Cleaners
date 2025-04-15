@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-[#0A1F44]">
+      <section id="services" className="py-16 bg-[#022349]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -459,8 +459,11 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                    <p className="text-neutral-600 text-lg">
-                      "Exceptional service! They handle my suits with incredible care and attention to detail. The pickup and delivery service is a game-changer for my busy schedule."
+                    <p className="text-neutral-500 text-lg">
+                      "The staff is so helpful and even brought out my items to
+                      my car since my baby was sleeping. Can’t thank them enough
+                      for their service. Highly recommend for any laundering you
+                      need."
                     </p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-neutral-100">
@@ -469,48 +472,8 @@ export default function HomePage() {
                         M
                       </div>
                       <div>
-                        <h4 className="font-semibold text-neutral-900">
-                          Michael Anderson
-                        </h4>
-                        <p className="text-sm text-neutral-500">
-                          Business Executive
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-
-              <CarouselItem className="md:basis-1/3 px-4">
-                <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
-                  <div className="flex-grow">
-                    <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
-                    <div className="flex items-center mb-4">
-                      {[...Array(5)].map((_, i) => (
-                        <div key={i} className="text-[#790003]">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                          </svg>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="text-neutral-600 text-lg">
-                      "I trust them completely with my wedding dress preservation. Their expertise in handling delicate fabrics is unmatched. Highly recommend their specialized cleaning services!"
-                    </p>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-neutral-100">
-                    <div className="flex items-center">
-                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                        S
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-neutral-900">
-                          Sarah Martinez
+                        <h4 className="font-semibold text-neutral-500">
+                          Maggie B.
                         </h4>
                         <p className="text-sm text-neutral-500">
                           Satisfied Customer
@@ -539,18 +502,63 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                    <p className="text-neutral-600 text-lg">
-                      "The wash & fold service has been a lifesaver for our family. Quality work, consistent results, and their attention to detail sets them apart. We wouldn't go anywhere else!"
+                    <p className="text-neutral-500 text-lg">
+                      "I needed two Dresses pressed on short notice and
+                      signature cleaners had the best reviews. Now I know why!
+                      They were accommodating, quick, and so so welcoming and
+                      kind. Finding places like this is rare these days! Highly
+                      recommend."
                     </p>
                   </div>
                   <div className="mt-6 pt-4 border-t border-neutral-100">
                     <div className="flex items-center">
                       <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
-                        R
+                        G
                       </div>
                       <div>
-                        <h4 className="font-semibold text-neutral-900">
-                          Robert Chen
+                        <h4 className="font-semibold text-neutral-500">
+                          Gabrielle A.
+                        </h4>
+                        <p className="text-sm text-neutral-500">
+                          Satisfied Customer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+
+              <CarouselItem className="md:basis-1/3 px-4">
+                <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
+                  <div className="flex-grow">
+                    <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="text-[#790003]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-neutral-500 text-lg">
+                      "People are the best part of this business. Always
+                      friendly and more than helpful "
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-neutral-500">
+                    <div className="flex items-center">
+                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                        T
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-neutral-500">
+                          Tom K.
                         </h4>
                         <p className="text-sm text-neutral-500">
                           Local Resident
@@ -566,8 +574,6 @@ export default function HomePage() {
               <CarouselNext className="relative translate-y-0 right-0 h-10 w-10 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300" />
             </div>
           </Carousel>
-
-          
         </div>
       </section>
 
