@@ -242,12 +242,12 @@ export default function HomePage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Delivery Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -271,12 +271,12 @@ export default function HomePage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Alterations and Tailoring Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -306,12 +306,12 @@ export default function HomePage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Shoe Repair Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
