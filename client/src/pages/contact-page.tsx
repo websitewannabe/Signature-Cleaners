@@ -1,8 +1,3 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { type InsertContact } from "@shared/schema";
-import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -25,45 +20,6 @@ import {
 } from "@/components/ui/accordion";
 
 export default function ContactPage() {
-  const { toast } = useToast();
-
-  // Form validation schema
-  const form = useForm<InsertContact>({
-    resolver: zodResolver(insertContactSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    },
-  });
-
-  // Contact form submission
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const res = await apiRequest("POST", "/api/contact", data);
-      return res.json();
-    },
-    onSuccess: () => {
-      toast({
-        title: "Message Sent",
-        description: "Thank you for your message. We'll respond shortly.",
-      });
-      form.reset();
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description:
-          "There was a problem sending your message. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: InsertContact) => {
-    contactMutation.mutate(data);
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -78,94 +34,37 @@ export default function ContactPage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
             <div>
               <div className="bg-white rounded-lg shadow-md p-6">
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-6"
-                  >
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="John Doe" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Your Name</label>
+                  <Input placeholder="John Doe" />
+                </div>
 
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder="john@example.com"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                <div>
+                  <label className="block text-sm font-medium mb-2">Email Address</label>
+                  <Input type="email" placeholder="john@example.com" />
+                </div>
 
-                    <FormField
-                      control={form.control}
-                      name="subject"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Subject</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="How can we help you?"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                <div>
+                  <label className="block text-sm font-medium mb-2">Subject</label>
+                  <Input placeholder="How can we help you?" />
+                </div>
 
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Message</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder="Please provide details about your inquiry..."
-                              className="min-h-[120px]"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
+                <div>
+                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <Textarea
+                    placeholder="Please provide details about your inquiry..."
+                    className="min-h-[120px]"
+                  />
+                </div>
 
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary-dark"
-                      disabled={contactMutation.isPending}
-                    >
-                      {contactMutation.isPending ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Sending...
-                        </>
-                      ) : (
-                        "Send Message"
-                      )}
-                    </Button>
-                  </form>
-                </Form>
+                <Button
+                  type="button"
+                  className="w-full bg-primary hover:bg-primary-dark"
+                >
+                  Send Message
+                </Button>
+              </form>
               </div>
             </div>
 
