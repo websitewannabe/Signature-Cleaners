@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        isOpaque ? "bg-[#181818]/90 backdrop-blur-sm" : "bg-[#181818]"
+        isOpaque ? "bg-[#181818]/90 backdrop-blur-sm" : "bg-[#790003]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
