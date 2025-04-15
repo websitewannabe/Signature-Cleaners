@@ -25,7 +25,7 @@ export default function AuthPage() {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      <div className="flex-1 py-40 bg-[#022349]">
+      <div className="flex-1 py-40 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Login Section */}
@@ -78,7 +78,7 @@ export default function AuthPage() {
 
           {/* Account Benefits */}
           <div className="mt-16">
-            <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
+            <h2 className="text-2xl font-bold text-white mb-8 text-center">
               Account Benefits
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

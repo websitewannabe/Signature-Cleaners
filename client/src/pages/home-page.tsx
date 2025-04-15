@@ -424,7 +424,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/schedule">
-              <Button className="bg-[#181818] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+              <Button className="bg-white hover:bg-[#F6AE2D] text-black font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
               </Button>
             </Link>
