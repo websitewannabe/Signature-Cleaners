@@ -291,7 +291,7 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="bg-white shadow-md overflow-hidden">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-neutral-200">
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-primary mb-4">
