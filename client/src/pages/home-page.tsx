@@ -64,9 +64,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/services">
-                <Button
-                  className="w-full sm:w-auto bg-white text-black font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:bg-[#F6AE2D] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group border-none"
-                >
+                <Button className="w-full sm:w-auto bg-white text-black font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:bg-[#F6AE2D] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group border-none">
                   View Services
                 </Button>
               </Link>
