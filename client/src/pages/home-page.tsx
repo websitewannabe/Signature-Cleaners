@@ -550,8 +550,21 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#F8F5F0]">
+          {/* Primary radial gradient for soft light effect */}
+          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+          
+          {/* Diagonal gradient streaks */}
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute inset-0 rotate-45 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.8)_25%,transparent_50%)]"></div>
+            <div className="absolute inset-0 -rotate-45 bg-[linear-gradient(90deg,transparent_50%,rgba(255,255,255,0.8)_75%,transparent_100%)]"></div>
+          </div>
+          
+          {/* Subtle marble-like texture */}
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(1px_1px_at_2px_2px,rgba(0,0,0,0.1)_0%,transparent_100%)] bg-repeat"></div>
+        </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
             Frequently Asked Questions
           </h2>
