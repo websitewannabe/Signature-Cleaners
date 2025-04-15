@@ -64,7 +64,7 @@ const Header = () => {
                       </NavigationMenuTrigger>
                     </Link>
                   </div>
-                  <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                  <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 shadow-lg">
                     <div className="grid grid-cols-2 gap-3 p-4 w-[600px] text-xs">
                       <Link
                         href="/dry-cleaning"
