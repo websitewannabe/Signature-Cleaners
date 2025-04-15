@@ -22,7 +22,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       id: 1,
       name: "Demo User",
       email: email
-      email: email
     });
   };
 
