@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -51,20 +52,6 @@ export default function SchedulePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
-      {/* Hero Section */}
-      <section className="bg-[#23282F] py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Schedule a Pickup
-            </h1>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
-              Book a convenient time for us to collect your garments.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Scheduling Form */}
       <section className="py-16 relative overflow-hidden">
@@ -307,72 +294,70 @@ export default function SchedulePage() {
         </div>
       </section>
 
-      {/* How It Works Section (when not on mobile) */}
-      {!isMobile && !isSuccess && (
-        <section className="py-16 bg-neutral-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-neutral-900">
-                How It Works
-              </h2>
-              <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
-                Our simple pickup and delivery process
+      {/* How It Works Section */}
+      <section className="py-8 bg-[#790003]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              How It Works
+            </h2>
+            <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto">
+              Our convenient process makes it easy to get your clothes cleaned
+              without disrupting your schedule.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="text-center">
+              <div className="bg-white/90 rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-[#790003] text-3xl font-bold">1</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white">Schedule</h3>
+              <p className="mt-2 text-white/80">
+                Book your pickup online or by phone
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center">
-                <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
-                  <span className="text-primary text-2xl font-bold">1</span>
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  Schedule
-                </h3>
-                <p className="mt-2 text-neutral-600">
-                  Book your pickup online or by phone
-                </p>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">2</span>
               </div>
+              <h3 className="text-xl font-semibold text-white">Pickup</h3>
+              <p className="mt-2 text-white/80">
+                We collect your garments from your door
+              </p>
+            </div>
 
-              <div className="text-center">
-                <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
-                  <span className="text-primary text-2xl font-bold">2</span>
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  Pickup
-                </h3>
-                <p className="mt-2 text-neutral-600">
-                  We collect your garments from your door
-                </p>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">3</span>
               </div>
+              <h3 className="text-xl font-semibold text-white">Clean</h3>
+              <p className="mt-2 text-white/80">
+                Your items receive expert care
+              </p>
+            </div>
 
-              <div className="text-center">
-                <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
-                  <span className="text-primary text-2xl font-bold">3</span>
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  Clean
-                </h3>
-                <p className="mt-2 text-neutral-600">
-                  Your items receive expert care
-                </p>
+            <div className="text-center">
+              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-primary text-3xl font-bold">4</span>
               </div>
-
-              <div className="text-center">
-                <div className="bg-white rounded-full h-20 w-20 flex items-center justify-center mx-auto shadow-md mb-4">
-                  <span className="text-primary text-2xl font-bold">4</span>
-                </div>
-                <h3 className="text-xl font-semibold text-neutral-900">
-                  Deliver
-                </h3>
-                <p className="mt-2 text-neutral-600">
-                  We return your fresh, clean garments
-                </p>
-              </div>
+              <h3 className="text-xl font-semibold text-white">Deliver</h3>
+              <p className="mt-2 text-white/80">
+                We return your fresh, clean garments
+              </p>
             </div>
           </div>
-        </section>
-      )}
 
+          <div className="mt-12 text-center">
+            <Link href="/schedule">
+              <Button className="bg-white hover:bg-[#F6AE2D] text-black font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+                Get Started Now
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
