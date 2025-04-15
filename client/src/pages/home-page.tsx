@@ -99,7 +99,7 @@ export default function HomePage() {
                   <Link href="/dry-cleaning" className="block">
                     <Button
                       variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
                     >
                       Learn More
                     </Button>
@@ -113,7 +113,7 @@ export default function HomePage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -121,7 +121,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wash & Fold */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -136,7 +136,7 @@ export default function HomePage() {
                   <Link href="/wash-fold" className="block">
                     <Button
                       variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
                     >
                       Learn More
                     </Button>
@@ -150,7 +150,7 @@ export default function HomePage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -158,7 +158,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wedding Gowns */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -173,7 +173,7 @@ export default function HomePage() {
                   <Link href="/wedding-gown" className="block">
                     <Button
                       variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
                     >
                       Learn More
                     </Button>
@@ -187,7 +187,7 @@ export default function HomePage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -195,7 +195,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Household Items */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -210,7 +210,7 @@ export default function HomePage() {
                   <Link href="/clean-household-items" className="block">
                     <Button
                       variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
+                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
                     >
                       Learn More
                     </Button>
@@ -224,7 +224,7 @@ export default function HomePage() {
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
