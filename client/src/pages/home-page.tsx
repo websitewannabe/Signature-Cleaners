@@ -70,13 +70,13 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-[#022349]">
+      <section id="services" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-neutral-800 text-white max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-xl text-neutral-800 text-black max-w-3xl mx-auto leading-relaxed">
               Experience exceptional garment care with our premium cleaning
               services, tailored to preserve and enhance your wardrobe.
             </p>
@@ -84,15 +84,15 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#181818] rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Professional Dry Cleaning
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     State-of-the-art dry cleaning services for all your delicate
                     and special garments, ensuring the highest quality care.
                   </p>
@@ -105,8 +105,8 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $6.99
                   </span>
                   <Link
@@ -332,7 +332,7 @@ export default function HomePage() {
           </div>
           <div className="mt-12 text-center">
             <Link href="/services">
-              <span className="inline-flex items-center text-white hover:shadow-lg font-medium">
+              <span className="inline-flex items-center text-black hover:shadow-lg font-medium">
                 View Complete Price List
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -466,15 +466,13 @@ export default function HomePage() {
                       need."
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-neutral-100">
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
                     <div className="flex items-center">
                       <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                         M
                       </div>
                       <div>
-                        <h4 className="font-semibold text-neutral-500">
-                          Maggie B.
-                        </h4>
+                        <h4 className="font-semibold text-white">Maggie B.</h4>
                         <p className="text-sm text-neutral-500">
                           Satisfied Customer
                         </p>
@@ -510,13 +508,13 @@ export default function HomePage() {
                       recommend."
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-neutral-100">
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
                     <div className="flex items-center">
                       <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                         G
                       </div>
                       <div>
-                        <h4 className="font-semibold text-neutral-500">
+                        <h4 className="font-semibold text-white">
                           Gabrielle A.
                         </h4>
                         <p className="text-sm text-neutral-500">
@@ -551,15 +549,13 @@ export default function HomePage() {
                       friendly and more than helpful "
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-neutral-500">
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
                     <div className="flex items-center">
                       <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
                         T
                       </div>
                       <div>
-                        <h4 className="font-semibold text-neutral-500">
-                          Tom K.
-                        </h4>
+                        <h4 className="font-semibold text-white">Tom K.</h4>
                         <p className="text-sm text-neutral-500">
                           Local Resident
                         </p>
