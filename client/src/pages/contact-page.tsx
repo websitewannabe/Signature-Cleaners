@@ -146,64 +146,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Locations Section */}
-      <section className="py-16 bg-[#181818]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">
-              Locations We Pick Up & Deliver
-            </h2>
-            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
-              We service the following areas in Bucks County and surrounding
-              regions
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
-              {/* Placeholder for Google Maps - Replace with actual map component */}
-              <div className="h-full w-full bg-neutral-200 flex items-center justify-center">
-                <span className="text-neutral-500">Service Area Map</span>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-lg shadow-md p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
-                <div className="space-y-2">
-                  <p className="text-neutral-900">Buckingham</p>
-                  <p className="text-neutral-900">Carversville</p>
-                  <p className="text-neutral-900">Chalfont</p>
-                  <p className="text-neutral-900">Doylestown</p>
-                  <p className="text-neutral-900">Dublin</p>
-                  <p className="text-neutral-900">Fountainville</p>
-                  <p className="text-neutral-900">Furlong</p>
-                  <p className="text-neutral-900">Holland</p>
-                  <p className="text-neutral-900">Ivyland</p>
-                  <p className="text-neutral-900">Jamison</p>
-                  <p className="text-neutral-900">Lahaska</p>
-                  <p className="text-neutral-900">Morrisville</p>
-                  <p className="text-neutral-900">New Hope</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-neutral-900">Newtown</p>
-                  <p className="text-neutral-900">Ottsville</p>
-                  <p className="text-neutral-900">Perkasie</p>
-                  <p className="text-neutral-900">Pipersville</p>
-                  <p className="text-neutral-900">Point Pleasant</p>
-                  <p className="text-neutral-900">Richboro</p>
-                  <p className="text-neutral-900">Southampton</p>
-                  <p className="text-neutral-900">Trevose</p>
-                  <p className="text-neutral-900">Warminster</p>
-                  <p className="text-neutral-900">Warrington</p>
-                  <p className="text-neutral-900">Washington Crossing</p>
-                  <p className="text-neutral-900">Yardley</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Content */}
       <section className="py-16 bg-[#790003]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
@@ -305,6 +247,64 @@ export default function ContactPage() {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
+        </div>
+      </section>
+
+      {/* Locations Section */}
+      <section className="py-16 bg-[#181818]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white">
+              Locations We Pick Up & Deliver
+            </h2>
+            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
+              We service the following areas in Bucks County and surrounding
+              regions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
+              {/* Placeholder for Google Maps - Replace with actual map component */}
+              <div className="h-full w-full bg-neutral-200 flex items-center justify-center">
+                <span className="text-neutral-500">Service Area Map</span>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Buckingham</p>
+                  <p className="text-neutral-900">Carversville</p>
+                  <p className="text-neutral-900">Chalfont</p>
+                  <p className="text-neutral-900">Doylestown</p>
+                  <p className="text-neutral-900">Dublin</p>
+                  <p className="text-neutral-900">Fountainville</p>
+                  <p className="text-neutral-900">Furlong</p>
+                  <p className="text-neutral-900">Holland</p>
+                  <p className="text-neutral-900">Ivyland</p>
+                  <p className="text-neutral-900">Jamison</p>
+                  <p className="text-neutral-900">Lahaska</p>
+                  <p className="text-neutral-900">Morrisville</p>
+                  <p className="text-neutral-900">New Hope</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-neutral-900">Newtown</p>
+                  <p className="text-neutral-900">Ottsville</p>
+                  <p className="text-neutral-900">Perkasie</p>
+                  <p className="text-neutral-900">Pipersville</p>
+                  <p className="text-neutral-900">Point Pleasant</p>
+                  <p className="text-neutral-900">Richboro</p>
+                  <p className="text-neutral-900">Southampton</p>
+                  <p className="text-neutral-900">Trevose</p>
+                  <p className="text-neutral-900">Warminster</p>
+                  <p className="text-neutral-900">Warrington</p>
+                  <p className="text-neutral-900">Washington Crossing</p>
+                  <p className="text-neutral-900">Yardley</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
