@@ -59,10 +59,12 @@ function Router() {
 
 function App() {
   return (
-    <AuthProvider>
-      <Router />
-      <Toaster />
-    </AuthProvider>
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <Router />
+        <Toaster />
+      </AuthProvider>
+    </QueryClientProvider>
   );
 }
 
