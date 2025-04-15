@@ -30,16 +30,16 @@ const Header = () => {
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        isOpaque ? "bg-navy/90 backdrop-blur-sm" : "bg-transparent"
+        isOpaque ? "bg-[#181818]/90 backdrop-blur-sm" : "bg-[#181818]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
-        <div className="flex h-20 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="flex h-16 items-center justify-between">
           {/* Left: Logo */}
-          <div className="flex items-center -ml-2 -mb-2">
-            <Link href="/" className="flex items-center space-x-2">
+          <div className="flex items-center">
+            <Link href="/" className="flex items-center">
               <div
-                className="h-16 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                className="h-12 w-40 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
                 role="img"
                 aria-label="Signature Cleaners"
               />
@@ -47,19 +47,19 @@ const Header = () => {
           </div>
 
           {/* Center: Nav Links */}
-          <nav className="hidden md:flex items-center justify-center flex-1 gap-12 text-white text-lg font-medium">
+          <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
             <Link
               href="/"
-              className="hover:text-white/80 h-10 flex items-center"
+              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
             >
-              <Home className="w-5 h-5" />
+              <Home className="w-4 h-4" />
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <div className="flex items-center h-10">
                     <Link href="/services">
-                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-white/80 hover:bg-transparent text-lg font-medium h-10 flex items-center">
+                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#790003] hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase">
                         Services
                       </NavigationMenuTrigger>
                     </Link>
@@ -206,19 +206,19 @@ const Header = () => {
             </NavigationMenu>
             <Link
               href="/about"
-              className="hover:text-white/80 h-10 flex items-center"
+              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="hover:text-white/80 h-10 flex items-center"
+              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
             >
               Contact
             </Link>
             <Link
               href="/auth"
-              className="hover:text-white/80 h-10 flex items-center"
+              className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase"
             >
               My Account
             </Link>
