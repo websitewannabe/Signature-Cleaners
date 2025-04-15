@@ -18,16 +18,11 @@ import AboutPage from "@/pages/about-page";
 
 import ContactPage from "@/pages/contact-page";
 import SchedulePage from "@/pages/schedule-page";
-import CustomerPortal from "@/pages/customer-portal";
-import CustomerOrders from "@/pages/customer-portal/orders";
-import CustomerAccount from "@/pages/customer-portal/account";
-import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
 import LiveChat from "./components/live-chat";
-// Added import for FaqPage
-import FaqPage from "@/pages/faq-page"; // You'll need to create this component
-import AuthPage from "@/pages/auth-page"; //New Auth Page
-import DeliveryPage from "@/pages/delivery-page"; // Added import for DeliveryPage
+import FaqPage from "@/pages/faq-page";
+import AuthPage from "@/pages/auth-page";
+import DeliveryPage from "@/pages/delivery-page";
 
 function Router() {
   return (

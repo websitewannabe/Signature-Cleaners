@@ -82,14 +82,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/auth"
-                  className="text-neutral-300 hover:text-white"
-                >
-                  Customer Portal
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/contact"
                   className="text-neutral-300 hover:text-white"
                 >
