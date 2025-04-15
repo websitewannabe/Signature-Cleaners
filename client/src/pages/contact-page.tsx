@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
-import { z } from "zod";
-import { apiRequest } from "@/lib/utils";
+import { type InsertContact } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -26,21 +24,12 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-// Define schema locally to avoid circular dependencies
-const contactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(1, "Subject is required"),
-  message: z.string().min(1, "Message is required"),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
-
 export default function ContactPage() {
   const { toast } = useToast();
 
-  const form = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+  // Form validation schema
+  const form = useForm<InsertContact>({
+    resolver: zodResolver(insertContactSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -49,8 +38,9 @@ export default function ContactPage() {
     },
   });
 
+  // Contact form submission
   const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormData) => {
+    mutationFn: async (data: InsertContact) => {
       const res = await apiRequest("POST", "/api/contact", data);
       return res.json();
     },
@@ -64,13 +54,14 @@ export default function ContactPage() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: "There was a problem sending your message. Please try again.",
+        description:
+          "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
     },
   });
 
-  const onSubmit = (data: ContactFormData) => {
+  const onSubmit = (data: InsertContact) => {
     contactMutation.mutate(data);
   };
 
