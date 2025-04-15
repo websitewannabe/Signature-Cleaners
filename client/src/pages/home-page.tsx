@@ -142,20 +142,20 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wash & Fold */}
-            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
                     Wash & Fold
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
                   <Link href="/wash-fold" className="block">
-                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -176,20 +176,20 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wedding Gowns */}
-            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
                     Wedding Gowns
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
                   <Link href="/wedding-gown" className="block">
-                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -210,20 +210,20 @@ export default function HomePage() {
               </div>
             </div>
             {/* Household Items */}
-            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
                     Cleaning of Household Items
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
                   <Link href="/clean-household-items" className="block">
-                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
