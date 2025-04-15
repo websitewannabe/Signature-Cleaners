@@ -21,31 +21,34 @@ const services = [
   {
     id: 1,
     name: "Professional Dry Cleaning",
-    description: "State-of-the-art dry cleaning services for all your delicate and special garments.",
+    description:
+      "State-of-the-art dry cleaning services for all your delicate and special garments.",
     price: "From $8.99",
-    imageUrl: "/src/images/cleaners.gif"
+    imageUrl: "/src/images/cleaners.gif",
   },
   {
     id: 2,
     name: "Wash & Fold",
-    description: "Convenient laundry service with professional washing, drying, and folding.",
+    description:
+      "Convenient laundry service with professional washing, drying, and folding.",
     price: "$2.99/lb",
-    imageUrl: "/src/images/wash-fold.gif"
+    imageUrl: "/src/images/wash-fold.gif",
   },
   {
     id: 3,
     name: "Wedding Gowns",
-    description: "Specialized cleaning and preservation services for wedding gowns.",
+    description:
+      "Specialized cleaning and preservation services for wedding gowns.",
     price: "From $99.99",
-    imageUrl: "/src/images/wedding-gown.gif"
+    imageUrl: "/src/images/wedding-gown.gif",
   },
   {
     id: 4,
     name: "Household Items",
     description: "Comprehensive cleaning solutions for household items.",
     price: "From $24.99",
-    imageUrl: "/src/images/household-items.gif"
-  }
+    imageUrl: "/src/images/household-items.gif",
+  },
 ];
 
 export default function HomePage() {
@@ -97,10 +100,10 @@ export default function HomePage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-neutral-800 text-black max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-xl text-neutral-800 text-[#790003]/80 max-w-3xl mx-auto leading-relaxed">
               Experience exceptional garment care with our premium cleaning
               services, tailored to preserve and enhance your wardrobe.
             </p>

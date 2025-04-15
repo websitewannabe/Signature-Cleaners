@@ -41,16 +41,6 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Our Services
-            </h2>
-            <p className="mt-4 text-xl text-neutral-800 text-black max-w-3xl mx-auto leading-relaxed">
-              Experience exceptional garment care with our premium cleaning
-              services, tailored to preserve and enhance your wardrobe.
-            </p>
-          </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
@@ -287,34 +277,15 @@ export default function ServicesPage() {
               </Link>
             </div>
           </div>
-          <div className="mt-12 text-center">
-            <Link href="/services">
-              <span className="inline-flex items-center text-black hover:shadow-lg font-medium">
-                View Complete Price List
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-1"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </Link>
-          </div>
         </div>
       </section>
 
       {/* Price List */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#790003]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">Price List</h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-white">Price List</h2>
+            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
               Below is our standard pricing for common items. Contact us for
               special items or bulk pricing.
             </p>
@@ -370,7 +341,7 @@ export default function ServicesPage() {
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-neutral-600 mb-4">
+            <p className="text-white/80 mb-4">
               Need a service not listed here? Contact us for a custom quote.
             </p>
             <Link href="/contact">
