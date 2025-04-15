@@ -506,16 +506,7 @@ export default function HomePage() {
             </Carousel>
           )}
 
-          <div className="mt-12 text-center">
-            <Link href="/testimonials">
-              <Button
-                variant="outline"
-                className="px-8 py-6 text-lg font-medium border-2 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300 rounded-xl"
-              >
-                View All Testimonials
-              </Button>
-            </Link>
-          </div>
+          
         </div>
       </section>
 

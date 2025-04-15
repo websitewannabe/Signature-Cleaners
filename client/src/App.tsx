@@ -15,7 +15,7 @@ import WeddingGownPage from "@/pages/wedding-gown-page";
 import DryCleaningPage from "@/pages/dry-cleaning-page";
 import CleanHouseholdItemsPage from "@/pages/clean-household-items-page";
 import AboutPage from "@/pages/about-page";
-import TestimonialsPage from "@/pages/testimonials-page";
+
 import ContactPage from "@/pages/contact-page";
 import SchedulePage from "@/pages/schedule-page";
 import CustomerPortal from "@/pages/customer-portal";
@@ -50,7 +50,7 @@ function Router() {
         component={CleanHouseholdItemsPage}
       />
       <Route path="/about" component={AboutPage} />
-      <Route path="/testimonials" component={TestimonialsPage} />
+      
       <Route path="/contact" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
