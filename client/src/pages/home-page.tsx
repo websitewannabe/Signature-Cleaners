@@ -125,11 +125,11 @@ export default function HomePage() {
               <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Wash & Fold
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
@@ -142,8 +142,8 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     $2.99/lb
                   </span>
                   <Link
@@ -162,11 +162,11 @@ export default function HomePage() {
               <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Wedding Gowns
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
@@ -179,8 +179,8 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $99.99
                   </span>
                   <Link
@@ -199,11 +199,11 @@ export default function HomePage() {
               <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Cleaning of Household Items
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
@@ -216,8 +216,8 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $24.99
                   </span>
                   <Link
