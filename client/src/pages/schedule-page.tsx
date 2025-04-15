@@ -54,7 +54,7 @@ export default function SchedulePage() {
       <Header />
 
       {/* Scheduling Form */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="pt-40 pb-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#F8F5F0]">
           {/* Primary radial gradient for soft light effect */}
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
