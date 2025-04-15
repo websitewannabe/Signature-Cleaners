@@ -84,7 +84,7 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
-            <div className="group bg-[#181818] rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -121,7 +121,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wash & Fold */}
-            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -158,7 +158,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Wedding Gowns */}
-            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -195,7 +195,7 @@ export default function HomePage() {
               </div>
             </div>
             {/* Household Items */}
-            <div className="group bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
@@ -260,7 +260,7 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Delivery
                 </span>
               </Link>
@@ -295,7 +295,7 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
                 </span>
               </Link>
@@ -324,7 +324,7 @@ export default function HomePage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair
                 </span>
               </Link>
