@@ -29,13 +29,23 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-[#022349]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="services" className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#F8F5F0]">
+          {/* Primary radial gradient for soft light effect */}
+          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+
+          {/* Parallel diagonal streaks */}
+          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+
+          {/* Soft overlay gradient */}
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Our Services
             </h2>
-            <p className="mt-4 text-xl text-neutral-800 text-white max-w-3xl mx-auto leading-relaxed">
+            <p className="mt-4 text-xl text-neutral-800 text-black max-w-3xl mx-auto leading-relaxed">
               Experience exceptional garment care with our premium cleaning
               services, tailored to preserve and enhance your wardrobe.
             </p>
@@ -43,36 +53,33 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Professional Dry Cleaning
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     State-of-the-art dry cleaning services for all your delicate
                     and special garments, ensuring the highest quality care.
                   </p>
                   <Link href="/dry-cleaning" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                    >
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $6.99
                   </span>
                   <Link
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -80,36 +87,33 @@ export default function ServicesPage() {
               </div>
             </div>
             {/* Wash & Fold */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wash-fold.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Wash & Fold
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
                   <Link href="/wash-fold" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                    >
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     $2.99/lb
                   </span>
                   <Link
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -117,36 +121,33 @@ export default function ServicesPage() {
               </div>
             </div>
             {/* Wedding Gowns */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/wedding-gown.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Wedding Gowns
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
                   <Link href="/wedding-gown" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                    >
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $99.99
                   </span>
                   <Link
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -154,36 +155,33 @@ export default function ServicesPage() {
               </div>
             </div>
             {/* Household Items */}
-            <div className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
-                  <h3 className="text-xl font-semibold text-neutral-900">
+                  <h3 className="text-xl font-semibold text-white">
                     Cleaning of Household Items
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]/10"></div>
-                  <p className="text-neutral-600 line-clamp-3 flex-grow">
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
                   <Link href="/clean-household-items" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300"
-                    >
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-neutral-100 flex flex-col sm:flex-row items-center gap-4">
-                  <span className="text-[#790003] font-semibold text-lg">
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
                     From $24.99
                   </span>
                   <Link
                     href="/schedule"
                     className="w-full sm:w-auto sm:ml-auto"
                   >
-                    <Button className="w-full bg-burgundy hover:bg-gold text-ivory font-medium transition-colors duration-300">
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
                       Book Now
                     </Button>
                   </Link>
@@ -201,12 +199,12 @@ export default function ServicesPage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Delivery Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -219,7 +217,7 @@ export default function ServicesPage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Delivery
                 </span>
               </Link>
@@ -230,12 +228,12 @@ export default function ServicesPage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Alterations and Tailoring Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -254,7 +252,7 @@ export default function ServicesPage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
                 </span>
               </Link>
@@ -265,12 +263,12 @@ export default function ServicesPage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 bg-[#790003] rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110"
+                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Shoe Repair Service"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10 text-white"
+                    className="h-12 w-12 text-[#790003]"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -283,11 +281,30 @@ export default function ServicesPage() {
                     />
                   </svg>
                 </div>
-                <span className="mt-2 text-white text-sm font-medium">
+                <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair
                 </span>
               </Link>
             </div>
+          </div>
+          <div className="mt-12 text-center">
+            <Link href="/services">
+              <span className="inline-flex items-center text-black hover:shadow-lg font-medium">
+                View Complete Price List
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 ml-1"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </span>
+            </Link>
           </div>
         </div>
       </section>
