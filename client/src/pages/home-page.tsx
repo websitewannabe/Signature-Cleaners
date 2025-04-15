@@ -575,6 +575,124 @@ export default function HomePage() {
                   </div>
                 </div>
               </CarouselItem>
+
+              <CarouselItem className="md:basis-1/3 px-4">
+                <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
+                  <div className="flex-grow">
+                    <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="text-[#FFFFFF]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-neutral-400 text-lg">
+                      "Great pick up and delivery service and high quality dry
+                      cleaning and ladies blouse ironing. Excellent alteration
+                      services and superb customer service from Joan! "
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
+                    <div className="flex items-center">
+                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                        N
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white">Nancy R.</h4>
+                        <p className="text-sm text-neutral-400">
+                          Satisfied Customer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+
+              <CarouselItem className="md:basis-1/3 px-4">
+                <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
+                  <div className="flex-grow">
+                    <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="text-[#FFFFFF]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-neutral-400 text-lg">
+                      "Very professional, friendly and fast I always tell all my
+                      friends about you guys thank you again"
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
+                    <div className="flex items-center">
+                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                        R
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white">Rich E.</h4>
+                        <p className="text-sm text-neutral-400">
+                          Satisfied Customer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
+
+              <CarouselItem className="md:basis-1/3 px-4">
+                <div className="bg-[#000000] rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
+                  <div className="flex-grow">
+                    <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
+                    <div className="flex items-center mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <div key={i} className="text-[#FFFFFF]">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                          >
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                          </svg>
+                        </div>
+                      ))}
+                    </div>
+                    <p className="text-neutral-400 text-lg">
+                      "I received my robe the very next day, it was a happy
+                      unexpected. Thank you so much. Always do a great job!!"
+                    </p>
+                  </div>
+                  <div className="mt-6 pt-4 border-t border-[#790003]">
+                    <div className="flex items-center">
+                      <div className="mr-3 h-10 w-10 rounded-full bg-primary text-white flex items-center justify-center font-bold">
+                        C
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white">Cindy A.</h4>
+                        <p className="text-sm text-neutral-400">
+                          Satisfied Customer
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CarouselItem>
             </CarouselContent>
             <div className="flex justify-center gap-8 mt-8">
               <CarouselPrevious className="relative translate-y-0 left-0 h-10 w-10 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300" />
