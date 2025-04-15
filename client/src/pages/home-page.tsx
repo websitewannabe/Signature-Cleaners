@@ -19,9 +19,33 @@ import {
 } from "@/components/ui/carousel";
 
 export default function HomePage() {
-  const { data: services, isLoading: isLoadingServices } = useQuery({
-    queryKey: ["/api/services"],
-  });
+  // Static data instead of API calls
+  const services = [
+    {
+      id: 1,
+      name: "Professional Dry Cleaning",
+      description: "State-of-the-art dry cleaning services for all your delicate and special garments.",
+      price: "From $6.99"
+    },
+    {
+      id: 2, 
+      name: "Wash & Fold",
+      description: "Convenient wash and fold service for your everyday laundry needs.",
+      price: "$2.99/lb"
+    },
+    {
+      id: 3,
+      name: "Wedding Gowns",
+      description: "Specialized cleaning and preservation services for wedding gowns.",
+      price: "From $99.99"
+    },
+    {
+      id: 4,
+      name: "Household Items",
+      description: "Comprehensive cleaning solutions for household items.",
+      price: "From $24.99"
+    }
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
