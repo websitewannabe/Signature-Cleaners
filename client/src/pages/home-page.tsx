@@ -550,12 +550,8 @@ export default function HomePage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 relative overflow-hidden bg-[#F8F5F0]">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.8),rgba(248,245,240,0.4))]"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.5)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.5)_75%,rgba(255,255,255,0.5)),linear-gradient(45deg,rgba(255,255,255,0.5)_25%,transparent_25%,transparent_75%,rgba(255,255,255,0.5)_75%,rgba(255,255,255,0.5))] bg-[length:60px_60px] opacity-10"></div>
-        </div>
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
             Frequently Asked Questions
           </h2>
