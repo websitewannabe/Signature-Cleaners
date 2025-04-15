@@ -72,12 +72,12 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
-                <Button className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+                <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   Schedule Pickup
                 </Button>
               </Link>
               <Link href="/services">
-                <Button className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+                <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   View Services
                 </Button>
               </Link>

@@ -37,7 +37,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16">
             Contact Us
           </h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
@@ -147,13 +147,13 @@ export default function ContactPage() {
       </section>
 
       {/* Locations Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold text-white">
               Locations We Pick Up & Deliver
             </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
               We service the following areas in Bucks County and surrounding
               regions
             </p>
@@ -205,8 +205,8 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Content */}
-      <section className="py-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-[#790003]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <Accordion type="single" collapsible className="space-y-4">
             <AccordionItem value="item-1">
               <AccordionTrigger>How do I sign up?</AccordionTrigger>
