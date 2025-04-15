@@ -43,24 +43,12 @@ export default function HomePage() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
-                <Button className="w-full sm:w-auto bg-[#790003] hover:bg-[#F6AE2D] text-white font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group">
+                <Button className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   Schedule Pickup
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-200"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
                 </Button>
               </Link>
               <Link href="/services">
-                <Button className="w-full sm:w-auto bg-white text-black font-semibold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl hover:bg-[#F6AE2D] hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center group border-none">
+                <Button className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   View Services
                 </Button>
               </Link>
