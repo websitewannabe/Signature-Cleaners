@@ -198,7 +198,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="space-y-8 text-white/80">
+          <div className="space-y-8">
             <ProcessStep
               number="01"
               title="Inspection"
@@ -357,8 +357,8 @@ const ProcessStep = ({
       {number}
     </div>
     <div>
-      <h3 className="text-xl font-semibold text-neutral-900 mb-2">{title}</h3>
-      <p className="text-neutral-600">{description}</p>
+      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+      <p className="text-white/80">{description}</p>
     </div>
   </div>
 );
