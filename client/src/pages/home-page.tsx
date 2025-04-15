@@ -426,40 +426,41 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-16 bg-navy">
+      <section id="testimonials" className="py-20 bg-[#F8F5F0]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-[#0A1F44] mb-4">
               What Our Customers Say
             </h2>
-            <p className="mt-4 text-xl text-white text-opacity-90 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-[#1D1D1D]/80 max-w-3xl mx-auto">
               Discover why our customers trust us with their garments.
             </p>
           </div>
 
           {isLoadingTestimonials ? (
             <div className="flex justify-center items-center py-12">
-              <Loader2 className="h-8 w-8 animate-spin text-white" />
+              <Loader2 className="h-8 w-8 animate-spin text-[#5E0B15]" />
             </div>
           ) : (
             <Carousel
               opts={{
-                align: "start",
+                align: "center",
                 loop: true,
               }}
-              className="w-full max-w-5xl mx-auto px-8"
+              className="w-full max-w-6xl mx-auto"
             >
               <CarouselContent>
                 {testimonials &&
                   testimonials.map((testimonial) => (
-                    <CarouselItem key={testimonial.id} className="md:basis-1/1">
-                      <div className="bg-white rounded-lg shadow-md p-6 flex flex-col h-full mx-2">
+                    <CarouselItem key={testimonial.id} className="md:basis-1/3 px-4">
+                      <div className="bg-white rounded-xl shadow-lg p-8 flex flex-col h-full transform transition-all duration-300 hover:shadow-xl">
                         <div className="flex-grow">
+                          <div className="text-[#5E0B15] text-4xl mb-6">"</div>
                           <div className="flex items-center mb-4">
                             {[...Array(5)].map((_, i) => (
                               <div
                                 key={i}
-                                className={`text-${i < testimonial.rating ? "[#F9A826]" : "neutral-300"}`}
+                                className={`text-${i < testimonial.rating ? "[#D4AF37]" : "neutral-300"}`}
                               >
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
@@ -495,12 +496,20 @@ export default function HomePage() {
                     </CarouselItem>
                   ))}
               </CarouselContent>
-              <div className="flex justify-center gap-2 mt-4">
-                <CarouselPrevious className="relative translate-y-0 left-0" />
-                <CarouselNext className="relative translate-y-0 right-0" />
+              <div className="flex justify-center gap-8 mt-8">
+                <CarouselPrevious className="relative translate-y-0 left-0 h-10 w-10 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300" />
+                <CarouselNext className="relative translate-y-0 right-0 h-10 w-10 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300" />
               </div>
             </Carousel>
           )}
+          
+          <div className="mt-12 text-center">
+            <Link href="/testimonials">
+              <Button variant="outline" className="px-8 py-6 text-lg font-medium border-2 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300 rounded-xl">
+                View All Testimonials
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
