@@ -72,20 +72,20 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
-            <div className="group bg-[#181818] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
               <div className="h-40 bg-[url('/src/images/cleaners.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
                     Professional Dry Cleaning
                   </h3>
-                  <div className="w-12 h-0.5 bg-[#790003]"></div>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
                     State-of-the-art dry cleaning services for all your delicate
                     and special garments, ensuring the highest quality care.
                   </p>
                   <Link href="/dry-cleaning" className="block">
-                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-[#181818] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -346,9 +346,7 @@ export default function HomePage() {
               <div className="bg-white/90 rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
                 <span className="text-[#790003] text-3xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-white">
-                Schedule
-              </h3>
+              <h3 className="text-xl font-semibold text-white">Schedule</h3>
               <p className="mt-2 text-white/80">
                 Book your pickup online or by phone
               </p>
@@ -358,8 +356,8 @@ export default function HomePage() {
               <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
                 <span className="text-primary text-3xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
-              <p className="mt-2 text-neutral-600">
+              <h3 className="text-xl font-semibold text-white">Pickup</h3>
+              <p className="mt-2 text-white/80">
                 We collect your garments from your door
               </p>
             </div>
@@ -368,8 +366,8 @@ export default function HomePage() {
               <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
                 <span className="text-primary text-3xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
-              <p className="mt-2 text-neutral-600">
+              <h3 className="text-xl font-semibold text-white">Clean</h3>
+              <p className="mt-2 text-white/80">
                 Your items receive expert care
               </p>
             </div>
@@ -378,10 +376,8 @@ export default function HomePage() {
               <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
                 <span className="text-primary text-3xl font-bold">4</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">
-                Deliver
-              </h3>
-              <p className="mt-2 text-neutral-600">
+              <h3 className="text-xl font-semibold text-white">Deliver</h3>
+              <p className="mt-2 text-white/80">
                 We return your fresh, clean garments
               </p>
             </div>
@@ -389,7 +385,7 @@ export default function HomePage() {
 
           <div className="mt-12 text-center">
             <Link href="/schedule">
-              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
+              <Button className="bg-[#181818] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
               </Button>
             </Link>
