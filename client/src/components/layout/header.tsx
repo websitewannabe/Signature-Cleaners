@@ -216,6 +216,12 @@ const Header = () => {
             >
               Contact
             </Link>
+            <Link
+              href="/auth"
+              className="hover:text-white/80 h-10 flex items-center"
+            >
+              My Account
+            </Link>
           </nav>
 
           {/* Right: Optional - Mobile Menu or CTA */}
