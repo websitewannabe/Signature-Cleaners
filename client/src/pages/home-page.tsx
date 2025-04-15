@@ -1,9 +1,7 @@
 import { Link } from "wouter";
-import { useQuery } from "@tanstack/react-query";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -18,11 +16,39 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 
-export default function HomePage() {
-  const { data: services, isLoading: isLoadingServices } = useQuery({
-    queryKey: ["/api/services"],
-  });
+// Static services data
+const services = [
+  {
+    id: 1,
+    name: "Professional Dry Cleaning",
+    description: "State-of-the-art dry cleaning services for all your delicate and special garments.",
+    price: "From $8.99",
+    imageUrl: "/src/images/cleaners.gif"
+  },
+  {
+    id: 2,
+    name: "Wash & Fold",
+    description: "Convenient laundry service with professional washing, drying, and folding.",
+    price: "$2.99/lb",
+    imageUrl: "/src/images/wash-fold.gif"
+  },
+  {
+    id: 3,
+    name: "Wedding Gowns",
+    description: "Specialized cleaning and preservation services for wedding gowns.",
+    price: "From $99.99",
+    imageUrl: "/src/images/wedding-gown.gif"
+  },
+  {
+    id: 4,
+    name: "Household Items",
+    description: "Comprehensive cleaning solutions for household items.",
+    price: "From $24.99",
+    imageUrl: "/src/images/household-items.gif"
+  }
+];
 
+export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -62,10 +88,10 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[#F8F5F0]">
           {/* Primary radial gradient for soft light effect */}
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
-          
+
           {/* Parallel diagonal streaks */}
           <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
-          
+
           {/* Soft overlay gradient */}
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>

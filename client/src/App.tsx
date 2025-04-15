@@ -1,6 +1,4 @@
 import { Switch, Route } from "wouter";
-import { queryClient } from "./lib/queryClient";
-import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home-page";
@@ -15,7 +13,6 @@ import WeddingGownPage from "@/pages/wedding-gown-page";
 import DryCleaningPage from "@/pages/dry-cleaning-page";
 import CleanHouseholdItemsPage from "@/pages/clean-household-items-page";
 import AboutPage from "@/pages/about-page";
-
 import ContactPage from "@/pages/contact-page";
 import SchedulePage from "@/pages/schedule-page";
 import { AuthProvider } from "./hooks/use-auth";
@@ -33,25 +30,17 @@ function Router() {
       <Route path="/folding-dress-shirt" component={FoldingDressShirtPage} />
       <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
       <Route path="/shoe-repair" component={ShoeRepairPage} />
-      <Route
-        path="/suede-leather-cleaning"
-        component={SuedeLeatherCleaningPage}
-      />
+      <Route path="/suede-leather-cleaning" component={SuedeLeatherCleaningPage} />
       <Route path="/interior-cleaning" component={InteriorCleaningPage} />
       <Route path="/wedding-gown" component={WeddingGownPage} />
       <Route path="/dry-cleaning" component={DryCleaningPage} />
-      <Route
-        path="/clean-household-items"
-        component={CleanHouseholdItemsPage}
-      />
+      <Route path="/clean-household-items" component={CleanHouseholdItemsPage} />
       <Route path="/about" component={AboutPage} />
-      
       <Route path="/contact" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
-      <Route path="/faq" component={FaqPage} /> {/* Added FAQ route */}
-      <Route path="/auth" component={AuthPage} /> {/* Added Auth route */}
-      <Route path="/delivery" component={DeliveryPage} />{" "}
-      {/* Added Delivery page route */}
+      <Route path="/faq" component={FaqPage} />
+      <Route path="/auth" component={AuthPage} />
+      <Route path="/delivery" component={DeliveryPage} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -59,12 +48,10 @@ function Router() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <Router />
-        <Toaster />
-      </AuthProvider>
-    </QueryClientProvider>
+    <AuthProvider>
+      <Router />
+      <Toaster />
+    </AuthProvider>
   );
 }
 
