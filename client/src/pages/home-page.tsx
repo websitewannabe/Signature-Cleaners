@@ -556,9 +556,9 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
           
           {/* Diagonal gradient streaks */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 rotate-45 bg-[linear-gradient(90deg,transparent_0%,rgba(255,255,255,0.8)_25%,transparent_50%)]"></div>
-            <div className="absolute inset-0 -rotate-45 bg-[linear-gradient(90deg,transparent_50%,rgba(255,255,255,0.8)_75%,transparent_100%)]"></div>
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute inset-0 rotate-45 bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.1)_25%,transparent_50%)]"></div>
+            <div className="absolute inset-0 -rotate-45 bg-[linear-gradient(90deg,transparent_50%,rgba(0,0,0,0.1)_75%,transparent_100%)]"></div>
           </div>
           
           {/* Subtle marble-like texture */}
