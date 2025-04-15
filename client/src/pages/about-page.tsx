@@ -22,12 +22,12 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16">
             Our Story
           </h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
             <div>
-              <p className="mt-4 text-lg text-white/80">
+              <p className="mt-4 text-lg text-black/80">
                 Signature Cleaners was founded on simple principles: provide a
                 quality product, deliver excellent customer service, and offer
                 fair pricing. With decades of experience in the industry, the
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 attention using top-of-the-line equipment to ensure the highest
                 standards of cleanliness and presentation.
               </p>
-              <p className="mt-4 text-lg text-white/80">
+              <p className="mt-4 text-lg text-black/80">
                 Signature Cleaners welcomes rush orders and never makes promises
                 they can’t keep. Most items can be turned around in under 24
                 hours, and if more time is needed, customers are notified
@@ -46,7 +46,7 @@ export default function AboutPage() {
                 come—ensuring that cherished garments stay as beautiful as the
                 day they were worn.
               </p>
-              <p className="mt-4 text-lg text-white/80">
+              <p className="mt-4 text-lg text-black/80">
                 As the only member of the Dry Cleaning and Laundry Institute in
                 the area, Signature Cleaners stays current on the latest fabrics
                 and care methods. The team is always seeking new ways to improve
@@ -88,13 +88,13 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Values */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#790003]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold text-white">
               Our Mission & Values
             </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
               At Signature Cleaners, we're guided by a set of core principles
               that define our approach to garment care.
             </p>
@@ -186,19 +186,19 @@ export default function AboutPage() {
       </section>
 
       {/* Our Process */}
-      <section className="py-16">
+      <section className="py-16 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-neutral-900">
+            <h2 className="text-3xl font-bold text-white">
               Our Cleaning Process
             </h2>
-            <p className="mt-4 text-lg text-neutral-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
               Each garment goes through a meticulous multi-step process to
               ensure the highest quality results.
             </p>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 text-white/80">
             <ProcessStep
               number="01"
               title="Inspection"
