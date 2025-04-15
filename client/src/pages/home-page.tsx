@@ -423,7 +423,7 @@ export default function HomePage() {
                     <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
                     <div className="flex items-center mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="text-[#790003]">
+                        <div key={i} className="text-[#FFFFFF]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -435,7 +435,7 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                    <p className="text-neutral-500 text-lg">
+                    <p className="text-neutral-400 text-lg">
                       "The staff is so helpful and even brought out my items to
                       my car since my baby was sleeping. Can’t thank them enough
                       for their service. Highly recommend for any laundering you
@@ -449,7 +449,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white">Maggie B.</h4>
-                        <p className="text-sm text-neutral-500">
+                        <p className="text-sm text-neutral-400">
                           Satisfied Customer
                         </p>
                       </div>
@@ -464,7 +464,7 @@ export default function HomePage() {
                     <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
                     <div className="flex items-center mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="text-[#790003]">
+                        <div key={i} className="text-[#FFFFFF]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -476,7 +476,7 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                    <p className="text-neutral-500 text-lg">
+                    <p className="text-neutral-400 text-lg">
                       "I needed two Dresses pressed on short notice and
                       signature cleaners had the best reviews. Now I know why!
                       They were accommodating, quick, and so so welcoming and
@@ -493,7 +493,7 @@ export default function HomePage() {
                         <h4 className="font-semibold text-white">
                           Gabrielle A.
                         </h4>
-                        <p className="text-sm text-neutral-500">
+                        <p className="text-sm text-neutral-400">
                           Satisfied Customer
                         </p>
                       </div>
@@ -508,7 +508,7 @@ export default function HomePage() {
                     <div className="text-[#FFFFFF] text-4xl mb-6">"</div>
                     <div className="flex items-center mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <div key={i} className="text-[#790003]">
+                        <div key={i} className="text-[#FFFFFF]">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -520,7 +520,7 @@ export default function HomePage() {
                         </div>
                       ))}
                     </div>
-                    <p className="text-neutral-500 text-lg">
+                    <p className="text-neutral-400 text-lg">
                       "People are the best part of this business. Always
                       friendly and more than helpful "
                     </p>
@@ -532,7 +532,7 @@ export default function HomePage() {
                       </div>
                       <div>
                         <h4 className="font-semibold text-white">Tom K.</h4>
-                        <p className="text-sm text-neutral-500">
+                        <p className="text-sm text-neutral-400">
                           Local Resident
                         </p>
                       </div>
@@ -554,10 +554,10 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[#F8F5F0]">
           {/* Primary radial gradient for soft light effect */}
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
-          
+
           {/* Parallel diagonal streaks */}
           <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
-          
+
           {/* Soft overlay gradient */}
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
