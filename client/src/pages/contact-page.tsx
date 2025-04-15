@@ -1,4 +1,5 @@
 import Header from "@/components/layout/header";
+import { Link } from "wouter";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import {
@@ -37,7 +38,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16">
+          <h2 className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16">
             Contact Us
           </h2>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
@@ -305,6 +306,25 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/70"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Ready to simplify your laundry routine?
+          </h2>
+          <Link href="/schedule">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
+              Schedule a Pickup
+            </Button>
+          </Link>
         </div>
       </section>
 
