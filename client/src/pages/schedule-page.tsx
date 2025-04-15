@@ -1,10 +1,4 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
-import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -25,39 +19,19 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Loader2 } from "lucide-react";
-import { useAuth } from "@/hooks/use-auth";
+import { useForm } from "react-hook-form";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-// Form validation schema
-const scheduleSchema = z.object({
-  fullName: z.string().min(2, { message: "Name is required" }),
-  phone: z.string().min(10, { message: "Valid phone number is required" }),
-  email: z.string().email({ message: "Valid email is required" }),
-  address: z.string().min(5, { message: "Address is required" }),
-  serviceType: z.string().min(1, { message: "Please select a service" }),
-  pickupDate: z.string().min(1, { message: "Pickup date is required" }),
-  pickupTime: z.string().min(1, { message: "Pickup time is required" }),
-  notes: z.string().optional(),
-});
-
-type ScheduleFormValues = z.infer<typeof scheduleSchema>;
-
 export default function SchedulePage() {
-  const { toast } = useToast();
-  const { user } = useAuth();
   const isMobile = useIsMobile();
   const [isSuccess, setIsSuccess] = useState(false);
-  const [confirmationNumber, setConfirmationNumber] = useState("");
 
-  // Initialize form with user data if available
-  const form = useForm<ScheduleFormValues>({
-    resolver: zodResolver(scheduleSchema),
+  const form = useForm({
     defaultValues: {
-      fullName: user?.fullName || "",
-      email: user?.email || "",
-      phone: user?.phone || "",
-      address: user?.address || "",
+      fullName: "",
+      email: "",
+      phone: "",
+      address: "",
       serviceType: "",
       pickupDate: "",
       pickupTime: "",
@@ -65,33 +39,10 @@ export default function SchedulePage() {
     },
   });
 
-  // Schedule form submission
-  const scheduleMutation = useMutation({
-    mutationFn: async (data: ScheduleFormValues) => {
-      const res = await apiRequest("POST", "/api/schedule", data);
-      return res.json();
-    },
-    onSuccess: (data) => {
-      setConfirmationNumber(data.confirmationNumber);
-      setIsSuccess(true);
-      window.scrollTo(0, 0);
-      toast({
-        title: "Success!",
-        description: "Your pickup has been scheduled.",
-      });
-    },
-    onError: (error) => {
-      toast({
-        title: "Error",
-        description:
-          "There was a problem scheduling your pickup. Please try again.",
-        variant: "destructive",
-      });
-    },
-  });
-
-  const onSubmit = (data: ScheduleFormValues) => {
-    scheduleMutation.mutate(data);
+  const onSubmit = (data: any) => {
+    console.log("Form submitted:", data);
+    setIsSuccess(true);
+    window.scrollTo(0, 0);
   };
 
   // Get today's date for min date on date picker
@@ -145,7 +96,7 @@ export default function SchedulePage() {
               </p>
               <p className="text-green-700 mb-6">
                 Your confirmation number:{" "}
-                <span className="font-bold">{confirmationNumber}</span>
+                <span className="font-bold">DEMO12345</span>
               </p>
               <div className="space-y-4">
                 <Button
@@ -336,16 +287,8 @@ export default function SchedulePage() {
                   <Button
                     type="submit"
                     className="w-full bg-[#790003] hover:bg-[#5a0002] text-white font-medium py-3"
-                    disabled={scheduleMutation.isPending}
                   >
-                    {scheduleMutation.isPending ? (
-                      <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                        Scheduling...
-                      </>
-                    ) : (
-                      "Schedule Pickup"
-                    )}
+                    Schedule Pickup
                   </Button>
                 </form>
               </Form>
