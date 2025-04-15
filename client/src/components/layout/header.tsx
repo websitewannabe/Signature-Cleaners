@@ -50,7 +50,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
             <Link
               href="/"
-              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
+              className="hover:text-[#181818] h-10 flex items-center transition-colors duration-200"
             >
               <Home className="w-4 h-4" />
             </Link>
@@ -59,7 +59,7 @@ const Header = () => {
                 <NavigationMenuItem>
                   <div className="flex items-center h-10">
                     <Link href="/services">
-                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#790003] hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase">
+                      <NavigationMenuTrigger className="bg-transparent text-white hover:text-[#181818] hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase">
                         Services
                       </NavigationMenuTrigger>
                     </Link>
@@ -206,13 +206,13 @@ const Header = () => {
             </NavigationMenu>
             <Link
               href="/about"
-              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
+              className="hover:text-[#181818] h-10 flex items-center transition-colors duration-200"
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className="hover:text-[#790003] h-10 flex items-center transition-colors duration-200"
+              className="hover:text-[#181818] h-10 flex items-center transition-colors duration-200"
             >
               Contact
             </Link>

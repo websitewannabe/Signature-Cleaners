@@ -2,15 +2,6 @@ import { pgTable, text, serial, integer, boolean, timestamp, jsonb } from "drizz
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-export const insertContactSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  subject: z.string().min(1, "Subject is required"),
-  message: z.string().min(1, "Message is required"),
-});
-
-export type InsertContact = z.infer<typeof insertContactSchema>;
-
 // User schema
 export const users = pgTable("users", {
   id: serial("id").primaryKey(),
@@ -67,7 +58,12 @@ export const contacts = pgTable("contacts", {
   resolved: boolean("resolved").default(false),
 });
 
-// Contact schema is already defined above
+export const insertContactSchema = createInsertSchema(contacts).pick({
+  name: true,
+  email: true,
+  subject: true,
+  message: true,
+});
 
 // Service schema
 export const services = pgTable("services", {
