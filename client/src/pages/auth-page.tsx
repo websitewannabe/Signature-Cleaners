@@ -103,8 +103,18 @@ export default function AuthPage() {
       </div>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#F8F5F0]">
+          {/* Primary radial gradient for soft light effect */}
+          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+
+          {/* Parallel diagonal streaks */}
+          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+
+          {/* Soft overlay gradient */}
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
+        </div>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <h2 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
             Frequently Asked Questions
           </h2>
