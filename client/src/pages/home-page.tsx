@@ -329,13 +329,13 @@ export default function HomePage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-16 bg-neutral-50">
+      <section className="py-16 bg-[#790003]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
               How It Works
             </h2>
-            <p className="mt-4 text-xl text-neutral-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-xl text-white/90 max-w-3xl mx-auto">
               Our convenient process makes it easy to get your clothes cleaned
               without disrupting your schedule.
             </p>
@@ -343,13 +343,13 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
-                <span className="text-primary text-3xl font-bold">1</span>
+              <div className="bg-white/90 rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
+                <span className="text-[#790003] text-3xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-900">
+              <h3 className="text-xl font-semibold text-white">
                 Schedule
               </h3>
-              <p className="mt-2 text-neutral-600">
+              <p className="mt-2 text-white/80">
                 Book your pickup online or by phone
               </p>
             </div>
