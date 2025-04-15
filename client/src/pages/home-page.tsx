@@ -97,10 +97,7 @@ export default function HomePage() {
                     and special garments, ensuring the highest quality care.
                   </p>
                   <Link href="/dry-cleaning" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
-                    >
+                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -134,10 +131,7 @@ export default function HomePage() {
                     needs, saving you time and effort.
                   </p>
                   <Link href="/wash-fold" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
-                    >
+                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -171,10 +165,7 @@ export default function HomePage() {
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
                   <Link href="/wedding-gown" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
-                    >
+                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -208,10 +199,7 @@ export default function HomePage() {
                     including comforters, blankets, and decorative pieces.
                   </p>
                   <Link href="/clean-household-items" className="block">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#790003] text-[#790003] hover:bg-[#790003] hover:text-white transition-colors duration-300 rounded-none"
-                    >
+                    <Button className="w-full bg-[#790003] text-white hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
