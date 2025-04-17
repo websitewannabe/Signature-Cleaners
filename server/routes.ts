@@ -80,6 +80,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Service inquiries
+  app.post("/api/service-inquiry", async (req, res) => {
+    try {
+      const { name, email, phone, message, service } = req.body;
+      
+      // Here you can add your custom logic for handling the inquiry
+      // For example, sending emails, storing in database, etc.
+      
+      res.status(200).json({ message: "Inquiry received successfully" });
+    } catch (error) {
+      res.status(500).json({ message: "Error processing inquiry" });
+    }
+  });
+
   // Order management - protected routes
   app.post("/api/orders", async (req, res) => {
     if (!req.isAuthenticated()) {
