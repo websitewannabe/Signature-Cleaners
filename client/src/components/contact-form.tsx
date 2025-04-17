@@ -49,20 +49,18 @@ export default function ContactForm({ serviceName, messagePlaceholder }: Contact
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormValues) => {
-      const response = await fetch('https://api.mydrycleaner.com/q', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          RequestType: "MessageToManagerNoUser",
-          AccountKey: process.env.ACCOUNT_KEY,
-          SessionID: process.env.SESSION_ID,
-          Parameters: {
-            Subject: data.service || "General Inquiry",
-            Message: data.message,
-            FromEmail: data.email
-          }
+          type: "MessageToManagerNoUser",
+          service: data.service || "General Inquiry",
+          message: data.message,
+          email: data.email,
+          name: data.name,
+          phone: data.phone
         })
       });
       
