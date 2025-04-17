@@ -55,8 +55,26 @@ export default function ContactPage() {
 
   // API mutation for form submission
   const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+    mutationFn: async (data: ContactFormValues) => {
+      const response = await fetch('https://api.mydrycleaner.com/q', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          RequestType: "MessageToManagerNoUser",
+          AccountKey: process.env.ACCOUNT_KEY,
+          SessionID: process.env.SESSION_ID,
+          Parameters: {
+            Subject: data.subject,
+            Message: data.message,
+            FromEmail: data.email
+          }
+        })
+      });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
       return response.json();
     },
     onSuccess: () => {
