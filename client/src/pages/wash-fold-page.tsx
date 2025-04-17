@@ -11,9 +11,6 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState } from "react";
-// Assuming ContactForm component is defined elsewhere and handles API calls.
-import ContactForm from "@/components/contact-form"; // Import the new component
-
 
 export default function WashFoldPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -230,11 +227,46 @@ export default function WashFoldPage() {
               <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
                 Contact Us
               </h3>
-              {/* Replaced with ContactForm component */}
-              <ContactForm 
-                serviceName="Wash & Fold"
-                messagePlaceholder="Tell us about your laundry needs..."
-              />
+              <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Name
+                  </label>
+                  <Input placeholder="Your name" className="w-full" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Email
+                  </label>
+                  <Input
+                    type="email"
+                    placeholder="your@email.com"
+                    className="w-full"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Phone
+                  </label>
+                  <Input
+                    type="tel"
+                    placeholder="(555) 123-4567"
+                    className="w-full"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Message
+                  </label>
+                  <Textarea
+                    placeholder="Tell us about your laundry needs..."
+                    className="min-h-[100px] w-full"
+                  />
+                </div>
+                <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                  Send Message
+                </Button>
+              </form>
             </div>
           </div>
         </div>
