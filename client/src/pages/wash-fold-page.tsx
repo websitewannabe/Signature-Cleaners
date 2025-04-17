@@ -12,7 +12,7 @@ import {
 import { Link } from "wouter";
 import { useState } from "react";
 // Assuming ContactForm component is defined elsewhere and handles API calls.
-import ContactForm from "@/components/ContactForm"; // Import the new component
+import ContactForm from "@/components/contact-form"; // Import the new component
 
 
 export default function WashFoldPage() {
