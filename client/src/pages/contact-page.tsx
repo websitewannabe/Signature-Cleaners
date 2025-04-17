@@ -12,15 +12,77 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, Mail, MapPin, Phone } from "lucide-react";
+import { CheckCircle2, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { InsertContact } from "@shared/schema";
+
+// Define form schema with validation
+const contactFormSchema = z.object({
+  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  subject: z.string().min(2, { message: "Subject is required" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactPage() {
+  const { toast } = useToast();
+  const [submitted, setSubmitted] = useState(false);
+  
+  // Initialize form with validation
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
+  // API mutation for form submission
+  const contactMutation = useMutation({
+    mutationFn: async (data: InsertContact) => {
+      const response = await apiRequest("POST", "/api/contact", data);
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message Sent",
+        description: "We've received your message and will respond shortly.",
+        variant: "success",
+      });
+      setSubmitted(true);
+      form.reset();
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Contact form error:", error);
+    },
+  });
+
+  // Handle form submission
+  const onSubmit = (data: ContactFormValues) => {
+    contactMutation.mutate(data);
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -44,45 +106,100 @@ export default function ContactPage() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
             <div>
               <div className="bg-white rounded-lg shadow-md p-6">
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Your Name
-                    </label>
-                    <Input placeholder="John Doe" />
+                {submitted ? (
+                  <div className="flex flex-col items-center justify-center py-8 space-y-4">
+                    <CheckCircle2 className="h-16 w-16 text-green-500" />
+                    <h3 className="text-2xl font-semibold text-center">Thank You!</h3>
+                    <p className="text-center text-neutral-600">
+                      Your message has been sent successfully. We'll get back to you as soon as possible.
+                    </p>
+                    <Button
+                      onClick={() => setSubmitted(false)}
+                      className="mt-4"
+                    >
+                      Send Another Message
+                    </Button>
                   </div>
+                ) : (
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Your Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John Doe" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Email Address
-                    </label>
-                    <Input type="email" placeholder="john@example.com" />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email Address</FormLabel>
+                            <FormControl>
+                              <Input type="email" placeholder="john@example.com" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Subject
-                    </label>
-                    <Input placeholder="How can we help you?" />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Subject</FormLabel>
+                            <FormControl>
+                              <Input placeholder="How can we help you?" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Message
-                    </label>
-                    <Textarea
-                      placeholder="Please provide details about your inquiry..."
-                      className="min-h-[120px]"
-                    />
-                  </div>
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder="Please provide details about your inquiry..."
+                                className="min-h-[120px]"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
 
-                  <Button
-                    type="button"
-                    className="w-full bg-primary hover:bg-primary-dark"
-                  >
-                    Send Message
-                  </Button>
-                </form>
+                      <Button
+                        type="submit"
+                        className="w-full bg-primary hover:bg-primary-dark"
+                        disabled={contactMutation.isPending}
+                      >
+                        {contactMutation.isPending ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
+                      </Button>
+                    </form>
+                  </Form>
+                )}
               </div>
             </div>
 
