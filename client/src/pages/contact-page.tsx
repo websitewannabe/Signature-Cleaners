@@ -2,6 +2,7 @@ import Header from "@/components/layout/header";
 import { Link } from "wouter";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+
 import {
   Form,
   FormControl,
@@ -33,7 +34,9 @@ const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
   subject: z.string().min(2, { message: "Subject is required" }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters" }),
+  message: z
+    .string()
+    .min(10, { message: "Message must be at least 10 characters" }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -41,7 +44,7 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 export default function ContactPage() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-  
+
   // Initialize form with validation
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
@@ -56,10 +59,10 @@ export default function ContactPage() {
   // API mutation for form submission
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormValues) => {
-      const response = await fetch('https://api.mydrycleaner.com/q', {
-        method: 'POST',
+      const response = await fetch("https://api.mydrycleaner.com/q", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           RequestType: "MessageToManagerNoUser",
@@ -68,12 +71,12 @@ export default function ContactPage() {
           Parameters: {
             Subject: data.subject,
             Message: data.message,
-            FromEmail: data.email
-          }
-        })
+            FromEmail: data.email,
+          },
+        }),
       });
       if (!response.ok) {
-        throw new Error('Failed to send message');
+        throw new Error("Failed to send message");
       }
       return response.json();
     },
@@ -89,7 +92,8 @@ export default function ContactPage() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: "There was a problem sending your message. Please try again.",
+        description:
+          "There was a problem sending your message. Please try again.",
         variant: "destructive",
       });
       console.error("Contact form error:", error);
@@ -127,9 +131,12 @@ export default function ContactPage() {
                 {submitted ? (
                   <div className="flex flex-col items-center justify-center py-8 space-y-4">
                     <CheckCircle2 className="h-16 w-16 text-green-500" />
-                    <h3 className="text-2xl font-semibold text-center">Thank You!</h3>
+                    <h3 className="text-2xl font-semibold text-center">
+                      Thank You!
+                    </h3>
                     <p className="text-center text-neutral-600">
-                      Your message has been sent successfully. We'll get back to you as soon as possible.
+                      Your message has been sent successfully. We'll get back to
+                      you as soon as possible.
                     </p>
                     <Button
                       onClick={() => setSubmitted(false)}
@@ -140,7 +147,10 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <form
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="space-y-6"
+                    >
                       <FormField
                         control={form.control}
                         name="name"
@@ -162,7 +172,11 @@ export default function ContactPage() {
                           <FormItem>
                             <FormLabel>Email Address</FormLabel>
                             <FormControl>
-                              <Input type="email" placeholder="john@example.com" {...field} />
+                              <Input
+                                type="email"
+                                placeholder="john@example.com"
+                                {...field}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -176,7 +190,10 @@ export default function ContactPage() {
                           <FormItem>
                             <FormLabel>Subject</FormLabel>
                             <FormControl>
-                              <Input placeholder="How can we help you?" {...field} />
+                              <Input
+                                placeholder="How can we help you?"
+                                {...field}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
