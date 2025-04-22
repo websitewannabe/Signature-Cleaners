@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
 import {
   Accordion,
   AccordionContent,
@@ -54,6 +56,106 @@ const services = [
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>
+          Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA
+        </title>
+        <meta
+          name="description"
+          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+        />
+        <meta
+          name="keywords"
+          content="dry cleaning, wash and fold, laundry service, garment care, wedding gown cleaning, tailoring, Doylestown cleaners, Bucks County laundry"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com",
+            image: "https://signaturecleaners.com/src/images/interior.jpg",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
+            telephone: "+1-215-345-1470",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "1456 Ferry Road #10",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            openingHours: "Mo-Fr 08:00-18:00",
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "New Hope",
+                "Newtown",
+                "Warrington",
+                "Furlong",
+                "Richboro",
+                "Warminster",
+                "Buckingham",
+                "Yardley",
+                "Jamison",
+              ],
+            },
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Signature Cleaners Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Dry Cleaning",
+                    description:
+                      "State-of-the-art dry cleaning for suits, dresses, and more.",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      priceCurrency: "USD",
+                      price: "6.99",
+                    },
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Wash & Fold",
+                    description:
+                      "Convenient wash and fold service for everyday laundry.",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      priceCurrency: "USD",
+                      price: "2.99",
+                      unitText: "Pound",
+                    },
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Wedding Gown Cleaning",
+                    description:
+                      "Preservation and detailed cleaning of wedding gowns.",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      priceCurrency: "USD",
+                      price: "99.99",
+                    },
+                  },
+                },
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

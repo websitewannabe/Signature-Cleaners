@@ -3,10 +3,71 @@ import Footer from "@/components/layout/footer";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>About Us | Signature Cleaners in Doylestown, PA</title>
+        <meta
+          name="description"
+          content="Learn more about Signature Cleaners, our history, team, and commitment to high-quality dry cleaning and garment care services in Bucks County."
+        />
+        <meta
+          name="keywords"
+          content="about Signature Cleaners, dry cleaning experts, Doylestown garment care, Bucks County laundry service, wedding gown cleaning, stain removal professionals"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/about",
+            image: "https://signaturecleaners.com/src/images/theTeam.jpg",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners is a trusted garment care provider in Bucks County, offering expert dry cleaning, tailoring, shoe repair, and preservation services.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            founder: {
+              "@type": "Person",
+              name: "Robert Thompson",
+            },
+            employee: [
+              {
+                "@type": "Person",
+                name: "Sarah Williams",
+                jobTitle: "Operations Manager",
+              },
+              {
+                "@type": "Person",
+                name: "Michael Chen",
+                jobTitle: "Customer Experience Director",
+              },
+            ],
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "New Hope",
+                "Jamison",
+                "Warrington",
+                "Perkasie",
+                "Yardley",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* About Content */}
