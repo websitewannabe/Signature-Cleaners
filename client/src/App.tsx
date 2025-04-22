@@ -1,9 +1,12 @@
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { HelmetProvider } from 'react-helmet-async';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home-page";
 import ServicesPage from "@/pages/services-page";
+
+const queryClient = new QueryClient();
 import WashFoldPage from "@/pages/wash-fold-page";
 import FoldingDressShirtPage from "@/pages/folding-dress-shirt-page";
 import ShoeRepairPage from "@/pages/shoe-repair-page";
@@ -50,10 +53,12 @@ function Router() {
 function App() {
   return (
     <HelmetProvider>
-      <AuthProvider>
-        <Router />
-        <Toaster />
-      </AuthProvider>
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <Router />
+          <Toaster />
+        </AuthProvider>
+      </QueryClientProvider>
     </HelmetProvider>
   );
 }
