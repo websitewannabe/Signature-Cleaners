@@ -1,5 +1,6 @@
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
+import { HelmetProvider } from 'react-helmet-async';
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home-page";
 import ServicesPage from "@/pages/services-page";
@@ -48,10 +49,12 @@ function Router() {
 
 function App() {
   return (
-    <AuthProvider>
-      <Router />
-      <Toaster />
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <Router />
+        <Toaster />
+      </AuthProvider>
+    </HelmetProvider>
   );
 }
 
