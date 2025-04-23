@@ -108,14 +108,8 @@ export default function CleanHouseholdItemsPage() {
                   {[
                     {
                       name: "Comforters",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M20 14v4a2 2 0 01-2 2H6a2 2 0 01-2-2v-4m16 0l-4-4m4 4h-8m-4 0l4-4m-4 4h8"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/comforter.svg",
                       details:
                         "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness.",
                     },
