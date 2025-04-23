@@ -129,14 +129,8 @@ export default function CleanHouseholdItemsPage() {
                     },
                     {
                       name: "Blankets",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/blanket.svg",
                       details:
                         "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability.",
                     },
@@ -156,8 +150,8 @@ export default function CleanHouseholdItemsPage() {
                         className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
                       >
                         {service.type === "img" ? (
-                          <img 
-                            src={service.icon} 
+                          <img
+                            src={service.icon}
                             alt={service.name}
                             className="w-12 h-12"
                           />

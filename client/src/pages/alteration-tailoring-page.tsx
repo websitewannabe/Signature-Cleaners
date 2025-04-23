@@ -133,15 +133,8 @@ export default function AlterationTailoringPage() {
                   {[
                     {
                       name: "Hemming",
-                      type: "svg",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M15 12a3 3 0 11-6 0 3 3 0 016 0z M17.8 12a9 9 0 10-11.6 0"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/hemming.svg",
                       details:
                         "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish.",
                     },
@@ -154,15 +147,8 @@ export default function AlterationTailoringPage() {
                     },
                     {
                       name: "Fitting",
-                      type: "svg",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/fitting.svg",
                       details:
                         "Our tailors specialize in accurate body measurements and advanced fitting techniques for custom results.",
                     },

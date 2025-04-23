@@ -293,58 +293,106 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Service Category Icons */}
-          <div className="mt-12 mb-8">
-            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-              {/* Delivery */}
-              <Link
-                href="/delivery"
-                className="group flex flex-col items-center"
-              >
-                <div
-                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
-                  aria-label="Delivery Service"
-                >
-                  <Car className="h-12 w-12 text-[#790003]" />
+            {/* Alterations & Tailoring */}
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-[url('/src/images/tailoring.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow flex flex-col space-y-3">
+                  <h3 className="text-xl font-semibold text-white">
+                    Alterations & Tailoring
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
+                    Perfect fit, perfected style — our expert tailoring brings
+                    your garments to life.
+                  </p>
+                  <Link href="/alteration-tailoring" className="block">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
-                <span className="mt-2 text-black text-sm font-medium">
-                  Delivery
-                </span>
-              </Link>
-
-              {/* Alterations & Tailoring */}
-              <Link
-                href="/alteration-tailoring"
-                className="group flex flex-col items-center"
-              >
-                <div
-                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
-                  aria-label="Alterations and Tailoring Service"
-                >
-                  <Shirt className="h-12 w-12 text-[#790003]" />
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
+                    From $24.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
+                      Book Now
+                    </Button>
+                  </Link>
                 </div>
-                <span className="mt-2 text-black text-sm font-medium">
-                  Tailoring
-                </span>
-              </Link>
-
-              {/* Shoe Repair */}
-              <Link
-                href="/shoe-repair"
-                className="group flex flex-col items-center"
-              >
-                <div
-                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
-                  aria-label="Shoe Repair Service"
-                >
-                  <Footprints className="h-12 w-12 text-[#790003]" />
+              </div>
+            </div>
+            {/* Delivery */}
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-[url('/src/images/delivery.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow flex flex-col space-y-3">
+                  <h3 className="text-xl font-semibold text-white">Delivery</h3>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
+                    Clean clothes, delivered to your door — convenience you can
+                    count on. Our reliable pickup and delivery service fits
+                    seamlessly into your schedule.
+                  </p>
+                  <Link href="/delivery" className="block">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                      Learn More
+                    </Button>
+                  </Link>
                 </div>
-                <span className="mt-2 text-black text-sm font-medium">
-                  Shoe Repair
-                </span>
-              </Link>
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
+                    From $24.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            {/* Shoe Repair */}
+            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
+              <div className="h-40 bg-[url('/src/images/shoe-repair.gif')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow flex flex-col space-y-3">
+                  <h3 className="text-xl font-semibold text-white">
+                    Shoe Repair
+                  </h3>
+                  <div className="w-12 h-0.5 bg-[#181818]"></div>
+                  <p className="text-white line-clamp-3 flex-grow">
+                    Step into confidence with expert shoe repair that restores
+                    and revives.
+                  </p>
+                  <Link href="/shoe-repair" className="block">
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+                <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
+                  <span className="text-white font-semibold text-lg">
+                    From $24.99
+                  </span>
+                  <Link
+                    href="/schedule"
+                    className="w-full sm:w-auto sm:ml-auto"
+                  >
+                    <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium transition-colors duration-300 rounded-none">
+                      Book Now
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
