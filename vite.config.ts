@@ -34,10 +34,8 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5000,
     hmr: {
-      clientPort: 443,
       host: '0.0.0.0',
-      protocol: 'wss',
-      timeout: 120000
+      protocol: 'ws'
     }
   },
 });
