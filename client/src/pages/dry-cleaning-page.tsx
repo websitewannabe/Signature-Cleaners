@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -160,14 +161,7 @@ export default function DryCleaningPage() {
                     },
                     {
                       name: "Shirts",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                        />
-                      ),
+                      icon: <Shirt className="w-12 h-12 text-black" />,
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
