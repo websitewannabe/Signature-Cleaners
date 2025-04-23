@@ -60,7 +60,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           Parameters: {
             Subject: subject,
             Message: message,
-            FromEmail: email
+            FromEmail: email,
+            Name: name
           },
         }),
       });

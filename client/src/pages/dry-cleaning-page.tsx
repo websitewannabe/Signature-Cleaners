@@ -3,7 +3,6 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -76,31 +75,55 @@ export default function DryCleaningPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Expert stain removal techniques
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Gentle care for delicate fabrics
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Professional pressing and finishing
                   </span>
@@ -125,10 +148,11 @@ export default function DryCleaningPage() {
                     {
                       name: "Dresses",
                       icon: (
-                        <img
-                          src="/src/images/dress.svg"
-                          alt="Dress icon"
-                          className="w-12 h-12 text-black"
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M7 7h10v10M7 17l5-5m0 0l5-5"
                         />
                       ),
                       details:
@@ -136,7 +160,14 @@ export default function DryCleaningPage() {
                     },
                     {
                       name: "Shirts",
-                      icon: <Shirt className="w-12 h-12 text-black" />,
+                      icon: (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                        />
+                      ),
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
