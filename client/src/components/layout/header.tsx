@@ -82,7 +82,7 @@ const Header = () => {
                       >
                         <div className="w-5 h-5 mr-2">
                           <img
-                            src="/src/images/bubbles.svg"
+                            src="/src/icons/bubbles.svg"
                             alt="Wash & Fold"
                             className="w-full h-full text-[#790003]"
                           />
