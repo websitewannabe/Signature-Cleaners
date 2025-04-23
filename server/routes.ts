@@ -2,7 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth } from "./auth";
-import { WebSocketServer } from "ws";
+import { WebSocketServer, WebSocket } from "ws";
 import { z } from "zod";
 import { insertContactSchema, insertOrderSchema } from "@shared/schema";
 
@@ -204,7 +204,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             });
             
             // Send response back to the client if still connected
-            if (ws.readyState === 1) { // WebSocket.OPEN
+            if (ws.readyState === WebSocket.OPEN) {
               ws.send(JSON.stringify(agentResponse));
             }
           }, 1000);
