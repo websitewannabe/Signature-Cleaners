@@ -20,7 +20,6 @@ import AboutPage from "@/pages/about-page";
 import ContactPage from "@/pages/contact-page";
 import SchedulePage from "@/pages/schedule-page";
 import { AuthProvider } from "./hooks/use-auth";
-import LiveChat from "./components/live-chat";
 import FaqPage from "@/pages/faq-page";
 import AuthPage from "@/pages/auth-page";
 import DeliveryPage from "@/pages/delivery-page";
