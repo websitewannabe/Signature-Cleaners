@@ -111,46 +111,43 @@ export default function DryCleaningPage() {
                   {[
                     {
                       name: "Suits",
+                      type: "svg",
                       icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M15 4h3a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h3m6 0v2H9V4m6 0a2 2 0 012-2h1a2 2 0 012 2v2H9V4a2 2 0 012-2h1a2 2 0 012 2v0z"
-                        />
+                        <svg
+                          className="w-12 h-12 text-[#790003]"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={1.5}
+                            d="M15 4h3a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h3m6 0v2H9V4m6 0a2 2 0 012-2h1a2 2 0 012 2v2H9V4a2 2 0 012-2h1a2 2 0 012 2v0z"
+                          />
+                        </svg>
                       ),
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
-                      icon: (
-                        <svg
-                          className="w-12 h-12 text-[#790003]"
-                          viewBox="0 0 512 512"
-                          fill="currentColor"
-                        >
-                          <path d="M329.31,195.497c0-37.245,44.218-67.499,44.218-96.59c0-18.02-13.153-33.706-32.578-41.814V0h-16.289v52.39 c-4.505-0.775-9.172-1.189-13.965-1.189c-23.461,0-43.894,9.766-54.687,24.218c-10.794-14.451-31.246-24.218-54.706-24.218 c-4.794,0-9.46,0.414-13.965,1.189V0H171.05v57.092c-19.406,8.108-32.579,23.794-32.579,41.814 c0,29.091,44.219,59.345,44.219,96.59c0,116.358-88.437,104.727-88.437,265.302c0,0,16.289,18.623,74.472,18.623 c37.317,0,47.714,32.578,87.284,32.578c39.552,0,49.948-32.578,87.265-32.578c58.184,0,74.473-18.623,74.473-18.623 C417.747,300.224,329.31,311.854,329.31,195.497z" />
-                        </svg>
-                      ),
+                      type: "img",
+                      icon: "/src/images/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
+                      type: "svg",
                       icon: <Shirt className="w-12 h-12 text-[#790003]" />,
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
                     {
                       name: "Pants",
-                      icon: (
-                        <img
-                          src="/src/images/pants.svg"
-                          alt="Pants icon"
-                          className="w-12 h-12 text-[#790003]"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/images/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
@@ -169,14 +166,15 @@ export default function DryCleaningPage() {
                       <div
                         className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
                       >
-                        <svg
-                          className="w-12 h-12 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          {service.icon}
-                        </svg>
+                        {service.type === "svg" ? (
+                          service.icon
+                        ) : (
+                          <img
+                            src={service.icon}
+                            alt={`${service.name} icon`}
+                            className="w-12 h-12"
+                          />
+                        )}
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
                         {service.name}
