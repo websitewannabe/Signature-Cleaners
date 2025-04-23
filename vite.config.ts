@@ -35,9 +35,8 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5000,
     hmr: {
-      protocol: "wss",
-      host: "workspace.ctierney1.repl.co",
-      clientPort: 443,
+      protocol: "ws",
+      port: 5000,
       timeout: 120000
     },
   },
