@@ -21,24 +21,34 @@ const LiveChat = () => {
   const [socket, setSocket] = useState<WebSocket | null>(null);
   
   useEffect(() => {
-    if (isOpen && !socket) {
-      const wsUrl = `wss://${window.location.host}/ws`;
+    let ws: WebSocket | null = null;
+    let reconnectTimer: NodeJS.Timeout;
+
+    const connectWebSocket = () => {
+      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+      const wsUrl = `${protocol}//${window.location.host}/ws`;
       console.log('Connecting to WebSocket:', wsUrl);
-      const ws = new WebSocket(wsUrl);
+      
+      ws = new WebSocket(wsUrl);
       
       ws.onopen = () => {
         console.log('WebSocket connected');
+        setSocket(ws);
       };
       
       ws.onmessage = (event) => {
-        const message = JSON.parse(event.data);
-        setMessages(prevMessages => [
-          ...prevMessages, 
-          {
-            ...message,
-            timestamp: new Date(message.timestamp)
-          }
-        ]);
+        try {
+          const message = JSON.parse(event.data);
+          setMessages(prevMessages => [
+            ...prevMessages, 
+            {
+              ...message,
+              timestamp: new Date(message.timestamp)
+            }
+          ]);
+        } catch (error) {
+          console.error('Failed to parse message:', error);
+        }
       };
       
       ws.onerror = (error) => {
@@ -46,16 +56,23 @@ const LiveChat = () => {
       };
       
       ws.onclose = () => {
-        console.log('WebSocket connection closed');
+        console.log('WebSocket connection closed, attempting to reconnect...');
+        setSocket(null);
+        reconnectTimer = setTimeout(connectWebSocket, 3000);
       };
-      
-      setSocket(ws);
-      
-      return () => {
-        ws.close();
-      };
+    };
+
+    if (isOpen && !socket) {
+      connectWebSocket();
     }
-  }, [isOpen]);
+    
+    return () => {
+      if (ws) {
+        ws.close();
+      }
+      clearTimeout(reconnectTimer);
+    };
+  }, [isOpen, socket]);
   
   // Scroll to bottom when messages update
   useEffect(() => {
