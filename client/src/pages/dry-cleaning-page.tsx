@@ -145,11 +145,13 @@ export default function DryCleaningPage() {
                     {
                       name: "Pants",
                       icon: (
-                        <img
-                          src="./src/images/pants.svg"
-                          alt="Jeans icon"
-                          className="w-12 h-12"
-                        />
+                        <svg
+                          className="w-12 h-12 text-[#790003]"
+                          viewBox="0 0 512 512"
+                          fill="currentColor"
+                        >
+                          <path d="M442.2,457.4L372.9,76.7c-1.7-8.7-9.3-15.1-18.2-15.1h-40.8v-6.4C313.9,24.7,289.2,0,258.7,0h-5.4 c-30.5,0-55.2,24.7-55.2,55.2v6.4h-40.8c-8.9,0-16.5,6.4-18.2,15.1L69.8,457.4c-1.1,6.3,0.7,12.7,5,17.4c4.3,4.8,10.5,7.5,17,7.5 h164.2h164.2c6.4,0,12.7-2.8,17-7.5C441.5,470.1,443.3,463.7,442.2,457.4z M219.3,55.2c0-18.7,15.2-33.9,33.9-33.9h5.4 c18.7,0,33.9,15.2,33.9,33.9v6.4h-73.3V55.2z"/>
+                        </svg>
                       ),
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
