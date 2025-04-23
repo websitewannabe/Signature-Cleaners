@@ -60,21 +60,12 @@ export default function ContactPage() {
   // API mutation for form submission
   const contactMutation = useMutation({
     mutationFn: async (data: ContactFormValues) => {
-      const response = await fetch("https://api.mydrycleaner.com/q", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          RequestType: "MessageToManagerNoUser",
-          AccountKey: import.meta.env.ACCOUNT_KEY,
-          SessionID: import.meta.env.SESSION_ID,
-          Parameters: {
-            Subject: data.subject,
-            Message: data.message,
-            FromEmail: data.email,
-          },
-        }),
+        body: JSON.stringify(data),
       });
       if (!response.ok) {
         throw new Error("Failed to send message");
@@ -91,13 +82,17 @@ export default function ContactPage() {
       form.reset();
     },
     onError: (error) => {
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
       toast({
         title: "Error",
-        description:
-          "There was a problem sending your message. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
-      console.error("Contact form error:", error);
+      console.error("Contact form error details:", {
+        error,
+        message: errorMessage,
+        timestamp: new Date().toISOString()
+      });
     },
   });
 

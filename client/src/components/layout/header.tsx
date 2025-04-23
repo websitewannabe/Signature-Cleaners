@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Home, Shirt, Car, Footprints, Gem } from "lucide-react";
+import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 
 import {
   NavigationMenu,
@@ -73,19 +73,7 @@ const Header = () => {
                         href="/dry-cleaning"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"
-                          />
-                        </svg>
+                        <AirVent className="w-5 h-5 mr-2 text-black" />
                         <div>Dry Cleaning</div>
                       </Link>
                       <Link
@@ -105,21 +93,21 @@ const Header = () => {
                         href="/alteration-tailoring"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Shirt className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Shirt className="w-5 h-5 mr-2 text-black" />
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link
                         href="/wedding-gown"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Gem className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Gem className="w-5 h-5 mr-2 text-black" />
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link
                         href="/shoe-repair"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Footprints className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Footprints className="w-5 h-5 mr-2 text-black" />
                         <div>Shoe Repair</div>
                       </Link>
                       <Link
@@ -127,7 +115,7 @@ const Header = () => {
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
+                          className="w-5 h-5 mr-2 text-black"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -145,7 +133,7 @@ const Header = () => {
                         href="/delivery"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Car className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Car className="w-5 h-5 mr-2 text-black" />
                         <div>Delivery</div>
                       </Link>
                     </div>
