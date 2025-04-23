@@ -135,8 +135,8 @@ export default function DryCleaningPage() {
                   {[
                     {
                       name: "Suits",
-                      type: "svg",
-                      icon: "/src/icons/dress.svg",
+                      type: "img",
+                      icon: "/src/icons/suit.svg",
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
@@ -149,8 +149,8 @@ export default function DryCleaningPage() {
                     },
                     {
                       name: "Shirts",
-                      type: "svg",
-                      icon: <Shirt className="w-12 h-12 text-[#790003]" />,
+                      type: "img",
+                      icon: "/src/icons/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
