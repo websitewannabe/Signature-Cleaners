@@ -167,14 +167,22 @@ export default function CleanHouseholdItemsPage() {
                       <div
                         className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
                       >
-                        <svg
-                          className="w-12 h-12 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          {service.icon}
-                        </svg>
+                        {service.type === "img" ? (
+                          <img 
+                            src={service.icon} 
+                            alt={service.name}
+                            className="w-12 h-12"
+                          />
+                        ) : (
+                          <svg
+                            className="w-12 h-12 text-[#790003]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            {service.icon}
+                          </svg>
+                        )}
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
                         {service.name}
