@@ -33,7 +33,7 @@ export default function ServicesPage() {
             image: "https://signaturecleaners.com/src/images/logo.png",
             logo: "https://signaturecleaners.com/src/images/logo.png",
             description:
-              "Signature Cleaners provides professional dry cleaning, wash and fold, wedding gown preservation, and household item care with pickup and delivery in Bucks County.",
+              "Signature Cleaners offers expert garment care and delivery services throughout Bucks County.",
             address: {
               "@type": "PostalAddress",
               streetAddress: "123 Main Street",
@@ -163,12 +163,12 @@ export default function ServicesPage() {
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
-                    Professional Dry Cleaning
+                    Dry Cleaning
                   </h3>
                   <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
-                    State-of-the-art dry cleaning services for all your delicate
-                    and special garments, ensuring the highest quality care.
+                    Signature Cleaners offers expert garment care and delivery
+                    services throughout Bucks County.
                   </p>
                   <Link href="/dry-cleaning" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
+                <div className="mt-8 pt-4 border-t border-black flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
                     From $6.99
                   </span>
@@ -336,8 +336,7 @@ export default function ServicesPage() {
                   <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
                     Clean clothes, delivered to your door — convenience you can
-                    count on. Our reliable pickup and delivery service fits
-                    seamlessly into your schedule.
+                    count on.
                   </p>
                   <Link href="/delivery" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">

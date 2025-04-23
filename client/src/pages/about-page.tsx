@@ -132,8 +132,8 @@ export default function AboutPage() {
                   <div className="text-neutral-600">Fast Turnaround</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-primary font-bold text-2xl">100%</div>
-                  <div className="text-neutral-600">Satisfaction Guarantee</div>
+                  <div className="text-primary font-bold text-2xl">4.9★</div>
+                  <div className="text-neutral-600">Average Review Score</div>
                 </div>
               </div>
             </div>
