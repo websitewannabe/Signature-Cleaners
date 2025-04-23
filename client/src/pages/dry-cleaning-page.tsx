@@ -126,9 +126,9 @@ export default function DryCleaningPage() {
                       name: "Dresses",
                       icon: (
                         <img
-                          src="/src/images/dress.svg"
+                          src="./src/images/dress.svg"
                           alt="Dress icon"
-                          className="w-12 h-12 text-black"
+                          className="w-12 h-12"
                         />
                       ),
                       details:
