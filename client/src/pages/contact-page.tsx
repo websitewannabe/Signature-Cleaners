@@ -2,6 +2,7 @@ import Header from "@/components/layout/header";
 import { Link } from "wouter";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
 
 import {
   Form,
@@ -107,6 +108,78 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>
+          Contact Signature Cleaners | Schedule a Pickup or Ask a Question
+        </title>
+        <meta
+          name="description"
+          content="Get in touch with Signature Cleaners for dry cleaning, laundry, and garment care. Contact us to schedule a pickup, ask a question, or find store hours and location."
+        />
+        <meta
+          name="keywords"
+          content="contact Signature Cleaners, dry cleaning Doylestown, laundry pickup, garment care, store hours, customer support, Bucks County cleaners"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/contact",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Contact Signature Cleaners in Doylestown, PA for expert dry cleaning, laundry services, and personalized garment care. Reach us by phone, email, or visit our store.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "1456 Ferry Road #10",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            email: "customerservice@mysignaturecleaners.com",
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                opens: "07:00",
+                closes: "18:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Saturday",
+                opens: "08:00",
+                closes: "15:00",
+              },
+            ],
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Perkasie",
+                "Warrington",
+                "Newtown",
+                "Jamison",
+                "Yardley",
+              ],
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+1-215-345-1470",
+              contactType: "Customer Service",
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Contact Info & Form */}

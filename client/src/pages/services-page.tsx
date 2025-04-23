@@ -4,11 +4,125 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { getServices } from "@/lib/queryClient"; // Added import
 
+import { Helmet } from "react-helmet-async";
+
 const services = getServices(); // Replaced with static data retrieval
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>
+          Services | Signature Cleaners – Dry Cleaning, Wash & Fold, Tailoring
+        </title>
+        <meta
+          name="description"
+          content="Explore Signature Cleaners’ services including dry cleaning, wash & fold, tailoring, household item cleaning, wedding gown preservation, and shoe repair across Bucks County."
+        />
+        <meta
+          name="keywords"
+          content="dry cleaning, wash and fold, tailoring, household cleaning, wedding gown preservation, shoe repair, garment care, laundry service, Signature Cleaners, Bucks County laundry"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/services",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners provides professional dry cleaning, wash and fold, wedding gown preservation, and household item care with pickup and delivery in Bucks County.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Garment Care Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Professional Dry Cleaning",
+                    description:
+                      "Dry cleaning for suits, dresses, coats, and delicates.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Wash & Fold",
+                    description: "Everyday laundry services billed per pound.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Wedding Gown Preservation",
+                    description:
+                      "Careful cleaning and boxing of wedding dresses for lifelong preservation.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Household Item Cleaning",
+                    description:
+                      "Comforters, blankets, and decor cleaned with care.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Tailoring & Alterations",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Shoe Repair",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Pickup & Delivery",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Furlong",
+                "Warrington",
+                "Warminster",
+                "New Hope",
+                "Newtown",
+                "Yardley",
+                "Richboro",
+                "Perkasie",
+                "Southampton",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}
