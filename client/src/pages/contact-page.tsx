@@ -67,8 +67,8 @@ export default function ContactPage() {
         },
         body: JSON.stringify({
           RequestType: "MessageToManagerNoUser",
-          AccountKey: process.env.ACCOUNT_KEY,
-          SessionID: process.env.SESSION_ID,
+          AccountKey: import.meta.env.VITE_ACCOUNT_KEY,
+          SessionID: import.meta.env.VITE_SESSION_ID,
           Parameters: {
             Subject: data.subject,
             Message: data.message,
