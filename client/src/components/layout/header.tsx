@@ -105,21 +105,21 @@ const Header = () => {
                         href="/alteration-tailoring"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Shirt className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Shirt className="w-5 h-5 mr-2 text-black" />
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link
                         href="/wedding-gown"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Gem className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Gem className="w-5 h-5 mr-2 text-black" />
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link
                         href="/shoe-repair"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Footprints className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Footprints className="w-5 h-5 mr-2 text-black" />
                         <div>Shoe Repair</div>
                       </Link>
                       <Link
@@ -127,7 +127,7 @@ const Header = () => {
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
+                          className="w-5 h-5 mr-2 text-black"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -145,7 +145,7 @@ const Header = () => {
                         href="/delivery"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <Car className="w-5 h-5 mr-2 text-[#790003]" />
+                        <Car className="w-5 h-5 mr-2 text-black" />
                         <div>Delivery</div>
                       </Link>
                     </div>
