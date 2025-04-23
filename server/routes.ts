@@ -46,36 +46,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form
   app.post("/api/contact", async (req, res) => {
     try {
-      const contactData = insertContactSchema.parse(req.body);
-      const contact = await storage.createContact(contactData);
+      const { name, email, subject, message } = req.body;
       
-      // Send email notifications (if SendGrid API key is configured)
-      if (process.env.SENDGRID_API_KEY) {
-        try {
-          const { sendContactFormNotification } = await import("./email");
-          const emailSent = await sendContactFormNotification(
-            contactData.name,
-            contactData.email,
-            contactData.subject,
-            contactData.message
-          );
-          
-          if (emailSent) {
-            console.log("Contact form notification emails sent successfully");
-          } else {
-            console.warn("Failed to send contact form notification emails");
-          }
-        } catch (emailError) {
-          console.error("Error sending email:", emailError);
-          // Continue with the process even if email sending fails
-        }
+      const response = await fetch("https://api.mydrycleaner.com/q", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          RequestType: "MessageToManagerNoUser",
+          AccountKey: process.env.ACCOUNT_KEY,
+          SessionID: process.env.SESSION_ID,
+          Parameters: {
+            Subject: subject,
+            Message: message,
+            FromEmail: email,
+            Name: name
+          },
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
       }
-      
-      res.status(201).json({ message: "Message sent successfully" });
+
+      const data = await response.json();
+      res.status(201).json(data);
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({ message: "Invalid form data", errors: error.errors });
-      }
+      console.error("Error submitting contact form:", error);
       res.status(500).json({ message: "Error submitting contact form" });
     }
   });
