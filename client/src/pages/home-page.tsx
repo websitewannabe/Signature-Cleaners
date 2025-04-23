@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shirt } from "lucide-react";
+import { Shirt, Car } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -363,20 +363,7 @@ export default function HomePage() {
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Delivery Service"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-[#790003]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                    />
-                  </svg>
+                  <Car className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Delivery
