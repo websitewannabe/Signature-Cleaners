@@ -125,11 +125,10 @@ export default function DryCleaningPage() {
                     {
                       name: "Dresses",
                       icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M7 7h10v10M7 17l5-5m0 0l5-5"
+                        <img
+                          src="/src/images/dress.svg"
+                          alt="Dress icon"
+                          className="w-12 h-12 text-black"
                         />
                       ),
                       details:
