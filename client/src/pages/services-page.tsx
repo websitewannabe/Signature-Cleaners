@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { Shirt, Car, Footprints } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -306,20 +307,7 @@ export default function ServicesPage() {
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Delivery Service"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-[#790003]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
-                    />
-                  </svg>
+                  <Car className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Delivery
@@ -335,26 +323,7 @@ export default function ServicesPage() {
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Alterations and Tailoring Service"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-[#790003]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                  <Shirt className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
@@ -370,20 +339,7 @@ export default function ServicesPage() {
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Shoe Repair Service"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-[#790003]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                    />
-                  </svg>
+                  <Footprints className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair

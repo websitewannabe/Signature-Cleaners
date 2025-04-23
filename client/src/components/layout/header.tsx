@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Home } from "lucide-react";
+import { Home, Shirt, Car, Footprints, Gem } from "lucide-react";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -50,7 +51,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
             <Link
               href="/"
-              className={`${isOpaque ? 'hover:text-[#790003]' : 'hover:text-[#181818]'} h-10 flex items-center transition-colors duration-200`}
+              className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
             >
               <Home className="w-4 h-4" />
             </Link>
@@ -59,7 +60,9 @@ const Header = () => {
                 <NavigationMenuItem>
                   <div className="flex items-center h-10">
                     <Link href="/services">
-                      <NavigationMenuTrigger className={`bg-transparent text-white ${isOpaque ? 'hover:text-[#790003]' : 'hover:text-[#181818]'} hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase`}>
+                      <NavigationMenuTrigger
+                        className={`bg-transparent text-white ${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase`}
+                      >
                         Services
                       </NavigationMenuTrigger>
                     </Link>
@@ -108,57 +111,21 @@ const Header = () => {
                         href="/alteration-tailoring"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                          />
-                        </svg>
+                        <Shirt className="w-5 h-5 mr-2 text-[#790003]" />
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link
                         href="/wedding-gown"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
+                        <Gem className="w-5 h-5 mr-2 text-[#790003]" />
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link
                         href="/shoe-repair"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                          />
-                        </svg>
+                        <Footprints className="w-5 h-5 mr-2 text-[#790003]" />
                         <div>Shoe Repair</div>
                       </Link>
                       <Link
@@ -184,19 +151,7 @@ const Header = () => {
                         href="/delivery"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
-                        <svg
-                          className="w-5 h-5 mr-2 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
-                        </svg>
+                        <Car className="w-5 h-5 mr-2 text-[#790003]" />
                         <div>Delivery</div>
                       </Link>
                     </div>
@@ -206,13 +161,13 @@ const Header = () => {
             </NavigationMenu>
             <Link
               href="/about"
-              className={`${isOpaque ? 'hover:text-[#790003]' : 'hover:text-[#181818]'} h-10 flex items-center transition-colors duration-200`}
+              className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
             >
               About Us
             </Link>
             <Link
               href="/contact"
-              className={`${isOpaque ? 'hover:text-[#790003]' : 'hover:text-[#181818]'} h-10 flex items-center transition-colors duration-200`}
+              className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
             >
               Contact
             </Link>
