@@ -35,9 +35,10 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5000,
     hmr: {
-      protocol: "ws",
-      host: process.env.REPL_SLUG + "." + process.env.REPL_OWNER + ".repl.co",
+      protocol: "wss",
+      host: "workspace.ctierney1.repl.co",
       clientPort: 443,
+      timeout: 120000
     },
   },
 });
