@@ -23,8 +23,9 @@ const LiveChat = () => {
   useEffect(() => {
     if (isOpen && !socket) {
       const protocol = window.location.protocol === "https:" ? "wss:" : "ws:";
-      const host = import.meta.env.DEV ? window.location.hostname + ":5000" : window.location.host;
-      const wsUrl = `${protocol}//${host}/ws`;
+      const wsUrl = import.meta.env.DEV 
+        ? `ws://${window.location.hostname}:5000/ws`
+        : `${protocol}//${window.location.host}/ws`;
       const ws = new WebSocket(wsUrl);
       
       ws.onopen = () => {
