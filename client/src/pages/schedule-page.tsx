@@ -22,12 +22,32 @@ import {
 } from "@/components/ui/select";
 import { useForm } from "react-hook-form";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
+import { apiRequest } from "@/lib/queryClient";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 
 export default function SchedulePage() {
   const isMobile = useIsMobile();
   const [isSuccess, setIsSuccess] = useState(false);
 
+  // Define form schema with validation
+  const formSchema = z.object({
+    fullName: z.string().min(2, "Full name is required"),
+    phone: z.string().min(10, "Valid phone number is required"),
+    email: z.string().email("Valid email is required"),
+    address: z.string().min(5, "Address is required"),
+    serviceType: z.string().min(1, "Please select a service type"),
+    pickupDate: z.string().min(1, "Pickup date is required"),
+    pickupTime: z.string().min(1, "Pickup time is required"),
+    notes: z.string().optional(),
+  });
+
+  // Initialize form with validation
   const form = useForm({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       fullName: "",
       email: "",
@@ -40,10 +60,38 @@ export default function SchedulePage() {
     },
   });
 
+  // Import the necessary hooks and functions
+  const { toast } = useToast();
+  const [confirmationNumber, setConfirmationNumber] = useState("");
+  
+  // API mutation for form submission
+  const scheduleMutation = useMutation({
+    mutationFn: async (formData: any) => {
+      const response = await apiRequest("POST", "/api/schedule", formData);
+      return response.json();
+    },
+    onSuccess: (data) => {
+      toast({
+        title: "Pickup Scheduled",
+        description: "Your pickup has been scheduled successfully.",
+      });
+      setConfirmationNumber(data.confirmationNumber || "DEMO12345");
+      setIsSuccess(true);
+      window.scrollTo(0, 0);
+      form.reset();
+    },
+    onError: (error) => {
+      toast({
+        title: "Error",
+        description: "There was a problem scheduling your pickup. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Schedule form error:", error);
+    },
+  });
+
   const onSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-    setIsSuccess(true);
-    window.scrollTo(0, 0);
+    scheduleMutation.mutate(data);
   };
 
   // Get today's date for min date on date picker
