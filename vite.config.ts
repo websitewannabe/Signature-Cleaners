@@ -34,9 +34,9 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5000,
     hmr: {
-      protocol: 'wss',
-      host: 'your-replit-name.replit.dev',
-      port: 443,
+      protocol: 'ws',
+      host: process.env.REPL_SLUG + '.' + process.env.REPL_OWNER + '.repl.co',
+      clientPort: 443
     }
   },
 });
