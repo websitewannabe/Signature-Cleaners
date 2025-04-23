@@ -91,13 +91,17 @@ export default function ContactPage() {
       form.reset();
     },
     onError: (error) => {
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
       toast({
         title: "Error",
-        description:
-          "There was a problem sending your message. Please try again.",
+        description: errorMessage,
         variant: "destructive",
       });
-      console.error("Contact form error:", error);
+      console.error("Contact form error details:", {
+        error,
+        message: errorMessage,
+        timestamp: new Date().toISOString()
+      });
     },
   });
 
