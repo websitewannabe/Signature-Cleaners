@@ -76,31 +76,55 @@ export default function DryCleaningPage() {
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Expert stain removal techniques
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Gentle care for delicate fabrics
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <img
-                    src="/src/images/dress.svg"
-                    alt="Dress icon"
+                  <svg
                     className="h-6 w-6 text-white mt-1 flex-shrink-0"
-                  />
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
                   <span className="ml-3 text-white/90">
                     Professional pressing and finishing
                   </span>
