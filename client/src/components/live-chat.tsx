@@ -25,8 +25,10 @@ const LiveChat = () => {
     let reconnectTimer: NodeJS.Timeout;
 
     const connectWebSocket = () => {
-      const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-      const wsUrl = `${protocol}//${window.location.host}/ws`;
+      // During development, always use ws:// protocol with the dev server port
+      const wsUrl = import.meta.env.DEV 
+        ? `ws://${window.location.hostname}:5000/ws`
+        : `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/ws`;
       console.log('Connecting to WebSocket:', wsUrl);
       
       ws = new WebSocket(wsUrl);
