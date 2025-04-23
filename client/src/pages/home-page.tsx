@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shirt, Car } from "lucide-react";
+import { Shirt, Car, Boot } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -395,20 +395,7 @@ export default function HomePage() {
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
                   aria-label="Shoe Repair Service"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-12 w-12 text-[#790003]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                    />
-                  </svg>
+                  <Boot className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair
