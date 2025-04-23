@@ -141,7 +141,7 @@ export default function SchedulePage() {
               </p>
               <p className="text-green-700 mb-6">
                 Your confirmation number:{" "}
-                <span className="font-bold">DEMO12345</span>
+                <span className="font-bold">{confirmationNumber}</span>
               </p>
               <div className="space-y-4">
                 <Button
@@ -332,8 +332,16 @@ export default function SchedulePage() {
                   <Button
                     type="submit"
                     className="w-full bg-[#790003] hover:bg-[#5a0002] text-white font-medium py-3"
+                    disabled={scheduleMutation.isPending}
                   >
-                    Schedule Pickup
+                    {scheduleMutation.isPending ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Processing...
+                      </>
+                    ) : (
+                      "Schedule Pickup"
+                    )}
                   </Button>
                 </form>
               </Form>
