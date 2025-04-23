@@ -133,6 +133,7 @@ export default function AlterationTailoringPage() {
                   {[
                     {
                       name: "Hemming",
+                      type: "svg",
                       icon: (
                         <path
                           strokeLinecap="round"
@@ -146,19 +147,14 @@ export default function AlterationTailoringPage() {
                     },
                     {
                       name: "Resizing",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/shirt.svg",
                       details:
                         "Whether you've sized up or down, we expertly resize garments to ensure a perfect, flattering fit.",
                     },
                     {
                       name: "Fitting",
+                      type: "svg",
                       icon: (
                         <path
                           strokeLinecap="round"
@@ -172,14 +168,8 @@ export default function AlterationTailoringPage() {
                     },
                     {
                       name: "Repairs",
-                      icon: (
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
-                      ),
+                      type: "img",
+                      icon: "/src/icons/pants.svg",
                       details:
                         "From torn seams to broken zippers, we restore your clothing with high-quality, durable repairs.",
                     },
@@ -198,14 +188,22 @@ export default function AlterationTailoringPage() {
                       <div
                         className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
                       >
-                        <svg
-                          className="w-12 h-12 text-[#790003]"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          {service.icon}
-                        </svg>
+                        {service.type === "svg" ? (
+                          <svg
+                            className="w-12 h-12 text-[#790003]"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            {service.icon}
+                          </svg>
+                        ) : (
+                          <img
+                            src={service.icon}
+                            alt={`${service.name} icon`}
+                            className="w-12 h-12"
+                          />
+                        )}
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
                         {service.name}
