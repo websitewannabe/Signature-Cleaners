@@ -176,8 +176,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Create HTTP server
   const httpServer = createServer(app);
 
-  // WebSocket server for live chat
-  const wss = new WebSocketServer({ server: httpServer, path: '/ws' });
+  // WebSocket server for live chat - use a non-conflicting path
+  const wss = new WebSocketServer({ server: httpServer, path: '/api/chat-ws' });
 
   wss.on('connection', (ws) => {
     ws.on('message', async (message) => {

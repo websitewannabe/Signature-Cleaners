@@ -86,9 +86,9 @@ const LiveChat = () => {
 
     const connectWebSocket = () => {
       try {
-        // Use the correct WebSocket URL format
+        // Use the correct WebSocket URL format with the updated path
         const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
-        const wsUrl = `${protocol}//${window.location.host}/ws`;
+        const wsUrl = `${protocol}//${window.location.host}/api/chat-ws`;
         console.log('Connecting to WebSocket:', wsUrl);
         
         ws = new WebSocket(wsUrl);
