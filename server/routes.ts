@@ -67,14 +67,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to send message");
+        console.error('API Response:', {
+          status: response.status,
+          statusText: response.statusText,
+          body: await response.text()
+        });
+        throw new Error(`Failed to send message: ${response.statusText}`);
       }
 
       const data = await response.json();
       res.status(201).json(data);
     } catch (error) {
       console.error("Error submitting contact form:", error);
-      res.status(500).json({ message: "Error submitting contact form" });
+      res.status(500).json({ 
+        message: "Error submitting contact form",
+        details: error instanceof Error ? error.message : "Unknown error"
+      });
     }
   });
 
