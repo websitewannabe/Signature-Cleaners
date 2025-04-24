@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -39,6 +40,96 @@ export default function WashFoldPage() {
   ];
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Wash & Fold Laundry Service | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available."
+        />
+        <meta
+          name="keywords"
+          content="wash and fold, laundry service, regular wash, delicate laundry, towel washing, bedding cleaning, Signature Cleaners, Bucks County laundry pickup"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/wash-fold",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers a full-service wash and fold experience with expert sorting, premium detergents, and folding for regular laundry, delicates, towels, and bedding.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Wash & Fold Laundry Options",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Regular Wash",
+                    description:
+                      "Everyday laundry washed with color-safe temperature and gentle cycles.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Delicates",
+                    description:
+                      "Low-agitation, fragrance-free care for sensitive fabrics.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Bedding",
+                    description:
+                      "Separate washing of sheets, duvets, and pillowcases for softness and hygiene.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Towel Service",
+                    description:
+                      "Towels laundered for absorbency, fluffiness, and cleanliness.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Furlong",
+                "Warrington",
+                "Warminster",
+                "Jamison",
+                "Perkasie",
+                "New Hope",
+                "Newtown",
+                "Richboro",
+                "Yardley",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

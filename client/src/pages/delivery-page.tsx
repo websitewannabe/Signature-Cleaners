@@ -11,11 +11,102 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function DeliveryPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Free Pickup & Delivery | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Signature Cleaners offers free laundry and dry cleaning pickup & delivery across Bucks County. Schedule your service with convenient text notifications and flexible timing."
+        />
+        <meta
+          name="keywords"
+          content="laundry delivery, dry cleaning delivery, free pickup, residential laundry service, office garment delivery, Signature Cleaners, Bucks County laundry service"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/delivery",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners provides free pickup and delivery services for dry cleaning and laundry in Doylestown and surrounding Bucks County areas. Flexible scheduling and reliable text updates included.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Pickup & Delivery Options",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Home Pickup",
+                    description:
+                      "Pickup and return directly from your front door.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Office Pickup",
+                    description:
+                      "Convenient service to and from your workplace.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "24/7 Scheduling",
+                    description:
+                      "Request service any time with our online booking system.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Text Notifications",
+                    description:
+                      "Receive real-time updates when your items are picked up and delivered.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Furlong",
+                "Warrington",
+                "Warminster",
+                "Perkasie",
+                "Jamison",
+                "New Hope",
+                "Newtown",
+                "Richboro",
+                "Yardley",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
       {/* Hero Section */}
       <section className="relative py-40">

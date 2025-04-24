@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Helmet } from "react-helmet-async";
 import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 import {
   Accordion,
@@ -41,6 +42,94 @@ export default function DryCleaningPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Dry Cleaning Services | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Experience expert dry cleaning at Signature Cleaners. We offer stain removal, pressing, and gentle care for suits, dresses, shirts, and more across Bucks County."
+        />
+        <meta
+          name="keywords"
+          content="dry cleaning, professional garment care, suit cleaning, dress cleaning, shirt pressing, stain removal, Signature Cleaners, Bucks County laundry service"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/dry-cleaning",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers professional dry cleaning services for delicate and high-end garments including suits, dresses, and shirts, serving Bucks County with pickup and delivery options.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Dry Cleaning Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Suit Cleaning",
+                    description:
+                      "Business suit cleaning and pressing with stain removal and fabric preservation.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Dress Cleaning",
+                    description:
+                      "Delicate care and finishing for casual to formal dresses.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Shirt Cleaning",
+                    description:
+                      "Laundering, starching, and collar/cuff care for button-down shirts.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Pants Cleaning",
+                    description:
+                      "Professional care for slacks and trousers including crease definition and pressing.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "New Hope",
+                "Perkasie",
+                "Jamison",
+                "Warminster",
+                "Newtown",
+                "Richboro",
+                "Yardley",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

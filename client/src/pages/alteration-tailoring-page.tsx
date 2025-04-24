@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -39,6 +40,96 @@ export default function AlterationTailoringPage() {
   ];
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Alterations & Tailoring | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit."
+        />
+        <meta
+          name="keywords"
+          content="tailoring, alterations, hemming, clothing resizing, garment repairs, fitting service, custom tailoring, Signature Cleaners, Bucks County tailoring"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/alteration-tailoring",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers precision tailoring and alterations for a perfect fit. Services include hemming, resizing, fittings, and high-quality garment repairs.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Tailoring and Alteration Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Hemming",
+                    description:
+                      "Clean and precise hemming for pants, skirts, and dresses to your preferred length.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Resizing",
+                    description:
+                      "Adjust garments up or down in size for a better, more flattering fit.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Fitting",
+                    description:
+                      "Accurate measurements and expert fitting for custom comfort and appearance.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Repairs",
+                    description:
+                      "Durable repairs for torn seams, broken zippers, and damaged garments.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Furlong",
+                "Warrington",
+                "Jamison",
+                "Warminster",
+                "New Hope",
+                "Yardley",
+                "Perkasie",
+                "Newtown",
+                "Southampton",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

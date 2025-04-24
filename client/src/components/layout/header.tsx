@@ -155,7 +155,7 @@ const Header = () => {
             </Link>
             <Link
               href="/auth"
-              className="border border-[#790003] hover:bg-[#790003] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase"
+              className="border border-[#181818] hover:bg-[#181818] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase"
             >
               My Account
             </Link>

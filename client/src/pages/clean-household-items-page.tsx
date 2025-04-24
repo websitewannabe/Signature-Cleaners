@@ -11,11 +11,102 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function CleanHouseholdItemsPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Household Item Cleaning | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Trust Signature Cleaners to clean your comforters, curtains, blankets, and rugs with expert care. We handle your household items with safe and effective techniques."
+        />
+        <meta
+          name="keywords"
+          content="household item cleaning, comforter cleaning, rug cleaning, curtain cleaning, blanket laundry, Signature Cleaners, Bucks County home textile care"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/clean-household-items",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers professional cleaning services for household items like comforters, blankets, rugs, and curtains using safe, fabric-sensitive methods.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Household Textile Cleaning",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Comforter Cleaning",
+                    description:
+                      "Deep-clean sanitization for down, synthetic, or quilted comforters.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Curtain Cleaning",
+                    description:
+                      "Dust and allergen removal with safe handling for sheer, blackout, and heavy fabrics.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Rug Cleaning",
+                    description:
+                      "Gentle area rug cleaning with stain removal and protective finishing.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Blanket Cleaning",
+                    description:
+                      "Soft cycle fabric-safe cleaning for fleece, wool, and cotton blankets.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "Furlong",
+                "Warrington",
+                "Perkasie",
+                "Warminster",
+                "New Hope",
+                "Yardley",
+                "Jamison",
+                "Newtown",
+                "Richboro",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

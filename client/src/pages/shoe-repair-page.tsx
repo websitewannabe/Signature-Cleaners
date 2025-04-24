@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +17,96 @@ export default function ShoeRepairPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Shoe Repair Services | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Extend the life of your shoes with professional repair services from Signature Cleaners. We offer heel replacement, sole repair, polishing, and stretching."
+        />
+        <meta
+          name="keywords"
+          content="shoe repair, sole replacement, heel repair, shoe polishing, shoe stretching, footwear restoration, Signature Cleaners, Bucks County shoe service"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/shoe-repair",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers expert shoe repair services including sole and heel replacement, color restoration, polishing, and stretching. Bring life back to your favorite footwear.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Shoe Repair Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Heel Repair",
+                    description:
+                      "Professional heel replacement for dress shoes, boots, and casual styles.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Sole Replacement",
+                    description:
+                      "Durable sole repairs for improved comfort, grip, and longevity.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Polishing & Restoration",
+                    description:
+                      "Revive color, finish, and softness with premium leather polishing.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Shoe Stretching",
+                    description:
+                      "Improve fit and relieve tightness without damaging the material.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "New Hope",
+                "Newtown",
+                "Warminster",
+                "Perkasie",
+                "Furlong",
+                "Richboro",
+                "Jamison",
+                "Southampton",
+                "Warrington",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}

@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Helmet } from "react-helmet-async";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +17,96 @@ export default function WeddingGownPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Wedding Gown Cleaning & Preservation | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Preserve your wedding gown with expert care from Signature Cleaners. We use museum-quality materials and techniques to clean and store gowns for generations."
+        />
+        <meta
+          name="keywords"
+          content="wedding gown cleaning, wedding dress preservation, bridal dress care, anti-yellowing fabric treatment, gown boxing, Signature Cleaners, Bucks County bridal services"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Signature Cleaners",
+            url: "https://signaturecleaners.com/wedding-gown",
+            image: "https://signaturecleaners.com/src/images/logo.png",
+            logo: "https://signaturecleaners.com/src/images/logo.png",
+            description:
+              "Signature Cleaners offers professional wedding gown cleaning and preservation services using safe, museum-quality methods to protect cherished bridal garments for years to come.",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "123 Main Street",
+              addressLocality: "Doylestown",
+              addressRegion: "PA",
+              postalCode: "18901",
+              addressCountry: "US",
+            },
+            telephone: "+1-215-345-1470",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Wedding Gown Preservation Services",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Gown Inspection",
+                    description:
+                      "Detailed fabric, beadwork, and seam inspection before preservation.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Bridal Dress Cleaning",
+                    description:
+                      "Gentle fabric-safe cleaning to remove stains and residue from the gown.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Documentation",
+                    description:
+                      "Before-and-after documentation with high-resolution images and condition notes.",
+                  },
+                },
+                {
+                  "@type": "Offer",
+                  itemOffered: {
+                    "@type": "Service",
+                    name: "Gown Preservation",
+                    description:
+                      "Archival-quality storage using acid-free tissue and anti-yellowing packaging.",
+                  },
+                },
+              ],
+            },
+            areaServed: {
+              "@type": "Place",
+              name: [
+                "Doylestown",
+                "New Hope",
+                "Newtown",
+                "Jamison",
+                "Warrington",
+                "Furlong",
+                "Warminster",
+                "Yardley",
+                "Perkasie",
+                "Richboro",
+              ],
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Hero Section */}
