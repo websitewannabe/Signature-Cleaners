@@ -17,7 +17,6 @@ export default function DeliveryPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-
       {/* Hero Section */}
       <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/src/images/delivery.gif')] bg-cover bg-center bg-no-repeat"></div>
