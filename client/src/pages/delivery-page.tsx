@@ -20,7 +20,7 @@ export default function DeliveryPage() {
 
       {/* Hero Section */}
       <section className="relative py-40">
-        <div className="absolute inset-0 bg-[url('./images/delivery.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/delivery.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
