@@ -47,7 +47,27 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const { name, email, subject, message } = req.body;
-      
+
+      // First get the token
+      const tokenResponse = await fetch("https://api.mydrycleaner.com/q", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          RequestType: "GetToken",
+          AccountKey: process.env.ACCOUNT_KEY,
+          SecurityID: process.env.SECURITY_ID
+        }),
+      });
+
+      if (!tokenResponse.ok) {
+        throw new Error("Failed to get token");
+      }
+
+      const tokenData = await tokenResponse.json();
+
+      // Then send the message with the token
       const response = await fetch("https://api.mydrycleaner.com/q", {
         method: "POST",
         headers: {
@@ -62,6 +82,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             Message: message,
             FromEmail: email
           },
+          Token: tokenData.Token
         }),
       });
 
@@ -97,7 +118,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         userId: req.user.id,
         status: "pending"
       });
-      
+
       const order = await storage.createOrder(orderData);
       res.status(201).json(order);
     } catch (error) {
@@ -128,15 +149,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
     try {
       const order = await storage.getOrder(parseInt(req.params.id));
-      
+
       if (!order) {
         return res.status(404).json({ message: "Order not found" });
       }
-      
+
       if (order.userId !== req.user.id) {
         return res.status(403).json({ message: "Not authorized to view this order" });
       }
-      
+
       res.json(order);
     } catch (error) {
       res.status(500).json({ message: "Error fetching order" });
@@ -148,11 +169,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       // Validate input data
       const { fullName, email, phone, address, serviceType, pickupDate, pickupTime, notes } = req.body;
-      
+
       if (!fullName || !email || !phone || !address || !serviceType || !pickupDate || !pickupTime) {
         return res.status(400).json({ message: "All fields are required" });
       }
-      
+
       // For guest scheduling, just confirm the appointment without storing it
       // In a real implementation, this would be stored in the database
       res.status(200).json({ 
@@ -189,7 +210,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         // Parse incoming message
         const data = JSON.parse(message.toString());
-        
+
         // If user is authenticated, save the message
         if (data.userId) {
           await storage.addChatMessage({
@@ -198,7 +219,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             isAgent: false,
             timestamp: new Date()
           });
-          
+
           // Simulate a response from an agent after a short delay
           setTimeout(async () => {
             const agentResponse = await storage.addChatMessage({
@@ -207,7 +228,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
               isAgent: true,
               timestamp: new Date()
             });
-            
+
             // Send response back to the client if still connected
             if (ws.readyState === WebSocket.OPEN) {
               ws.send(JSON.stringify(agentResponse));
@@ -218,7 +239,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         console.error('Error processing WebSocket message:', error);
       }
     });
-    
+
     // Send a welcome message
     ws.send(JSON.stringify({
       id: 0,
