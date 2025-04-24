@@ -219,7 +219,7 @@ export default function HomePage() {
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
-                    Professional Dry Cleaning
+                    Dry Cleaning
                   </h3>
                   <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
@@ -234,7 +234,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#790003] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $6.99
+                    From $9.95
                   </span>
                   <Link
                     href="/schedule"
@@ -268,7 +268,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    $2.99/lb
+                    $2.95/lb
                   </span>
                   <Link
                     href="/schedule"
@@ -302,7 +302,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $99.99
+                    From $325
                   </span>
                   <Link
                     href="/schedule"
@@ -336,7 +336,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $24.99
+                    From $39.95
                   </span>
                   <Link
                     href="/schedule"

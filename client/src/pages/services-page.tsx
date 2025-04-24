@@ -178,7 +178,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-black flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $6.99
+                    From $9.95
                   </span>
                   <Link
                     href="/schedule"
@@ -212,7 +212,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    $2.99/lb
+                    $2.95/lb
                   </span>
                   <Link
                     href="/schedule"
@@ -246,7 +246,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $99.99
+                    From $325
                   </span>
                   <Link
                     href="/schedule"
@@ -280,7 +280,7 @@ export default function ServicesPage() {
                 </div>
                 <div className="mt-8 pt-4 border-t border-[#181818] flex flex-col sm:flex-row items-center gap-4">
                   <span className="text-white font-semibold text-lg">
-                    From $24.99
+                    From $39.95
                   </span>
                   <Link
                     href="/schedule"
