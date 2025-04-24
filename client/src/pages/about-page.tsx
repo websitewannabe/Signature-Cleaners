@@ -132,8 +132,8 @@ export default function AboutPage() {
                   <div className="text-neutral-600">Fast Turnaround</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="text-primary font-bold text-2xl">4.9★</div>
-                  <div className="text-neutral-600">Average Review Score</div>
+                  <div className="text-primary font-bold text-2xl">10+</div>
+                  <div className="text-neutral-600">Cleaning Services</div>
                 </div>
               </div>
             </div>
@@ -398,12 +398,12 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to simplify your laundry routine?
           </h2>
-          <Link href="/schedule">
+          <Link href="/services">
             <Button
               size="lg"
               className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
             >
-              Schedule a Pickup
+              View our Services
             </Button>
           </Link>
         </div>

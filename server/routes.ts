@@ -78,13 +78,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         body: JSON.stringify({
           RequestType: "MessageToManagerNoUser",
           AccountKey: process.env.ACCOUNT_KEY,
-          SessionID: process.env.SESSION_ID,
+          SessionID: tokenData.ReturnObject.SessionID,
           Parameters: {
             Subject: subject,
             Message: message,
             FromEmail: email,
           },
-          Token: tokenData.Token,
         }),
       });
 
