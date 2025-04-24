@@ -109,28 +109,28 @@ export default function CleanHouseholdItemsPage() {
                     {
                       name: "Comforters",
                       type: "img",
-                      icon: "/src/icons/comforter.svg",
+                      icon: "/icons/comforter.svg",
                       details:
                         "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness.",
                     },
                     {
                       name: "Curtains",
                       type: "img",
-                      icon: "/src/icons/curtains.svg",
+                      icon: "/icons/curtains.svg",
                       details:
                         "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape.",
                     },
                     {
                       name: "Rugs",
                       type: "img",
-                      icon: "/src/icons/rug.svg",
+                      icon: "/icons/rug.svg",
                       details:
                         "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
                     },
                     {
                       name: "Blankets",
                       type: "img",
-                      icon: "/src/icons/blanket.svg",
+                      icon: "/icons/blanket.svg",
                       details:
                         "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability.",
                     },
