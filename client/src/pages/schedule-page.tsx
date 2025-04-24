@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
 import {
   Form,
   FormControl,
@@ -51,6 +53,37 @@ export default function SchedulePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Schedule Pickup | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we’ll handle the rest with care and reliability."
+        />
+        <meta
+          name="keywords"
+          content="schedule pickup, laundry service scheduling, dry cleaning delivery, online pickup booking, Signature Cleaners appointment, garment pickup request"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Schedule a Pickup",
+            url: "https://signaturecleaners.com/schedule",
+            description:
+              "Use this page to schedule your dry cleaning, wash & fold, or alterations pickup service with Signature Cleaners. Flexible time slots and simple online booking.",
+            publisher: {
+              "@type": "Organization",
+              name: "Signature Cleaners",
+              url: "https://signaturecleaners.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://signaturecleaners.com/src/images/logo.png",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       {/* Scheduling Form */}

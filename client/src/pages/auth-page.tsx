@@ -2,6 +2,8 @@ import { Link } from "wouter";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet-async";
+
 import {
   Card,
   CardContent,
@@ -23,6 +25,37 @@ import { CheckCircle } from "lucide-react";
 export default function AuthPage() {
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <title>Log In or Create Account | Signature Cleaners</title>
+        <meta
+          name="description"
+          content="Access your Signature Cleaners account to schedule pickups, update payment info, and manage your preferences. New customers can sign up and get $10 off their first order."
+        />
+        <meta
+          name="keywords"
+          content="login, create account, Signature Cleaners login, dry cleaning account, schedule pickup, pay bill, manage preferences, new customer signup"
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Customer Login and Signup",
+            url: "https://signaturecleaners.com/account",
+            description:
+              "Existing customers can log in to their Signature Cleaners account to pay bills, schedule services, and update preferences. New users can sign up online and get $10 off their first order.",
+            publisher: {
+              "@type": "Organization",
+              name: "Signature Cleaners",
+              url: "https://signaturecleaners.com",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://signaturecleaners.com/src/images/logo.png",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
       <Header />
 
       <div className="flex-1 py-40 bg-[#181818]">
