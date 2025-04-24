@@ -83,7 +83,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           AccountKey: process.env.ACCOUNT_KEY,
           SessionID: tokenData.ReturnObject.SessionID,
           Parameters: {
-            AccountNodeID: process.env.ACCOUNT_NODE_ID,
+            AccountNodeID: process.env.SECURITY_ID,
             Firstname: firstName,
             Lastname: lastName || "",
             EmailAddress: email,

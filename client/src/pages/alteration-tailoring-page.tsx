@@ -134,28 +134,28 @@ export default function AlterationTailoringPage() {
                     {
                       name: "Hemming",
                       type: "img",
-                      icon: "/src/icons/hemming.svg",
+                      icon: "/icons/hemming.svg",
                       details:
                         "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish.",
                     },
                     {
                       name: "Resizing",
                       type: "img",
-                      icon: "/src/icons/shirt.svg",
+                      icon: "/icons/shirt.svg",
                       details:
                         "Whether you've sized up or down, we expertly resize garments to ensure a perfect, flattering fit.",
                     },
                     {
                       name: "Fitting",
                       type: "img",
-                      icon: "/src/icons/fitting.svg",
+                      icon: "/icons/fitting.svg",
                       details:
                         "Our tailors specialize in accurate body measurements and advanced fitting techniques for custom results.",
                     },
                     {
                       name: "Repairs",
                       type: "img",
-                      icon: "/src/icons/pants.svg",
+                      icon: "/icons/pants.svg",
                       details:
                         "From torn seams to broken zippers, we restore your clothing with high-quality, durable repairs.",
                     },
