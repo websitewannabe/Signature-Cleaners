@@ -109,28 +109,28 @@ export default function ShoeRepairPage() {
                     {
                       name: "Heels",
                       type: "img",
-                      icon: "/icons/heel.svg",
+                      icon: "/src/icons/heel.svg",
                       details:
                         "We specialize in heel repair and replacement for all types of shoes, restoring stability, comfort, and appearance.",
                     },
                     {
                       name: "Soles",
                       type: "img",
-                      icon: "/icons/shoes.svg",
+                      icon: "/src/icons/shoes.svg",
                       details:
                         "Worn-out soles are replaced with durable materials to extend the life of your shoes and improve traction.",
                     },
                     {
                       name: "Polish",
                       type: "img",
-                      icon: "/icons/polish.svg",
+                      icon: "/src/icons/polish.svg",
                       details:
                         "Our polishing service restores shine, color, and softness to your footwear with premium finishing products.",
                     },
                     {
                       name: "Stretching",
                       type: "img",
-                      icon: "/icons/stretching.svg",
+                      icon: "/src/icons/stretching.svg",
                       details:
                         "Tight shoes? We offer professional stretching to improve fit without damaging the material or structure.",
                     },

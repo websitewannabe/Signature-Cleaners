@@ -20,7 +20,7 @@ export default function CleanHouseholdItemsPage() {
 
       {/* Hero Section */}
       <section className="relative py-40">
-        <div className="absolute inset-0 bg-[url('/images/household-items.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/household-items.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
@@ -109,28 +109,28 @@ export default function CleanHouseholdItemsPage() {
                     {
                       name: "Comforters",
                       type: "img",
-                      icon: "/icons/comforter.svg",
+                      icon: "/src/icons/comforter.svg",
                       details:
                         "Our cleaning process for comforters includes deep sanitization and fluff-safe drying for long-lasting freshness and softness.",
                     },
                     {
                       name: "Curtains",
                       type: "img",
-                      icon: "/icons/curtains.svg",
+                      icon: "/src/icons/curtains.svg",
                       details:
                         "Curtains are gently cleaned to remove dust, allergens, and stains while preserving fabric texture and drape.",
                     },
                     {
                       name: "Rugs",
                       type: "img",
-                      icon: "/icons/rug.svg",
+                      icon: "/src/icons/rug.svg",
                       details:
                         "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
                     },
                     {
                       name: "Blankets",
                       type: "img",
-                      icon: "/icons/blanket.svg",
+                      icon: "/src/icons/blanket.svg",
                       details:
                         "Blankets are thoroughly cleaned using fabric-safe detergents to maintain warmth, softness, and durability.",
                     },

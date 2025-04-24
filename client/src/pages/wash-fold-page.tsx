@@ -134,7 +134,7 @@ export default function WashFoldPage() {
                       name: "Regular Wash",
                       icon: (
                         <img
-                          src="/icons/regularWash.svg"
+                          src="/src/icons/regularWash.svg"
                           alt="Regular Wash"
                           className="w-12 h-12"
                         />
@@ -146,7 +146,7 @@ export default function WashFoldPage() {
                       name: "Delicates",
                       icon: (
                         <img
-                          src="/icons/delicates.svg"
+                          src="/src/icons/delicates.svg"
                           alt="Regular Wash"
                           className="w-12 h-12"
                         />
@@ -158,7 +158,7 @@ export default function WashFoldPage() {
                       name: "Bedding",
                       icon: (
                         <img
-                          src="/icons/blanket.svg"
+                          src="/src/icons/blanket.svg"
                           alt="Regular Wash"
                           className="w-12 h-12"
                         />
@@ -170,7 +170,7 @@ export default function WashFoldPage() {
                       name: "Towels",
                       icon: (
                         <img
-                          src="/icons/towel.svg"
+                          src="/src/icons/towel.svg"
                           alt="Regular Wash"
                           className="w-12 h-12"
                         />
