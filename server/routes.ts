@@ -47,6 +47,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/contact", async (req, res) => {
     try {
       const { name, email, subject, message } = req.body;
+      const [firstName, ...lastNameParts] = name.trim().split(" ");
+      const lastName = lastNameParts.join(" ");
+      
+      // Generate a secure random password
+      const password = Math.random().toString(36).slice(-12) + Math.random().toString(36).slice(-12);
 
       // First get the token
       const tokenResponse = await fetch("https://api.mydrycleaner.com/q", {
@@ -67,22 +72,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       const tokenData = await tokenResponse.json();
 
-      console.log("Token Data:", tokenData);
-
-      // Then send the message with the token
+      // Then send the signup request
       const response = await fetch("https://api.mydrycleaner.com/q", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          RequestType: "MessageToManagerNoUser",
+          RequestType: "Signup",
           AccountKey: process.env.ACCOUNT_KEY,
           SessionID: tokenData.ReturnObject.SessionID,
           Parameters: {
-            Subject: subject,
-            Message: message,
-            FromEmail: email,
+            AccountNodeID: process.env.ACCOUNT_NODE_ID,
+            Firstname: firstName,
+            Lastname: lastName || "",
+            EmailAddress: email,
+            Password: password,
+            ClientAccountID: "",
+            ServiceType: "RETAIL"
           },
         }),
       });
