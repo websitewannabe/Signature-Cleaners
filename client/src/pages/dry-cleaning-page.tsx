@@ -143,21 +143,21 @@ export default function DryCleaningPage() {
                     {
                       name: "Dresses",
                       type: "img",
-                      icon: "icons/dress.svg",
+                      icon: "/icons/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
                       type: "img",
-                      icon: "icons/shirt.svg",
+                      icon: "src/icons/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
                     {
                       name: "Pants",
                       type: "img",
-                      icon: "icons/pants.svg",
+                      icon: "/src/icons/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },

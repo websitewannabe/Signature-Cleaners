@@ -82,7 +82,8 @@ export default function ContactPage() {
       form.reset();
     },
     onError: (error) => {
-      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      const errorMessage =
+        error instanceof Error ? error.message : "Unknown error";
       toast({
         title: "Error",
         description: errorMessage,
@@ -91,7 +92,7 @@ export default function ContactPage() {
       console.error("Contact form error details:", {
         error,
         message: errorMessage,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
     },
   });
@@ -537,12 +538,12 @@ export default function ContactPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to simplify your laundry routine?
           </h2>
-          <Link href="/schedule">
+          <Link href="/services">
             <Button
               size="lg"
               className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
             >
-              Schedule a Pickup
+              View our Services
             </Button>
           </Link>
         </div>
