@@ -19,7 +19,7 @@ export default function DeliveryPage() {
       <Header />
       {/* Hero Section */}
       <section className="relative py-40">
-        <div className="absolute inset-0 bg-[url('/src/images/delivery.gif')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/public/images/delivery.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="text-center mt-16">
@@ -357,7 +357,7 @@ export default function DeliveryPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">

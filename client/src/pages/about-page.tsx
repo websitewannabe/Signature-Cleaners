@@ -139,7 +139,7 @@ export default function AboutPage() {
             </div>
             <div className="mt-10 lg:mt-0">
               <div
-                className="h-[600px] w-full bg-[url('/src/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
+                className="h-[600px] w-full bg-[url('/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
                 role="img"
                 aria-label="Signature Cleaners team"
               />
