@@ -535,14 +535,17 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-[#790003]/70"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to simplify your laundry routine?
+            Explore Our Full Range of Services
           </h2>
-          <Link href="/schedule">
+          <p className="text-xl text-white mb-8">
+            From dry cleaning to alterations, discover all the ways we can help care for your garments
+          </p>
+          <Link href="/services">
             <Button
               size="lg"
               className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
             >
-              Schedule a Pickup
+              View Our Services
             </Button>
           </Link>
         </div>
