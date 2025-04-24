@@ -57,7 +57,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         body: JSON.stringify({
           RequestType: "GetToken",
           AccountKey: process.env.ACCOUNT_KEY,
-          SecurityID: process.env.SECURITY_ID
+          SecurityID: process.env.SECURITY_ID,
         }),
       });
 
@@ -66,6 +66,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       const tokenData = await tokenResponse.json();
+
+      console.log("Token Data:", tokenData);
 
       // Then send the message with the token
       const response = await fetch("https://api.mydrycleaner.com/q", {
@@ -80,17 +82,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
           Parameters: {
             Subject: subject,
             Message: message,
-            FromEmail: email
+            FromEmail: email,
           },
-          Token: tokenData.Token
+          Token: tokenData.Token,
         }),
       });
 
       if (!response.ok) {
-        console.error('API Response:', {
+        console.error("API Response:", {
           status: response.status,
           statusText: response.statusText,
-          body: await response.text()
+          body: await response.text(),
         });
         throw new Error(`Failed to send message: ${response.statusText}`);
       }
@@ -99,9 +101,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(201).json(data);
     } catch (error) {
       console.error("Error submitting contact form:", error);
-      res.status(500).json({ 
+      res.status(500).json({
         message: "Error submitting contact form",
-        details: error instanceof Error ? error.message : "Unknown error"
+        details: error instanceof Error ? error.message : "Unknown error",
       });
     }
   });
@@ -116,14 +118,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const orderData = insertOrderSchema.parse({
         ...req.body,
         userId: req.user.id,
-        status: "pending"
+        status: "pending",
       });
 
       const order = await storage.createOrder(orderData);
       res.status(201).json(order);
     } catch (error) {
       if (error instanceof z.ZodError) {
-        return res.status(400).json({ message: "Invalid order data", errors: error.errors });
+        return res
+          .status(400)
+          .json({ message: "Invalid order data", errors: error.errors });
       }
       res.status(500).json({ message: "Error creating order" });
     }
@@ -155,7 +159,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
 
       if (order.userId !== req.user.id) {
-        return res.status(403).json({ message: "Not authorized to view this order" });
+        return res
+          .status(403)
+          .json({ message: "Not authorized to view this order" });
       }
 
       res.json(order);
@@ -168,17 +174,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/schedule", async (req, res) => {
     try {
       // Validate input data
-      const { fullName, email, phone, address, serviceType, pickupDate, pickupTime, notes } = req.body;
+      const {
+        fullName,
+        email,
+        phone,
+        address,
+        serviceType,
+        pickupDate,
+        pickupTime,
+        notes,
+      } = req.body;
 
-      if (!fullName || !email || !phone || !address || !serviceType || !pickupDate || !pickupTime) {
+      if (
+        !fullName ||
+        !email ||
+        !phone ||
+        !address ||
+        !serviceType ||
+        !pickupDate ||
+        !pickupTime
+      ) {
         return res.status(400).json({ message: "All fields are required" });
       }
 
       // For guest scheduling, just confirm the appointment without storing it
       // In a real implementation, this would be stored in the database
-      res.status(200).json({ 
+      res.status(200).json({
         message: "Pickup scheduled successfully",
-        confirmationNumber: `SC-${Date.now().toString().slice(-6)}` 
+        confirmationNumber: `SC-${Date.now().toString().slice(-6)}`,
       });
     } catch (error) {
       res.status(500).json({ message: "Error scheduling pickup" });
@@ -203,10 +226,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
   const httpServer = createServer(app);
 
   // WebSocket server for live chat - use a non-conflicting path
-  const wss = new WebSocketServer({ server: httpServer, path: '/api/chat-ws' });
+  const wss = new WebSocketServer({ server: httpServer, path: "/api/chat-ws" });
 
-  wss.on('connection', (ws) => {
-    ws.on('message', async (message) => {
+  wss.on("connection", (ws) => {
+    ws.on("message", async (message) => {
       try {
         // Parse incoming message
         const data = JSON.parse(message.toString());
@@ -217,16 +240,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
             userId: data.userId,
             content: data.content,
             isAgent: false,
-            timestamp: new Date()
+            timestamp: new Date(),
           });
 
           // Simulate a response from an agent after a short delay
           setTimeout(async () => {
             const agentResponse = await storage.addChatMessage({
               userId: data.userId,
-              content: "Thank you for your message. A customer service representative will respond shortly.",
+              content:
+                "Thank you for your message. A customer service representative will respond shortly.",
               isAgent: true,
-              timestamp: new Date()
+              timestamp: new Date(),
             });
 
             // Send response back to the client if still connected
@@ -236,17 +260,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
           }, 1000);
         }
       } catch (error) {
-        console.error('Error processing WebSocket message:', error);
+        console.error("Error processing WebSocket message:", error);
       }
     });
 
     // Send a welcome message
-    ws.send(JSON.stringify({
-      id: 0,
-      content: "Hello! Welcome to Signature Cleaners. How can I help you today?",
-      isAgent: true,
-      timestamp: new Date()
-    }));
+    ws.send(
+      JSON.stringify({
+        id: 0,
+        content:
+          "Hello! Welcome to Signature Cleaners. How can I help you today?",
+        isAgent: true,
+        timestamp: new Date(),
+      }),
+    );
   });
 
   return httpServer;
