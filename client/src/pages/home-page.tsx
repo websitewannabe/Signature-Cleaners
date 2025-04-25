@@ -428,7 +428,7 @@ export default function HomePage() {
       {/* How It Works Section */}
       <section className="py-16 bg-[#790003]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
               Why Choose Signature Cleaners?
             </h2>
