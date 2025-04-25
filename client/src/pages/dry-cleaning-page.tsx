@@ -427,7 +427,7 @@ export default function DryCleaningPage() {
             <h2 className="text-3xl font-bold text-white">
               Locations We Pick Up & Deliver
             </h2>
-            <p className="mt-4 text-lg text-white/80 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
               We service the following areas in Bucks County and surrounding
               regions
             </p>
@@ -441,38 +441,38 @@ export default function DryCleaningPage() {
               </div>
             </div>
 
-            <div className="bg-neutral-200 rounded-lg shadow-md p-8 h-[400px] overflow-y-auto">
+            <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
                 <div className="space-y-2">
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Buckingham</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Carversville</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Chalfont</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Doylestown</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Dublin</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Fountainville</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Furlong</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Holland</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Buckingham</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Carversville</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Chalfont</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Doylestown</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Dublin</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Fountainville</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Furlong</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Holland</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Ivyland</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Jamison</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Lahaska</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Morrisville</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>New Hope</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Newtown</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Ottsville</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Perkasie</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Ivyland</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Jamison</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Lahaska</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Morrisville</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>New Hope</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Newtown</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Ottsville</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Perkasie</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Pipersville</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Point Pleasant</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Richboro</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Southampton</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Trevose</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Warminster</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Warrington</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Washington Crossing</p>
-                  <p className="text-neutral-500 flex items-center"><span className="mr-2">•</span>Yardley</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Pipersville</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Point Pleasant</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Richboro</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Southampton</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Trevose</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Warminster</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Warrington</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Washington Crossing</p>
+                  <p className="text-white flex items-center"><span className="mr-2">•</span>Yardley</p>
                 </div>
               </div>
             </div>
