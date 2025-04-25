@@ -337,7 +337,9 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
                       <p className="text-neutral-600">
-                        customerservice@mysignaturecleaners.com
+                        <a href="mailto:customerservice@mysignaturecleaners.com" className="hover:text-[#F6AE2D] transition-colors">
+                          customerservice@mysignaturecleaners.com
+                        </a>
                       </p>
                     </div>
                   </div>
