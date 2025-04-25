@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/src/images/signature-cleaners-logo-white.png"
+                src="/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
                 className="h-20 w-auto"
               />
@@ -136,10 +136,10 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/interior-cleaning"
+                  href="/delivery"
                   className="text-neutral-300 hover:text-white"
                 >
-                  Commercial Services
+                  Delivery
                 </Link>
               </li>
             </ul>
