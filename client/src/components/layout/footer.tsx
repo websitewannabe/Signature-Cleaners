@@ -253,12 +253,12 @@ const Footer = () => {
             reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a
-              href="/sitemap.xml"
+            <Link
+              href="/sitemap"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Sitemap
-            </a>
+            </Link>
             <a
               href="#"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
