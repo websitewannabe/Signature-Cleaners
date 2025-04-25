@@ -403,25 +403,6 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="mt-12 text-center">
-            <Link href="/services">
-              <span className="inline-flex items-center text-black hover:shadow-lg font-medium">
-                View Complete Price List
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-1"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </span>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -441,9 +422,12 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="h-8 w-8 text-[#790003]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 text-center">Expert Care</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
+                Expert Care
+              </h3>
               <p className="text-white/90 text-center">
-                Decades of expertise combined with cutting-edge eco-friendly cleaning technology for unparalleled results.
+                Decades of expertise combined with cutting-edge eco-friendly
+                cleaning technology for unparalleled results.
               </p>
             </div>
 
@@ -451,9 +435,12 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Leaf className="h-8 w-8 text-[#790003]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 text-center">Eco-Friendly</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
+                Eco-Friendly
+              </h3>
               <p className="text-white/90 text-center">
-                Committed to preserving your wardrobe while protecting our environment with sustainable practices.
+                Committed to preserving your wardrobe while protecting our
+                environment with sustainable practices.
               </p>
             </div>
 
@@ -461,9 +448,12 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Car className="h-8 w-8 text-[#790003]" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4 text-center">Convenient Service</h3>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">
+                Convenient Service
+              </h3>
               <p className="text-white/90 text-center">
-                Door-to-door delivery with meticulous attention to detail, valuing your time as much as your garments.
+                Door-to-door delivery with meticulous attention to detail,
+                valuing your time as much as your garments.
               </p>
             </div>
           </div>
@@ -707,8 +697,8 @@ export default function HomePage() {
             </div>
           </Carousel>
           <div className="text-center mt-8">
-            <a 
-              href="https://www.google.com/maps/place/Signature+Cleaners+at+Doylestown/data=!4m2!3m1!1s0x0:0x4739bde141ae22d1?sa=X&ved=1t:2428&ictx=111"
+            <a
+              href="https://reviews.reviewmydrycleaner.com/signature-cleaners-at-doylestown-372957952"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#FFFFFF] hover:text-[#F6AE2D] transition-colors text-lg font-medium"
