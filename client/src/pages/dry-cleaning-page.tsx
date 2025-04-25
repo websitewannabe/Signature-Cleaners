@@ -442,7 +442,7 @@ export default function DryCleaningPage() {
             </div>
 
             <div className="bg-white rounded-lg shadow-md p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
                 <div className="space-y-2">
                   <p className="text-neutral-900">Buckingham</p>
                   <p className="text-neutral-900">Carversville</p>
@@ -452,16 +452,18 @@ export default function DryCleaningPage() {
                   <p className="text-neutral-900">Fountainville</p>
                   <p className="text-neutral-900">Furlong</p>
                   <p className="text-neutral-900">Holland</p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-neutral-900">Ivyland</p>
                   <p className="text-neutral-900">Jamison</p>
                   <p className="text-neutral-900">Lahaska</p>
                   <p className="text-neutral-900">Morrisville</p>
                   <p className="text-neutral-900">New Hope</p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-neutral-900">Newtown</p>
                   <p className="text-neutral-900">Ottsville</p>
                   <p className="text-neutral-900">Perkasie</p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-neutral-900">Pipersville</p>
                   <p className="text-neutral-900">Point Pleasant</p>
                   <p className="text-neutral-900">Richboro</p>
