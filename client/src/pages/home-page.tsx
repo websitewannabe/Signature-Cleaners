@@ -419,8 +419,8 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-[#790003]" />
+              <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Expert Care
@@ -432,8 +432,8 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Leaf className="h-8 w-8 text-[#790003]" />
+              <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Leaf className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Eco-Friendly
@@ -445,8 +445,8 @@ export default function HomePage() {
             </div>
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
-              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Car className="h-8 w-8 text-[#790003]" />
+              <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Car className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Convenient Service
