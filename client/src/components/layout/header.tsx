@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 import {
   NavigationMenu,
@@ -161,9 +166,86 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* Right: Optional - Mobile Menu or CTA */}
+          {/* Right: Mobile Menu */}
           <div className="md:hidden">
-            {/* Your mobile menu trigger here (Sheet, hamburger icon, etc.) */}
+            <Sheet>
+              <SheetTrigger className="text-white p-2">
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </SheetTrigger>
+              <SheetContent className="w-[300px] bg-[#181818] border-neutral-800">
+                <nav className="flex flex-col gap-4">
+                  <Link href="/" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <Home className="w-4 h-4" />
+                    Home
+                  </Link>
+                  <div className="border-t border-neutral-700" />
+                  <Link href="/dry-cleaning" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <AirVent className="w-4 h-4" />
+                    Dry Cleaning
+                  </Link>
+                  <Link href="/wash-fold" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <img src="/icons/bubbles.svg" alt="Wash & Fold" className="w-4 h-4" />
+                    Wash & Fold
+                  </Link>
+                  <Link href="/alteration-tailoring" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <Shirt className="w-4 h-4" />
+                    Alterations & Tailoring
+                  </Link>
+                  <Link href="/wedding-gown" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <Gem className="w-4 h-4" />
+                    Wedding Gowns
+                  </Link>
+                  <Link href="/shoe-repair" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <Footprints className="w-4 h-4" />
+                    Shoe Repair
+                  </Link>
+                  <Link href="/clean-household-items" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                      />
+                    </svg>
+                    Household Items
+                  </Link>
+                  <Link href="/delivery" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                    <Car className="w-4 h-4" />
+                    Delivery
+                  </Link>
+                  <div className="border-t border-neutral-700" />
+                  <Link href="/about" className="text-white hover:text-[#F6AE2D] py-2">
+                    About Us
+                  </Link>
+                  <Link href="/contact" className="text-white hover:text-[#F6AE2D] py-2">
+                    Contact
+                  </Link>
+                  <Link href="/auth" className="mt-4">
+                    <button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+                      My Account
+                    </button>
+                  </Link>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>
