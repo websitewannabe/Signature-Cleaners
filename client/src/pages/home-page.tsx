@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shirt, Car, Footprints } from "lucide-react";
+import { Shirt, Car, Footprints, Shield, Leaf } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -425,19 +425,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 bg-[#790003]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-[#790003] relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top_right,#fff_0%,transparent_60%)]"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose Signature Cleaners?
             </h2>
-            <p className="text-xl md:text-2xl text-white/95 leading-relaxed mb-12">
-              Experience the pinnacle of garment care with Bucks County's most trusted premium dry cleaning service. We combine cutting-edge eco-friendly cleaning technology with decades of expertise to deliver unparalleled results. Our commitment to excellence extends beyond just cleaning – we're dedicated to preserving your wardrobe while protecting our environment. With convenient door-to-door service and meticulous attention to detail, we provide a level of care that reflects the quality of your garments and the value of your time.
-            </p>
+            <div className="w-24 h-1 bg-[#F6AE2D] mx-auto mt-6 mb-8"></div>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="h-8 w-8 text-[#790003]" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">Expert Care</h3>
+              <p className="text-white/90 text-center">
+                Decades of expertise combined with cutting-edge eco-friendly cleaning technology for unparalleled results.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Leaf className="h-8 w-8 text-[#790003]" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">Eco-Friendly</h3>
+              <p className="text-white/90 text-center">
+                Committed to preserving your wardrobe while protecting our environment with sustainable practices.
+              </p>
+            </div>
+
+            <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
+              <div className="w-16 h-16 bg-[#F6AE2D] rounded-full flex items-center justify-center mx-auto mb-6">
+                <Car className="h-8 w-8 text-[#790003]" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4 text-center">Convenient Service</h3>
+              <p className="text-white/90 text-center">
+                Door-to-door delivery with meticulous attention to detail, valuing your time as much as your garments.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
             <Link href="/schedule">
               <Button className="bg-white hover:bg-[#F6AE2D] text-black font-medium px-6 py-3 shadow-md hover:shadow-lg transition duration-300">
                 Get Started Now
