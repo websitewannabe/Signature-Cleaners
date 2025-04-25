@@ -124,18 +124,18 @@ export default function DeliveryPage() {
         </div>
       </section>
 
-      {/* Main Content */}
+      {/* Why Choose Us */}
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
-                Convenient Delivery Service
+                Why Choose Signature Cleaners?
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Let us handle your garment care with our premium pickup and
-                delivery service. We make it easy to keep your wardrobe fresh
-                and clean without leaving your home or office.
+                Experience the difference with Bucks County's premier garment care service.
+                We combine convenience, quality, and exceptional customer service to exceed
+                your expectations.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -153,7 +153,7 @@ export default function DeliveryPage() {
                     />
                   </svg>
                   <span className="ml-3 text-white/90">
-                    Free pickup and delivery
+                    30+ Years of Expert Care Experience
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -171,7 +171,7 @@ export default function DeliveryPage() {
                     />
                   </svg>
                   <span className="ml-3 text-white/90">
-                    Flexible scheduling options
+                    Eco-Friendly Cleaning Solutions
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -189,7 +189,43 @@ export default function DeliveryPage() {
                     />
                   </svg>
                   <span className="ml-3 text-white/90">
-                    Text notifications for pickup and delivery
+                    Guaranteed Satisfaction on Every Order
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="ml-3 text-white/90">
+                    Free Pickup & Delivery Across Bucks County
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <svg
+                    className="h-6 w-6 text-white mt-1 flex-shrink-0"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span className="ml-3 text-white/90">
+                    Real-Time Order Tracking & Updates
                   </span>
                 </li>
               </ul>
