@@ -425,25 +425,51 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 bg-[#790003]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+      {/* Why Choose Us Section */}
+      <section className="relative min-h-[600px] py-24 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('/src/images/exterior.jpg')] bg-cover bg-center bg-no-repeat"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div 
+            className="text-center max-w-4xl mx-auto opacity-0 animate-fade-in"
+            style={{
+              animation: 'fadeIn 1s ease-out forwards',
+              animationDelay: '0.2s'
+            }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-10 tracking-tight">
               Why Choose Signature Cleaners?
             </h2>
-            <p className="text-xl md:text-2xl text-white/95 leading-relaxed mb-12">
+            <p className="text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed mb-14 opacity-0 animate-fade-in"
+              style={{
+                animation: 'fadeIn 1s ease-out forwards',
+                animationDelay: '0.6s'
+              }}
+            >
               Experience the pinnacle of garment care with Bucks County's most trusted premium dry cleaning service. We combine cutting-edge eco-friendly cleaning technology with decades of expertise to deliver unparalleled results. Our commitment to excellence extends beyond just cleaning – we're dedicated to preserving your wardrobe while protecting our environment. With convenient door-to-door service and meticulous attention to detail, we provide a level of care that reflects the quality of your garments and the value of your time.
             </p>
+            
+            <div 
+              className="opacity-0 animate-fade-in"
+              style={{
+                animation: 'fadeIn 1s ease-out forwards',
+                animationDelay: '1s'
+              }}
+            >
+              <Link href="/schedule">
+                <Button 
+                  size="lg"
+                  className="bg-[#F6AE2D] hover:bg-[#f9c05f] text-white text-lg px-8 py-6 shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  Get Started Now
+                </Button>
+              </Link>
+            </div>
           </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/schedule">
-              <Button className="bg-white hover:bg-[#F6AE2D] text-black font-medium px-6 py-3 shadow-md hover:shadow-lg transition duration-300">
-                Get Started Now
-              </Button>
-            </Link>
-          </div>
+        </div>
         </div>
       </section>
 
