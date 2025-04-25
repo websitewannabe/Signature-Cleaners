@@ -317,9 +317,16 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
                       <p className="text-neutral-600">
-                        1456 Ferry Road #10
-                        <br />
-                        Doylestown, PA 18901
+                        <a 
+                          href="https://www.google.com/maps?q=1456+Ferry+Road+%2310,+Doylestown,+PA+18901" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-[#F6AE2D] transition-colors"
+                        >
+                          1456 Ferry Road #10
+                          <br />
+                          Doylestown, PA 18901
+                        </a>
                       </p>
                     </div>
                   </div>
