@@ -327,7 +327,9 @@ export default function ContactPage() {
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
                     <div className="ml-3">
-                      <p className="text-neutral-600">(215) 345-1470</p>
+                      <p className="text-neutral-600">
+                        <a href="tel:+12153451470" className="hover:text-[#F6AE2D] transition-colors">(215) 345-1470</a>
+                      </p>
                     </div>
                   </div>
 
@@ -375,7 +377,7 @@ export default function ContactPage() {
             <AccordionItem value="item-1">
               <AccordionTrigger>How do I sign up?</AccordionTrigger>
               <AccordionContent>
-                Click here or Call (215) 345-1470 – Include your sign up form
+                Click here or Call <a href="tel:+12153451470" className="hover:text-[#F6AE2D] transition-colors">(215) 345-1470</a> – Include your sign up form
                 with your name, address and phone number on your first order
                 indicating that you signed up online.
               </AccordionContent>
@@ -464,8 +466,7 @@ export default function ContactPage() {
               <AccordionContent>
                 We use the latest encryption and authentication services for all
                 our web transactions so that your credit card information
-                remains safe. If you prefer, just give us a call at (877)
-                779-1269 and we can assist you via phone.
+                remains safe. If you prefer, just give us a call at <a href="tel:+18777791269" className="hover:text-[#F6AE2D] transition-colors">(877) 779-1269</a> and we can assist you via phone.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
