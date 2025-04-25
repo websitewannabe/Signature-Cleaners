@@ -96,7 +96,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/services"
+                  href="/dry-cleaning"
                   className="text-neutral-300 hover:text-white"
                 >
                   Dry Cleaning
@@ -104,7 +104,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/wash-fold"
                   className="text-neutral-300 hover:text-white"
                 >
                   Wash & Fold
@@ -112,7 +112,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/alteration-tailoring"
                   className="text-neutral-300 hover:text-white"
                 >
                   Alterations & Repairs
@@ -120,7 +120,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/clean-household-items"
                   className="text-neutral-300 hover:text-white"
                 >
                   Specialty Cleaning
@@ -128,7 +128,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/wedding-gown"
                   className="text-neutral-300 hover:text-white"
                 >
                   Wedding Gown Preservation
@@ -136,7 +136,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/interior-cleaning"
                   className="text-neutral-300 hover:text-white"
                 >
                   Commercial Services
