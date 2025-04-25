@@ -706,6 +706,16 @@ export default function HomePage() {
               <CarouselNext className="relative translate-y-0 right-0 h-10 w-10 border-[#5E0B15] text-[#5E0B15] hover:bg-[#5E0B15] hover:text-white transition-colors duration-300" />
             </div>
           </Carousel>
+          <div className="text-center mt-8">
+            <a 
+              href="https://www.google.com/maps/place/Signature+Cleaners+at+Doylestown/data=!4m2!3m1!1s0x0:0x4739bde141ae22d1?sa=X&ved=1t:2428&ictx=111"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#FFFFFF] hover:text-[#F6AE2D] transition-colors text-lg font-medium"
+            >
+              View all reviews
+            </a>
+          </div>
         </div>
       </section>
 
