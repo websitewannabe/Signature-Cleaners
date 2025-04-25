@@ -9,7 +9,7 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/images/signature-cleaners-logo-white.png"
+                src="src/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
                 className="h-20 w-auto"
               />
