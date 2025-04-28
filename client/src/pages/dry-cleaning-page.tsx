@@ -228,25 +228,49 @@ export default function DryCleaningPage() {
                   {[
                     {
                       name: "Suits",
-                      icon: "/images/suit.svg",
+                      icon: (
+                        <img
+                          src="/icons/suit.svg"
+                          alt="Suits"
+                          className="w-12 h-12"
+                        />
+                      ),
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
-                      icon: "./images/dress.svg",
+                      icon: (
+                        <img
+                          src="/icons/dress.svg"
+                          alt="Dresses"
+                          className="w-12 h-12"
+                        />
+                      ),
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
-                      icon: "/images/shirt.svg",
+                      icon: (
+                        <img
+                          src="/icons/shirt.svg"
+                          alt="Shirts"
+                          className="w-12 h-12"
+                        />
+                      ),
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
                     {
                       name: "Pants",
-                      icon: "./images/pants.svg",
+                      icon: (
+                        <img
+                          src="/icons/pants.svg"
+                          alt="Pants"
+                          className="w-12 h-12"
+                        />
+                      ),
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
@@ -263,16 +287,9 @@ export default function DryCleaningPage() {
                       className="text-center focus:outline-none"
                     >
                       <div
-                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${
-                          selectedService === service.name
-                            ? "scale-110 ring-2 ring-[#F6AE2D]"
-                            : "hover:scale-105"
-                        }`}
+                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
                       >
-                        <div
-                          style={{ backgroundImage: `url(${service.icon})` }}
-                          className="w-12 h-12 bg-contain bg-no-repeat bg-center"
-                        />
+                        {service.icon}
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
                         {service.name}
