@@ -1,0 +1,71 @@
+Update the Dry Cleaning page service icons so they reliably display as visible background images using Tailwind styling.
+
+Follow these steps:
+
+1. **Ensure all icons** (`suit.svg`, `dress.svg`, `shirt.svg`, `pants.svg`) are present inside `/public/images/`.
+
+2. \*\*Update the service icon rendering inside \*\***`services.map()`** to use a `div` with these Tailwind utility classes:
+
+   - Remove all inline `style={{ backgroundImage: ... }}`.
+   - Instead, use a `style` attribute \*\*only for the dynamic \*\***`backgroundImage`** and control everything else via Tailwind.
+
+3. **For each service icon, render like this:**
+
+```tsx
+<div
+  style={{ backgroundImage: `url(${service.icon})` }}
+  className="w-12 h-12 bg-center bg-no-repeat bg-[length:60%]"
+/>
+```
+
+✅ This will:
+
+- Center the icon
+- Prevent repeat
+- Force the icon to fill 60% of the container size (always visible)
+
+4. **Update the full service button structure:**
+
+```tsx
+<button
+  key={index}
+  onClick={() => {
+    if (selectedService === service.name) {
+      setSelectedService(null);
+    } else {
+      setSelectedService(service.name);
+    }
+  }}
+  className="text-center focus:outline-none"
+>
+  <div
+    className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${
+      selectedService === service.name
+        ? "scale-110 ring-2 ring-[#F6AE2D]"
+        : "hover:scale-105"
+    }`}
+  >
+    <div
+      style={{ backgroundImage: `url(${service.icon})` }}
+      className="w-12 h-12 bg-center bg-no-repeat bg-[length:60%]"
+    />
+  </div>
+  <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+</button>
+```
+
+5. **Final Notes:**
+
+- You can adjust `bg-[length:60%]` to `70%` or `80%` for larger icon appearance if desired.
+- Keep the icons in `/public/images/` for production reliability.
+- No `<img>` elements should be used inside the service buttons anymore.
+
+---
+
+✅ This approach ensures:
+
+- **Full visibility** of all icons on all devices
+- **Consistent sizing** across browsers
+- **Fast page load** (since images are light SVGs)
+
+---
