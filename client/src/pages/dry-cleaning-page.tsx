@@ -225,14 +225,14 @@ export default function DryCleaningPage() {
                     {
                       name: "Suits",
                       type: "img",
-                      icon: "./images/suit.svg",
+                      icon: "./icons/suit.svg",
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
                       type: "img",
-                      icon: "/images/dress.svg",
+                      icon: "./icons/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
@@ -246,7 +246,7 @@ export default function DryCleaningPage() {
                     {
                       name: "Pants",
                       type: "img",
-                      icon: "/images/pants.svg",
+                      icon: "./icons/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
