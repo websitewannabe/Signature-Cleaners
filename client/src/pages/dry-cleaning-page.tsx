@@ -271,7 +271,7 @@ export default function DryCleaningPage() {
                       >
                         <div
                           style={{ backgroundImage: `url(${service.icon})` }}
-                          className="w-12 h-12 bg-contain bg-no-repeat bg-center"
+                          className="w-12 h-12 bg-center bg-no-repeat bg-[length:60%]"
                         />
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
