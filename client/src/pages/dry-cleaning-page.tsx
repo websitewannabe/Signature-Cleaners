@@ -20,23 +20,27 @@ export default function DryCleaningPage() {
   const services = [
     {
       name: "Suits",
+      icon: "/images/suit.svg",
       details:
         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
     },
     {
       name: "Dresses",
+      icon: "/images/dress.svg",
       details:
-        "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
+        "Delicate cleaning for formal wear and dresses, maintaining fabric integrity and embellishments.",
     },
     {
       name: "Shirts",
+      icon: "/images/shirt.svg",
       details:
-        "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
+        "Professional laundering and pressing for dress shirts, ensuring crisp collars and cuffs.",
     },
     {
       name: "Pants",
+      icon: "/images/pants.svg",
       details:
-        "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
+        "Thorough cleaning and precise creasing for trousers and slacks.",
     },
   ];
 
@@ -224,28 +228,24 @@ export default function DryCleaningPage() {
                   {[
                     {
                       name: "Suits",
-                      type: "img",
-                      icon: "/icons/suit.svg",
+                      icon: "/images/suit.svg",
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
-                      type: "img",
-                      icon: "./icons/dress.svg",
+                      icon: "/images/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
-                      type: "img",
-                      icon: "/icons/shirt.svg",
+                      icon: "/images/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
                     {
                       name: "Pants",
-                      type: "img",
                       icon: "/images/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
@@ -263,17 +263,16 @@ export default function DryCleaningPage() {
                       className="text-center focus:outline-none"
                     >
                       <div
-                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
+                        className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${
+                          selectedService === service.name
+                            ? "scale-110 ring-2 ring-[#F6AE2D]"
+                            : "hover:scale-105"
+                        }`}
                       >
-                        {service.type === "svg" ? (
-                          service.icon
-                        ) : (
-                          <img
-                            src={service.icon}
-                            alt={`${service.name} icon`}
-                            className="w-12 h-12"
-                          />
-                        )}
+                        <div
+                          style={{ backgroundImage: `url(${service.icon})` }}
+                          className="w-12 h-12 bg-contain bg-no-repeat bg-center"
+                        />
                       </div>
                       <span className="block mt-2 text-sm text-white/90">
                         {service.name}
@@ -283,11 +282,14 @@ export default function DryCleaningPage() {
                 </div>
 
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${selectedService ? "max-h-48" : "max-h-0"}`}
+                  className={`overflow-hidden transition-all duration-300 ${
+                    selectedService ? "max-h-48" : "max-h-0"
+                  }`}
                 >
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white/90">
                     {selectedService &&
-                      services.find((s) => s.name === selectedService)?.details}
+                      services.find((s) => s.name === selectedService)
+                        ?.details}
                   </div>
                 </div>
               </div>
@@ -304,49 +306,6 @@ export default function DryCleaningPage() {
                   loading="lazy"
                 />
               </div>
-              {/* <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
-                Contact Us
-              </h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
-                    Name
-                  </label>
-                  <Input placeholder="Your name" className="w-full" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
-                    Email
-                  </label>
-                  <Input
-                    type="email"
-                    placeholder="your@email.com"
-                    className="w-full"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
-                    Phone
-                  </label>
-                  <Input
-                    type="tel"
-                    placeholder="(555) 123-4567"
-                    className="w-full"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-neutral-700 mb-1">
-                    Message
-                  </label>
-                  <Textarea
-                    placeholder="Tell us about your garments..."
-                    className="min-h-[100px] w-full"
-                  />
-                </div>
-                <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
-                  Send Message
-                </Button>
-              </form> */}
             </div>
           </div>
         </div>
