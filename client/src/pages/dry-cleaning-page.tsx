@@ -26,7 +26,7 @@ export default function DryCleaningPage() {
     },
     {
       name: "Dresses",
-      icon: "/images/dress.svg",
+      icon: "./images/dress.svg",
       details:
         "Delicate cleaning for formal wear and dresses, maintaining fabric integrity and embellishments.",
     },
@@ -234,7 +234,7 @@ export default function DryCleaningPage() {
                     },
                     {
                       name: "Dresses",
-                      icon: "/images/dress.svg",
+                      icon: "./images/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
@@ -246,7 +246,7 @@ export default function DryCleaningPage() {
                     },
                     {
                       name: "Pants",
-                      icon: "/images/pants.svg",
+                      icon: "./images/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
