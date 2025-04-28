@@ -8,11 +8,18 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <div className="mb-4">
-              <img
+              <Link href="/" className="flex items-center">
+                <div
+                  className="h-20 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                  role="img"
+                  aria-label="Signature Cleaners"
+                />
+              </Link>
+              {/* <img
                 src="/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
                 className="h-20 w-auto"
-              />
+              /> */}
             </div>
             <p className="text-neutral-300 mb-4">
               Old Fashioned Service. Guaranteed.

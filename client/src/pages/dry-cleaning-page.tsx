@@ -225,21 +225,21 @@ export default function DryCleaningPage() {
                     {
                       name: "Suits",
                       type: "img",
-                      icon: "/icons/suit.png",
+                      icon: "/icons/suit.svg",
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
                       type: "img",
-                      icon: "./icons/dress.png",
+                      icon: "./icons/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
                       type: "img",
-                      icon: "/icons/shirt.png",
+                      icon: "/icons/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
