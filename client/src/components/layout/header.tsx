@@ -155,7 +155,7 @@ const Header = () => {
               Contact
             </Link>
             <Link
-              href="/auth"
+              href="/my-account"
               className="border border-[#181818] hover:bg-[#181818] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase"
             >
               My Account
@@ -268,7 +268,7 @@ const Header = () => {
                   >
                     Contact
                   </Link>
-                  <Link href="/auth" className="mt-4">
+                  <Link href="/my-account" className="mt-4">
                     <button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                       My Account
                     </button>

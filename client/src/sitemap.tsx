@@ -1,4 +1,3 @@
-
 export const sitemap = {
   home: {
     path: "/",
@@ -51,11 +50,11 @@ export const sitemap = {
     title: "Delivery Service",
   },
   about: {
-    path: "/about",
+    path: "/about-us",
     title: "About Us",
   },
   contact: {
-    path: "/contact",
+    path: "/contact-us",
     title: "Contact",
   },
   faq: {
@@ -67,7 +66,7 @@ export const sitemap = {
     title: "Schedule Service",
   },
   auth: {
-    path: "/auth",
+    path: "/my-account",
     title: "Login/Signup",
   },
 };

@@ -48,7 +48,7 @@ function Router() {
       <Route path="/contact-us" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} />
-      <Route path="/auth" component={AuthPage} />
+      <Route path="/my-account" component={AuthPage} />
       <Route path="/delivery" component={DeliveryPage} />
       <Route component={NotFound} />
     </Switch>
