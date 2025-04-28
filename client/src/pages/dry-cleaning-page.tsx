@@ -232,14 +232,14 @@ export default function DryCleaningPage() {
                     {
                       name: "Dresses",
                       type: "img",
-                      icon: "./icons/dress.svg",
+                      icon: "src/icons/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
                       type: "img",
-                      icon: "./icons/shirt.svg",
+                      icon: "/icons/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
