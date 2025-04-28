@@ -60,7 +60,7 @@ const Header = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <div className="flex items-center h-10">
-                    <Link href="/services">
+                    <Link href="/all-services">
                       <NavigationMenuTrigger
                         className={`bg-transparent text-white ${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase`}
                       >

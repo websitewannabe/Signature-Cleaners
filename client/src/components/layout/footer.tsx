@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/all-services"
                   className="text-neutral-300 hover:text-white"
                 >
                   Services
