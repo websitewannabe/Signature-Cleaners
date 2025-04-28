@@ -20,25 +20,25 @@ export default function DryCleaningPage() {
   const services = [
     {
       name: "Suits",
-      icon: "/images/suit.svg",
+      icon: "./images/suit.svg",
       details:
         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
     },
     {
       name: "Dresses",
-      icon: "/images/dress.svg",
+      icon: "./images/dress.svg",
       details:
         "Delicate cleaning for formal wear and dresses, maintaining fabric integrity and embellishments.",
     },
     {
       name: "Shirts",
-      icon: "/images/shirt.svg",
+      icon: "./images/shirt.svg",
       details:
         "Professional laundering and pressing for dress shirts, ensuring crisp collars and cuffs.",
     },
     {
       name: "Pants",
-      icon: "/images/pants.svg",
+      icon: "./images/pants.svg",
       details:
         "Thorough cleaning and precise creasing for trousers and slacks.",
     },
@@ -288,8 +288,7 @@ export default function DryCleaningPage() {
                 >
                   <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-white/90">
                     {selectedService &&
-                      services.find((s) => s.name === selectedService)
-                        ?.details}
+                      services.find((s) => s.name === selectedService)?.details}
                   </div>
                 </div>
               </div>
