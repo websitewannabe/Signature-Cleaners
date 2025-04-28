@@ -20,25 +20,25 @@ export default function DryCleaningPage() {
   const services = [
     {
       name: "Suits",
-      icon: "https://signaturecleaners.com/images/suit.svg",
+      icon: "./images/suit.svg",
       details:
         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
     },
     {
       name: "Dresses",
-      icon: "https://signaturecleaners.com/images/dress.svg",
+      icon: "./images/dress.svg",
       details:
         "Delicate cleaning for formal wear and dresses, maintaining fabric integrity and embellishments.",
     },
     {
       name: "Shirts",
-      icon: "https://signaturecleaners.com/images/shirt.svg",
+      icon: "./images/shirt.svg",
       details:
         "Professional laundering and pressing for dress shirts, ensuring crisp collars and cuffs.",
     },
     {
       name: "Pants",
-      icon: "https://signaturecleaners.com/images/pants.svg",
+      icon: "./images/pants.svg",
       details:
         "Thorough cleaning and precise creasing for trousers and slacks.",
     },
@@ -228,25 +228,25 @@ export default function DryCleaningPage() {
                   {[
                     {
                       name: "Suits",
-                      icon: "https://signaturecleaners.com/images/suit.svg",
+                      icon: "/images/suit.svg",
                       details:
                         "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains.",
                     },
                     {
                       name: "Dresses",
-                      icon: "https://signaturecleaners.com/images/dress.svg",
+                      icon: "/images/dress.svg",
                       details:
                         "Delicate care for all dress types, from casual to formal wear, ensuring fabric integrity and perfect finish.",
                     },
                     {
                       name: "Shirts",
-                      icon: "https://signaturecleaners.com/images/shirt.svg",
+                      icon: "/images/shirt.svg",
                       details:
                         "Professional laundering with optional starch levels, precise pressing, and careful attention to collars and cuffs.",
                     },
                     {
                       name: "Pants",
-                      icon: "https://signaturecleaners.com/images/pants.svg",
+                      icon: "/images/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
