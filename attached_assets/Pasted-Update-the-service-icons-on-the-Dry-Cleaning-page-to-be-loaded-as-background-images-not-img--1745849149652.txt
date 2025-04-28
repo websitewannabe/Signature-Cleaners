@@ -1,0 +1,66 @@
+Update the service icons on the Dry Cleaning page to be loaded as **background images**, not `<img>` tags.
+
+Follow these steps:
+
+1. **Move all service icons** (`suit.svg`, `dress.svg`, `shirt.svg`, `pants.svg`) into the `/public/images/` folder.\
+   Ensure the paths are clean — for example:
+
+   - `/public/images/suit.svg`
+   - `/public/images/dress.svg`
+   - `/public/images/shirt.svg`
+   - `/public/images/pants.svg`
+
+2. **Update the ********`services`******** array** to specify only the filename needed:
+
+   ```tsx
+   {
+     name: "Suits",
+     icon: "/images/suit.svg",
+     details: "Expert cleaning and pressing for business suits, preserving structure and finish while removing tough stains."
+   }
+   ```
+
+3. **In the ********`services.map()`******** loop**, replace the `<img>` tag with a `div` using dynamic inline background styling:
+
+   ```tsx
+   <div
+     style={{ backgroundImage: `url(${service.icon})` }}
+     className="w-12 h-12 bg-contain bg-no-repeat bg-center"
+   />
+   ```
+
+4. **Full updated button structure** should look like this:
+
+   ```tsx
+   <button
+     key={index}
+     onClick={() => {
+       if (selectedService === service.name) {
+         setSelectedService(null);
+       } else {
+         setSelectedService(service.name);
+       }
+     }}
+     className="text-center focus:outline-none"
+   >
+     <div
+       className={`w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto transition-all duration-300 ${selectedService === service.name ? "scale-110 ring-2 ring-[#F6AE2D]" : "hover:scale-105"}`}
+     >
+       <div
+         style={{ backgroundImage: `url(${service.icon})` }}
+         className="w-12 h-12 bg-contain bg-no-repeat bg-center"
+       />
+     </div>
+     <span className="block mt-2 text-sm text-white/90">{service.name}</span>
+   </button>
+   ```
+
+5. **Remove** the old `<img>` tags completely. No need for `service.type` checks anymore.
+
+6. **Deploy and test** — all icons will now load properly, matching your working footer logo technique.
+
+---
+
+✅ This approach **guarantees icons will appear correctly** across dev and live (cPanel) environments — no more broken images or mystery path issues!
+
+---
