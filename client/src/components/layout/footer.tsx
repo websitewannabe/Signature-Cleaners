@@ -9,9 +9,9 @@ const Footer = () => {
           <div>
             <div className="mb-4">
               <img
-                src="/src/images/signature-cleaners-logo-white.png"
+                src="/images/signature-cleaners-logo-white.png"
                 alt="Signature Cleaners"
-                className="h-20 w-auto"
+                className="h-20 w-auto object-contain"
               />
             </div>
             <p className="text-neutral-300 mb-4">
