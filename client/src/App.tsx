@@ -1,7 +1,7 @@
 import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
-import { HelmetProvider } from 'react-helmet-async';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { HelmetProvider } from "react-helmet-async";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home-page";
 import ServicesPage from "@/pages/services-page";
@@ -33,13 +33,19 @@ function Router() {
       <Route path="/folding-dress-shirt" component={FoldingDressShirtPage} />
       <Route path="/alteration-tailoring" component={AlterationTailoringPage} />
       <Route path="/shoe-repair" component={ShoeRepairPage} />
-      <Route path="/suede-leather-cleaning" component={SuedeLeatherCleaningPage} />
+      <Route
+        path="/suede-leather-cleaning"
+        component={SuedeLeatherCleaningPage}
+      />
       <Route path="/interior-cleaning" component={InteriorCleaningPage} />
       <Route path="/wedding-gown" component={WeddingGownPage} />
       <Route path="/dry-cleaning" component={DryCleaningPage} />
-      <Route path="/clean-household-items" component={CleanHouseholdItemsPage} />
-      <Route path="/about" component={AboutPage} />
-      <Route path="/contact" component={ContactPage} />
+      <Route
+        path="/clean-household-items"
+        component={CleanHouseholdItemsPage}
+      />
+      <Route path="/about-us" component={AboutPage} />
+      <Route path="/contact-us" component={ContactPage} />
       <Route path="/schedule" component={SchedulePage} />
       <Route path="/faq" component={FaqPage} />
       <Route path="/auth" component={AuthPage} />

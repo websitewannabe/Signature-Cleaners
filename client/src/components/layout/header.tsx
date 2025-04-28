@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import {
   NavigationMenu,
@@ -147,13 +143,13 @@ const Header = () => {
               </NavigationMenuList>
             </NavigationMenu>
             <Link
-              href="/about"
+              href="/about-us"
               className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
             >
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
             >
               Contact
@@ -186,32 +182,57 @@ const Header = () => {
               </SheetTrigger>
               <SheetContent className="w-[300px] bg-[#181818] border-neutral-800">
                 <nav className="flex flex-col gap-4">
-                  <Link href="/" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <Home className="w-4 h-4" />
                     Home
                   </Link>
                   <div className="border-t border-neutral-700" />
-                  <Link href="/dry-cleaning" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/dry-cleaning"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <AirVent className="w-4 h-4" />
                     Dry Cleaning
                   </Link>
-                  <Link href="/wash-fold" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
-                    <img src="/icons/bubbles.svg" alt="Wash & Fold" className="w-4 h-4" />
+                  <Link
+                    href="/wash-fold"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
+                    <img
+                      src="/icons/bubbles.svg"
+                      alt="Wash & Fold"
+                      className="w-4 h-4"
+                    />
                     Wash & Fold
                   </Link>
-                  <Link href="/alteration-tailoring" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/alteration-tailoring"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <Shirt className="w-4 h-4" />
                     Alterations & Tailoring
                   </Link>
-                  <Link href="/wedding-gown" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/wedding-gown"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <Gem className="w-4 h-4" />
                     Wedding Gowns
                   </Link>
-                  <Link href="/shoe-repair" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/shoe-repair"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <Footprints className="w-4 h-4" />
                     Shoe Repair
                   </Link>
-                  <Link href="/clean-household-items" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/clean-household-items"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <svg
                       className="w-4 h-4"
                       fill="none"
@@ -227,15 +248,24 @@ const Header = () => {
                     </svg>
                     Household Items
                   </Link>
-                  <Link href="/delivery" className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2">
+                  <Link
+                    href="/delivery"
+                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                  >
                     <Car className="w-4 h-4" />
                     Delivery
                   </Link>
                   <div className="border-t border-neutral-700" />
-                  <Link href="/about" className="text-white hover:text-[#F6AE2D] py-2">
+                  <Link
+                    href="/about"
+                    className="text-white hover:text-[#F6AE2D] py-2"
+                  >
                     About Us
                   </Link>
-                  <Link href="/contact" className="text-white hover:text-[#F6AE2D] py-2">
+                  <Link
+                    href="/contact"
+                    className="text-white hover:text-[#F6AE2D] py-2"
+                  >
                     Contact
                   </Link>
                   <Link href="/auth" className="mt-4">

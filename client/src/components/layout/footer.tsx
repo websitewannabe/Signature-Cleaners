@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="/about-us"
                   className="text-neutral-300 hover:text-white"
                 >
                   About Us
@@ -89,7 +89,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/contact-us"
                   className="text-neutral-300 hover:text-white"
                 >
                   Contact Us
