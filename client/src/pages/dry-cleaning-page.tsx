@@ -246,7 +246,7 @@ export default function DryCleaningPage() {
                     {
                       name: "Pants",
                       type: "img",
-                      icon: "./images/pants.svg",
+                      icon: "/images/pants.svg",
                       details:
                         "Thorough cleaning and precise pressing for all types of pants, ensuring perfect creases and wrinkle-free results.",
                     },
