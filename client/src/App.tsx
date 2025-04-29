@@ -23,6 +23,7 @@ import { AuthProvider } from "./hooks/use-auth";
 import FaqPage from "@/pages/faq-page";
 import AuthPage from "@/pages/auth-page";
 import DeliveryPage from "@/pages/delivery-page";
+import AccessibilityPage from "@/pages/accessibility-page";
 
 function Router() {
   return (
