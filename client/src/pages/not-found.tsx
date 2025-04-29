@@ -2,6 +2,8 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { AlertCircle } from "lucide-react";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 
 export default function NotFound() {
   return (
