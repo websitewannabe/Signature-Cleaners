@@ -54,6 +54,7 @@ function Router() {
       <Route path="/faq" component={FaqPage} />
       <Route path="/my-account" component={AuthPage} />
       <Route path="/delivery" component={DeliveryPage} />
+      <Route path="/accessibility" component={AccessibilityPage} />
       <Route component={NotFound} />
     </Switch>
   );

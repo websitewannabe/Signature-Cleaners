@@ -278,12 +278,12 @@ const Footer = () => {
             >
               Terms of Service
             </a>
-            <a
-              href="#"
+            <Link
+              href="/accessibility"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Accessibility
-            </a>
+            </Link>
           </div>
         </div>
       </div>
