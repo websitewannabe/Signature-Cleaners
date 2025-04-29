@@ -24,6 +24,7 @@ import FaqPage from "@/pages/faq-page";
 import AuthPage from "@/pages/auth-page";
 import DeliveryPage from "@/pages/delivery-page";
 import AccessibilityPage from "@/pages/accessibility-page";
+import TermsPage from "@/pages/terms-page";
 
 function Router() {
   return (
@@ -56,6 +57,7 @@ function Router() {
       <Route path="/my-account" component={AuthPage} />
       <Route path="/delivery" component={DeliveryPage} />
       <Route path="/accessibility" component={AccessibilityPage} />
+      <Route path="/terms" component={TermsPage} />
       <Route component={NotFound} />
     </Switch>
   );
