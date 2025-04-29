@@ -27,6 +27,10 @@ import DeliveryPage from "@/pages/delivery-page";
 function Router() {
   return (
     <Switch>
+      <Route path="/sitemap.xml" component={() => {
+        window.location.href = '/sitemap.xml';
+        return null;
+      }} />
       <Route path="/" component={HomePage} />
       <Route path="/all-services" component={ServicesPage} />
       <Route path="/wash-fold" component={WashFoldPage} />
