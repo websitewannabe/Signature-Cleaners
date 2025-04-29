@@ -266,12 +266,12 @@ const Footer = () => {
             >
               Sitemap
             </a>
-            <a
-              href="#"
+            <Link
+              href="/privacy"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Privacy Policy
-            </a>
+            </Link>
             <Link
               href="/terms"
               className="text-neutral-400 hover:text-neutral-300 text-sm"

@@ -25,6 +25,7 @@ import AuthPage from "@/pages/auth-page";
 import DeliveryPage from "@/pages/delivery-page";
 import AccessibilityPage from "@/pages/accessibility-page";
 import TermsPage from "@/pages/terms-page";
+import PrivacyPage from "@/pages/privacy-page";
 
 function Router() {
   return (
@@ -58,6 +59,7 @@ function Router() {
       <Route path="/delivery" component={DeliveryPage} />
       <Route path="/accessibility" component={AccessibilityPage} />
       <Route path="/terms" component={TermsPage} />
+      <Route path="/privacy" component={PrivacyPage} />
       <Route component={NotFound} />
     </Switch>
   );
