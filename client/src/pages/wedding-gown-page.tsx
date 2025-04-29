@@ -328,7 +328,7 @@ export default function WeddingGownPage() {
               </div>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
-              <div className="w-full h-[600px]">
+              <div className="w-full h-[800px]">
                 <iframe
                   src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56"
                   style={{ width: "100%", height: "100%", border: "0" }}
