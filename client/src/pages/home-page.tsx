@@ -179,7 +179,7 @@ export default function HomePage() {
                   Schedule Pickup
                 </Button>
               </Link>
-              <Link href="/all-services">
+              <Link href="/all-services/all-services">
                 <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   View Services
                 </Button>
@@ -226,7 +226,7 @@ export default function HomePage() {
                     State-of-the-art dry cleaning services for all your delicate
                     and special garments, ensuring the highest quality care.
                   </p>
-                  <Link href="/dry-cleaning" className="block">
+                  <Link href="/all-services/dry-cleaning" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -260,7 +260,7 @@ export default function HomePage() {
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
-                  <Link href="/wash-fold" className="block">
+                  <Link href="/all-services/wash-fold" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -294,7 +294,7 @@ export default function HomePage() {
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
-                  <Link href="/wedding-gown" className="block">
+                  <Link href="/all-services/wedding-gown" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -328,7 +328,7 @@ export default function HomePage() {
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
-                  <Link href="/clean-household-items" className="block">
+                  <Link href="/all-services/clean-household-items" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -356,7 +356,7 @@ export default function HomePage() {
             <div className="flex flex-wrap justify-center gap-8 md:gap-12">
               {/* Delivery */}
               <Link
-                href="/delivery"
+                href="/all-services/delivery"
                 className="group flex flex-col items-center"
               >
                 <div
@@ -372,7 +372,7 @@ export default function HomePage() {
 
               {/* Alterations & Tailoring */}
               <Link
-                href="/alteration-tailoring"
+                href="/all-services/alteration-tailoring"
                 className="group flex flex-col items-center"
               >
                 <div
@@ -388,7 +388,7 @@ export default function HomePage() {
 
               {/* Shoe Repair */}
               <Link
-                href="/shoe-repair"
+                href="/all-services/shoe-repair"
                 className="group flex flex-col items-center"
               >
                 <div

@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/all-services"
+                  href="/all-services/all-services"
                   className="text-neutral-300 hover:text-white"
                 >
                   Services
@@ -103,7 +103,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="/dry-cleaning"
+                  href="/all-services/dry-cleaning"
                   className="text-neutral-300 hover:text-white"
                 >
                   Dry Cleaning
@@ -111,7 +111,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/wash-fold"
+                  href="/all-services/wash-fold"
                   className="text-neutral-300 hover:text-white"
                 >
                   Wash & Fold
@@ -119,7 +119,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/alteration-tailoring"
+                  href="/all-services/alteration-tailoring"
                   className="text-neutral-300 hover:text-white"
                 >
                   Alterations & Repairs
@@ -127,7 +127,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/clean-household-items"
+                  href="/all-services/clean-household-items"
                   className="text-neutral-300 hover:text-white"
                 >
                   Specialty Cleaning
@@ -135,7 +135,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/wedding-gown"
+                  href="/all-services/wedding-gown"
                   className="text-neutral-300 hover:text-white"
                 >
                   Wedding Gown Preservation
@@ -143,7 +143,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/delivery"
+                  href="/all-services/delivery"
                   className="text-neutral-300 hover:text-white"
                 >
                   Delivery
@@ -238,19 +238,19 @@ const Footer = () => {
               Sitemap
             </a>
             <Link
-              href="/privacy-policy"
+              href="/legal/privacy-policy"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms-and-conditions"
+              href="/legal/terms-and-conditions"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Terms of Service
             </Link>
             <Link
-              href="/accessibility-statement"
+              href="/legal/accessibility-statement"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Accessibility

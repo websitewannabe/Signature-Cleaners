@@ -170,7 +170,7 @@ export default function ServicesPage() {
                     Signature Cleaners offers expert garment care and delivery
                     services throughout Bucks County.
                   </p>
-                  <Link href="/dry-cleaning" className="block">
+                  <Link href="/all-services/dry-cleaning" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                     Convenient wash and fold service for your everyday laundry
                     needs, saving you time and effort.
                   </p>
-                  <Link href="/wash-fold" className="block">
+                  <Link href="/all-services/wash-fold" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -238,7 +238,7 @@ export default function ServicesPage() {
                     Specialized cleaning and preservation services for wedding
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
-                  <Link href="/wedding-gown" className="block">
+                  <Link href="/all-services/wedding-gown" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -272,7 +272,10 @@ export default function ServicesPage() {
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
-                  <Link href="/clean-household-items" className="block">
+                  <Link
+                    href="/all-services/clean-household-items"
+                    className="block"
+                  >
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -306,7 +309,10 @@ export default function ServicesPage() {
                     Perfect fit, perfected style — our expert tailoring brings
                     your garments to life.
                   </p>
-                  <Link href="/alteration-tailoring" className="block">
+                  <Link
+                    href="/all-services/alteration-tailoring"
+                    className="block"
+                  >
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -338,7 +344,7 @@ export default function ServicesPage() {
                     Clean clothes, delivered to your door — convenience you can
                     count on.
                   </p>
-                  <Link href="/delivery" className="block">
+                  <Link href="/all-services/delivery" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
@@ -372,7 +378,7 @@ export default function ServicesPage() {
                     Step into confidence with expert shoe repair that restores
                     and revives.
                   </p>
-                  <Link href="/shoe-repair" className="block">
+                  <Link href="/all-services/shoe-repair" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>

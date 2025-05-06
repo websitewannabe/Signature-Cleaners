@@ -455,7 +455,7 @@ export default function AboutPage() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to simplify your laundry routine?
           </h2>
-          <Link href="/all-services">
+          <Link href="/all-services/all-services">
             <Button
               size="lg"
               className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"

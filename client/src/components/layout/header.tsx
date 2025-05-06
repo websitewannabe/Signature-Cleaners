@@ -60,7 +60,7 @@ const Header = () => {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <div className="flex items-center h-10">
-                    <Link href="/all-services">
+                    <Link href="/all-services/all-services">
                       <NavigationMenuTrigger
                         className={`bg-transparent text-white ${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase`}
                       >
@@ -71,14 +71,14 @@ const Header = () => {
                   <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 shadow-lg">
                     <div className="grid grid-cols-2 gap-3 p-4 w-[600px] text-xs">
                       <Link
-                        href="/dry-cleaning"
+                        href="/all-services/dry-cleaning"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <AirVent className="w-5 h-5 mr-2 text-black" />
                         <div>Dry Cleaning</div>
                       </Link>
                       <Link
-                        href="/wash-fold"
+                        href="/all-services/wash-fold"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <div className="w-5 h-5 mr-2">
@@ -91,28 +91,28 @@ const Header = () => {
                         <div>Wash & Fold</div>
                       </Link>
                       <Link
-                        href="/alteration-tailoring"
+                        href="/all-services/alteration-tailoring"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <Shirt className="w-5 h-5 mr-2 text-black" />
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link
-                        href="/wedding-gown"
+                        href="/all-services/wedding-gown"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <Gem className="w-5 h-5 mr-2 text-black" />
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link
-                        href="/shoe-repair"
+                        href="/all-services/shoe-repair"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <Footprints className="w-5 h-5 mr-2 text-black" />
                         <div>Shoe Repair</div>
                       </Link>
                       <Link
-                        href="/clean-household-items"
+                        href="/all-services/clean-household-items"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <svg
@@ -131,7 +131,7 @@ const Header = () => {
                         <div>Cleaning of Household Items</div>
                       </Link>
                       <Link
-                        href="/delivery"
+                        href="/all-services/delivery"
                         className="flex items-center p-2 hover:bg-neutral-100 rounded"
                       >
                         <Car className="w-5 h-5 mr-2 text-black" />
@@ -191,14 +191,14 @@ const Header = () => {
                   </Link>
                   <div className="border-t border-neutral-700" />
                   <Link
-                    href="/dry-cleaning"
+                    href="/all-services/dry-cleaning"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <AirVent className="w-4 h-4" />
                     Dry Cleaning
                   </Link>
                   <Link
-                    href="/wash-fold"
+                    href="/all-services/wash-fold"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <img
@@ -209,28 +209,28 @@ const Header = () => {
                     Wash & Fold
                   </Link>
                   <Link
-                    href="/alteration-tailoring"
+                    href="/all-services/alteration-tailoring"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <Shirt className="w-4 h-4" />
                     Alterations & Tailoring
                   </Link>
                   <Link
-                    href="/wedding-gown"
+                    href="/all-services/wedding-gown"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <Gem className="w-4 h-4" />
                     Wedding Gowns
                   </Link>
                   <Link
-                    href="/shoe-repair"
+                    href="/all-services/shoe-repair"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <Footprints className="w-4 h-4" />
                     Shoe Repair
                   </Link>
                   <Link
-                    href="/clean-household-items"
+                    href="/all-services/clean-household-items"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <svg
@@ -249,7 +249,7 @@ const Header = () => {
                     Household Items
                   </Link>
                   <Link
-                    href="/delivery"
+                    href="/all-services/delivery"
                     className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
                   >
                     <Car className="w-4 h-4" />
