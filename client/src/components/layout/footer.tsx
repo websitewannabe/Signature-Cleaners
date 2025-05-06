@@ -222,7 +222,6 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
-            
           </div>
         </div>
 
@@ -239,19 +238,19 @@ const Footer = () => {
               Sitemap
             </a>
             <Link
-              href="/privacy"
+              href="/privacy-policy"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Privacy Policy
             </Link>
             <Link
-              href="/terms"
+              href="/terms-and-conditions"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Terms of Service
             </Link>
             <Link
-              href="/accessibility"
+              href="/accessibility-statement"
               className="text-neutral-400 hover:text-neutral-300 text-sm"
             >
               Accessibility

@@ -30,10 +30,13 @@ import PrivacyPage from "@/pages/privacy-page";
 function Router() {
   return (
     <Switch>
-      <Route path="/sitemap.xml" component={() => {
-        window.location.href = '/sitemap.xml';
-        return null;
-      }} />
+      <Route
+        path="/sitemap.xml"
+        component={() => {
+          window.location.href = "/sitemap.xml";
+          return null;
+        }}
+      />
       <Route path="/" component={HomePage} />
       <Route path="/all-services" component={ServicesPage} />
       <Route path="/wash-fold" component={WashFoldPage} />
@@ -57,9 +60,9 @@ function Router() {
       <Route path="/faq" component={FaqPage} />
       <Route path="/my-account" component={AuthPage} />
       <Route path="/delivery" component={DeliveryPage} />
-      <Route path="/accessibility" component={AccessibilityPage} />
-      <Route path="/terms" component={TermsPage} />
-      <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/accessibility-statement" component={AccessibilityPage} />
+      <Route path="/terms-and-conditions" component={TermsPage} />
+      <Route path="/privacy-policy" component={PrivacyPage} />
       <Route component={NotFound} />
     </Switch>
   );
