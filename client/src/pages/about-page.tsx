@@ -9,6 +9,10 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/about-us"
+        />
         <title>About Us | Signature Cleaners in Doylestown, PA</title>
         <meta
           name="description"

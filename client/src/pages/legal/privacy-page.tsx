@@ -1,4 +1,3 @@
-
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Helmet } from "react-helmet-async";
@@ -7,6 +6,10 @@ export default function PrivacyPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/legal/privacy-policy"
+        />
         <title>Privacy Policy | Signature Cleaners</title>
         <meta
           name="description"

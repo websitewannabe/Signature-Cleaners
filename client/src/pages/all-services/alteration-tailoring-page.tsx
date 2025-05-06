@@ -41,6 +41,10 @@ export default function AlterationTailoringPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/alteration-tailoring"
+        />
         <title>Alterations & Tailoring | Signature Cleaners</title>
         <meta
           name="description"

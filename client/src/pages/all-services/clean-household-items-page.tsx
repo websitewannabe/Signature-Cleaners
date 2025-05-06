@@ -18,6 +18,10 @@ export default function CleanHouseholdItemsPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/clean-household-items"
+        />
         <title>Household Item Cleaning | Signature Cleaners</title>
         <meta
           name="description"

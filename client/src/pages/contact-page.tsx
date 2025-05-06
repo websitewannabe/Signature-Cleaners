@@ -105,6 +105,10 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/contact-us"
+        />
         <title>
           Contact Signature Cleaners | Schedule a Pickup or Ask a Question
         </title>

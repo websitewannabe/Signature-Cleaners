@@ -41,6 +41,10 @@ export default function WashFoldPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/wash-fold"
+        />
         <title>Wash & Fold Laundry Service | Signature Cleaners</title>
         <meta
           name="description"

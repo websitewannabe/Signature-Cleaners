@@ -18,6 +18,10 @@ export default function DeliveryPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/delivery"
+        />
         <title>Free Pickup & Delivery | Signature Cleaners</title>
         <meta
           name="description"

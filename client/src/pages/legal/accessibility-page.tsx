@@ -6,6 +6,10 @@ export default function AccessibilityPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/legal/accessibility-statement"
+        />
         <title>Accessibility Statement | Signature Cleaners</title>
       </Helmet>
       <Header />

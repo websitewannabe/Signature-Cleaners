@@ -18,6 +18,10 @@ export default function ShoeRepairPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/shoe-repair"
+        />
         <title>Shoe Repair Services | Signature Cleaners</title>
         <meta
           name="description"

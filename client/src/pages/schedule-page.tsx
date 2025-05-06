@@ -54,6 +54,10 @@ export default function SchedulePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/schedule"
+        />
         <title>Schedule Pickup | Signature Cleaners</title>
         <meta
           name="description"

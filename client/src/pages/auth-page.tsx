@@ -26,6 +26,10 @@ export default function AuthPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/my-account"
+        />
         <title>Log In or Create Account | Signature Cleaners</title>
         <meta
           name="description"

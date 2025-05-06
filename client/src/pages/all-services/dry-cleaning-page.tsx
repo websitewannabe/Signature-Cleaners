@@ -47,6 +47,10 @@ export default function DryCleaningPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/dry-cleaning"
+        />
         <title>Dry Cleaning Services | Signature Cleaners</title>
         <meta
           name="description"

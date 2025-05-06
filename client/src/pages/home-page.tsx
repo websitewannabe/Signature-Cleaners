@@ -58,7 +58,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <link rel="canonical" href="https://signaturecleaners.com/" />
+        <link rel="canonical" href="https://www.mysignaturecleaners.com/" />
         <title>
           Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA
         </title>
@@ -329,7 +329,10 @@ export default function HomePage() {
                     Comprehensive cleaning solutions for household items
                     including comforters, blankets, and decorative pieces.
                   </p>
-                  <Link href="/all-services/clean-household-items" className="block">
+                  <Link
+                    href="/all-services/clean-household-items"
+                    className="block"
+                  >
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>

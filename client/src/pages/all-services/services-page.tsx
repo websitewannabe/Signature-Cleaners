@@ -13,6 +13,10 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link
+          rel="canonical"
+          href="https://www.mysignaturecleaners.com/all-services/all-services"
+        />
         <title>
           Services | Signature Cleaners – Dry Cleaning, Wash & Fold, Tailoring
         </title>
