@@ -58,6 +58,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
+        <link rel="canonical" href="https://signaturecleaners.com/" />
         <title>
           Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA
         </title>
