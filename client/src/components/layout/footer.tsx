@@ -222,35 +222,7 @@ const Footer = () => {
                 </span>
               </li>
             </ul>
-            <div className="mt-4">
-              <h4 className="text-sm font-semibold text-neutral-400 mb-2">
-                Subscribe to our newsletter
-              </h4>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="px-3 py-2 bg-neutral-800 text-white rounded-l-md focus:outline-none focus:ring-1 focus:ring-primary w-full"
-                />
-                <button
-                  type="submit"
-                  className="bg-primary hover:bg-primary-light px-4 py-2 rounded-r-md"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </form>
-            </div>
+            
           </div>
         </div>
 
