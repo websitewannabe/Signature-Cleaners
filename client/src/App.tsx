@@ -30,6 +30,7 @@ import WeddingDressCleaningDoylestownPage from "@/pages/locations/wedding-dress-
 import HouseholdCleaningDoylestownPage from "@/pages/locations/household-cleaning-doylestown";
 import LaundryDeliveryDoylestownPage from "@/pages/locations/laundry-delivery-doylestown";
 import MensTailorDoylestownPage from "@/pages/locations/mens-tailor-doylestown";
+import DoylestownPage from "@/pages/locations/doylestown";
 
 function Router() {
   return (
@@ -66,8 +67,9 @@ function Router() {
       />
       <Route path="/legal/terms-and-conditions" component={TermsPage} />
       <Route path="/legal/privacy-policy" component={PrivacyPage} />
-      
+
       {/* Location-based pages */}
+      <Route path="/doylestown" component={DoylestownPage} />
       <Route path="/doylestown-dry-cleaners" component={DoylestownDryCleanersPage} />
       <Route path="/dry-cleaning-doylestown" component={DryCleaningDoylestownPage} />
       <Route path="/wash-and-fold-doylestown" component={WashAndFoldDoylestownPage} />
@@ -75,7 +77,7 @@ function Router() {
       <Route path="/household-cleaning-doylestown" component={HouseholdCleaningDoylestownPage} />
       <Route path="/laundry-delivery-doylestown" component={LaundryDeliveryDoylestownPage} />
       <Route path="/mens-tailor-doylestown" component={MensTailorDoylestownPage} />
-      
+
       <Route component={NotFound} />
     </Switch>
   );
