@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
@@ -42,11 +41,14 @@ export default function DoylestownPage() {
       </Helmet>
 
       <Header />
-      
+
       <main>
         {/* Hero Section */}
-        <section className="relative bg-[#1A1E23] py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-52">
+        <div className="absolute inset-0 bg-[url('/images/exterior.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mt-24">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Professional Dry Cleaning in Doylestown
             </h1>
@@ -57,7 +59,8 @@ export default function DoylestownPage() {
               <Link href="/schedule">Schedule Pickup in Doylestown</Link>
             </Button>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* About Services */}
         <section className="py-16 bg-white">
