@@ -171,8 +171,11 @@ export default function DoylestownPage() {
                     <p className="font-semibold">- Michael R., Doylestown</p>
                   </div>
                   <div className="bg-neutral-50 p-6 rounded-lg">
-                    <p className="italic mb-4">"I've been using Signature Cleaners for years. Their Doylestown location is convenient and the staff is always friendly."</p>
-                    <p className="font-semibold">- Sarah T., Doylestown</p>
+                    <div>
+                  <h4 className="font-semibold">Scott N.</h4>
+                  <p className="italic mb-4">"Very friendly staff and always quick service. Highly recommend Signature Cleaners of Doylestown"</p>
+                  <p className="font-semibold">- Scott N., Doylestown</p>
+                </div>
                   </div>
                 </div>
               </div>
