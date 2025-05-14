@@ -208,7 +208,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Expert Dry Cleaning Services</h2>
                 <p className="text-lg text-neutral-600 mb-8">Experience premium garment care with our state-of-the-art dry cleaning services. We treat each item with precision and care, ensuring your clothes look and feel their best.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/dry-cleaning-doylestown">Learn More</Link>
+                  <Link href="/all-services/dry-cleaning">Learn More</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -229,7 +229,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Wedding Gown Preservation</h2>
                 <p className="text-lg text-neutral-600 mb-8">Trust us with your precious wedding gown. Our specialized preservation process ensures your dress remains as beautiful as the day you wore it.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/wedding-dress-cleaning-doylestown">Learn More</Link>
+                  <Link href="/all-services/wedding-gown">Learn More</Link>
                 </Button>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Free Pickup & Delivery</h2>
                 <p className="text-lg text-neutral-600 mb-8">Enjoy the convenience of our complimentary pickup and delivery service throughout Doylestown. Schedule your service with just a few clicks.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/laundry-delivery-doylestown">Schedule Pickup</Link>
+                  <Link href="/all-services/delivery">Schedule Pickup</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -311,7 +311,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Professional Wash & Fold</h2>
                 <p className="text-lg text-neutral-600 mb-8">Experience hassle-free laundry service with our professional wash and fold. We handle everything from everyday wear to delicate fabrics with expert care.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/wash-and-fold-doylestown">Learn More</Link>
+                  <Link href="/all-services/wash-fold">Learn More</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -332,7 +332,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Expert Alterations & Tailoring</h2>
                 <p className="text-lg text-neutral-600 mb-8">Our skilled tailors ensure your garments fit perfectly. From simple hemming to complex alterations, we provide precise craftsmanship for all your tailoring needs.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/mens-tailor-doylestown">Learn More</Link>
+                  <Link href="/all-services/alteration-tailoring">Learn More</Link>
                 </Button>
               </div>
             </div>
@@ -347,7 +347,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Professional Shoe Repair</h2>
                 <p className="text-lg text-neutral-600 mb-8">Extend the life of your favorite footwear with our expert shoe repair services. From heel replacement to sole repair, we restore your shoes to like-new condition.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/shoe-repair">Learn More</Link>
+                  <Link href="/all-services/shoe-repair">Learn More</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -368,7 +368,7 @@ export default function DoylestownPage() {
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Household Items Cleaning</h2>
                 <p className="text-lg text-neutral-600 mb-8">From delicate curtains to bulky comforters, we clean all types of household items with specialized care to maintain their quality and extend their life.</p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/household-cleaning-doylestown">Learn More</Link>
+                  <Link href="/all-services/clean-household-items">Learn More</Link>
                 </Button>
               </div>
             </div>
