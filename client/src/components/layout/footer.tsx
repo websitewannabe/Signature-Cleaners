@@ -95,6 +95,14 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/doylestown"
+                  className="text-neutral-300 hover:text-white"
+                >
+                  Doylestown
+                </Link>
+              </li>
             </ul>
           </div>
 
