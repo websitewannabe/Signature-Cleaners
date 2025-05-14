@@ -304,6 +304,78 @@ export default function DoylestownPage() {
           </div>
         </section>
 
+        {/* Wash & Fold Service */}
+        <section className="py-16 bg-neutral-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Professional Wash & Fold</h2>
+                <p className="text-lg text-neutral-600 mb-8">Experience hassle-free laundry service with our professional wash and fold. We handle everything from everyday wear to delicate fabrics with expert care.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/wash-and-fold-doylestown">Learn More</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img src="/images/washFold.jpg" alt="Wash & Fold Service" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alterations & Tailoring */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-first">
+                <img src="/images/tailor.jpg" alt="Alterations & Tailoring" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Expert Alterations & Tailoring</h2>
+                <p className="text-lg text-neutral-600 mb-8">Our skilled tailors ensure your garments fit perfectly. From simple hemming to complex alterations, we provide precise craftsmanship for all your tailoring needs.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/mens-tailor-doylestown">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Shoe Repair */}
+        <section className="py-16 bg-neutral-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Professional Shoe Repair</h2>
+                <p className="text-lg text-neutral-600 mb-8">Extend the life of your favorite footwear with our expert shoe repair services. From heel replacement to sole repair, we restore your shoes to like-new condition.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/shoe-repair">Learn More</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img src="/images/shoeRepair.jpg" alt="Shoe Repair Service" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Household Items Cleaning */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-first">
+                <img src="/images/householdItems.jpg" alt="Household Items Cleaning" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Household Items Cleaning</h2>
+                <p className="text-lg text-neutral-600 mb-8">From delicate curtains to bulky comforters, we clean all types of household items with specialized care to maintain their quality and extend their life.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/household-cleaning-doylestown">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Areas We Serve */}
         <section className="py-16 bg-neutral-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
