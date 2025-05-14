@@ -1,0 +1,136 @@
+Objective: Generate SEO-optimized service pages for Signature Cleaners of Doylestown, a premium dry cleaner and tailoring service in Doylestown, PA. These pages will be integrated into the business website (https://www.mysignaturecleaners.com) and must support ranking in the Google Local Map Pack and for relevant service keywords. Match the visual and content tone of the current website.
+
+🔧 Instructions for Each Web Page
+Design Match:
+
+Match the clean, modern, professional style of the Signature Cleaners site.
+
+Responsive design for both desktop and mobile.
+
+Follow the layout conventions: header (H1), section headers (H2/H3), CTA buttons, contact section, and footer.
+
+Location Targeting:
+
+Every page must emphasize Doylestown, PA.
+
+Use terms like “in Doylestown”, “near Doylestown”, “serving the Doylestown community”, etc., naturally throughout content.
+
+SEO Elements:
+
+Include relevant keywords per page (see below).
+
+Use engaging meta titles and meta descriptions.
+
+URL slug should be clean and descriptive (e.g., /dry-cleaning-doylestown).
+
+One main H1 tag per page with the primary keyword and location.
+
+Use relevant H2/H3 subheadings for services, benefits, FAQs, and trust signals.
+
+Call to Action (CTA):
+
+Encourage contact, quote requests, or drop-off.
+
+Include links to contact page and/or phone number with click-to-call.
+
+🧩 Pages to Generate (7–10 total)
+Location Page
+
+Slug: /doylestown-dry-cleaners
+
+H1: Premium Dry Cleaning & Tailoring in Doylestown, PA
+
+Focus: General overview of Signature Cleaners’ services with local trust signals.
+
+GBP Categories: All categories (summary)
+
+Dry Cleaning
+
+Slug: /dry-cleaning-doylestown
+
+H1: Expert Dry Cleaning Services in Doylestown, PA
+
+Keywords: “dry cleaner near me”, “dry cleaning Doylestown PA”
+
+GBP Category: Dry cleaner
+
+Wash & Fold Laundry
+
+Slug: /wash-and-fold-doylestown
+
+H1: Wash & Fold Laundry Service in Doylestown
+
+Keywords: “laundry service Doylestown”, “drop off laundry near me”
+
+GBP Category: Laundry service
+
+Wedding Gown Cleaning & Preservation
+
+Slug: /wedding-dress-cleaning-doylestown
+
+H1: Wedding Gown Cleaning & Preservation in Doylestown
+
+Keywords: “wedding gown preservation Doylestown”
+
+GBP Category: Dry cleaner
+
+Household Item Cleaning
+
+Slug: /household-cleaning-doylestown
+
+H1: Household Fabric Cleaning in Doylestown, PA
+
+Focus: Comforters, drapes, table linens, etc.
+
+GBP Category: Laundry service
+
+Delivery Service
+
+Slug: /laundry-delivery-doylestown
+
+H1: Laundry & Dry Cleaning Delivery in Doylestown
+
+Keywords: “laundry pickup and delivery Doylestown”
+
+GBP Category: Delivery service
+
+Clothing Alterations & Tailoring
+
+Slug: /clothing-alterations-doylestown
+
+H1: Clothing Alterations in Doylestown
+
+Keywords: “clothing alteration service”, “tailor Doylestown”
+
+GBP Categories: Clothing alteration service, Tailor
+
+Men’s Tailoring Services
+
+Slug: /mens-tailor-doylestown
+
+H1: Custom Men’s Tailoring in Doylestown
+
+Keywords: “men’s tailor near me”, “custom suits Doylestown”
+
+GBP Category: Men’s tailor
+
+Shoe Repair Services
+
+Slug: /shoe-repair-doylestown
+
+H1: Shoe Repair & Restoration in Doylestown
+
+Keywords: “shoe repair near me”, “cobbler Doylestown”
+
+GBP Category: (Not listed on GBP – optional trust content page)
+
+✅ Content Guidelines
+Each page should be 500–900 words.
+
+Use local references (e.g., “Located near Doylestown Borough Hall…”).
+
+Highlight Signature Cleaners’ quality, history, or commitment to excellence.
+
+Include FAQs, service-specific benefits, and why customers choose you.
+
+Use schema markup for LocalBusiness where applicable.
