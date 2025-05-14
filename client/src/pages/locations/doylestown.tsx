@@ -442,7 +442,7 @@ export default function DoylestownPage() {
               size="lg"
               className="bg-[#F6AE2D] hover:bg-white hover:text-[#790003]"
             >
-              <Link href="/schedule">Schedule Now</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </Button>
           </div>
         </section>
