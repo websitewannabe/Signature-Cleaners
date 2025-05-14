@@ -201,7 +201,59 @@ export default function DoylestownPage() {
           </div>
         </section>
 
-        
+        {/* Dry Cleaning Service */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Expert Dry Cleaning Services</h2>
+                <p className="text-lg text-neutral-600 mb-8">Experience premium garment care with our state-of-the-art dry cleaning services. We treat each item with precision and care, ensuring your clothes look and feel their best.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/dry-cleaning-doylestown">Learn More</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img src="/images/interior.jpg" alt="Dry Cleaning Service" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Wedding Gown Service */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-first">
+                <img src="/images/weddingGown.jpg" alt="Wedding Gown Service" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Wedding Gown Preservation</h2>
+                <p className="text-lg text-neutral-600 mb-8">Trust us with your precious wedding gown. Our specialized preservation process ensures your dress remains as beautiful as the day you wore it.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/wedding-dress-cleaning-doylestown">Learn More</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Delivery Service */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">Free Pickup & Delivery</h2>
+                <p className="text-lg text-neutral-600 mb-8">Enjoy the convenience of our complimentary pickup and delivery service throughout Doylestown. Schedule your service with just a few clicks.</p>
+                <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
+                  <Link href="/laundry-delivery-doylestown">Schedule Pickup</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img src="/images/delivery.jpg" alt="Delivery Service" className="rounded-lg shadow-lg w-full h-[400px] object-cover" />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Map & Reviews */}
         <section className="py-16 bg-white">
