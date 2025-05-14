@@ -15,7 +15,7 @@ export default function DoylestownPage() {
         />
         <link
           rel="canonical"
-          href="https://www.mysignaturecleaners.com/all-services/doylestown"
+          href="https://www.mysignaturecleaners.com/doylestown"
         />
         <script type="application/ld+json">
           {`
