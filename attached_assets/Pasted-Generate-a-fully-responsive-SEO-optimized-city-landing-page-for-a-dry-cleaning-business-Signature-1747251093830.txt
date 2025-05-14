@@ -1,0 +1,43 @@
+Generate a fully responsive, SEO-optimized city landing page for a dry cleaning business, "Signature Cleaners," focused on Doylestown, PA.
+
+Framework: React (or HTML + Tailwind if static)
+
+### Page Metadata
+- **Page Title**: "Dry Cleaning in Doylestown, PA | Signature Cleaners"
+- **Meta Description**: "Looking for expert dry cleaning in Doylestown? Signature Cleaners offers eco-friendly, same-day service with exceptional quality and care."
+- **URL slug**: /doylestown/
+
+### Content Requirements
+Use “Doylestown” naturally throughout the page at least 6–8 times.
+
+#### Sections to Include:
+1. **H1 Heading**: "Professional Dry Cleaning in Doylestown"
+2. **About Our Services in Doylestown** (150–200 words): Highlight dry cleaning, wash-and-fold, and alterations.
+3. **Why Doylestown Chooses Signature Cleaners**: Use bullet points for benefits like fast turnaround, eco-friendly solvents, family-owned values, and quality care.
+4. **Map & Directions**:
+   - Embed a Google Map centered on Doylestown, PA.
+5. **Image of Doylestown**:
+   - Use a responsive image of a recognizable Doylestown landmark or downtown.
+6. **Local Reviews**:
+   - Include 2–3 short customer testimonials that mention Doylestown specifically.
+7. **Areas We Serve Nearby**:
+   - List towns such as New Hope, Warrington, Chalfont, Buckingham.
+8. **Internal Links**:
+   - Add links to core service pages: `/dry-cleaning/`, `/wash-and-fold/`, `/alterations/`
+9. **Call to Action (CTA)**:
+   - Section with: "Visit Us or Schedule a Pickup in Doylestown Today"
+10. **Schema Markup**:
+    - Add JSON-LD structured data for `LocalBusiness` including `areaServed: "Doylestown, PA"` and `address`, `telephone`, and `url`.
+
+### Design Guidelines
+- Clean, modern design
+- Colors:
+  - Barn Red: #790003
+  - Eerie Black: #1A1E23
+  - White: #FFFFFF
+  - Outer Space: #424B4D
+  - Hunyadi Yellow: #F6AE2D
+- Fully responsive across devices
+- Suggest filename: `DoylestownPage.jsx` (or `doylestown.html`)
+
+Deliver the complete page code with all content, styling, and markup.
