@@ -376,29 +376,6 @@ export default function DoylestownPage() {
           </div>
         </section>
 
-        {/* Areas We Serve */}
-        <section className="py-16 bg-neutral-100">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold mb-6">
-              Areas We Serve Near Doylestown
-            </h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="p-4 bg-white rounded-lg text-center">
-                New Hope
-              </div>
-              <div className="p-4 bg-white rounded-lg text-center">
-                Warrington
-              </div>
-              <div className="p-4 bg-white rounded-lg text-center">
-                Chalfont
-              </div>
-              <div className="p-4 bg-white rounded-lg text-center">
-                Buckingham
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* CTA */}
         <section className="py-16 bg-[#790003] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
