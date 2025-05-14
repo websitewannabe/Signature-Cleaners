@@ -66,7 +66,7 @@ export default function AlterationTailoringPage() {
               "Signature Cleaners offers precision tailoring and alterations for a perfect fit. Services include hemming, resizing, fittings, and high-quality garment repairs.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Main Street",
+              streetAddress: "1456 Ferry Road #10",
               addressLocality: "Doylestown",
               addressRegion: "PA",
               postalCode: "18901",

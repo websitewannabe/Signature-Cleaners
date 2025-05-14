@@ -43,7 +43,7 @@ export default function WeddingGownPage() {
               "Signature Cleaners offers professional wedding gown cleaning and preservation services using safe, museum-quality methods to protect cherished bridal garments for years to come.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Main Street",
+              streetAddress: "1456 Ferry Road #10",
               addressLocality: "Doylestown",
               addressRegion: "PA",
               postalCode: "18901",

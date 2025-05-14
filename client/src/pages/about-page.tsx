@@ -34,7 +34,7 @@ export default function AboutPage() {
               "Signature Cleaners is a trusted garment care provider in Bucks County, offering expert dry cleaning, tailoring, shoe repair, and preservation services.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Main Street",
+              streetAddress: "1456 Ferry Road #10",
               addressLocality: "Doylestown",
               addressRegion: "PA",
               postalCode: "18901",

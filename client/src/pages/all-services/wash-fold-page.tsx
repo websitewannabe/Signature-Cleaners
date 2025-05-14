@@ -66,7 +66,7 @@ export default function WashFoldPage() {
               "Signature Cleaners offers a full-service wash and fold experience with expert sorting, premium detergents, and folding for regular laundry, delicates, towels, and bedding.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Main Street",
+              streetAddress: "1456 Ferry Road #10",
               addressLocality: "Doylestown",
               addressRegion: "PA",
               postalCode: "18901",

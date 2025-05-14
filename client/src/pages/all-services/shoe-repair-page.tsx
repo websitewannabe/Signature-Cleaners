@@ -43,7 +43,7 @@ export default function ShoeRepairPage() {
               "Signature Cleaners offers expert shoe repair services including sole and heel replacement, color restoration, polishing, and stretching. Bring life back to your favorite footwear.",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "123 Main Street",
+              streetAddress: "1456 Ferry Road #10",
               addressLocality: "Doylestown",
               addressRegion: "PA",
               postalCode: "18901",
