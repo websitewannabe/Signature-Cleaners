@@ -52,7 +52,7 @@ export default function DoylestownPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Professional Dry Cleaning in Doylestown
             </h1>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Your trusted local dry cleaner providing premium garment care services to the Doylestown community with exceptional attention to detail.
             </p>
             <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
