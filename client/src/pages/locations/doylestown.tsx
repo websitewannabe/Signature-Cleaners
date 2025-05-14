@@ -78,39 +78,124 @@ export default function DoylestownPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
-              Premium Dry Cleaning Services in Doylestown
+              Premium Dry Cleaning in Doylestown
             </h2>
-            <p className="text-lg text-[#424B4D] mb-6">
-              At Signature Cleaners, we've been serving the Doylestown community
-              with exceptional dry cleaning, wash-and-fold, and alteration
-              services. Our state-of-the-art facility uses eco-friendly solvents
-              and advanced cleaning techniques to ensure your garments receive
-              the highest quality care.
-            </p>
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="bg-neutral-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Dry Cleaning</h3>
-                <p className="mb-4">
-                  Expert care for your finest garments using eco-friendly
-                  methods.
-                </p>
-                <Link href="/all-services/dry-cleaning">Learn More →</Link>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Same-day service available for Doylestown residents
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Eco-friendly cleaning solutions
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Family-owned and operated since 1985
+                    </span>
+                  </li>
+                </ul>
               </div>
-              <div className="bg-neutral-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Wash & Fold</h3>
-                <p className="mb-4">
-                  Professional laundry service with attention to detail.
-                </p>
-                <Link href="/all-services/wash-fold">Learn More →</Link>
-              </div>
-              <div className="bg-neutral-50 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Alterations</h3>
-                <p className="mb-4">
-                  Expert tailoring and alterations for the perfect fit.
-                </p>
-                <Link href="/all-services/alteration-tailoring">
-                  Learn More →
-                </Link>
+              <div>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Free pickup and delivery in Doylestown
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Expert garment care and attention to detail
+                    </span>
+                  </li>
+                  <li className="flex items-start">
+                    <svg
+                      className="h-6 w-6 text-[#790003] mt-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                    <span className="ml-3">
+                      Convenient location in downtown Doylestown
+                    </span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
