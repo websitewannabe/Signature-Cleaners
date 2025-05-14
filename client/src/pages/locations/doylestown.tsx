@@ -376,6 +376,16 @@ export default function DoylestownPage() {
           </div>
         </section>
 
+        {/* About Doylestown */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-[#1A1E23]">About Doylestown, PA</h2>
+            <p className="text-lg text-[#424B4D] mt-4">
+              Doylestown, the charming county seat of Bucks County, stands as a testament to the perfect blend of historic preservation and modern vitality. This walkable downtown hub captivates visitors and residents alike with its beautifully preserved architecture, thriving small businesses, and renowned cultural institutions including the Mercer Museum, Fonthill Castle, and the James A. Michener Art Museum. The strong sense of community and small-town atmosphere make it one of Pennsylvania's most desirable places to live. For over three decades, Signature Cleaners has been proud to serve the residents of this vibrant town, contributing to its legacy of quality local services and helping to keep Doylestown looking its best, one garment at a time.
+            </p>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-[#790003] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
