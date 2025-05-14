@@ -167,8 +167,8 @@ export default function DoylestownPage() {
                 <h2 className="text-2xl font-bold mb-6">What Our Customers Say</h2>
                 <div className="space-y-6">
                   <div className="bg-neutral-50 p-6 rounded-lg">
-                    <p className="italic mb-4">"The best dry cleaner in Doylestown! They always do an amazing job with my suits and deliver right to my office."</p>
-                    <p className="font-semibold">- Michael R., Doylestown</p>
+                    <p className="italic mb-4">"I am very pleased with my experience with Signer Cleaners-of Doylestown. The woman was very pleasant at the counter, I had a pair of slacks shortened and who ever did them did a very good job. (Thank you)."</p>
+                    <p className="font-semibold">- Angela T., Doylestown</p>
                   </div>
                   <div className="bg-neutral-50 p-6 rounded-lg">
                     <div>
