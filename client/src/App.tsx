@@ -22,6 +22,11 @@ import AccessibilityPage from "@/pages/legal/accessibility-page";
 import TermsPage from "@/pages/legal/terms-page";
 import PrivacyPage from "@/pages/legal/privacy-page";
 
+// Location-based pages
+import DoylestownDryCleanersPage from "@/pages/locations/doylestown-dry-cleaners";
+import DryCleaningDoylestownPage from "@/pages/locations/dry-cleaning-doylestown";
+import WashAndFoldDoylestownPage from "@/pages/locations/wash-and-fold-doylestown";
+
 function Router() {
   return (
     <Switch>
@@ -57,6 +62,12 @@ function Router() {
       />
       <Route path="/legal/terms-and-conditions" component={TermsPage} />
       <Route path="/legal/privacy-policy" component={PrivacyPage} />
+      
+      {/* Location-based pages */}
+      <Route path="/doylestown-dry-cleaners" component={DoylestownDryCleanersPage} />
+      <Route path="/dry-cleaning-doylestown" component={DryCleaningDoylestownPage} />
+      <Route path="/wash-and-fold-doylestown" component={WashAndFoldDoylestownPage} />
+      
       <Route component={NotFound} />
     </Switch>
   );
