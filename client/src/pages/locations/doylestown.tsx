@@ -59,9 +59,7 @@ export default function DoylestownPage() {
                 Professional Dry Cleaning in Doylestown
               </h1>
               <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Your trusted local dry cleaner providing premium garment care
-                services to the Doylestown community with exceptional attention
-                to detail.
+                Proudly serving the Doylestown community with trusted dry cleaning for decades.
               </p>
               <Button
                 asChild
