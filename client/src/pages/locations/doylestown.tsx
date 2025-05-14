@@ -384,6 +384,49 @@ export default function DoylestownPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <section className="py-16 bg-neutral-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-[#1A1E23] mb-6">Frequently Asked Questions – Doylestown, PA</h2>
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>Do you offer same-day dry cleaning in Doylestown?</AccordionTrigger>
+                <AccordionContent>
+                  Yes! We offer same-day dry cleaning for orders dropped off before 10 AM at our Doylestown location.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Is pickup and delivery available for homes in Doylestown?</AccordionTrigger>
+                <AccordionContent>
+                  Absolutely. We provide free pickup and delivery to residents throughout the Doylestown borough and surrounding neighborhoods.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Where is your Doylestown location?</AccordionTrigger>
+                <AccordionContent>
+                  We're conveniently located at 80 N Main St, right in the heart of downtown Doylestown.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Do you clean wedding gowns in Doylestown?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, our Doylestown facility specializes in wedding gown preservation and restoration. We treat each gown with the utmost care.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Can I schedule services online if I live in Doylestown?</AccordionTrigger>
+                <AccordionContent>
+                  Definitely. Use our online scheduling tool to book any of our services, including pickup, for Doylestown residents.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="py-16 bg-[#790003] text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
