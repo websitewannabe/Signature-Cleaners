@@ -407,7 +407,7 @@ export default function DoylestownPage() {
               <AccordionItem value="item-3">
                 <AccordionTrigger>Where is your Doylestown location?</AccordionTrigger>
                 <AccordionContent>
-                  We're conveniently located at 80 N Main St, right in the heart of downtown Doylestown.
+                  We're conveniently located at 1456 Ferry Road #10, Doylestown, PA 18901.
                 </AccordionContent>
               </AccordionItem>
 
