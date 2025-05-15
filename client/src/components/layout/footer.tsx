@@ -177,7 +177,7 @@ const Footer = () => {
                   />
                 </svg>
                 <a
-                  href="https://g.co/kgs/N5hacqD"
+                  href="https://www.google.com/maps/place/Signature+Cleaners+at+Doylestown/@40.3414365,-75.1344387,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6a8674873a9d9:0x4c3105276c27f6a4!8m2!3d40.3414365!4d-75.1318638!16s%2Fg%2F1td7jphd"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors"
