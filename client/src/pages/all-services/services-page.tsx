@@ -130,15 +130,6 @@ export default function ServicesPage() {
       </Helmet>
 
       <Header />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs
-          items={[
-            { label: "Home", path: "/" },
-            { label: "Services", path: "/all-services/all-services", current: true }
-          ]}
-        />
-      </div>
 
       <script type="application/ld+json">
         {JSON.stringify({
@@ -174,6 +165,14 @@ export default function ServicesPage() {
               Discover our comprehensive range of cleaning and garment care
               services
             </p>
+          </div>
+          <div className="absolute bottom-8 left-8">
+            <Breadcrumbs
+              items={[
+                { label: "Home", path: "/" },
+                { label: "Services", path: "/all-services/all-services", current: true }
+              ]}
+            />
           </div>
         </div>
       </section>
