@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Shirt, Car, Footprints } from "lucide-react";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -130,36 +129,6 @@ export default function ServicesPage() {
       </Helmet>
 
       <Header />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <Breadcrumbs
-          items={[
-            { label: "Home", path: "/" },
-            { label: "Services", path: "/all-services/all-services", current: true }
-          ]}
-        />
-      </div>
-
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://signaturecleaners.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Services",
-              "item": "https://signaturecleaners.com/all-services/all-services"
-            }
-          ]
-        })}
-      </script>
 
       {/* Hero Section */}
       <section className="relative py-40">
