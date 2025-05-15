@@ -464,7 +464,7 @@ export default function CleanHouseholdItemsPage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d195364.09092274493!2d-75.17437112929687!3d40.33361389999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6202cd62a52b9%3A0x4c3105276c27f6a4!2sBucks%20County%2C%20PA!5e0!3m2!1sen!2sus!4v1704641408397!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -486,9 +486,12 @@ export default function CleanHouseholdItemsPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Chalfont
                   </p>
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/doylestown"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Doylestown
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Dublin
                   </p>
