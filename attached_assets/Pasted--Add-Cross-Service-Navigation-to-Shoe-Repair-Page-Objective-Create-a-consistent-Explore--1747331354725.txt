@@ -1,0 +1,99 @@
+### Add Cross-Service Navigation to "Shoe Repair" Page
+
+**Objective:**
+Create a consistent “Explore Our Other Services” section on the `/all-services/shoe-repair` page, matching the design and behavior of similar sections already added to the **Dry Cleaning**, **Wash & Fold**, **Alterations & Tailoring**, and **Wedding Gown** pages.
+
+---
+
+**Section Placement:**
+Insert this section **after the main Shoe Repair content** and **just before the “How It Works” section**.
+
+---
+
+**Section Content:**
+
+* **Heading:**
+  `<h2>Explore Our Other Services</h2>`
+
+* **Subtitle (optional):**
+  `More ways we can help keep your wardrobe and home at their best`
+
+---
+
+**Services to Display (Exclude Shoe Repair):**
+
+1. Dry Cleaning
+2. Wash & Fold
+3. Alterations & Tailoring
+4. Wedding Gowns
+5. Cleaning of Household Items
+6. Delivery
+
+Each service should be presented as a **card** with:
+
+* A representative icon
+* The service name
+* A one-line description
+* A link to the corresponding service page
+
+---
+
+**Design & Layout Guidelines:**
+
+* Use a **responsive grid layout**:
+
+  * Desktop: 3 cards per row
+  * Tablet: 2 cards
+  * Mobile: 1 card
+* **Uniform card sizing**:
+
+  * All cards must have equal height and width, regardless of content
+* **Interactive styling**:
+
+  * Add a hover effect like `box-shadow` or `transform: scale(1.03)`
+* Match existing site styles in terms of font, spacing, and color scheme
+
+---
+
+**Example CSS:**
+
+```css
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  min-height: 220px;
+}
+```
+
+---
+
+**Routing:**
+
+Each card should link to:
+
+* `/services/dry-cleaning`
+* `/services/wash-fold`
+* `/services/alterations-tailoring`
+* `/services/wedding-gowns`
+* `/services/household-items`
+* `/services/delivery`
+
+---
+
+**Accessibility Notes:**
+
+* Use semantic elements (`<section>`, `<nav>`, `<h2>`, `<a>`)
+* Include `aria-labels` or `alt` attributes for icons and links
