@@ -135,14 +135,8 @@ export default function ServicesPage() {
       <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/images/cleaners.gif')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <Breadcrumbs
-            items={[
-              { label: "Home", path: "/" },
-              { label: "Services", path: "/all-services/all-services", current: true }
-            ]}
-          />
-          <div className="text-center mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative h-full flex flex-col">
+          <div className="text-center flex-grow">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               Our Services
             </h1>
@@ -150,6 +144,14 @@ export default function ServicesPage() {
               Discover our comprehensive range of cleaning and garment care
               services
             </p>
+          </div>
+          <div className="absolute bottom-8 left-8">
+            <Breadcrumbs
+              items={[
+                { label: "Home", path: "/" },
+                { label: "Services", path: "/all-services/all-services", current: true }
+              ]}
+            />
           </div>
         </div>
       </section>
