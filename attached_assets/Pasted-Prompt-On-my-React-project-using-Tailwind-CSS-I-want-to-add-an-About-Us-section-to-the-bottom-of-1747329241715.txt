@@ -1,0 +1,38 @@
+Prompt:
+On my React project using Tailwind CSS, I want to add an "About Us" section to the bottom of the Home Page ("/"), just above the footer. Use the content and style guidelines based on the existing "About Us" page.
+
+Instructions:
+
+1. **Placement:**
+   - Insert the new "About Us" section right above the `<Footer />` component in the `home-page.tsx` file.
+
+2. **Content Summary:**
+   Include a brief version of our story using these points:
+   - "Signature Cleaners was founded on simple principles: provide a quality product, deliver excellent customer service, and offer fair pricing."
+   - "With decades of experience, the team brings a deep understanding of fabric care and stain removal."
+   - "Every garment is treated with personal care using top-of-the-line equipment to ensure high standards of cleanliness and presentation."
+   - Include a small image (e.g., team photo from About Us page).
+
+3. **Mission & Values (Use 3 Boxes in a Horizontal Layout on Desktop):**
+   - **Quality First:** "We never compromise on quality. Every garment receives personalized attention."
+   - **Environmental Responsibility:** "Eco-friendly cleaning methods that reduce environmental footprint while delivering exceptional results."
+   - **Customer Convenience:** "Designed for your busy schedule with convenient pickup & delivery."
+
+4. **Layout & Styling:**
+   - Use a neutral background (`bg-[#F8F5F0]` or `bg-white`) with padding (`py-16`) and container max width (`max-w-7xl mx-auto px-4`).
+   - Use responsive grid layout for the Mission & Values icons/cards (`grid-cols-1 md:grid-cols-3 gap-8`).
+   - Include a bold heading: "About Signature Cleaners" and subheading if needed.
+   - Style text in `text-neutral-800` with heading in `text-[#790003] font-bold`.
+
+5. **Optional Enhancements:**
+   - Use a Tailwind-friendly animation (like `fade-in` on scroll).
+   - Include a “Learn More” button that links to the full `/about-us` page.
+
+6. **Accessibility:**
+   - Ensure all content is keyboard and screen-reader accessible.
+   - Use semantic HTML (`<section>`, `<h2>`, `<p>`, etc.).
+
+Please return:
+- The complete JSX code for the new About Us section.
+- Guidance on where exactly to insert it in `home-page.tsx`.
+- Optional styling tips for consistent design with the rest of the home page.
