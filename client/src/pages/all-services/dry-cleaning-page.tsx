@@ -165,7 +165,11 @@ export default function DryCleaningPage() {
             items={[
               { label: "Home", path: "/" },
               { label: "Services", path: "/all-services/all-services" },
-              { label: "Dry Cleaning", path: "/all-services/dry-cleaning", current: true }
+              {
+                label: "Dry Cleaning",
+                path: "/all-services/dry-cleaning",
+                current: true,
+              },
             ]}
           />
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -174,10 +178,16 @@ export default function DryCleaningPage() {
                 Premium Dry Cleaning Service
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Our state-of-the-art dry cleaning process ensures your garments
-                receive the highest quality care. We specialize in treating
-                delicate fabrics and preserving the color and texture of your
-                clothing.
+                At Signature Cleaners, we take pride in offering a premium dry
+                cleaning experience tailored to your wardrobe's unique needs.
+                From everyday business attire to delicate evening wear, our team
+                uses advanced technology and eco-friendly solvents to safely and
+                effectively clean your garments. We specialize in maintaining
+                the integrity of fine fabrics such as silk, wool, and linen,
+                ensuring that each item is returned crisp, fresh, and ready to
+                wear. Whether you're preparing for a big event or simply keeping
+                your wardrobe in top shape, our expert care guarantees results
+                you can trust.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -355,60 +365,114 @@ export default function DryCleaningPage() {
             <Link href="/all-services/wash-fold" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/regularWash.svg" alt="Wash & Fold" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/regularWash.svg"
+                    alt="Wash & Fold"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Wash & Fold</h3>
-                <p className="text-neutral-600 text-center">Professional laundry service for your everyday garments</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Wash & Fold
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Professional laundry service for your everyday garments
+                </p>
               </div>
             </Link>
 
             <Link href="/all-services/alteration-tailoring" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/fitting.svg" alt="Alterations & Tailoring" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/fitting.svg"
+                    alt="Alterations & Tailoring"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Alterations & Tailoring</h3>
-                <p className="text-neutral-600 text-center">Expert fitting and garment modifications</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Alterations & Tailoring
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Expert fitting and garment modifications
+                </p>
               </div>
             </Link>
 
             <Link href="/all-services/wedding-gown" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/dress.svg" alt="Wedding Gowns" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/dress.svg"
+                    alt="Wedding Gowns"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Wedding Gowns</h3>
-                <p className="text-neutral-600 text-center">Specialized care for your precious wedding dress</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Wedding Gowns
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Specialized care for your precious wedding dress
+                </p>
               </div>
             </Link>
 
             <Link href="/all-services/shoe-repair" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/shoes.svg" alt="Shoe Repair" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/shoes.svg"
+                    alt="Shoe Repair"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Shoe Repair</h3>
-                <p className="text-neutral-600 text-center">Professional restoration and repair services</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Shoe Repair
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Professional restoration and repair services
+                </p>
               </div>
             </Link>
 
             <Link href="/all-services/clean-household-items" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/comforter.svg" alt="Household Items" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/comforter.svg"
+                    alt="Household Items"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Household Items</h3>
-                <p className="text-neutral-600 text-center">Cleaning for your home textiles and furnishings</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Household Items
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Cleaning for your home textiles and furnishings
+                </p>
               </div>
             </Link>
 
             <Link href="/all-services/delivery" className="group">
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <img src="/icons/bubbles.svg" alt="Delivery Service" className="w-8 h-8" aria-hidden="true" />
+                  <img
+                    src="/icons/bubbles.svg"
+                    alt="Delivery Service"
+                    className="w-8 h-8"
+                    aria-hidden="true"
+                  />
                 </div>
-                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">Delivery Service</h3>
-                <p className="text-neutral-600 text-center">Convenient pickup and delivery to your door</p>
+                <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                  Delivery Service
+                </h3>
+                <p className="text-neutral-600 text-center">
+                  Convenient pickup and delivery to your door
+                </p>
               </div>
             </Link>
           </div>

@@ -1,0 +1,99 @@
+Absolutely! Here's the revised **Replit prompt**, now clearly specifying that this carousel is to be implemented **on the Dry Cleaning page**:
+
+---
+
+### 🔄 Replit Prompt: Add "Explore Our Other Services" Carousel to the Dry Cleaning Page
+
+**Page:**
+`/services/dry-cleaning`
+
+**Objective:**
+Replace the static “Explore Our Other Services” grid currently on the **Dry Cleaning page** with a **rotating, responsive carousel**. This carousel should highlight the other service offerings, each with its logo/icon and name, linking to the appropriate service page.
+
+---
+
+**Functionality & Design Requirements:**
+
+1. **Carousel Content:**
+
+   * Each item in the carousel must include:
+
+     * The **service icon/logo**
+     * The **name/title of the service** (e.g., "Wash & Fold")
+     * A link to the respective service page
+   * Do **not include "Dry Cleaning"** in the carousel, since the user is already on that page.
+
+2. **Responsiveness:**
+
+   * **Desktop:** 3 services visible at a time
+   * **Tablet:** 2 services visible
+   * **Mobile:** 1 service visible
+   * Enable **touch/swipe support** for mobile devices
+
+3. **Navigation Features:**
+
+   * Include **left/right arrows**
+   * Optional: **dot indicators** beneath the carousel
+   * Auto-scroll every 4–6 seconds with smooth animation
+   * User interaction (click/swipe) pauses auto-scrolling
+
+4. **Accessibility:**
+
+   * Use semantic HTML elements (`<section>`, `<nav>`, `<ul>`, `<li>`, `<a>`)
+   * Ensure all logos have `alt` text or `aria-label`s
+   * Provide keyboard navigation for arrows
+
+---
+
+**Recommended Libraries:**
+
+* **Swiper.js** (preferred) or **React Slick Carousel**
+* Example install:
+
+  ```bash
+  npm install swiper
+  ```
+
+---
+
+**Service Items to Include:**
+
+| Service Name            | URL Route                         |
+| ----------------------- | --------------------------------- |
+| Wash & Fold             | `/services/wash-fold`             |
+| Alterations & Tailoring | `/services/alterations-tailoring` |
+| Wedding Gowns           | `/services/wedding-gowns`         |
+| Shoe Repair             | `/services/shoe-repair`           |
+| Household Items         | `/services/household-items`       |
+| Delivery Service        | `/services/delivery`              |
+
+---
+
+**Example JSX Using Swiper.js:**
+
+```jsx
+<Swiper
+  spaceBetween={30}
+  slidesPerView={3}
+  autoplay={{ delay: 5000 }}
+  loop={true}
+  breakpoints={{
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }}
+>
+  {services.map(service => (
+    <SwiperSlide key={service.name}>
+      <a href={service.link} className="carousel-item">
+        <img src={service.icon} alt={`${service.name} icon`} />
+        <p>{service.name}</p>
+      </a>
+    </SwiperSlide>
+  ))}
+</Swiper>
+```
+
+---
+
+Let me know if you’d like help generating the full JSX and styling based on your design system!
