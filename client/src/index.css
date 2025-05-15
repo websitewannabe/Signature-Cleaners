@@ -11,3 +11,19 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+.services-carousel {
+  padding: 20px 40px !important;
+}
+
+.services-carousel .swiper-button-next,
+.services-carousel .swiper-button-prev {
+  color: #790003;
+}
+
+.services-carousel .swiper-pagination-bullet-active {
+  background: #790003;
+}
+
+.services-carousel .swiper-slide {
+  height: auto;
+}
