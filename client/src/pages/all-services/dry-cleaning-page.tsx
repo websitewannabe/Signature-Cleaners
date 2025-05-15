@@ -141,18 +141,6 @@ export default function DryCleaningPage() {
 
       <Header />
 
-      <div className="bg-black py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Breadcrumbs
-            items={[
-              { label: "Home", path: "/" },
-              { label: "Services", path: "/all-services/all-services" },
-              { label: "Dry Cleaning", path: "/all-services/dry-cleaning", current: true }
-            ]}
-          />
-        </div>
-      </div>
-
       {/* Hero Section */}
       <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/images/cleaners.gif')] bg-cover bg-center bg-no-repeat"></div>
@@ -173,6 +161,7 @@ export default function DryCleaningPage() {
       {/* Main Content */}
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs
             items={[
               { label: "Home", path: "/" },
               { label: "Services", path: "/all-services/all-services" },
