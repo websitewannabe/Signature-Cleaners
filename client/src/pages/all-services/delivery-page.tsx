@@ -520,6 +520,164 @@ export default function DeliveryPage() {
         </div>
       </section>
 
+      {/* Explore Our Other Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
+              Explore Our Other Services
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              More ways we can help keep your wardrobe and home at their best
+            </p>
+          </div>
+
+          <Swiper
+            className="services-carousel"
+            modules={[Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            <SwiperSlide>
+              <Link href="/all-services/dry-cleaning" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/suit.svg"
+                      alt="Dry Cleaning"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Dry Cleaning
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/wash-fold" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/regularWash.svg"
+                      alt="Wash & Fold"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Wash & Fold
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/alteration-tailoring" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/fitting.svg"
+                      alt="Alterations & Tailoring"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Alterations & Tailoring
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/wedding-gown" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/dress.svg"
+                      alt="Wedding Gowns"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Wedding Gowns
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/shoe-repair" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/shoes.svg"
+                      alt="Shoe Repair"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Shoe Repair
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link
+                href="/all-services/clean-household-items"
+                className="block"
+              >
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/comforter.svg"
+                      alt="Household Items"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Household Items
+                  </h3>
+                </div>
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/80"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Ready to experience our delivery service?
+          </h2>
+          <Link href="/schedule">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
+              Schedule a Pickup
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* Locations Section */}
       <section className="py-16 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -635,161 +793,6 @@ export default function DeliveryPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Explore Our Other Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
-              Explore Our Other Services
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              More ways we can help keep your wardrobe and home at their best
-            </p>
-          </div>
-
-          <Swiper
-            className="services-carousel"
-            modules={[Navigation, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation
-            loop={true}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 }
-            }}
-          >
-            <SwiperSlide>
-              <Link href="/all-services/dry-cleaning" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/suit.svg"
-                      alt="Dry Cleaning"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Dry Cleaning
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/wash-fold" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/regularWash.svg"
-                      alt="Wash & Fold"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Wash & Fold
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/alteration-tailoring" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/fitting.svg"
-                      alt="Alterations & Tailoring"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Alterations & Tailoring
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/wedding-gown" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/dress.svg"
-                      alt="Wedding Gowns"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Wedding Gowns
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/shoe-repair" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/shoes.svg"
-                      alt="Shoe Repair"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Shoe Repair
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/clean-household-items" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/comforter.svg"
-                      alt="Household Items"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Household Items
-                  </h3>
-                </div>
-              </Link>
-            </SwiperSlide>
-          </Swiper>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-[#790003]/80"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to experience our delivery service?
-          </h2>
-          <Link href="/schedule">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
-            >
-              Schedule a Pickup
-            </Button>
-          </Link>
         </div>
       </section>
 

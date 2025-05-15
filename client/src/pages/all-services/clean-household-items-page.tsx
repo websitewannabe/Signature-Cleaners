@@ -391,203 +391,6 @@ export default function CleanHouseholdItemsPage() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#F8F5F0]">
-          {/* Primary radial gradient for soft light effect */}
-          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
-
-          {/* Parallel diagonal streaks */}
-          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
-
-          {/* Soft overlay gradient */}
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900">
-              How It Works
-            </h2>
-            <p className="mt-4 text-xl text-neutral-600 max-w-3xl mx-auto">
-              Our convenient process makes it easy to get your clothes cleaned
-              without disrupting your schedule.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
-                <span className="text-primary text-3xl font-bold">1</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900">
-                Schedule
-              </h3>
-              <p className="mt-2 text-neutral-600">
-                Book your pickup online or by phone
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
-                <span className="text-primary text-3xl font-bold">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900">Pickup</h3>
-              <p className="mt-2 text-neutral-600">
-                We collect your garments from your door
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
-                <span className="text-primary text-3xl font-bold">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900">Clean</h3>
-              <p className="mt-2 text-neutral-600">
-                Your items receive expert care
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-white rounded-full h-24 w-24 flex items-center justify-center mx-auto shadow-md mb-4">
-                <span className="text-primary text-3xl font-bold">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-900">
-                Deliver
-              </h3>
-              <p className="mt-2 text-neutral-600">
-                We return your fresh, clean garments
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link href="/schedule">
-              <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white font-medium px-6 py-3 rounded-md shadow-md hover:shadow-lg transition duration-300">
-                Get Started Now
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Locations Section */}
-      <section className="py-16 bg-[#181818]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white">
-              Locations We Pick Up & Deliver
-            </h2>
-            <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
-              We service the following areas in Bucks County and surrounding
-              regions
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
-            <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
-                <div className="space-y-2">
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Buckingham
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Carversville
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Chalfont
-                  </p>
-                  <Link
-                    href="/doylestown"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
-                    <span className="mr-2">•</span>Doylestown
-                  </Link>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Dublin
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Fountainville
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Furlong
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Holland
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Ivyland
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Jamison
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Lahaska
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Morrisville
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>New Hope
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Newtown
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Ottsville
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Perkasie
-                  </p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Pipersville
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Point Pleasant
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Richboro
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Southampton
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Trevose
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Warminster
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Warrington
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Washington Crossing
-                  </p>
-                  <p className="text-white flex items-center">
-                    <span className="mr-2">•</span>Yardley
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Explore Our Other Services */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -740,6 +543,124 @@ export default function CleanHouseholdItemsPage() {
               Schedule a Pickup
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* Locations Section */}
+      <section className="py-16 bg-[#181818]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white">
+              Locations We Pick Up & Deliver
+            </h2>
+            <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
+              We service the following areas in Bucks County and surrounding
+              regions
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+                <div className="space-y-2">
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Buckingham
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Carversville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Chalfont
+                  </p>
+                  <Link
+                    href="/doylestown"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
+                    <span className="mr-2">•</span>Doylestown
+                  </Link>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Dublin
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Fountainville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Furlong
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Holland
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Ivyland
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Jamison
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Lahaska
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Morrisville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>New Hope
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Newtown
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Ottsville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Perkasie
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Pipersville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Point Pleasant
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Richboro
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Southampton
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Trevose
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Warminster
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Warrington
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Washington Crossing
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Yardley
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

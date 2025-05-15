@@ -135,20 +135,20 @@ export default function ServicesPage() {
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
-          "itemListElement": [
+          itemListElement: [
             {
               "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://signaturecleaners.com"
+              position: 1,
+              name: "Home",
+              item: "https://signaturecleaners.com",
             },
             {
               "@type": "ListItem",
-              "position": 2,
-              "name": "Services",
-              "item": "https://signaturecleaners.com/all-services/all-services"
-            }
-          ]
+              position: 2,
+              name: "Services",
+              item: "https://signaturecleaners.com/all-services/all-services",
+            },
+          ],
         })}
       </script>
 
@@ -166,7 +166,6 @@ export default function ServicesPage() {
               services
             </p>
           </div>
-          
         </div>
       </section>
 
@@ -187,7 +186,11 @@ export default function ServicesPage() {
             <Breadcrumbs
               items={[
                 { label: "Home", path: "/" },
-                { label: "Services", path: "/all-services/all-services", current: true }
+                {
+                  label: "Services",
+                  path: "/all-services/all-services",
+                  current: true,
+                },
               ]}
             />
           </div>
@@ -438,6 +441,25 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/70"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Ready to simplify your laundry routine?
+          </h2>
+          <Link href="/schedule">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
+              Schedule a Pickup
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* Locations Section */}
       <section className="py-16 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -553,25 +575,6 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-[#790003]/70"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to simplify your laundry routine?
-          </h2>
-          <Link href="/schedule">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
-            >
-              Schedule a Pickup
-            </Button>
-          </Link>
         </div>
       </section>
 

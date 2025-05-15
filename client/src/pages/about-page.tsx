@@ -336,6 +336,25 @@ export default function AboutPage() {
         </div>
       </section> */}
 
+      {/* CTA Section */}
+      <section className="relative py-24">
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[#790003]/80"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Ready to simplify your laundry routine?
+          </h2>
+          <Link href="/all-services/all-services">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
+              View our Services
+            </Button>
+          </Link>
+        </div>
+      </section>
+
       {/* Locations Section */}
       <section className="py-16 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -451,25 +470,6 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
-        <div className="absolute inset-0 bg-[#790003]/80"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to simplify your laundry routine?
-          </h2>
-          <Link href="/all-services/all-services">
-            <Button
-              size="lg"
-              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
-            >
-              View our Services
-            </Button>
-          </Link>
         </div>
       </section>
 

@@ -167,7 +167,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-              Doylestown Dry Cleaner
+              Doylestown’s Trusted Dry Cleaner
             </h1>
             <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
               Old Fashioned Service. Guaranteed.
@@ -494,7 +494,7 @@ export default function HomePage() {
               />
             </div>
           </div>
-          
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
               About Signature Cleaners
