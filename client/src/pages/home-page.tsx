@@ -794,7 +794,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.482010904663!2d-75.1344387!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8674873a9d9%3A0x4c3105276c27f6a4!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1714582748851!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1524.241005452332!2d-75.13443869999999!3d40.341436499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8674873a9d9%3A0x4c3105276c27f6a4!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1714582748851!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
