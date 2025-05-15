@@ -485,6 +485,16 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="md:hidden mb-8">
+            <div className="relative h-[300px] rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="/images/theTeam.jpg"
+                alt="Signature Cleaners Team"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
               About Signature Cleaners
@@ -514,7 +524,7 @@ export default function HomePage() {
                 </Button>
               </Link>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl hidden md:block">
               <img
                 src="/images/theTeam.jpg"
                 alt="Signature Cleaners Team"
