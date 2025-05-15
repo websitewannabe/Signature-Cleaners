@@ -257,13 +257,13 @@ const Header = () => {
                   </Link>
                   <div className="border-t border-neutral-700" />
                   <Link
-                    href="/about"
+                    href="/about-us"
                     className="text-white hover:text-[#F6AE2D] py-2"
                   >
                     About Us
                   </Link>
                   <Link
-                    href="/contact"
+                    href="/contact-us"
                     className="text-white hover:text-[#F6AE2D] py-2"
                   >
                     Contact
