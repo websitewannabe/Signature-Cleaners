@@ -74,6 +74,7 @@ function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
+          <ScrollToTop />
           <Router />
           <Toaster />
         </AuthProvider>
