@@ -340,13 +340,14 @@ export default function DryCleaningPage() {
             <div className="bg-neutral-100 rounded-lg p-8">
               <div className="w-full h-[763px]">
                 <iframe
-                  src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56"
+                  src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56?hideFooter=true"
                   style={{ width: "100%", height: "100%", border: "0" }}
                   allow="camera; microphone; autoplay; encrypted-media;"
                   data-qa="iframe-container"
                   data-remove-element-on-mobile="true"
                   data-disable-scroll="true"
                   loading="lazy"
+                  frameBorder="0"
                 />
               </div>
             </div>
