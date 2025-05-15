@@ -794,14 +794,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.4820109046635!2d-75.13443867689742!3d40.34143647144839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8674873a9d9%3A0x4c3105276c27f6a4!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1714595460952!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
