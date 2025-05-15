@@ -368,11 +368,11 @@ export default function DryCleaningPage() {
 
           <Swiper
             className="services-carousel"
-            modules={[Navigation, Pagination, Autoplay]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}
+            loop={true}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             breakpoints={{
               640: { slidesPerView: 2 },
