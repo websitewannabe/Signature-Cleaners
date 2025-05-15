@@ -132,6 +132,13 @@ export default function WeddingGownPage() {
       {/* Main Content */}
       <section className="py-16 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs
+            items={[
+              { label: "Home", path: "/" },
+              { label: "Services", path: "/all-services/all-services" },
+              { label: "Wedding Gown", path: "/all-services/wedding-gown", current: true }
+            ]}
+          />
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">
