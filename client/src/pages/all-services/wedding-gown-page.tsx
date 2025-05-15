@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/accordion";
 import { Link } from "wouter";
 import { useState } from "react";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export default function WeddingGownPage() {
   const [selectedService, setSelectedService] = useState<string | null>(null);
