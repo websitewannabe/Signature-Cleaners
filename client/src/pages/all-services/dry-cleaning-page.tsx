@@ -353,7 +353,7 @@ export default function DryCleaningPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Link href="/all-services/wash-fold" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/regularWash.svg" alt="Wash & Fold" className="w-8 h-8" aria-hidden="true" />
                 </div>
@@ -363,7 +363,7 @@ export default function DryCleaningPage() {
             </Link>
 
             <Link href="/all-services/alteration-tailoring" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/fitting.svg" alt="Alterations & Tailoring" className="w-8 h-8" aria-hidden="true" />
                 </div>
@@ -373,7 +373,7 @@ export default function DryCleaningPage() {
             </Link>
 
             <Link href="/all-services/wedding-gown" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/dress.svg" alt="Wedding Gowns" className="w-8 h-8" aria-hidden="true" />
                 </div>
@@ -383,7 +383,7 @@ export default function DryCleaningPage() {
             </Link>
 
             <Link href="/all-services/shoe-repair" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/shoes.svg" alt="Shoe Repair" className="w-8 h-8" aria-hidden="true" />
                 </div>
@@ -393,7 +393,7 @@ export default function DryCleaningPage() {
             </Link>
 
             <Link href="/all-services/clean-household-items" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/comforter.svg" alt="Household Items" className="w-8 h-8" aria-hidden="true" />
                 </div>
@@ -403,7 +403,7 @@ export default function DryCleaningPage() {
             </Link>
 
             <Link href="/all-services/delivery" className="group">
-              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6">
+              <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img src="/icons/bubbles.svg" alt="Delivery Service" className="w-8 h-8" aria-hidden="true" />
                 </div>
