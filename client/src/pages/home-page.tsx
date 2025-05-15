@@ -470,6 +470,141 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* About Us Section */}
+      <section className="py-16 bg-[#F8F5F0] overflow-hidden relative">
+        {/* Background Pattern */}
+        <div className="absolute inset-0">
+          {/* Primary radial gradient for soft light effect */}
+          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+
+          {/* Parallel diagonal streaks */}
+          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+
+          {/* Soft overlay gradient */}
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
+              About Signature Cleaners
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              A trusted name in premium garment care, delivering quality and
+              convenience to our community.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <p className="text-neutral-700 leading-relaxed">
+                Signature Cleaners was founded on simple principles: provide a
+                quality product, deliver excellent customer service, and offer
+                fair pricing.
+              </p>
+              <p className="text-neutral-700 leading-relaxed">
+                With decades of experience, the team brings a deep understanding
+                of fabric care and stain removal. Every garment is treated with
+                personal care using top-of-the-line equipment to ensure high
+                standards of cleanliness and presentation.
+              </p>
+              <Link href="/about-us" className="inline-block">
+                <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                  Learn More About Us
+                </Button>
+              </Link>
+            </div>
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="/images/theTeam.jpg"
+                alt="Signature Cleaners Team"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-[#790003] mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-12 w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                Quality First
+              </h3>
+              <p className="text-neutral-600">
+                We never compromise on quality. Every garment receives
+                personalized attention.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-[#790003] mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-12 w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5V3.935M3 20.488V8.212a2 2 0 011.696-1.977l5-1.039a2 2 0 01.608 0l5 1.039a2 2 0 011.696 1.977v12.276l-6.5-2.536a2 2 0 00-1.5 0L3 20.488z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                Environmental Responsibility
+              </h3>
+              <p className="text-neutral-600">
+                Eco-friendly cleaning methods that reduce environmental
+                footprint while delivering exceptional results.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="text-[#790003] mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-12 w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-neutral-900 mb-2">
+                Customer Convenience
+              </h3>
+              <p className="text-neutral-600">
+                Designed for your busy schedule with convenient pickup &
+                delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -816,7 +951,10 @@ export default function HomePage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Chalfont
                   </p>
-                  <Link href="/doylestown" className="text-white hover:text-[#F6AE2D] transition-colors flex items-center">
+                  <Link
+                    href="/doylestown"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Doylestown
                   </Link>
                   <p className="text-white flex items-center">
@@ -893,209 +1031,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About Us Section */}
-          <section className="py-16 bg-[#F8F5F0] overflow-hidden relative">
-            {/* Background Pattern */}
-            <div className="absolute inset-0">
-              {/* Primary radial gradient for soft light effect */}
-              <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
-              
-              {/* Parallel diagonal streaks */}
-              <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
-              
-              {/* Soft overlay gradient */}
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
-            </div>
-
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
-                  About Signature Cleaners
-                </h2>
-                <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-                  A trusted name in premium garment care, delivering quality and convenience to our community.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <div className="space-y-6">
-                  <p className="text-neutral-700 leading-relaxed">
-                    Signature Cleaners was founded on simple principles: provide a quality product, deliver excellent customer service, and offer fair pricing.
-                  </p>
-                  <p className="text-neutral-700 leading-relaxed">
-                    With decades of experience, the team brings a deep understanding of fabric care and stain removal. Every garment is treated with personal care using top-of-the-line equipment to ensure high standards of cleanliness and presentation.
-                  </p>
-                  <Link href="/about-us" className="inline-block">
-                    <Button className="bg-[#790003] hover:bg-[#F6AE2D] text-white">
-                      Learn More About Us
-                    </Button>
-                  </Link>
-                </div>
-                <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                  <img
-                    src="/images/theTeam.jpg"
-                    alt="Signature Cleaners Team"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-[#790003] mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">Quality First</h3>
-                  <p className="text-neutral-600">
-                    We never compromise on quality. Every garment receives personalized attention.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-[#790003] mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5V3.935M3 20.488V8.212a2 2 0 011.696-1.977l5-1.039a2 2 0 01.608 0l5 1.039a2 2 0 011.696 1.977v12.276l-6.5-2.536a2 2 0 00-1.5 0L3 20.488z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">Environmental Responsibility</h3>
-                  <p className="text-neutral-600">
-                    Eco-friendly cleaning methods that reduce environmental footprint while delivering exceptional results.
-                  </p>
-                </div>
-
-                <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                  <div className="text-[#790003] mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold text-neutral-900 mb-2">Customer Convenience</h3>
-                  <p className="text-neutral-600">
-                    Designed for your busy schedule with convenient pickup & delivery.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Locations Section */}
-          <section className="py-16 bg-[#181818]">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-white">
-                  Locations We Pick Up & Deliver
-                </h2>
-                <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
-                  We service the following areas in Bucks County and surrounding
-                  regions
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8 items-start">
-                <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-
-                <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
-                    <div className="space-y-2">
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Buckingham
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Carversville
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Chalfont
-                      </p>
-                      <Link href="/doylestown" className="text-white hover:text-[#F6AE2D] transition-colors flex items-center">
-                        <span className="mr-2">•</span>Doylestown
-                      </Link>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Dublin
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Fountainville
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Furlong
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Holland
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Ivyland
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Jamison
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Lahaska
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Morrisville
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>New Hope
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Newtown
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Ottsville
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Perkasie
-                      </p>
-                    </div>
-                    <div className="space-y-2">
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Pipersville
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Point Pleasant
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Richboro
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Southampton
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Trevose
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Warminster
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Warrington
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Washington Crossing
-                      </p>
-                      <p className="text-white flex items-center">
-                        <span className="mr-2">•</span>Yardley
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <Footer />
+      <Footer />
     </div>
   );
 }
