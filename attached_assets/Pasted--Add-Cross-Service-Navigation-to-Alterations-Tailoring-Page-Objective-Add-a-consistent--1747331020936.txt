@@ -1,0 +1,88 @@
+### Add Cross-Service Navigation to "Alterations & Tailoring" Page
+
+**Objective:**
+Add a consistent “Explore Our Other Services” section to the `/all-services/alteration-tailoring` page. The section should match the layout, styling, and functionality used on the **Dry Cleaning** and **Wash & Fold** pages.
+
+**Section Placement:**
+Insert the new section **below the main Alterations & Tailoring content** and **above the "How It Works" section**.
+
+---
+
+**Content for the Section:**
+
+* **Section Title:**
+  `<h2>Explore Our Other Services</h2>`
+
+* **Subtitle (optional):**
+  `More ways we can help keep your wardrobe and home at their best`
+
+---
+
+**Services to Display (Exclude Alterations & Tailoring):**
+
+1. Dry Cleaning
+2. Wash & Fold
+3. Wedding Gowns
+4. Shoe Repair
+5. Cleaning of Household Items
+6. Delivery
+
+Each card should include:
+
+* A clean service icon
+* Service name
+* A short one-line description
+* Link to the correct service page
+
+---
+
+**Design & Styling Guidelines:**
+
+* Use a **responsive grid** layout:
+
+  * Desktop: 3 cards per row
+  * Tablet: 2 cards
+  * Mobile: 1 card
+* All boxes must be **equal size** in both width and height.
+* Add **hover effects** (e.g., box shadow or slight scale-up).
+* Match the site's current font, color scheme, and spacing.
+* Example CSS:
+
+  ```css
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    min-height: 220px;
+  }
+  ```
+
+---
+
+**Routing for Each Card:**
+
+* `/services/dry-cleaning`
+* `/services/wash-fold`
+* `/services/wedding-gowns`
+* `/services/shoe-repair`
+* `/services/household-items`
+* `/services/delivery`
+
+---
+
+**Accessibility Notes:**
+
+* Use semantic HTML: `<section>`, `<h2>`, `<nav>`, `<a>`
+* Include `alt` tags or `aria-labels` for icons and links
