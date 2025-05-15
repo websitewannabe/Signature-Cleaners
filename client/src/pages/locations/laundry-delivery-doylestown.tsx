@@ -331,7 +331,7 @@ export default function LaundryDeliveryDoylestownPage() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="aspect-video w-full mb-6">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.482010904663!2d-75.15086792397547!3d40.189290671502185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a858a3fdc5bb%3A0xf09ea81c7bc38535!2sSignature%20Cleaners!5e0!3m2!1sen!2sus!4v1714582748851!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24310.272399552945!2d-75.14142968700908!3d40.30923229805336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a90a472eaecf%3A0x1daa8caeb5534d21!2sDoylestown%2C%20PA!5e0!3m2!1sen!2sus!4v1713926611838!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -340,7 +340,7 @@ export default function LaundryDeliveryDoylestownPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
-              <p className="text-neutral-600 text-sm italic text-center">Signature Cleaners at 1456 Ferry Rd UNIT 100, Doylestown, PA 18901</p>
+              <p className="text-neutral-600 text-sm italic text-center">Our primary Doylestown service area</p>
             </div>
             
             <div>
