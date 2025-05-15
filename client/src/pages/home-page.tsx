@@ -167,8 +167,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight">
-              Doylestown's Trusted Dry Cleaner — Old Fashioned Service. Guaranteed.
+              Doylestown Dry Cleaner
             </h1>
+            <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
+              Old Fashioned Service. Guaranteed.
+            </p>
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
                 <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
