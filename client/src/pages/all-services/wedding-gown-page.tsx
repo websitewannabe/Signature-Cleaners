@@ -464,7 +464,7 @@ export default function WeddingGownPage() {
               <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
                 <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
                   <img
-                    src="/icons/shirt.svg"
+                    src="/icons/fitting.svg"
                     alt="Alterations & Tailoring"
                     className="w-8 h-8"
                     aria-hidden="true"
@@ -474,7 +474,7 @@ export default function WeddingGownPage() {
                   Alterations & Tailoring
                 </h3>
                 <p className="text-neutral-600 text-center">
-                  Custom fitting and alterations for the perfect fit
+                  Professional fitting and garment modifications
                 </p>
               </div>
             </Link>
