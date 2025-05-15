@@ -627,9 +627,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Dry Cleaning
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Expert care for your fine garments and delicate fabrics
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
@@ -648,9 +645,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Wash & Fold
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Professional laundry service for your everyday garments
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
@@ -669,9 +663,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Wedding Gowns
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Specialized care for your precious wedding dress
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
@@ -690,9 +681,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Shoe Repair
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Professional restoration and repair services
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
@@ -714,9 +702,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Household Items
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Cleaning for your home textiles and furnishings
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
@@ -735,9 +720,6 @@ export default function AlterationTailoringPage() {
                   <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
                     Delivery Service
                   </h3>
-                  <p className="text-neutral-600 text-center">
-                    Convenient pickup and delivery to your door
-                  </p>
                 </div>
               </Link>
             </SwiperSlide>
