@@ -1,0 +1,75 @@
+### Add Cross-Service Navigation to "Wash & Fold" Page
+
+**Objective:**
+Add a visually aligned **“Explore Our Other Services”** section to the bottom of the `/services/wash-fold` page, directly above the “How It Works” section — just like on the Dry Cleaning page.
+
+**Key Requirements:**
+
+1. **Section Title and Subtitle:**
+
+   * Title: `<h2>Explore Our Other Services</h2>`
+   * Subtitle: `More ways we can help keep your wardrobe and home at their best`
+
+2. **Displayed Services (Exclude “Wash & Fold” itself):**
+
+   * Dry Cleaning
+   * Alterations & Tailoring
+   * Wedding Gowns
+   * Shoe Repair
+   * Cleaning of Household Items
+   * Delivery
+
+3. **Design + Layout:**
+
+   * Display each service as a card with:
+
+     * An icon (consistent with the brand style).
+     * Title of the service.
+     * One-line description.
+   * Use a **3-column responsive grid**:
+
+     * Desktop: 3 cards/row
+     * Tablet: 2 cards/row
+     * Mobile: 1 card/row
+   * Apply a uniform size to all cards (same **width and height** regardless of content).
+   * Include hover effects like scale or subtle shadow.
+   * Match the color scheme and typography of the rest of the Signature Cleaners site.
+
+4. **CSS Guidance:**
+   Example styling for equal height cards:
+
+   ```css
+   .service-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 2rem;
+   }
+
+   .service-card {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     padding: 1.5rem;
+     background-color: #fff;
+     border-radius: 10px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     height: 100%;
+     min-height: 220px;
+   }
+   ```
+
+5. **Routing:**
+   Each card should route to the appropriate service page:
+
+   * `/services/dry-cleaning`
+   * `/services/alterations-tailoring`
+   * `/services/wedding-gowns`
+   * `/services/shoe-repair`
+   * `/services/household-items`
+   * `/services/delivery`
+
+6. **Accessibility:**
+
+   * Add semantic HTML (`<section>`, `<nav>`, `<a>`)
+   * Include `alt` or `aria-label` values for icons
