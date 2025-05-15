@@ -138,7 +138,7 @@ const Footer = () => {
                   href="/all-services/wedding-gown"
                   className="text-neutral-300 hover:text-white"
                 >
-                  Wedding Gown Service
+                  Wedding/Prom Gown Service
                 </Link>
               </li>
               <li>
