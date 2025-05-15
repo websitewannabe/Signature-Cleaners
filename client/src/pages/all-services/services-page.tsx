@@ -166,14 +166,7 @@ export default function ServicesPage() {
               services
             </p>
           </div>
-          <div className="absolute bottom-8 left-8">
-            <Breadcrumbs
-              items={[
-                { label: "Home", path: "/" },
-                { label: "Services", path: "/all-services/all-services", current: true }
-              ]}
-            />
-          </div>
+          
         </div>
       </section>
 
@@ -190,6 +183,14 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="mb-6">
+            <Breadcrumbs
+              items={[
+                { label: "Home", path: "/" },
+                { label: "Services", path: "/all-services/all-services", current: true }
+              ]}
+            />
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
