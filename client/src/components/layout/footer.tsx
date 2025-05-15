@@ -95,14 +95,6 @@ const Footer = () => {
                   Contact Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/doylestown"
-                  className="text-neutral-300 hover:text-white"
-                >
-                  Doylestown
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -146,7 +138,7 @@ const Footer = () => {
                   href="/all-services/wedding-gown"
                   className="text-neutral-300 hover:text-white"
                 >
-                  Wedding Gown Preservation
+                  Wedding Gown Service
                 </Link>
               </li>
               <li>
@@ -154,7 +146,7 @@ const Footer = () => {
                   href="/all-services/delivery"
                   className="text-neutral-300 hover:text-white"
                 >
-                  Delivery
+                  Pick Up & Delivery
                 </Link>
               </li>
             </ul>
