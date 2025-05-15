@@ -495,8 +495,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6 mt-8 md:mt-0">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
               <p className="text-neutral-700 leading-relaxed">
                 Signature Cleaners was founded on simple principles: provide a
                 quality product, deliver excellent customer service, and offer
