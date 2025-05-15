@@ -2,6 +2,7 @@ import { Switch, Route } from "wouter";
 import { Toaster } from "@/components/ui/toaster";
 import { HelmetProvider } from "react-helmet-async";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import ScrollToTop from "@/components/ui/scroll-to-top";
 import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/home-page";
 import ServicesPage from "@/pages/all-services/services-page";
@@ -74,6 +75,7 @@ function App() {
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>
         <AuthProvider>
+          <ScrollToTop />
           <Router />
           <Toaster />
         </AuthProvider>
