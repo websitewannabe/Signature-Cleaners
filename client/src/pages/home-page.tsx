@@ -980,6 +980,121 @@ export default function HomePage() {
             </div>
           </section>
 
+          {/* Locations Section */}
+          <section className="py-16 bg-[#181818]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-white">
+                  Locations We Pick Up & Deliver
+                </h2>
+                <p className="mt-4 text-lg text-white max-w-3xl mx-auto">
+                  We service the following areas in Bucks County and surrounding
+                  regions
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+
+                <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+                    <div className="space-y-2">
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Buckingham
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Carversville
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Chalfont
+                      </p>
+                      <Link href="/doylestown" className="text-white hover:text-[#F6AE2D] transition-colors flex items-center">
+                        <span className="mr-2">•</span>Doylestown
+                      </Link>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Dublin
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Fountainville
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Furlong
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Holland
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Ivyland
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Jamison
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Lahaska
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Morrisville
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>New Hope
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Newtown
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Ottsville
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Perkasie
+                      </p>
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Pipersville
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Point Pleasant
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Richboro
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Southampton
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Trevose
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Warminster
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Warrington
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Washington Crossing
+                      </p>
+                      <p className="text-white flex items-center">
+                        <span className="mr-2">•</span>Yardley
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
           <Footer />
     </div>
   );
