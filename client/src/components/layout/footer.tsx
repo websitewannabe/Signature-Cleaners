@@ -187,7 +187,7 @@ const Footer = () => {
                   Doylestown, PA 18901
                 </a>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.482010904663!2d-75.13186382397547!3d40.189290671502185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8674873a9d9%3A0x4c3105276c27f6a4!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1714582748851!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.482010904663!2d-75.1344387!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8674873a9d9%3A0x4c3105276c27f6a4!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1714582748851!5m2!1sen!2sus"
                   width="300"
                   height="200"
                   style={{ border: 0, marginTop: "10px" }}
