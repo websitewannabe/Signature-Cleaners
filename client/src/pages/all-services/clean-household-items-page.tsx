@@ -391,6 +391,160 @@ export default function CleanHouseholdItemsPage() {
         </div>
       </section>
 
+      {/* Explore Our Other Services */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
+              Explore Our Other Services
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
+              More ways we can help keep your wardrobe and home at their best
+            </p>
+          </div>
+
+          <Swiper
+            className="services-carousel"
+            modules={[Navigation, Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            navigation
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
+          >
+            <SwiperSlide>
+              <Link href="/all-services/dry-cleaning" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/suit.svg"
+                      alt="Dry Cleaning"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Dry Cleaning
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Expert care for your fine garments and delicate fabrics
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/wash-fold" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/regularWash.svg"
+                      alt="Wash & Fold"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Wash & Fold
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Professional laundry service for your everyday garments
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/alteration-tailoring" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/fitting.svg"
+                      alt="Alterations & Tailoring"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Alterations & Tailoring
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Professional fitting and garment modifications
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/wedding-gown" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/dress.svg"
+                      alt="Wedding Gowns"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Wedding Gowns
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Specialized care for your precious wedding dress
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/shoe-repair" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/shoes.svg"
+                      alt="Shoe Repair"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Shoe Repair
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Expert repair and restoration services for footwear
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <Link href="/all-services/delivery" className="block">
+                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
+                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/icons/bubbles.svg"
+                      alt="Delivery Service"
+                      className="w-8 h-8"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
+                    Delivery Service
+                  </h3>
+                  <p className="text-neutral-600 text-center">
+                    Convenient pickup and delivery to your door
+                  </p>
+                </div>
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
       {/* How It Works Section */}
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#F8F5F0]">
@@ -585,160 +739,6 @@ export default function CleanHouseholdItemsPage() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Explore Our Other Services */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#790003] mb-4">
-              Explore Our Other Services
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-3xl mx-auto">
-              More ways we can help keep your wardrobe and home at their best
-            </p>
-          </div>
-
-          <Swiper
-            className="services-carousel"
-            modules={[Navigation, Autoplay]}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation
-            loop={true}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-            }}
-          >
-            <SwiperSlide>
-              <Link href="/all-services/dry-cleaning" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/suit.svg"
-                      alt="Dry Cleaning"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Dry Cleaning
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Expert care for your fine garments and delicate fabrics
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/wash-fold" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/regularWash.svg"
-                      alt="Wash & Fold"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Wash & Fold
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Professional laundry service for your everyday garments
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/alteration-tailoring" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/fitting.svg"
-                      alt="Alterations & Tailoring"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Alterations & Tailoring
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Professional fitting and garment modifications
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/wedding-gown" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/dress.svg"
-                      alt="Wedding Gowns"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Wedding Gowns
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Specialized care for your precious wedding dress
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/shoe-repair" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/shoes.svg"
-                      alt="Shoe Repair"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Shoe Repair
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Expert repair and restoration services for footwear
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <Link href="/all-services/delivery" className="block">
-                <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 p-6 h-full flex flex-col items-center min-h-[220px]">
-                  <div className="w-16 h-16 bg-[#F8F5F0] rounded-full flex items-center justify-center mx-auto mb-4">
-                    <img
-                      src="/icons/bubbles.svg"
-                      alt="Delivery Service"
-                      className="w-8 h-8"
-                      aria-hidden="true"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-center text-neutral-900 mb-2">
-                    Delivery Service
-                  </h3>
-                  <p className="text-neutral-600 text-center">
-                    Convenient pickup and delivery to your door
-                  </p>
-                </div>
-              </Link>
-            </SwiperSlide>
-          </Swiper>
         </div>
       </section>
 
