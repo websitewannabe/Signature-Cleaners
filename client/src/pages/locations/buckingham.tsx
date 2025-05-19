@@ -1,4 +1,3 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -28,7 +27,7 @@ export default function BuckinghamPage() {
           <p className="text-xl text-white mb-8">
             Proudly serving Buckingham Township with trusted dry cleaning for decades.
           </p>
-          <Link to="/schedule">
+          <Link href="/schedule">
             <Button size="lg" className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg">
               Schedule Pickup in Buckingham
             </Button>
@@ -70,7 +69,7 @@ export default function BuckinghamPage() {
               <h3 className="text-2xl font-bold mb-4">Expert Dry Cleaning Services</h3>
               <img src="/images/cleaners.gif" alt="Dry Cleaning" className="w-full h-48 object-cover mb-4 rounded" />
               <p className="mb-4">Professional care for your finest garments.</p>
-              <Link to="/all-services/dry-cleaning">
+              <Link href="/all-services/dry-cleaning">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
@@ -78,7 +77,7 @@ export default function BuckinghamPage() {
               <h3 className="text-2xl font-bold mb-4">Wedding Gown Preservation</h3>
               <img src="/images/wedding-gown.gif" alt="Wedding Gown" className="w-full h-48 object-cover mb-4 rounded" />
               <p className="mb-4">Preserve your special day memories.</p>
-              <Link to="/all-services/wedding-gown">
+              <Link href="/all-services/wedding-gown">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
@@ -86,7 +85,7 @@ export default function BuckinghamPage() {
               <h3 className="text-2xl font-bold mb-4">Free Pickup & Delivery</h3>
               <img src="/images/delivery.gif" alt="Delivery" className="w-full h-48 object-cover mb-4 rounded" />
               <p className="mb-4">Convenient service at your doorstep.</p>
-              <Link to="/all-services/delivery">
+              <Link href="/all-services/delivery">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
@@ -133,28 +132,28 @@ export default function BuckinghamPage() {
             <div className="bg-white rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Professional Wash & Fold</h3>
               <img src="/images/wash-fold.gif" alt="Wash & Fold" className="w-full h-48 object-cover mb-4 rounded" />
-              <Link to="/all-services/wash-fold">
+              <Link href="/all-services/wash-fold">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
             <div className="bg-white rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Expert Alterations & Tailoring</h3>
               <img src="/images/tailoring.gif" alt="Alterations" className="w-full h-48 object-cover mb-4 rounded" />
-              <Link to="/all-services/alteration-tailoring">
+              <Link href="/all-services/alteration-tailoring">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
             <div className="bg-white rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Professional Shoe Repair</h3>
               <img src="/images/shoe-repair.gif" alt="Shoe Repair" className="w-full h-48 object-cover mb-4 rounded" />
-              <Link to="/all-services/shoe-repair">
+              <Link href="/all-services/shoe-repair">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
             <div className="bg-white rounded-lg p-8 text-center">
               <h3 className="text-2xl font-bold mb-4">Household Items Cleaning</h3>
               <img src="/images/household-items.gif" alt="Household Items" className="w-full h-48 object-cover mb-4 rounded" />
-              <Link to="/all-services/clean-household-items">
+              <Link href="/all-services/clean-household-items">
                 <Button variant="outline">Learn More</Button>
               </Link>
             </div>
@@ -228,7 +227,7 @@ export default function BuckinghamPage() {
           <p className="text-xl text-white mb-8">
             Experience the Signature Cleaners difference.
           </p>
-          <Link to="/schedule">
+          <Link href="/schedule">
             <Button size="lg" className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg">
               Schedule Pickup
             </Button>
