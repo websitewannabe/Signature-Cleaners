@@ -39,7 +39,7 @@ export default function CityPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative py-24">
+      <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
