@@ -38,6 +38,18 @@ export const cityData: Record<string, CityData> = {
       {
         question: "Where is your Doylestown location?",
         answer: "We are located at 1456 Ferry Road #10, Doylestown, PA 18901."
+      },
+      {
+        question: "What are your business hours in Doylestown?",
+        answer: "We are open Monday through Friday from 7 AM to 7 PM, Saturday from 8 AM to 5 PM, and Sunday from 10 AM to 3 PM."
+      },
+      {
+        question: "Do you offer pickup and delivery in Doylestown?",
+        answer: "Yes, we offer free pickup and delivery service throughout Doylestown and surrounding areas. Schedule online or call us to arrange service."
+      },
+      {
+        question: "What specialty cleaning services do you offer in Doylestown?",
+        answer: "We offer expert care for delicate garments, leather, suede, wedding gowns, formal wear, and household items like draperies and bedding."
       }
     ]
   },
@@ -61,6 +73,18 @@ export const cityData: Record<string, CityData> = {
       {
         question: "What areas of Buckingham do you service?",
         answer: "We provide pickup and delivery services throughout all of Buckingham Township, including the surrounding communities and neighborhoods."
+      },
+      {
+        question: "What payment methods do you accept in Buckingham?",
+        answer: "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options."
+      },
+      {
+        question: "Do you offer wedding gown preservation in Buckingham?",
+        answer: "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment."
+      },
+      {
+        question: "What is your turnaround time for alterations in Buckingham?",
+        answer: "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee."
       }
     ]
   },
@@ -88,6 +112,18 @@ export const cityData: Record<string, CityData> = {
       {
         question: "Can I get tailoring services in Carversville?",
         answer: "Absolutely. Schedule a pickup or bring your garments to our Doylestown location for alterations."
+      },
+      {
+        question: "What eco-friendly cleaning methods do you use?",
+        answer: "We use environmentally responsible cleaning solutions and energy-efficient equipment to minimize our environmental impact while ensuring superior cleaning results."
+      },
+      {
+        question: "How do I schedule a pickup in Carversville?",
+        answer: "You can easily schedule a pickup through our website, mobile app, or by calling our customer service team."
+      },
+      {
+        question: "Do you clean household items from Carversville homes?",
+        answer: "Yes, we clean comforters, blankets, draperies, and other household items with free pickup and delivery in Carversville."
       }
     ]
   }
