@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="mb-4">
               <Link href="/" className="flex items-center">
                 <div
-                  className="h-20 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                  className="h-20 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
                   role="img"
                   aria-label="Signature Cleaners"
                 />

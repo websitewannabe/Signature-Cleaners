@@ -41,7 +41,7 @@ const Header = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <div
-                className="h-14 w-48 bg-[url('/src/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                className="h-14 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
                 role="img"
                 aria-label="Signature Cleaners"
               />
