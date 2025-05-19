@@ -952,9 +952,12 @@ export default function HomePage() {
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
               <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 auto-rows-auto">
                 <div className="space-y-2">
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/buckingham"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Buckingham
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Carversville
                   </p>
