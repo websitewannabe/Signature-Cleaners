@@ -1,7 +1,6 @@
-
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Accordion,
   AccordionContent,
@@ -38,7 +37,7 @@ export default function BuckinghamPage() {
             </p>
             <div className="mt-10">
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-                <Link href="/schedule">Schedule Pickup in Buckingham</Link>
+                <RouterLink to="/schedule">Schedule Pickup in Buckingham</RouterLink>
               </Button>
             </div>
           </div>
@@ -110,7 +109,7 @@ export default function BuckinghamPage() {
                   methods and eco-friendly solutions to ensure your clothes look their best.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/dry-cleaning">Learn More</Link>
+                  <RouterLink to="/all-services/dry-cleaning">Learn More</RouterLink>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -138,7 +137,7 @@ export default function BuckinghamPage() {
                   techniques to ensure your dress remains beautiful for generations.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/wedding-gown">Learn More</Link>
+                  <RouterLink to="/all-services/wedding-gown">Learn More</RouterLink>
                 </Button>
               </div>
             </div>
@@ -152,7 +151,7 @@ export default function BuckinghamPage() {
                   Schedule online and let us handle the rest.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/schedule">Schedule Pickup</Link>
+                  <RouterLink to="/schedule">Schedule Pickup</RouterLink>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -211,7 +210,7 @@ export default function BuckinghamPage() {
                   Township residents who value their time.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/wash-fold">Learn More</Link>
+                  <RouterLink to="/all-services/wash-fold">Learn More</RouterLink>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -239,7 +238,7 @@ export default function BuckinghamPage() {
                   we've got you covered.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/alteration-tailoring">Learn More</Link>
+                  <RouterLink to="/all-services/alteration-tailoring">Learn More</RouterLink>
                 </Button>
               </div>
             </div>
@@ -253,7 +252,7 @@ export default function BuckinghamPage() {
                   Buckingham Township residents.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/shoe-repair">Learn More</Link>
+                  <RouterLink to="/all-services/shoe-repair">Learn More</RouterLink>
                 </Button>
               </div>
               <div className="order-first md:order-last">
@@ -281,7 +280,7 @@ export default function BuckinghamPage() {
                   specialized care.
                 </p>
                 <Button asChild size="lg" className="bg-[#790003] hover:bg-[#F6AE2D]">
-                  <Link href="/all-services/clean-household-items">Learn More</Link>
+                  <RouterLink to="/all-services/clean-household-items">Learn More</RouterLink>
                 </Button>
               </div>
             </div>
@@ -379,7 +378,7 @@ export default function BuckinghamPage() {
           </h2>
           <p className="text-xl text-white/90 mb-8">Experience the Signature Cleaners difference.</p>
           <Button asChild size="lg" className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg">
-            <Link href="/schedule">Schedule Pickup</Link>
+            <RouterLink to="/schedule">Schedule Pickup</RouterLink>
           </Button>
         </div>
       </section>
