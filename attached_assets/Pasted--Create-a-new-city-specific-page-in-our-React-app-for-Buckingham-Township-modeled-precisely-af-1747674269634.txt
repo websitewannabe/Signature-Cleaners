@@ -1,0 +1,137 @@
+> Create a new city-specific page in our React app for **Buckingham Township**, modeled precisely after `doylestown.tsx`. The goal is to replicate the exact layout, styles, and components while updating the content and references to Buckingham Township, PA.
+
+---
+
+### ✅ FILE STRUCTURE & ROUTING
+
+* Create a new file: `src/pages/buckingham.tsx`
+* Export a component named: `BuckinghamPage`
+* Add routing as needed in the main router (if applicable), e.g., `<Route path="/buckingham" component={BuckinghamPage} />`
+
+---
+
+### ✅ PAGE STRUCTURE & CONTENT REQUIREMENTS
+
+#### 1. **Metadata & SEO**
+
+Update the `<Helmet>` component:
+
+```tsx
+<title>Dry Cleaning in Buckingham Township, PA | Signature Cleaners</title>
+<meta
+  name="description"
+  content="Signature Cleaners offers expert dry cleaning, free pickup & delivery, and laundry services in Buckingham Township, PA."
+/>
+<link
+  rel="canonical"
+  href="https://www.mysignaturecleaners.com/buckingham"
+/>
+```
+
+---
+
+#### 2. **Hero Section**
+
+* Update title to:
+  `Professional Dry Cleaning in Buckingham Township`
+* Subtext:
+  `Proudly serving Buckingham Township with trusted dry cleaning for decades.`
+* CTA Button:
+  `Schedule Pickup in Buckingham`
+
+---
+
+#### 3. **About Services (Split into Two Columns)**
+
+**Update points for Buckingham:**
+
+* Eco-friendly cleaning solutions
+* Free pickup and delivery in Buckingham Township
+* Family-owned and operated since 1985
+* Expert garment care and attention to detail
+* Proudly serving Bucks County
+* Trusted by local residents for over 30 years
+
+---
+
+#### 4. **Three Service Sections (in order):**
+
+Use the same layout and styling from `doylestown.tsx`:
+
+* **Expert Dry Cleaning Services**
+* **Wedding Gown Preservation**
+* **Free Pickup & Delivery**
+
+Use the same images and buttons as Doylestown unless new ones are provided.
+
+---
+
+#### 5. **Map & Testimonials Split Layout**
+
+Replace the Doylestown map iframe with one for **Buckingham Township, PA**. Suggested Google Maps embed:
+
+```html
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24334.07952178715!2d-75.0885647598699!3d40.31035335918647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3e28c5f1d17fd%3A0x210b0876bb3a4587!2sBuckingham%20Township%2C%20PA!5e0!3m2!1sen!2sus!4v0000000000000"
+  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+></iframe>
+```
+
+Update testimonials to be general or location-neutral, or use:
+
+```tsx
+<p className="italic mb-4">
+  "Signature Cleaners always delivers quality and fast service. The pickup and delivery are a game changer!"
+</p>
+<p className="font-semibold">– Emily R., Buckingham Township</p>
+```
+
+---
+
+#### 6. **Four More Services (same structure & visuals):**
+
+* **Professional Wash & Fold**
+* **Expert Alterations & Tailoring**
+* **Professional Shoe Repair**
+* **Household Items Cleaning**
+
+Just update any location references from Doylestown → Buckingham Township.
+
+---
+
+#### 7. **About Section**
+
+**Title:** `About Buckingham Township, PA`
+**Content:**
+
+```txt
+Buckingham Township is one of the oldest and most picturesque areas in Bucks County, Pennsylvania. Known for its rolling farmlands, historic homes, and tight-knit community, Buckingham blends rural charm with elegant country living. Residents enjoy peaceful neighborhoods, great schools, and quick access to Doylestown and New Hope.
+
+At Signature Cleaners, we’re proud to serve Buckingham Township with expert dry cleaning and laundry services. Whether you're commuting to Philadelphia or working from home, our free pickup and delivery ensure your wardrobe and household items are always in excellent condition.
+```
+
+---
+
+#### 8. **FAQ Section**
+
+**Title:** `Frequently Asked Questions – Buckingham Township, PA`
+**Accordion Content:**
+
+1. **Do you offer same-day dry cleaning in Buckingham Township?**
+   *Not at this time, but we offer next-day service with early drop-off or pickup.*
+2. **Is pickup and delivery available for homes in Buckingham?**
+   *Yes! Free pickup and delivery is available throughout Buckingham Township—just schedule online or by phone.*
+3. **Where are the Buckingham service areas?**
+   *We serve the entire township, including Forest Grove, Holicong, and Pineville.*
+4. **Do you clean wedding gowns in Buckingham?**
+   *Yes. We provide pickup, preservation, and delivery for wedding gowns throughout Buckingham Township.*
+5. **Can I schedule wash & fold in Buckingham?**
+   *Absolutely. Our professional wash & fold laundry service is fully available to Buckingham residents.*
+
+---
+
+#### 9. **CTA Banner Section (Bottom)**
+
+* Heading: `Visit Us or Schedule a Pickup in Buckingham Township Today`
+* Subheading: `Experience the Signature Cleaners difference.`
+* CTA Button: `Schedule Pickup`
