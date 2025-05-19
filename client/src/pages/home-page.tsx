@@ -950,8 +950,7 @@ export default function HomePage() {
             </div>
 
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 auto-rows-auto">
-                <div className="grid-cols-subgrid col-span-1">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2">
                 <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Buckingham
@@ -980,14 +979,14 @@ export default function HomePage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Holland
                   </p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Ivyland
                   </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Jamison
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Lahaska
                   </p>
@@ -1006,14 +1005,14 @@ export default function HomePage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Perkasie
                   </p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Pipersville
                   </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Point Pleasant
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Richboro
                   </p>
@@ -1040,7 +1039,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
       </section>
 
       <Footer />
