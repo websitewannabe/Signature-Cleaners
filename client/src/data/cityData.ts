@@ -63,5 +63,32 @@ export const cityData: Record<string, CityData> = {
         answer: "We provide pickup and delivery services throughout all of Buckingham Township, including the surrounding communities and neighborhoods."
       }
     ]
+  },
+  carversville: {
+    name: "Carversville",
+    title: "Professional Dry Cleaning in Carversville",
+    subtitle: "Serving Carversville with eco-friendly, expert garment care and local pickup & delivery.",
+    seo: {
+      title: "Dry Cleaning in Carversville, PA | Signature Cleaners",
+      description: "Signature Cleaners offers expert dry cleaning and laundry services in Carversville, PA with free pickup & delivery.",
+      keywords: "Carversville dry cleaning, laundry service Carversville, Signature Cleaners Bucks County",
+      canonical: "https://www.mysignaturecleaners.com/carversville"
+    },
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3050.0371214575187!2d-75.07559866953123!3d40.32633199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8c8b8b8b8b9%3A0x8b8b8b8b8b8b8b8b!2sCarversville%2C%20PA%2018913!5e0!3m2!1sen!2sus!4v1707674821037!5m2!1sen!2sus",
+    about: "Carversville, nestled in the heart of Bucks County, is a picturesque village known for its scenic roads, preserved architecture, and quiet charm. Signature Cleaners is proud to serve Carversville residents with professional garment care and reliable pickup and delivery services.",
+    faq: [
+      {
+        question: "Do you offer pickup and delivery in Carversville?",
+        answer: "Yes! We offer free pickup and delivery service to all Carversville residents."
+      },
+      {
+        question: "How long does dry cleaning take in Carversville?",
+        answer: "Standard turnaround is 48 hours. Rush service is available by request."
+      },
+      {
+        question: "Can I get tailoring services in Carversville?",
+        answer: "Absolutely. Schedule a pickup or bring your garments to our Doylestown location for alterations."
+      }
+    ]
   }
 };
