@@ -1,0 +1,71 @@
+> Create a new city-specific page in our React app for **Buckingham Township**, using the existing `doylestown.tsx` as a reference. The layout, structure, and styling should be identical, but all content should be updated to reflect Buckingham Township, PA.
+
+---
+
+### ✅ FILE & ROUTING
+
+* Create `src/pages/buckingham.tsx`
+* Export a component named `BuckinghamPage`
+* Add routing to display the page at `/buckingham`
+
+---
+
+### ✅ WHAT TO INCLUDE
+
+**1. Hero Section**
+
+* Title: Professional Dry Cleaning in Buckingham Township
+* Subtitle: Proudly serving Buckingham Township with trusted dry cleaning for decades.
+* Button: Schedule Pickup in Buckingham
+
+**2. Feature Highlights Section**
+
+* Replace bullet points with those specific to Buckingham:
+
+  * Eco-friendly cleaning solutions
+  * Free pickup and delivery in Buckingham Township
+  * Family-owned and operated since 1985
+  * Expert garment care and attention to detail
+  * Proudly serving Bucks County
+  * Trusted by local residents for over 30 years
+
+**3. First Three Services (in order)**
+
+* Expert Dry Cleaning Services
+* Wedding Gown Preservation
+* Free Pickup & Delivery
+
+Use same layout and styling as in Doylestown.
+
+**4. Map & Testimonials Section**
+
+* Map should center on Buckingham Township, PA
+* Testimonials should be updated to be location-neutral or relevant to Buckingham
+
+**5. Final Four Services**
+
+* Professional Wash & Fold
+* Expert Alterations & Tailoring
+* Professional Shoe Repair
+* Household Items Cleaning
+
+Use same format and images unless new ones are supplied.
+
+**6. About Section**
+
+* Title: About Buckingham Township, PA
+* Content:
+
+  > Buckingham Township is one of the oldest and most picturesque areas in Bucks County, Pennsylvania. Known for its rolling farmlands, historic homes, and tight-knit community, Buckingham blends rural charm with elegant country living. Residents enjoy peaceful neighborhoods, great schools, and quick access to Doylestown and New Hope.
+  >
+  > At Signature Cleaners, we’re proud to serve Buckingham Township with expert dry cleaning and laundry services. Whether you're commuting to Philadelphia or working from home, our free pickup and delivery ensure your wardrobe and household items are always in excellent condition.
+
+**7. FAQ Section**
+
+* Use updated location references and Buckingham-specific questions.
+
+**8. CTA Banner**
+
+* Heading: Visit Us or Schedule a Pickup in Buckingham Township Today
+* Subheading: Experience the Signature Cleaners difference.
+* Button: Schedule Pickup
