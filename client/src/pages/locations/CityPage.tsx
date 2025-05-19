@@ -1,4 +1,3 @@
-
 import { useParams } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { cityData } from "@/data/cityData";
