@@ -64,8 +64,7 @@ function Router() {
       <Route path="/legal/privacy-policy" component={PrivacyPage} />
 
       {/* Location-based pages */}
-      <Route path="/doylestown" component={DoylestownPage} />
-      <Route path="/buckingham" component={BuckinghamPage} />
+      <Route path="/:city" component={CityPage} />
 
       <Route component={NotFound} />
     </Switch>
