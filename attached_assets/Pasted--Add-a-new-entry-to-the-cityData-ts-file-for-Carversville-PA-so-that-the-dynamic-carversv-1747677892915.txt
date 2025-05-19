@@ -1,0 +1,56 @@
+> Add a new entry to the `cityData.ts` file for **Carversville, PA**, so that the dynamic `/carversville` route is fully supported in the `CityPage.tsx` layout. This page should include unique content, meta data, and map embed settings for Carversville, while reusing the shared layout.
+
+---
+
+### ✅ Instructions
+
+#### 1. \*\*Update \*\***`cityData.ts`**
+
+Add a new object to `cityData` for the Carversville slug:
+
+```ts
+carversville: {
+  name: "Carversville",
+  title: "Professional Dry Cleaning in Carversville",
+  subtitle: "Serving Carversville with eco-friendly, expert garment care and local pickup & delivery.",
+  seo: {
+    title: "Dry Cleaning in Carversville, PA | Signature Cleaners",
+    description: "Signature Cleaners offers expert dry cleaning and laundry services in Carversville, PA with free pickup & delivery.",
+    keywords: "Carversville dry cleaning, laundry service Carversville, Signature Cleaners Bucks County",
+    canonical: "https://www.mysignaturecleaners.com/carversville"
+  },
+  mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXYZ!2sCarversville!5e0!3m2!1sen!2sus!4v123456789",
+  about: "Carversville, nestled in the heart of Bucks County, is a picturesque village known for its scenic roads, preserved architecture, and quiet charm. Signature Cleaners is proud to serve Carversville residents with professional garment care and reliable pickup and delivery services.",
+  faq: [
+    {
+      question: "Do you offer pickup and delivery in Carversville?",
+      answer: "Yes! We offer free pickup and delivery service to all Carversville residents."
+    },
+    {
+      question: "How long does dry cleaning take in Carversville?",
+      answer: "Standard turnaround is 48 hours. Rush service is available by request."
+    },
+    {
+      question: "Can I get tailoring services in Carversville?",
+      answer: "Absolutely. Schedule a pickup or bring your garments to our Doylestown location for alterations."
+    }
+  ]
+}
+```
+
+> 📝 *Be sure to replace the **`mapEmbedUrl`** with the actual Carversville Google Maps embed link.*
+
+---
+
+#### 2. **Verify Route Works**
+
+After adding the Carversville data:
+
+* Navigate to `/carversville`
+* Confirm the page renders properly with:
+
+  * Custom hero title and subtitle
+  * All seven services displayed
+  * Carversville-specific About text and Map
+  * FAQ accordion populated
+  * Correct meta tags in browser
