@@ -14,7 +14,7 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <nav aria-label="Breadcrumb" className="py-4">
-      <ol className="flex flex-wrap items-center gap-2 text-sm text-neutral-600">
+      <ol className="flex flex-wrap items-center gap-2 text-sm text-white">
         {items.map((item, index) => (
           <li 
             key={item.path}
