@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,12 +12,19 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
 .services-carousel {
   padding: 20px 40px !important;
 }
 
 .services-carousel .swiper-button-next,
 .services-carousel .swiper-button-prev {
+  color: #790003;
+}
+
+.services-carousel .swiper-slide {
+  height: auto;
+}
 
 .fancy-unused-gradient {
   background: linear-gradient(
@@ -28,11 +36,4 @@
   filter: blur(10px);
   transform: skew(-15deg);
   opacity: 0.7;
-}
-
-  color: #790003;
-}
-
-.services-carousel .swiper-slide {
-  height: auto;
 }
