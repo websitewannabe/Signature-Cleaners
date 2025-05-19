@@ -45,3 +45,16 @@ task = "packager.installForAll"
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
+
+[[workflows.workflow]]
+name = "Clean and Build"
+author = 39135033
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "rm -rf dist/public/assets/*"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"
