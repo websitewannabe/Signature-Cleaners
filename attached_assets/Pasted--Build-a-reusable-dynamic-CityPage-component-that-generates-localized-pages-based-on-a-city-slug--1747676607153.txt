@@ -1,0 +1,76 @@
+> Build a reusable dynamic `CityPage` component that generates localized pages based on a city slug (e.g. `/doylestown`, `/buckingham`, etc.). Each page should render unique SEO metadata, hero content, Google Maps embed, city bio, and FAQs using city-specific data.
+
+---
+
+### ✅ Routing & Setup
+
+* Implement a dynamic route at `/[city]`
+* Create a React component: `CityPage.tsx`
+* Use a router parameter (e.g. `useParams()`) to identify the current city
+
+---
+
+### ✅ City Content Data
+
+Create a `cityData.ts` or `cities.json` file with structured content for each city. Start with **Doylestown** and structure like this:
+
+```ts
+export const cityData = {
+  doylestown: {
+    name: "Doylestown",
+    title: "Professional Dry Cleaning in Doylestown",
+    subtitle: "Proudly serving the Doylestown community with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Doylestown, PA | Signature Cleaners",
+      description: "Signature Cleaners offers eco-friendly, same-day dry cleaning services in Doylestown, PA with expert garment care.",
+      keywords: "dry cleaning Doylestown, laundry service Doylestown, Signature Cleaners",
+      canonical: "https://www.mysignaturecleaners.com/doylestown"
+    },
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=...doylestown_map_embed_here...",
+    about: "Doylestown is a charming Bucks County town known for its cultural history and vibrant downtown...",
+    faq: [
+      {
+        question: "Do you offer same-day dry cleaning in Doylestown?",
+        answer: "Yes! Drop off before 10 AM for same-day service at our Doylestown location."
+      },
+      {
+        question: "Where is your Doylestown location?",
+        answer: "We are located at 1456 Ferry Road #10, Doylestown, PA 18901."
+      }
+    ]
+  }
+}
+```
+
+---
+
+### ✅ Component Behavior
+
+Inside `CityPage.tsx`, the component should:
+
+* Retrieve `city` from URL params
+* Load data from `cityData[city]`
+* If not found, show 404 or fallback message
+* Inject SEO meta tags via `react-helmet-async`
+* Render sections with content based on city object:
+
+  * Hero Section
+  * Feature list (if applicable)
+  * Google Map Embed
+  * City Bio / About
+  * FAQ Accordion
+  * CTA Footer
+
+---
+
+### ✅ Example URL Behavior
+
+* `/doylestown` → loads Doylestown data
+* `/buckingham` → loads Buckingham data (when added)
+* `/new-hope` → loads New Hope data (when added)
+
+---
+
+### ✅ Future Expansion
+
+The team should build the structure so additional cities can be added just by expanding the `cityData` object or JSON file—no new components or pages required.
