@@ -22,7 +22,6 @@ import DeliveryPage from "@/pages/all-services/delivery-page";
 import AccessibilityPage from "@/pages/legal/accessibility-page";
 import TermsPage from "@/pages/legal/terms-page";
 import PrivacyPage from "@/pages/legal/privacy-page";
-import BuckinghamPage from "@/pages/locations/buckingham";
 
 // Location-based pages
 import DoylestownPage from "@/pages/locations/doylestown";
@@ -65,7 +64,6 @@ function Router() {
 
       {/* Location-based pages */}
       <Route path="/doylestown" component={DoylestownPage} />
-      <Route path="/buckingham" component={BuckinghamPage} />
 
       <Route component={NotFound} />
     </Switch>
