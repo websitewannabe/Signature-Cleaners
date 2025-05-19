@@ -204,7 +204,8 @@ const Header = () => {
                     <img
                       src="/icons/bubbles.svg"
                       alt="Wash & Fold"
-                      className="w-4 h-4"
+                      className="w-4 h-4 text-white"
+                      style={{ filter: 'brightness(0) invert(1)' }}
                     />
                     Wash & Fold
                   </Link>
