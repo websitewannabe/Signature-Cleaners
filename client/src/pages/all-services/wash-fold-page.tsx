@@ -575,7 +575,7 @@ export default function WashFoldPage() {
             </div>
 
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2">
                 <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Buckingham
@@ -604,8 +604,6 @@ export default function WashFoldPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Holland
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Ivyland
                   </p>
@@ -621,6 +619,8 @@ export default function WashFoldPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>New Hope
                   </p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Newtown
                   </p>
@@ -630,8 +630,6 @@ export default function WashFoldPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Perkasie
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Pipersville
                   </p>
@@ -658,6 +656,35 @@ export default function WashFoldPage() {
                   </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Yardley
+                  </p>
+                </div>
+                <div className="hidden md:block space-y-2">
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Buckingham
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Carversville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Chalfont
+                  </p>
+                  <Link
+                    href="/doylestown"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
+                    <span className="mr-2">•</span>Doylestown
+                  </Link>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Dublin
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Fountainville
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Furlong
+                  </p>
+                  <p className="text-white flex items-center">
+                    <span className="mr-2">•</span>Holland
                   </p>
                 </div>
               </div>
