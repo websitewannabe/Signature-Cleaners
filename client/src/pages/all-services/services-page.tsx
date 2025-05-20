@@ -1,3 +1,7 @@
+The code has been updated with more descriptive text for the "Learn More" buttons on the service pages, improving user experience and clarity.
+```
+
+```replit_final_file
 import { Link } from "wouter";
 import { Shirt, Car, Footprints } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
@@ -246,8 +250,11 @@ export default function ServicesPage() {
                     needs, saving you time and effort.
                   </p>
                   <Link href="/all-services/wash-fold" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
+                      aria-label="Learn more about our wash and fold laundry service"
+                    >
+                      Explore Laundry Services
                     </Button>
                   </Link>
                 </div>
@@ -280,8 +287,11 @@ export default function ServicesPage() {
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
                   <Link href="/all-services/wedding-gown" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
+                      aria-label="Learn more about our wedding gown preservation services"
+                    >
+                      Wedding Gown Care Details
                     </Button>
                   </Link>
                 </div>
@@ -317,8 +327,11 @@ export default function ServicesPage() {
                     href="/all-services/clean-household-items"
                     className="block"
                   >
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
+                      aria-label="Learn more about our household items cleaning services"
+                    >
+                      Household Cleaning Details
                     </Button>
                   </Link>
                 </div>
@@ -354,8 +367,11 @@ export default function ServicesPage() {
                     href="/all-services/alteration-tailoring"
                     className="block"
                   >
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
+                      aria-label="Learn more about our tailoring and alterations services"
+                    >
+                      Tailoring Service Info
                     </Button>
                   </Link>
                 </div>
@@ -420,8 +436,11 @@ export default function ServicesPage() {
                     and revives.
                   </p>
                   <Link href="/all-services/shoe-repair" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                    <Button 
+                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
+                      aria-label="Learn more about our professional shoe repair services"
+                    >
+                      Shoe Repair Details
                     </Button>
                   </Link>
                 </div>
