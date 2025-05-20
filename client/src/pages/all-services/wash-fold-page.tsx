@@ -397,6 +397,17 @@ export default function WashFoldPage() {
                   />
                 </div>
 
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Message
+                  </label>
+                  <Textarea
+                    name="message"
+                    placeholder="Additional notes or special instructions..."
+                    className="min-h-[100px] w-full"
+                  />
+                </div>
+
                 <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
                   Schedule Service
                 </Button>
