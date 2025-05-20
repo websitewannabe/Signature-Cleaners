@@ -209,11 +209,8 @@ export default function ServicesPage() {
                     services throughout Bucks County.
                   </p>
                   <Link href="/all-services/dry-cleaning" className="block">
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
-                      aria-label="Learn more about our professional dry cleaning services"
-                    >
-                      Explore Dry Cleaning Services
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                      Learn More
                     </Button>
                   </Link>
                 </div>

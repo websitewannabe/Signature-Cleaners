@@ -331,11 +331,8 @@ export default function HomePage() {
                     href="/all-services/clean-household-items"
                     className="block"
                   >
-                    <Button 
-                      className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none"
-                      aria-label="Learn more about our household items cleaning services"
-                    >
-                      Household Cleaning Info
+                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                      Learn More
                     </Button>
                   </Link>
                 </div>
@@ -481,7 +478,7 @@ export default function HomePage() {
           <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
 
           {/* Parallel diagonal streaks */}
-          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
 
           {/* Soft overlay gradient */}
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
@@ -648,7 +645,7 @@ export default function HomePage() {
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
-                            viewBox="0 0 2020"
+                            viewBox="0 0 20 20"
                             fill="currentColor"
                           >
                             <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
