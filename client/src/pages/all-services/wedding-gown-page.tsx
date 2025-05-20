@@ -431,9 +431,12 @@ export default function WeddingGownPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
-                  Schedule Service
-                </Button>
+                <Button 
+                    className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                    aria-label="Learn more about our wedding gown cleaning and preservation services"
+                  >
+                    Learn About Wedding Gown Care
+                  </Button>
               </form>
 
               {/* <h3 className="text-2xl font-semibold text-neutral-900 mb-6">

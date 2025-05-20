@@ -408,9 +408,12 @@ export default function WashFoldPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
-                  Schedule Service
-                </Button>
+                <Button 
+                    className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                    aria-label="Learn more about our wash and fold laundry services"
+                  >
+                    Learn About Wash & Fold Services
+                  </Button>
               </form>
 
               {/* <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
