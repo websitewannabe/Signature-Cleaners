@@ -212,25 +212,83 @@ export default function DoylestownPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
-                  Expert Dry Cleaning Services
+                  Dry Cleaning in Doylestown
                 </h2>
                 <p className="text-lg text-neutral-600 mb-8">
-                  Experience premium garment care with our state-of-the-art dry
-                  cleaning services. We treat each item with precision and care,
-                  ensuring your clothes look and feel their best.
+                  Professional dry cleaning services with expert care for your garments. Our state-of-the-art facility and experienced team ensure your clothes receive the finest treatment available in Doylestown.
                 </p>
                 <Button
                   asChild
                   size="lg"
                   className="bg-[#790003] hover:bg-[#F6AE2D]"
                 >
-                  <Link href="/all-services/dry-cleaning">Learn More</Link>
+                  <Link href="/all-services/dry-cleaning">Learn More About Dry Cleaning</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
                 <img
-                  src="/images/interior.jpg"
-                  alt="Dry Cleaning Service"
+                  src="/images/interior-cleaning.gif"
+                  alt="Dry Cleaning Service in Doylestown"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Wash & Fold Service */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-first">
+                <img
+                  src="/images/wash-fold.gif"
+                  alt="Wash & Fold Service in Doylestown"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
+                  Wash & Fold in Doylestown
+                </h2>
+                <p className="text-lg text-neutral-600 mb-8">
+                  Convenient wash and fold service for your everyday laundry needs. Let our professionals handle your laundry while you focus on what matters most.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#790003] hover:bg-[#F6AE2D]"
+                >
+                  <Link href="/all-services/wash-fold">Learn More About Wash & Fold</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Alterations & Tailoring */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
+                  Alterations & Tailoring in Doylestown
+                </h2>
+                <p className="text-lg text-neutral-600 mb-8">
+                  Expert tailoring and alterations for the perfect fit. Our skilled tailors ensure your garments fit perfectly and look their best.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#790003] hover:bg-[#F6AE2D]"
+                >
+                  <Link href="/all-services/alteration-tailoring">Explore Tailoring Services</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img
+                  src="/images/tailoring.gif"
+                  alt="Alterations & Tailoring in Doylestown"
                   className="rounded-lg shadow-lg w-full h-[400px] object-cover"
                 />
               </div>
@@ -244,57 +302,113 @@ export default function DoylestownPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-first">
                 <img
-                  src="/images/weddingGown.jpg"
-                  alt="Wedding Gown Service"
+                  src="/images/wedding-gown.gif"
+                  alt="Wedding Gown Service in Doylestown"
                   className="rounded-lg shadow-lg w-full h-[400px] object-cover"
                 />
               </div>
               <div>
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
-                  Wedding Gown Preservation
+                  Wedding Gown Services in Doylestown
                 </h2>
                 <p className="text-lg text-neutral-600 mb-8">
-                  Trust us with your precious wedding gown. Our specialized
-                  preservation process ensures your dress remains as beautiful
-                  as the day you wore it.
+                  Specialized cleaning and preservation for wedding gowns. Trust us to preserve your precious memories with our expert care.
                 </p>
                 <Button
                   asChild
                   size="lg"
                   className="bg-[#790003] hover:bg-[#F6AE2D]"
                 >
-                  <Link href="/all-services/wedding-gown">Learn More</Link>
+                  <Link href="/all-services/wedding-gown">Wedding Gown Care Details</Link>
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Delivery Service */}
+        {/* Shoe Repair */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
-                  Free Pickup & Delivery
+                  Shoe Repair in Doylestown
                 </h2>
                 <p className="text-lg text-neutral-600 mb-8">
-                  Enjoy the convenience of our complimentary pickup and delivery
-                  service throughout Doylestown. Schedule your service with just
-                  a few clicks.
+                  Professional shoe repair and restoration services. Extend the life of your favorite footwear with our expert care.
                 </p>
                 <Button
                   asChild
                   size="lg"
                   className="bg-[#790003] hover:bg-[#F6AE2D]"
                 >
-                  <Link href="/all-services/delivery">Schedule Pickup</Link>
+                  <Link href="/all-services/shoe-repair">Explore Shoe Services</Link>
                 </Button>
               </div>
               <div className="order-first md:order-last">
                 <img
-                  src="/images/delivery.jpg"
-                  alt="Delivery Service"
+                  src="/images/shoe-repair.gif"
+                  alt="Shoe Repair Service in Doylestown"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Household Items */}
+        <section className="py-16 bg-neutral-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="order-first">
+                <img
+                  src="/images/household-items.gif"
+                  alt="Household Item Cleaning in Doylestown"
+                  className="rounded-lg shadow-lg w-full h-[400px] object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
+                  Household Item Cleaning in Doylestown
+                </h2>
+                <p className="text-lg text-neutral-600 mb-8">
+                  Professional cleaning for comforters, drapes, and more. Trust us with your valuable household items.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#790003] hover:bg-[#F6AE2D]"
+                >
+                  <Link href="/all-services/clean-household-items">Learn About Household Cleaning</Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pickup & Delivery */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl font-bold text-[#1A1E23] mb-6">
+                  Pickup & Delivery in Doylestown
+                </h2>
+                <p className="text-lg text-neutral-600 mb-8">
+                  Free pickup and delivery service throughout Doylestown. Experience the convenience of doorstep service.
+                </p>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-[#790003] hover:bg-[#F6AE2D]"
+                >
+                  <Link href="/all-services/delivery">Schedule Pickup & Delivery</Link>
+                </Button>
+              </div>
+              <div className="order-first md:order-last">
+                <img
+                  src="/images/delivery.gif"
+                  alt="Pickup & Delivery Service in Doylestown"
                   className="rounded-lg shadow-lg w-full h-[400px] object-cover"
                 />
               </div>
