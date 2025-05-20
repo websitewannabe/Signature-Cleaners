@@ -98,8 +98,25 @@ export default function ContactPage() {
   });
 
   // Handle form submission
-  const onSubmit = (data: ContactFormValues) => {
-    contactMutation.mutate(data);
+  const onSubmit = async (data: ContactFormValues) => {
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...data
+        }).toString()
+      });
+      setSubmitted(true);
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -310,16 +327,127 @@ export default function ContactPage() {
                 )}
               </div>
             </div> */}
-            <div className="w-full h-[600px]">
-              <iframe
-                src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56"
-                style={{ width: "100%", height: "100%", border: "0" }}
-                allow="camera; microphone; autoplay; encrypted-media;"
-                data-qa="iframe-container"
-                data-remove-element-on-mobile="true"
-                data-disable-scroll="true"
-                loading="lazy"
-              />
+            <div className="lg:mt-0">
+              <div className="bg-white rounded-lg shadow-md p-6">
+                {submitted ? (
+                  <div className="flex flex-col items-center justify-center py-8 space-y-4">
+                    <CheckCircle2 className="h-16 w-16 text-green-500" />
+                    <h3 className="text-2xl font-semibold text-center">
+                      Thank You!
+                    </h3>
+                    <p className="text-center text-neutral-600">
+                      Your message has been sent successfully. We'll get back to
+                      you as soon as possible.
+                    </p>
+                    <Button
+                      onClick={() => setSubmitted(false)}
+                      className="mt-4"
+                    >
+                      Send Another Message
+                    </Button>
+                  </div>
+                ) : (
+                  <Form {...form}>
+                    <form
+                      onSubmit={form.handleSubmit(onSubmit)}
+                      className="space-y-6"
+                      data-netlify="true"
+                      name="contact"
+                      method="POST"
+                      netlify-honeypot="bot-field"
+                    >
+                      <input type="hidden" name="form-name" value="contact" />
+                      <p className="hidden">
+                        <label>
+                          Don't fill this out if you're human: <input name="bot-field" />
+                        </label>
+                      </p>
+
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Your Name</FormLabel>
+                            <FormControl>
+                              <Input placeholder="John Doe" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Email Address</FormLabel>
+                            <FormControl>
+                              <Input
+                                type="email"
+                                placeholder="john@example.com"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="subject"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Subject</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="How can we help you?"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder="Please provide details about your inquiry..."
+                                className="min-h-[120px]"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <Button
+                        type="submit"
+                        className="w-full bg-primary hover:bg-primary-dark"
+                        disabled={form.formState.isSubmitting}
+                      >
+                        {form.formState.isSubmitting ? (
+                          <>
+                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            Sending...
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
+                      </Button>
+                    </form>
+                  </Form>
+                )}
+              </div>
             </div>
             <div className="mt-10 lg:mt-0">
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
