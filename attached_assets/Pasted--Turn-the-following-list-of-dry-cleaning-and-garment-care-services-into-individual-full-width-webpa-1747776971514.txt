@@ -1,0 +1,40 @@
+> Turn the following list of dry cleaning and garment care services into individual full-width webpage sections that follow a Z-pattern layout. Each section should feature:
+>
+> * A **high-resolution image** (use the image from the original service card),
+> * A **heading** with the service title (e.g., “Dry Cleaning in Doylestown”),
+> * A **short paragraph** with the description,
+> * A **clear CTA button** (e.g., “Learn More”) that links to a specific service route (e.g., `/services/dry-cleaning`, `/services/wash-fold`, etc.).
+>
+> Alternate the position of the image and text in each section to follow a **Z-pattern**: first section has image on the left and text on the right, second has text on the left and image on the right, and so on.
+>
+> Use the following service cards as input:
+>
+> 1. **Dry Cleaning in Doylestown**
+>    *Professional dry cleaning services with expert care for your garments.*
+>    Link: `/services/dry-cleaning`
+>
+> 2. **Wash & Fold in Doylestown**
+>    *Convenient wash and fold service for your everyday laundry needs.*
+>    Link: `/services/wash-fold`
+>
+> 3. **Alterations & Tailoring in Doylestown**
+>    *Expert tailoring and alterations for the perfect fit.*
+>    Link: `/services/alterations-tailoring`
+>
+> 4. **Wedding Gown Services in Doylestown**
+>    *Specialized cleaning and preservation for wedding gowns.*
+>    Link: `/services/wedding-gown`
+>
+> 5. **Shoe Repair in Doylestown**
+>    *Professional shoe repair and restoration services.*
+>    Link: `/services/shoe-repair`
+>
+> 6. **Household Item Cleaning in Doylestown**
+>    *Professional cleaning for comforters, drapes, and more.*
+>    Link: `/services/household-cleaning`
+>
+> 7. **Pickup & Delivery in Doylestown**
+>    *Free pickup and delivery service throughout Doylestown.*
+>    Link: `/services/pickup-delivery`
+>
+> Format each section using semantic HTML or JSX (your choice) and style it to match modern web layout best practices: full-bleed sections, responsive design, and accessible buttons.
