@@ -387,14 +387,15 @@ export default function DeliveryPage() {
               <form
                 className="space-y-4"
                 data-netlify="true"
-                name="delivery"
+                name="contact"
                 method="POST"
                 netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="delivery" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
+                    Don't fill this out if you're human:{" "}
+                    <input name="bot-field" />
                   </label>
                 </p>
 
@@ -402,11 +403,11 @@ export default function DeliveryPage() {
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Full Name
                   </label>
-                  <Input 
+                  <Input
                     name="name"
-                    placeholder="Your name" 
-                    className="w-full" 
-                    required 
+                    placeholder="Your name"
+                    className="w-full"
+                    required
                   />
                 </div>
 
@@ -448,7 +449,10 @@ export default function DeliveryPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                <Button
+                  type="submit"
+                  className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                >
                   Schedule Pickup
                 </Button>
               </form>
