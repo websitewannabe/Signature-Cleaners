@@ -34,7 +34,8 @@ import { InsertContact } from "@shared/schema";
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
   email: z.string().email({ message: "Please enter a valid email address" }),
-  subject: z.string().min(2, { message: "Subject is required" }),
+  phone: z.string().min(10, { message: "Phone number is required" }),
+  address: z.string().min(5, { message: "Address is required" }),
   message: z
     .string()
     .min(10, { message: "Message must be at least 10 characters" }),
@@ -52,7 +53,8 @@ export default function ContactPage() {
     defaultValues: {
       name: "",
       email: "",
-      subject: "",
+      phone: "",
+      address: "",
       message: "",
     },
   });
@@ -398,13 +400,31 @@ export default function ContactPage() {
 
                       <FormField
                         control={form.control}
-                        name="subject"
+                        name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Subject</FormLabel>
+                            <FormLabel>Phone Number</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="How can we help you?"
+                                type="tel"
+                                placeholder="(215) 555-0123"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+
+                      <FormField
+                        control={form.control}
+                        name="address"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Address</FormLabel>
+                            <FormControl>
+                              <Input
+                                placeholder="Enter your full address"
                                 {...field}
                               />
                             </FormControl>
