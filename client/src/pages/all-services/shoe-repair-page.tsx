@@ -330,17 +330,77 @@ export default function ShoeRepairPage() {
               </div>
             </div>
             <div className="bg-neutral-100 rounded-lg p-8">
-              <div className="w-full h-[763px]">
-                <iframe
-                  src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56"
-                  style={{ width: "100%", height: "100%", border: "0" }}
-                  allow="camera; microphone; autoplay; encrypted-media;"
-                  data-qa="iframe-container"
-                  data-remove-element-on-mobile="true"
-                  data-disable-scroll="true"
-                  loading="lazy"
-                />
-              </div>
+              <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
+                Schedule Shoe Repair
+              </h3>
+              <form
+                className="space-y-4"
+                data-netlify="true"
+                name="shoe-repair"
+                method="POST"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="shoe-repair" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
+
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Full Name
+                  </label>
+                  <Input 
+                    name="name"
+                    placeholder="Your name" 
+                    className="w-full" 
+                    required 
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Phone Number
+                  </label>
+                  <Input
+                    name="phone"
+                    type="tel"
+                    placeholder="(215) 555-0123"
+                    className="w-full"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Email
+                  </label>
+                  <Input
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    className="w-full"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    Address
+                  </label>
+                  <Textarea
+                    name="address"
+                    placeholder="Your pickup address"
+                    className="min-h-[100px] w-full"
+                    required
+                  />
+                </div>
+
+                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                  Schedule Service
+                </Button>
+              </form>
 
               {/* <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
                 Contact Us
