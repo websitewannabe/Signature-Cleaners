@@ -77,6 +77,8 @@ export default function AuthPage() {
                 <a
                   href="https://account.mydrycleaner.com/SIGNATUREPA/#/login"
                   className="block"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
                     Log In or Pay Bill
@@ -97,6 +99,8 @@ export default function AuthPage() {
                 <a
                   href="https://account.mydrycleaner.com/SIGNATUREPA/#/customer-signup"
                   className="block"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
                     Create Account
