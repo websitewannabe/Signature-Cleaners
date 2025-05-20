@@ -51,7 +51,9 @@ export default function AlterationTailoringPage() {
           rel="canonical"
           href="https://www.mysignaturecleaners.com/all-services/alteration-tailoring"
         />
-        <title>Alterations & Tailoring | Signature Cleaners</title>
+        <title>
+          Alterations & Tailoring in Dolyestown | Bucks County Dry Cleaner | Signature Cleaners
+        </title>
         <meta
           name="description"
           content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit."
