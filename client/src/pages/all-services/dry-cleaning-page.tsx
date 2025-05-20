@@ -344,7 +344,7 @@ export default function DryCleaningPage() {
               <form
                 className="space-y-4"
                 data-netlify="true"
-                name="dry-cleaning"
+                name="contact"
                 method="POST"
                 netlify-honeypot="bot-field"
               >

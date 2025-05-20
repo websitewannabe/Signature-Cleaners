@@ -359,7 +359,7 @@ export default function WeddingGownPage() {
               <form
                 className="space-y-4"
                 data-netlify="true"
-                name="wedding-gown"
+                name="contact"
                 method="POST"
                 netlify-honeypot="bot-field"
               >

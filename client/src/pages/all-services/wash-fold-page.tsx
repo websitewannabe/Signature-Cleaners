@@ -336,7 +336,7 @@ export default function WashFoldPage() {
               <form
                 className="space-y-4"
                 data-netlify="true"
-                name="wash-fold"
+                name="contact"
                 method="POST"
                 netlify-honeypot="bot-field"
               >

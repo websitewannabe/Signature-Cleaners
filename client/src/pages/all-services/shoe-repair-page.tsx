@@ -336,7 +336,7 @@ export default function ShoeRepairPage() {
               <form
                 className="space-y-4"
                 data-netlify="true"
-                name="shoe-repair"
+                name="contact"
                 method="POST"
                 netlify-honeypot="bot-field"
               >
