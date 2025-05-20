@@ -1,4 +1,3 @@
-
 import { useParams } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
@@ -159,6 +158,7 @@ export default function CityPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-neutral-100 rounded-lg overflow-hidden h-[400px]">
               <iframe
+                title={`Signature Cleaners location in ${city.name}`}
                 src={city.mapEmbedUrl}
                 width="100%"
                 height="100%"
