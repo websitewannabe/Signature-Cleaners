@@ -24,34 +24,56 @@ const Footer = () => {
             <p className="text-neutral-300 mb-4">
               Old Fashioned Service. Guaranteed.
             </p>
-            <div className="flex space-x-4">
-              <a
-                href="https://www.facebook.com/signaturecleaners"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-300 hover:text-white"
+            <div className="space-y-4">
+              <div className="flex space-x-4">
+                <a
+                  href="https://www.facebook.com/signaturecleaners"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-300 hover:text-white"
+                >
+                  <span className="sr-only">Facebook</span>
+                  <Facebook />
+                </a>
+                <a
+                  href="https://www.instagram.com/signaturedoylestown/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-300 hover:text-white"
+                >
+                  <span className="sr-only">Instagram</span>
+                  <Instagram />
+                </a>
+                <a
+                  href="https://x.com/i/flow/login?redirect_after_login=%2Fsignatureclean"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-300 hover:text-white"
+                >
+                  <span className="sr-only">Twitter</span>
+                  <Twitter />
+                </a>
+              </div>
+              <button
+                onClick={() => {
+                  // Load EqualWeb script
+                  const script = document.createElement('script');
+                  script.src = 'https://cdn.equalweb.com/core/4.0.7/accessibility.js';
+                  script.defer = true;
+                  document.head.appendChild(script);
+                  // Initialize EqualWeb
+                  window._userway_config = {
+                    account: "jn62B6XXXX"
+                  };
+                }}
+                className="text-neutral-300 hover:text-white flex items-center space-x-2 text-sm"
               >
-                <span className="sr-only">Facebook</span>
-                <Facebook />
-              </a>
-              <a
-                href="https://www.instagram.com/signaturedoylestown/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-300 hover:text-white"
-              >
-                <span className="sr-only">Instagram</span>
-                <Instagram />
-              </a>
-              <a
-                href="https://x.com/i/flow/login?redirect_after_login=%2Fsignatureclean"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-neutral-300 hover:text-white"
-              >
-                <span className="sr-only">Twitter</span>
-                <Twitter />
-              </a>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>Accessibility Tools</span>
+              </button>
             </div>
           </div>
 
