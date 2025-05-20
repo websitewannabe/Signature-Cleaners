@@ -348,7 +348,7 @@ export default function DryCleaningPage() {
                 method="POST"
                 netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="form-name" value="dry-cleaning" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
                     Don't fill this out if you're human: <input name="bot-field" />
