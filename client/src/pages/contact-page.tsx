@@ -105,8 +105,8 @@ export default function ContactPage() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
           "form-name": "contact",
-          ...data
-        }).toString()
+          ...data,
+        }).toString(),
       });
       setSubmitted(true);
       form.reset();
@@ -352,14 +352,15 @@ export default function ContactPage() {
                       onSubmit={form.handleSubmit(onSubmit)}
                       className="space-y-6"
                       data-netlify="true"
-                      name="contact"
+                      name="contact_page"
                       method="POST"
                       netlify-honeypot="bot-field"
                     >
                       <input type="hidden" name="form-name" value="contact" />
                       <p className="hidden">
                         <label>
-                          Don't fill this out if you're human: <input name="bot-field" />
+                          Don't fill this out if you're human:{" "}
+                          <input name="bot-field" />
                         </label>
                       </p>
 
