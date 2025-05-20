@@ -112,8 +112,12 @@ export default function AuthPage() {
 
           {/* Promo Section */}
           <div className="mt-12 text-center">
-            <div className="inline-block bg-[#790003] text-white px-6 py-3 rounded-md text-lg font-semibold">
-              $10 Off Your First Order – Sign up online or mention it in store
+            <div className="inline-block relative bg-white border-2 border-dashed border-[#790003] px-8 py-4 mx-4">
+              <div className="absolute -left-3 top-1/2 -mt-3 w-6 h-6 bg-[#181818] rounded-full"></div>
+              <div className="absolute -right-3 top-1/2 -mt-3 w-6 h-6 bg-[#181818] rounded-full"></div>
+              <div className="text-2xl font-bold text-[#790003] mb-1">$10 OFF</div>
+              <div className="text-[#181818] font-medium">Your First Order</div>
+              <div className="text-sm text-neutral-600 mt-1">Sign up online or mention in store</div>
             </div>
           </div>
 
