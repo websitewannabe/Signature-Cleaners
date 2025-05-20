@@ -416,8 +416,11 @@ export default function DryCleaningPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
-                  Schedule Service
+                <Button 
+                    className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                    aria-label="Learn more about our dry cleaning services"
+                >
+                    Learn About Dry Cleaning Services
                 </Button>
               </form>
             </div>
