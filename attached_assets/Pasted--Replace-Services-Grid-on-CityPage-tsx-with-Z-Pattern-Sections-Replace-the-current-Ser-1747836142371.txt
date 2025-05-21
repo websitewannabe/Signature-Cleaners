@@ -1,0 +1,82 @@
+## Replace Services Grid on CityPage.tsx with Z-Pattern Sections
+
+### 🔁 Replace the current `/* Services Grid */` section with the following:
+
+```tsx
+{/* Services Z-Pattern Sections */}
+{[
+  {
+    title: `Dry Cleaning in ${city.name}`,
+    description: "Professional dry cleaning services with expert care for your garments.",
+    image: "/images/interior-two.jpg",
+    link: "/all-services/dry-cleaning",
+  },
+  {
+    title: `Wash & Fold in ${city.name}`,
+    description: "Convenient wash and fold service for your everyday laundry needs.",
+    image: "/images/washFold.jpg",
+    link: "/all-services/wash-fold",
+  },
+  {
+    title: `Alterations & Tailoring in ${city.name}`,
+    description: "Expert tailoring and alterations for the perfect fit.",
+    image: "/images/tailor.jpg",
+    link: "/all-services/alteration-tailoring",
+  },
+  {
+    title: `Wedding Gown Services in ${city.name}`,
+    description: "Specialized cleaning and preservation for wedding gowns.",
+    image: "/images/weddingGown.jpg",
+    link: "/all-services/wedding-gown",
+  },
+  {
+    title: `Shoe Repair in ${city.name}`,
+    description: "Professional shoe repair and restoration services.",
+    image: "/images/shoeRepair.jpg",
+    link: "/all-services/shoe-repair",
+  },
+  {
+    title: `Household Item Cleaning in ${city.name}`,
+    description: "Professional cleaning for comforters, drapes, and more.",
+    image: "/images/householdItems.jpg",
+    link: "/all-services/clean-household-items",
+  },
+  {
+    title: `Pickup & Delivery in ${city.name}`,
+    description: `Free pickup and delivery service throughout ${city.name}.`,
+    image: "/images/delivery.jpg",
+    link: "/all-services/delivery",
+  },
+].map((service, index) => {
+  const isReversed = index % 2 === 1;
+  return (
+    <section key={index} className="py-16 bg-white">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse" : ""} items-center gap-10`}>
+        <div className="md:w-1/2">
+          <img
+            src={service.image}
+            alt={service.title}
+            className="w-full h-80 object-cover rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="md:w-1/2">
+          <h2 className="text-3xl font-bold mb-4 text-[#790003]">{service.title}</h2>
+          <p className="mb-6 text-neutral-700">{service.description}</p>
+          <Link href={service.link}>
+            <Button className="bg-[#790003] text-white hover:bg-[#F6AE2D]">Learn More</Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+})}
+```
+
+---
+
+## 📐 What This Does
+
+* **Z-pattern**: Alternates the layout direction using `md:flex-row-reverse` every other section.
+* **Dynamic city name**: Automatically injects the city name from the `city` object.
+* **Accessible & responsive**: Fully responsive layout with image and text pairing.
+* **Preserves CTA styling**: Uses the same button and color scheme from your existing design.
