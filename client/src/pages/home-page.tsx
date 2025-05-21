@@ -78,7 +78,7 @@ export default function HomePage() {
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
             url: "https://signaturecleaners.com",
-            image: "https://signaturecleaners.com/src/images/interior.jpg",
+            image: "https://signaturecleaners.com/src/images/interior.webp",
             logo: "https://signaturecleaners.com/src/images/logo.png",
             description:
               "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
@@ -216,7 +216,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/interior-two.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/interior-two.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
@@ -955,7 +955,7 @@ export default function HomePage() {
                 />
               ) : (
                 <img
-                  src="/images/map-placeholder.png"
+                  src="/images/map-placeholder.webp"
                   alt="Map of Signature Cleaners Doylestown"
                   className="w-full h-full object-cover"
                 />
