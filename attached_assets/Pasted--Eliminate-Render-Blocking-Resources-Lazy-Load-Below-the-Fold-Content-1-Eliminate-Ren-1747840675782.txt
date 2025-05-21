@@ -1,0 +1,104 @@
+## Eliminate Render-Blocking Resources & Lazy-Load Below-the-Fold Content
+
+### 1. 🚫 **Eliminate Render-Blocking Resources**
+
+Update your `index.html` or head tag in your React entry file (like `main.tsx`) to:
+
+```html
+<!-- Preconnect for faster Google Fonts loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Preload the font styles -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+
+<!-- Load fonts non-blocking -->
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
+/>
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</noscript>
+```
+
+Also, update `<script>` tags in `index.html` or Replit’s main HTML shell:
+
+```html
+<!-- Ensure JS files are async/deferred -->
+<script src="/src/main.tsx" type="module" defer></script>
+```
+
+> ✅ `defer` ensures scripts don’t block initial rendering.
+
+---
+
+### 2. 💤 **Lazy Load All Below-the-Fold Images**
+
+In any React component that includes images **below-the-fold**, add:
+
+```tsx
+<img
+  src="/images/example.jpg"
+  alt="Example"
+  loading="lazy"
+  className="w-full h-auto"
+/>
+```
+
+**For background images**, use lazy wrappers:
+
+```tsx
+import { useEffect, useRef, useState } from "react";
+
+function LazyBackground({ src, className, children }: { src: string; className?: string; children?: React.ReactNode }) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        setLoaded(true);
+        observer.disconnect();
+      }
+    });
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className={`${className} transition-all duration-500`}
+      style={
+        loaded
+          ? { backgroundImage: `url(${src})`, backgroundSize: "cover", backgroundPosition: "center" }
+          : undefined
+      }
+    >
+      {children}
+    </div>
+  );
+}
+```
+
+**Usage example:**
+
+```tsx
+<LazyBackground src="/images/interior.jpg" className="h-80">
+  <div className="text-white text-xl p-6">Welcome!</div>
+</LazyBackground>
+```
+
+---
+
+## 🧪 Final Steps
+
+* Add `loading="lazy"` to all `<iframe>`s, like Google Maps embeds.
+* Test your updates at [PageSpeed Insights](https://pagespeed.web.dev/).
+* Check visually in Replit’s mobile preview to confirm deferred elements load correctly.

@@ -379,4 +379,48 @@ export const cityData: Record<string, CityData> = {
       },
     ],
   },
+  ivyland: {
+    name: "Ivyland",
+    title: "Professional Dry Cleaning in Ivyland",
+    subtitle: "Proudly serving Holland with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Ivyland, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Ivyland. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Ivyland, laundry service Ivyland, Signature Cleaners Ivyland",
+      canonical: "https://www.mysignaturecleaners.com/ivyland",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6094.075938479339!2d-75.07812180017874!3d40.208218335895566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6aeb629b2f161%3A0x5ca59982008f0091!2sIvyland%2C%20PA%2018974!5e0!3m2!1sen!2sus!4v1747840333353!5m2!1sen!2sus",
+    about:
+      "Ivyland, Pennsylvania is a charming borough in Bucks County, known for its rich Victorian heritage and small-town warmth. With beautifully preserved architecture, quiet streets, and a close-knit community, Ivyland offers a unique blend of historical character and residential tranquility. It’s a hidden gem that captures the timeless spirit of classic Americana.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Ivyland?",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Ivyland do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Ivyland, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Ivyland?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Ivyland?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Ivyland?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
 };
