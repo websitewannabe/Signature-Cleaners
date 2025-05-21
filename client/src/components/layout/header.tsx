@@ -165,12 +165,13 @@ const Header = () => {
           {/* Right: Mobile Menu */}
           <div className="md:hidden">
             <Sheet>
-              <SheetTrigger className="text-white p-2">
+              <SheetTrigger className="text-white p-2" aria-label="Open menu">
                 <svg
                   className="w-6 h-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
