@@ -28,13 +28,13 @@ const TermsPage = lazy(() => import("@/pages/legal/terms-page"));
 const PrivacyPage = lazy(() => import("@/pages/legal/privacy-page"));
 
 // Location-based pages
-import DoylestownDryCleanersPage from "@/pages/locations/doylestown-dry-cleaners";
-import DryCleaningDoylestownPage from "@/pages/locations/dry-cleaning-doylestown";
-import WashAndFoldDoylestownPage from "@/pages/locations/wash-and-fold-doylestown";
-import WeddingDressCleaningDoylestownPage from "@/pages/locations/wedding-dress-cleaning-doylestown";
-import HouseholdCleaningDoylestownPage from "@/pages/locations/household-cleaning-doylestown";
-import LaundryDeliveryDoylestownPage from "@/pages/locations/laundry-delivery-doylestown";
-import MensTailorDoylestownPage from "@/pages/locations/mens-tailor-doylestown";
+const DoylestownDryCleanersPage = lazy(() => import("@/pages/locations/doylestown-dry-cleaners"));
+const DryCleaningDoylestownPage = lazy(() => import("@/pages/locations/dry-cleaning-doylestown"));
+const WashAndFoldDoylestownPage = lazy(() => import("@/pages/locations/wash-and-fold-doylestown"));
+const WeddingDressCleaningDoylestownPage = lazy(() => import("@/pages/locations/wedding-dress-cleaning-doylestown"));
+const HouseholdCleaningDoylestownPage = lazy(() => import("@/pages/locations/household-cleaning-doylestown"));
+const LaundryDeliveryDoylestownPage = lazy(() => import("@/pages/locations/laundry-delivery-doylestown"));
+const MensTailorDoylestownPage = lazy(() => import("@/pages/locations/mens-tailor-doylestown"));
 
 function Router() {
   return (
@@ -73,13 +73,13 @@ function Router() {
       <Route path="/legal/privacy-policy" component={() => <Suspense fallback={<div>Loading...</div>}><PrivacyPage /></Suspense>} />
 
       {/* Location-based pages */}
-      <Route path="/doylestown-dry-cleaners" component={DoylestownDryCleanersPage} />
-      <Route path="/dry-cleaning-doylestown" component={DryCleaningDoylestownPage} />
-      <Route path="/wash-and-fold-doylestown" component={WashAndFoldDoylestownPage} />
-      <Route path="/wedding-dress-cleaning-doylestown" component={WeddingDressCleaningDoylestownPage} />
-      <Route path="/household-cleaning-doylestown" component={HouseholdCleaningDoylestownPage} />
-      <Route path="/laundry-delivery-doylestown" component={LaundryDeliveryDoylestownPage} />
-      <Route path="/mens-tailor-doylestown" component={MensTailorDoylestownPage} />
+      <Route path="/doylestown-dry-cleaners" component={() => <Suspense fallback={<div>Loading...</div>}><DoylestownDryCleanersPage /></Suspense>} />
+      <Route path="/dry-cleaning-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><DryCleaningDoylestownPage /></Suspense>} />
+      <Route path="/wash-and-fold-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><WashAndFoldDoylestownPage /></Suspense>} />
+      <Route path="/wedding-dress-cleaning-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><WeddingDressCleaningDoylestownPage /></Suspense>} />
+      <Route path="/household-cleaning-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><HouseholdCleaningDoylestownPage /></Suspense>} />
+      <Route path="/laundry-delivery-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><LaundryDeliveryDoylestownPage /></Suspense>} />
+      <Route path="/mens-tailor-doylestown" component={() => <Suspense fallback={<div>Loading...</div>}><MensTailorDoylestownPage /></Suspense>} />
 
       <Route component={() => <Suspense fallback={<div>Loading...</div>}><NotFound /></Suspense>} />
     </Switch>
