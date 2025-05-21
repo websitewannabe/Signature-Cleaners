@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import { LazyBackground } from "../components/ui/lazy-background";
 import { Shirt, Car, Footprints, Shield, Leaf } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
@@ -164,7 +165,14 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">
-        <div className="absolute inset-0 bg-[url('/src/images/interior.webp')] md:bg-[url('/src/images/interior.jpg')] bg-cover bg-center bg-no-repeat"></div>
+        <LazyBackground 
+          src="/src/images/interior.webp"
+          className="absolute inset-0 md:hidden"
+        />
+        <LazyBackground 
+          src="/src/images/interior.jpg"
+          className="absolute inset-0 hidden md:block"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
