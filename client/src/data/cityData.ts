@@ -260,42 +260,87 @@ export const cityData: Record<string, CityData> = {
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6086.156882739395!2d-75.08726485016717!3d40.29621723583667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a9945e5fcea3%3A0xf1d5196041bd2baf!2sFurlong%2C%20PA%2018925!5e0!3m2!1sen!2sus!4v1747838361431!5m2!1sen!2sus",
     about:
-      "Chalfont, Pennsylvania is a quaint borough nestled in the heart of Bucks County. Rich in colonial history and small-town charm, Chalfont offers tree-lined streets, preserved Victorian architecture, and a welcoming, close-knit community. It’s a peaceful enclave that perfectly balances historic character with modern suburban comfort.",
+      "Furlong, Pennsylvania is a picturesque hamlet nestled between Doylestown and Buckingham in Bucks County. Known for its scenic beauty, horse farms, and upscale homes, Furlong exudes a serene, country elegance. With its close proximity to historic towns and preserved open spaces, Furlong offers a tranquil lifestyle rooted in charm and refinement.",
     faq: [
       {
-        question: "Do you offer same-day service in Chalfont?",
+        question: "Do you offer same-day service in Furlong?",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Chalfont do you service?",
+        question: "What areas of Furlong do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Chalfont, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Furlong, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Dublin?",
+        question: "What payment methods do you accept in Furlong?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Chalfont?",
+        question: "Do you offer wedding gown preservation in Furlong?",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question: "What is your turnaround time for alterations in Chalfont?",
+        question: "What is your turnaround time for alterations in Furlong?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
     ],
   },
   fountainville: {
-    name: "Fountainvilel",
+    name: "Fountainville",
     title: "Professional Dry Cleaning in Fountainville",
     subtitle:
       "Proudly serving Fountainville with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Fountainville, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Fountainville. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Fountainville, laundry service Fountainville, Signature Cleaners Fountainville",
+      canonical: "https://www.mysignaturecleaners.com/fountainville",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12162.792430883908!2d-75.17173271801676!3d40.349042543207126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402cbb1eefaa5%3A0x36f8ca19df4366b4!2sFountainville%2C%20PA%2018923!5e0!3m2!1sen!2sus!4v1747838086549!5m2!1sen!2sus",
+    about:
+      "Fountainville, Pennsylvania is a quiet village at the crossroads of Bucks County, where rural landscapes meet suburban convenience. Surrounded by open fields and gently winding roads, Fountainville offers a peaceful setting with easy access to nearby towns. Its laid-back atmosphere and community-oriented spirit make it a charming retreat in the heart of the county.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Fountainville?",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Fountainville do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Dublin, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Fountainville?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Fountainville?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Fountainville?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  holland: {
+    name: "Holland",
+    title: "Professional Dry Cleaning in Holland",
+    subtitle:
+      "Proudly serving Holland with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Holland, PA | Signature Cleaners",
       description:
         "Trusted dry cleaning services in Dublin. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
       keywords:
