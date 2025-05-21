@@ -24,7 +24,7 @@ import {
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
@@ -46,6 +46,11 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 export default function ContactPage() {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsLoaded(true), 250); // Delay background to prioritize LCP
+  }, []);
 
   // Initialize form with validation
   const form = useForm<ContactFormValues>({
@@ -203,18 +208,27 @@ export default function ContactPage() {
 
       {/* Contact Info & Form */}
       <section className="py-40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#F8F5F0]">
-          {/* Primary radial gradient for soft light effect */}
-          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+        {isLoaded && (
+          <div className="absolute inset-0 bg-[#F8F5F0]">
+            {/* Optional: background gradients and overlays can go back here */}
+            {/* Primary radial gradient for soft light effect */}
+            <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
 
-          {/* Parallel diagonal streaks */}
-          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+            {/* Parallel diagonal streaks */}
+            <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
 
-          {/* Soft overlay gradient */}
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
-        </div>
+            {/* Soft overlay gradient */}
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
+          </div>
+        )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 min-h-[2.5em] font-sans">
+          <h1 
+            className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 font-sans min-h-[2.5em]"
+            style={{
+              fontFamily: 'system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
+              lineHeight: '1.2',
+            }}
+          >
             Contact Us
           </h1>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
