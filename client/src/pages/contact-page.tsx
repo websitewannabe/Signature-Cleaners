@@ -387,7 +387,15 @@ export default function ContactPage() {
                           <FormItem>
                             <FormLabel>Your Name</FormLabel>
                             <FormControl>
-                              <Input placeholder="John Doe" {...field} />
+                              <label htmlFor="name" className="sr-only">Your Name</label>
+                              <Input
+                                type="text"
+                                id="name"
+                                name="name"
+                                className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#790003]"
+                                placeholder="John Doe"
+                                {...field}
+                              />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
