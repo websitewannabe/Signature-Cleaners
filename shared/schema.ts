@@ -1,21 +1,106 @@
-import { z } from 'zod';
+import { pgTable, text, serial, integer, boolean, timestamp, jsonb } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
+import { z } from "zod";
 
-export const userSchema = z.object({
-  id: z.string(),
-  email: z.string().email(),
-  name: z.string().optional(),
+// User schema
+export const users = pgTable("users", {
+  id: serial("id").primaryKey(),
+  username: text("username").notNull().unique(),
+  password: text("password").notNull(),
+  fullName: text("full_name").notNull(),
+  email: text("email").notNull(),
+  phone: text("phone"),
+  address: text("address"),
 });
 
-export const orderSchema = z.object({
-  id: z.string(),
-  userId: z.string(),
-  status: z.enum(['pending', 'processing', 'completed']),
-  items: z.array(z.object({
-    name: z.string(),
-    quantity: z.number(),
-  })),
-  createdAt: z.date(),
+export const insertUserSchema = createInsertSchema(users).pick({
+  username: true,
+  password: true,
+  fullName: true,
+  email: true,
+  phone: true,
+  address: true,
 });
 
-export type User = z.infer<typeof userSchema>;
-export type Order = z.infer<typeof orderSchema>;
+// Order schema
+export const orders = pgTable("orders", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id").notNull(),
+  status: text("status").notNull(),
+  serviceType: text("service_type").notNull(),
+  pickupDate: text("pickup_date").notNull(),
+  pickupTime: text("pickup_time").notNull(),
+  deliveryDate: text("delivery_date"),
+  deliveryTime: text("delivery_time"),
+  notes: text("notes"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertOrderSchema = createInsertSchema(orders).pick({
+  userId: true,
+  status: true,
+  serviceType: true,
+  pickupDate: true,
+  pickupTime: true,
+  deliveryDate: true,
+  deliveryTime: true,
+  notes: true,
+});
+
+// Contact schema
+export const contacts = pgTable("contacts", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  email: text("email").notNull(),
+  subject: text("subject").notNull(),
+  message: text("message").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  resolved: boolean("resolved").default(false),
+});
+
+export const insertContactSchema = createInsertSchema(contacts).pick({
+  name: true,
+  email: true,
+  subject: true,
+  message: true,
+});
+
+// Service schema
+export const services = pgTable("services", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  description: text("description").notNull(),
+  price: text("price").notNull(),
+  imageUrl: text("image_url"),
+});
+
+// Testimonial schema
+export const testimonials = pgTable("testimonials", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  role: text("role"),
+  content: text("content").notNull(),
+  rating: integer("rating").notNull(),
+});
+
+// Chat message schema
+export const chatMessages = pgTable("chat_messages", {
+  id: serial("id").primaryKey(),
+  userId: integer("user_id"),
+  content: text("content").notNull(),
+  isAgent: boolean("is_agent").default(false),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+});
+
+export type InsertUser = z.infer<typeof insertUserSchema>;
+export type User = typeof users.$inferSelect;
+
+export type InsertOrder = z.infer<typeof insertOrderSchema>;
+export type Order = typeof orders.$inferSelect;
+
+export type InsertContact = z.infer<typeof insertContactSchema>;
+export type Contact = typeof contacts.$inferSelect;
+
+export type Service = typeof services.$inferSelect;
+export type Testimonial = typeof testimonials.$inferSelect;
+export type ChatMessage = typeof chatMessages.$inferSelect;

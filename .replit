@@ -1,4 +1,4 @@
-modules = ["nodejs-20", "web"]
+modules = ["nodejs-20", "web", "postgresql-16"]
 run = "npm run dev"
 hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 
@@ -67,10 +67,6 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "pkill -f \"node|tsx\" || true"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "rm -rf dist"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"

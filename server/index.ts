@@ -8,12 +8,6 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// Import session
-import session from 'express-session';
-
-// Session middleware
-app.use(storage.getSessionMiddleware());
-
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
