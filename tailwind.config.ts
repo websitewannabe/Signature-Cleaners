@@ -4,10 +4,28 @@ export default {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
       },
+    },
+    fontFamily: {
+      sans: [
+        'system-ui',
+        '-apple-system',
+        'BlinkMacSystemFont',
+        'Segoe UI',
+        'Roboto',
+        'Helvetica Neue',
+        'Arial',
+        'sans-serif'
+      ],
+      serif: ['ui-serif', 'Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
+      mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace']
+    },
+    extend: {
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

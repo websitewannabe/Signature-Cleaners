@@ -157,10 +157,14 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <div
-                className="h-[600px] w-full bg-[url('/images/theTeam.jpg')] bg-cover bg-center bg-no-repeat rounded-lg shadow-lg"
-                role="img"
-                aria-label="Signature Cleaners team"
+              <img 
+                src="/images/theTeam.webp"
+                alt="Signature Cleaners team"
+                loading="lazy"
+                decoding="async"
+                className="h-[600px] w-full object-cover rounded-lg shadow-lg"
+                width="800"
+                height="600"
               />
             </div>
           </div>
