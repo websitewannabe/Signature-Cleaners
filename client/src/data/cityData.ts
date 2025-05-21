@@ -595,8 +595,7 @@ export const cityData: Record<string, CityData> = {
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question:
-          "What is your turnaround time for alterations in New Hope?",
+        question: "What is your turnaround time for alterations in New Hope?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
@@ -627,21 +626,20 @@ export const cityData: Record<string, CityData> = {
       {
         question: "What areas of Newtown do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of New Hope, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Newtown, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in New Hope?",
+        question: "What payment methods do you accept in Newtown?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in New Hope?",
+        question: "Do you offer wedding gown preservation in Newtown?",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question:
-          "What is your turnaround time for alterations in New Hope?",
+        question: "What is your turnaround time for alterations in Newtown?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
