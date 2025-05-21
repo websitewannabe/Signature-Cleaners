@@ -126,5 +126,40 @@ export const cityData: Record<string, CityData> = {
         answer: "Yes, we clean comforters, blankets, draperies, and other household items with free pickup and delivery in Carversville."
       }
     ]
-  }
+  },
+  chalfont: {
+    name: "Chalfont",
+    title: "Professional Dry Cleaning in Chalfont",
+    subtitle: "Proudly serving Chalfont with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Chalfont, PA | Signature Cleaners",
+      description: "Trusted dry cleaning services in Chalfont. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords: "dry cleaning Buckingham, laundry service Buckingham, Signature Cleaners Buckingham",
+      canonical: "https://www.mysignaturecleaners.com/buckingham"
+    },
+    mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48656.66193150027!2d-75.07559866953123!3d40.32633199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a89f944b9c91%3A0x8cfb89ae094fe457!2sBuckingham%2C%20PA%2018912!5e0!3m2!1sen!2sus!4v1707674821037!5m2!1sen!2sus",
+    about: "Buckingham Township is one of the oldest and most picturesque areas in Bucks County, Pennsylvania. Known for its rolling farmlands, historic homes, and tight-knit community, Buckingham blends rural charm with elegant country living.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Buckingham Township?",
+        answer: "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time."
+      },
+      {
+        question: "What areas of Buckingham do you service?",
+        answer: "We provide pickup and delivery services throughout all of Buckingham Township, including the surrounding communities and neighborhoods."
+      },
+      {
+        question: "What payment methods do you accept in Buckingham?",
+        answer: "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options."
+      },
+      {
+        question: "Do you offer wedding gown preservation in Buckingham?",
+        answer: "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment."
+      },
+      {
+        question: "What is your turnaround time for alterations in Buckingham?",
+        answer: "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee."
+      }
+    ]
+  },
 };
