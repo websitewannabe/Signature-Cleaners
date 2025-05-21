@@ -1,0 +1,82 @@
+## Update CTA Texts in ServicesPage
+
+### 🧩 Replace Each Button Text Block
+
+In your `services-page.tsx`, locate each `Link` block like this:
+
+```tsx
+<Link href="/all-services/dry-cleaning" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Learn More
+  </Button>
+</Link>
+```
+
+And replace **each one** using the updated CTA texts as follows:
+
+---
+
+### 🔁 Replace with These CTA Variants:
+
+#### 🧼 Dry Cleaning
+```tsx
+<Link href="/all-services/dry-cleaning" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Why Dry Cleaning
+  </Button>
+</Link>
+```
+
+#### 🧺 Wash & Fold
+```tsx
+<Link href="/all-services/wash-fold" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Laundry Made Easy
+  </Button>
+</Link>
+```
+
+#### 👰 Wedding Gowns
+```tsx
+<Link href="/all-services/wedding-gown" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Gown Care Guide
+  </Button>
+</Link>
+```
+
+#### 🛏 Household Items
+```tsx
+<Link href="/all-services/clean-household-items" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Clean Your Homewear
+  </Button>
+</Link>
+```
+
+#### ✂️ Alterations & Tailoring
+```tsx
+<Link href="/all-services/alteration-tailoring" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Perfect the Fit
+  </Button>
+</Link>
+```
+
+#### 🚚 Delivery
+```tsx
+<Link href="/all-services/delivery" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Pickup & Delivery
+  </Button>
+</Link>
+```
+
+#### 👞 Shoe Repair
+```tsx
+<Link href="/all-services/shoe-repair" className="block">
+  <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+    Fix Your Footwear
+  </Button>
+</Link>
+```
