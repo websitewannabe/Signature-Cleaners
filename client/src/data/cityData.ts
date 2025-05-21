@@ -348,7 +348,7 @@ export const cityData: Record<string, CityData> = {
       canonical: "https://www.mysignaturecleaners.com/fountainville",
     },
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12162.792430883908!2d-75.17173271801676!3d40.349042543207126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402cbb1eefaa5%3A0x36f8ca19df4366b4!2sFountainville%2C%20PA%2018923!5e0!3m2!1sen!2sus!4v1747838086549!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6094.8520066023975!2d-74.97762975017996!3d40.19958583590114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6acb3ea7b0981%3A0xc856bc6944a516dd!2sHolland%2C%20Northampton%20Township%2C%20PA%2018966!5e0!3m2!1sen!2sus!4v1747839300933!5m2!1sen!2sus",
     about:
       "Fountainville, Pennsylvania is a quiet village at the crossroads of Bucks County, where rural landscapes meet suburban convenience. Surrounded by open fields and gently winding roads, Fountainville offers a peaceful setting with easy access to nearby towns. Its laid-back atmosphere and community-oriented spirit make it a charming retreat in the heart of the county.",
     faq: [
