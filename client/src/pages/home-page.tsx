@@ -228,7 +228,7 @@ export default function HomePage() {
                     and special garments, ensuring the highest quality care.
                   </p>
                   <Link href="/all-services/dry-cleaning" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white te                      Learn Morext-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -262,7 +262,7 @@ export default function HomePage() {
                     needs, saving you time and effort.
                   </p>
                   <Link href="/all-services/wash-fold" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white te                      Learn Morext-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -296,7 +296,7 @@ export default function HomePage() {
                     gowns, ensuring your precious memories last a lifetime.
                   </p>
                   <Link href="/all-services/wedding-gown" className="block">
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white te                      Learn Morext-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
@@ -333,7 +333,7 @@ export default function HomePage() {
                     href="/all-services/clean-household-items"
                     className="block"
                   >
-                    <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
+                    <Button className="w-full bg-white te                      Learn Morext-black transition-colors duration-300 rounded-none">
                       Learn More
                     </Button>
                   </Link>
