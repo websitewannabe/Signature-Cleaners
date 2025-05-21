@@ -602,4 +602,49 @@ export const cityData: Record<string, CityData> = {
       },
     ],
   },
+  newtown: {
+    name: "Newtown",
+    title: "Professional Dry Cleaning in Newtown",
+    subtitle: "Proudly serving Newtown with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Newtown, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in New Hope. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Newtown, laundry service Newtown, Signature Cleaners Newtowne",
+      canonical: "https://www.mysignaturecleaners.com/newtown",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6092.186496471653!2d-74.93711335017595!3d40.22922888588149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c1548d5c46ab4f%3A0xdaa3ef0948be0af6!2sNewtown%2C%20PA%2018940!5e0!3m2!1sen!2sus!4v1747849093453!5m2!1sen!2sus",
+    about:
+      "Newtown, Pennsylvania is a historic and thriving town in Bucks County, known for its colonial roots, charming streetscape, and vibrant downtown. Rich in culture and community spirit, Newtown features preserved architecture, boutique shopping, and a lively mix of dining and events. It beautifully balances its historic legacy with modern suburban living, making it one of the county’s most sought-after locales.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Newtown",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Newtown do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of New Hope, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in New Hope?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in New Hope?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question:
+          "What is your turnaround time for alterations in New Hope?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
 };
