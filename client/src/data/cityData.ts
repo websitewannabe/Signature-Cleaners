@@ -423,4 +423,92 @@ export const cityData: Record<string, CityData> = {
       },
     ],
   },
+  jamison: {
+    name: "Jamison",
+    title: "Professional Dry Cleaning in Jamison",
+    subtitle: "Proudly serving Jamison with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Jamison, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Jamison. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Jamison, laundry service Jamison, Signature Cleaners Jamison",
+      canonical: "https://www.mysignaturecleaners.com/jamison",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24359.190275431494!2d-75.09580395697441!3d40.25578067379979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a96f070fa463%3A0x88ae7715dc5e8a73!2sJamison%2C%20PA!5e0!3m2!1sen!2sus!4v1747841758776!5m2!1sen!2sus",
+    about:
+      "Jamison, Pennsylvania is a welcoming community nestled in Warwick Township, Bucks County. Known for its scenic neighborhoods, well-regarded schools, and family-friendly vibe, Jamison offers a perfect blend of suburban comfort and natural beauty. With parks, golf courses, and a strong sense of community, it’s a peaceful place to live and grow.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Jamison",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Jamison do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Jamison, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Jamison?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Jamison?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Jamison?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  lahaska: {
+    name: "Lahaska",
+    title: "Professional Dry Cleaning in Lahaska",
+    subtitle: "Proudly serving Lahaska with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Lahaska, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Lahaska. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Lahaska, laundry service Lahaska, Signature Cleaners Lahaska",
+      canonical: "https://www.mysignaturecleaners.com/lahaska",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6081.625981034163!2d-75.0367081501606!3d40.346494335803946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c401095e9cefb7%3A0xb1716f809855bc47!2sLahaska%2C%20PA%2018938!5e0!3m2!1sen!2sus!4v1747842076626!5m2!1sen!2sus",
+    about:
+      "Lahaska, Pennsylvania is a quaint village in Bucks County, best known as the home of the beloved shopping destination Peddler’s Village. Blending colonial charm with artisan flair, Lahaska features cobblestone paths, unique boutiques, and cozy eateries. Surrounded by rolling countryside, it offers a delightful mix of history, culture, and small-town enchantment.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Lahaska",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Lahaska do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Lahaska, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Lahaska?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Lahaska?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Lahaska?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
 };
