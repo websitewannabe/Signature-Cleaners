@@ -1,223 +1,150 @@
 import {
-  users,
   type User,
   type InsertUser,
-  orders,
   type Order,
   type InsertOrder,
-  contacts,
   type Contact,
   type InsertContact,
-  services,
   type Service,
-  testimonials,
   type Testimonial,
-  chatMessages,
   type ChatMessage,
 } from "@shared/schema";
-import { db } from "./db";
-import { eq, and, desc } from "drizzle-orm";
-import session from "express-session";
-import connectPg from "connect-pg-simple";
-import pg from "pg";
 
-// Create a PostgreSQL session store
-const PostgresSessionStore = connectPg(session);
-const pool = new pg.Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+// In-memory storage
+const memoryStore = {
+  users: new Map<number, User>(),
+  orders: new Map<number, Order>(),
+  contacts: new Map<number, Contact>(),
+  services: new Map<number, Service>([
+    [1, {
+      id: 1,
+      name: "Professional Dry Cleaning",
+      description: "Expert dry cleaning services for all your garments",
+      price: "From $8.99 per item",
+      imageUrl: "/images/interior.webp"
+    }]
+  ]),
+  testimonials: new Map<number, Testimonial>(),
+  chatMessages: new Map<number, ChatMessage>(),
+  nextId: 1
+};
 
-// Interface for all storage operations
+// Storage interface
 export interface IStorage {
-  // User methods
   getUser(id: number): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   getUserByEmail(email: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
   updateUser(id: number, user: Partial<InsertUser>): Promise<User | undefined>;
-
-  // Order methods
   getOrder(id: number): Promise<Order | undefined>;
   getOrdersByUserId(userId: number): Promise<Order[]>;
   createOrder(order: InsertOrder): Promise<Order>;
-  updateOrder(
-    id: number,
-    order: Partial<InsertOrder>,
-  ): Promise<Order | undefined>;
-
-  // Contact methods
+  updateOrder(id: number, order: Partial<InsertOrder>): Promise<Order | undefined>;
   createContact(contact: InsertContact): Promise<Contact>;
-
-  // Service methods
   getServices(): Promise<Service[]>;
   getService(id: number): Promise<Service | undefined>;
-
-  // Testimonial methods
   getTestimonials(): Promise<Testimonial[]>;
-
-  // Chat methods
   getChatMessages(userId: number): Promise<ChatMessage[]>;
   addChatMessage(message: Omit<ChatMessage, "id">): Promise<ChatMessage>;
-
-  // Session store
   sessionStore: any;
-
-  // Database initialization method
   initializeDatabase(): Promise<void>;
 }
 
-// Define in-memory storage
-const memoryStore = {
-  services: [],
-  testimonials: [],
-  chatMessages: [],
-  orders: [],
-};
-
-// Database storage implementation
+// Memory storage implementation
 export class DatabaseStorage implements IStorage {
   sessionStore: any;
 
   constructor() {
-    // Initialize PostgreSQL session store
-    this.sessionStore = new PostgresSessionStore({
-      pool,
-      createTableIfMissing: true,
-    });
+    this.sessionStore = new Map();
   }
 
-  // Initialize the database with default sample data
   async initializeDatabase(): Promise<void> {
-    try {
-      // Initialize with default data
-      memoryStore.services = [
-        {
-          id: 1,
-          name: "Professional Dry Cleaning",
-          description: "Expert dry cleaning services"
-        }
-      ];
-      memoryStore.testimonials = [];
-      memoryStore.chatMessages = [];
-      memoryStore.orders = [];
-      return Promise.resolve();
-    } catch (error) {
-      console.error("Failed to initialize storage:", error);
-      return Promise.resolve();
-    }
+    return Promise.resolve();
   }
 
-  // User methods
   async getUser(id: number): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.id, id));
-    return user;
+    return memoryStore.users.get(id);
   }
 
   async getUserByUsername(username: string): Promise<User | undefined> {
-    const [user] = await db
-      .select()
-      .from(users)
-      .where(eq(users.username, username));
-    return user;
+    return Array.from(memoryStore.users.values()).find(u => u.username === username);
   }
 
   async getUserByEmail(email: string): Promise<User | undefined> {
-    const [user] = await db.select().from(users).where(eq(users.email, email));
-    return user;
+    return Array.from(memoryStore.users.values()).find(u => u.email === email);
   }
 
   async createUser(insertUser: InsertUser): Promise<User> {
-    const [user] = await db.insert(users).values(insertUser).returning();
+    const id = memoryStore.nextId++;
+    const user = { id, ...insertUser } as User;
+    memoryStore.users.set(id, user);
     return user;
   }
 
-  async updateUser(
-    id: number,
-    userData: Partial<InsertUser>,
-  ): Promise<User | undefined> {
-    const [updatedUser] = await db
-      .update(users)
-      .set(userData)
-      .where(eq(users.id, id))
-      .returning();
+  async updateUser(id: number, userData: Partial<InsertUser>): Promise<User | undefined> {
+    const user = memoryStore.users.get(id);
+    if (!user) return undefined;
+    const updatedUser = { ...user, ...userData };
+    memoryStore.users.set(id, updatedUser);
     return updatedUser;
   }
 
-  // Order methods
   async getOrder(id: number): Promise<Order | undefined> {
-    const [order] = await db.select().from(orders).where(eq(orders.id, id));
-    return order;
+    return memoryStore.orders.get(id);
   }
 
   async getOrdersByUserId(userId: number): Promise<Order[]> {
-    return db
-      .select()
-      .from(orders)
-      .where(eq(orders.userId, userId))
-      .orderBy(desc(orders.createdAt));
+    return Array.from(memoryStore.orders.values())
+      .filter(order => order.userId === userId)
+      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
   }
 
   async createOrder(insertOrder: InsertOrder): Promise<Order> {
-    const [order] = await db.insert(orders).values(insertOrder).returning();
+    const id = memoryStore.nextId++;
+    const order = { id, ...insertOrder } as Order;
+    memoryStore.orders.set(id, order);
     return order;
   }
 
-  async updateOrder(
-    id: number,
-    orderData: Partial<InsertOrder>,
-  ): Promise<Order | undefined> {
-    const [updatedOrder] = await db
-      .update(orders)
-      .set(orderData)
-      .where(eq(orders.id, id))
-      .returning();
+  async updateOrder(id: number, orderData: Partial<InsertOrder>): Promise<Order | undefined> {
+    const order = memoryStore.orders.get(id);
+    if (!order) return undefined;
+    const updatedOrder = { ...order, ...orderData };
+    memoryStore.orders.set(id, updatedOrder);
     return updatedOrder;
   }
 
-  // Contact methods
   async createContact(insertContact: InsertContact): Promise<Contact> {
-    const [contact] = await db
-      .insert(contacts)
-      .values(insertContact)
-      .returning();
+    const id = memoryStore.nextId++;
+    const contact = { id, ...insertContact } as Contact;
+    memoryStore.contacts.set(id, contact);
     return contact;
   }
 
-  // Service methods
   async getServices(): Promise<Service[]> {
-    return db.select().from(services);
+    return Array.from(memoryStore.services.values());
   }
 
   async getService(id: number): Promise<Service | undefined> {
-    const [service] = await db
-      .select()
-      .from(services)
-      .where(eq(services.id, id));
-    return service;
+    return memoryStore.services.get(id);
   }
 
-  // Testimonial methods
   async getTestimonials(): Promise<Testimonial[]> {
-    return db.select().from(testimonials);
+    return Array.from(memoryStore.testimonials.values());
   }
 
-  // Chat methods
   async getChatMessages(userId: number): Promise<ChatMessage[]> {
-    return db
-      .select()
-      .from(chatMessages)
-      .where(eq(chatMessages.userId, userId))
-      .orderBy(chatMessages.timestamp);
+    return Array.from(memoryStore.chatMessages.values())
+      .filter(msg => msg.userId === userId)
+      .sort((a, b) => a.timestamp.getTime() - b.timestamp.getTime());
   }
 
   async addChatMessage(message: Omit<ChatMessage, "id">): Promise<ChatMessage> {
-    const [chatMessage] = await db
-      .insert(chatMessages)
-      .values(message)
-      .returning();
+    const id = memoryStore.nextId++;
+    const chatMessage = { id, ...message } as ChatMessage;
+    memoryStore.chatMessages.set(id, chatMessage);
     return chatMessage;
   }
 }
 
-// Create and export storage instance
 export const storage = new DatabaseStorage();
