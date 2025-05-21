@@ -4,31 +4,6 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { CheckCircle2, Loader2 } from "lucide-react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useToast } from "@/hooks/use-toast";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-
-const scheduleFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters" }),
-  email: z.string().email({ message: "Please enter a valid email address" }),
-  phone: z.string().min(10, { message: "Phone number is required" }),
-  address: z.string().min(5, { message: "Address is required" }),
-  message: z.string().optional(),
-});
-
-type ScheduleFormValues = z.infer<typeof scheduleFormSchema>;
 
 import {
   Form,
@@ -167,143 +142,18 @@ export default function SchedulePage() {
               </div>
             </div>
           ) : (
-            <div className="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
-              {submitted ? (
-                <div className="flex flex-col items-center justify-center py-8 space-y-4">
-                  <CheckCircle2 className="h-16 w-16 text-green-500" />
-                  <h3 className="text-2xl font-semibold text-center">
-                    Thank You!
-                  </h3>
-                  <p className="text-center text-neutral-600">
-                    Your pickup has been scheduled successfully. We'll be there at your selected time.
-                  </p>
-                  <Button
-                    onClick={() => setSubmitted(false)}
-                    className="mt-4"
-                  >
-                    Schedule Another Pickup
-                  </Button>
-                </div>
-              ) : (
-                <Form {...form}>
-                  <form
-                    onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-6"
-                    data-netlify="true"
-                    name="schedule"
-                    method="POST"
-                    netlify-honeypot="bot-field"
-                  >
-                    <input type="hidden" name="form-name" value="schedule" />
-                    <p className="hidden">
-                      <label>
-                        Don't fill this out if you're human:{" "}
-                        <input name="bot-field" />
-                      </label>
-                    </p>
-
-                    <FormField
-                      control={form.control}
-                      name="name"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Your Name</FormLabel>
-                          <FormControl>
-                            <Input placeholder="John Doe" {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="email"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Email Address</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="email"
-                              placeholder="john@example.com"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="phone"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Phone Number</FormLabel>
-                          <FormControl>
-                            <Input
-                              type="tel"
-                              placeholder="(215) 555-0123"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="address"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Pickup Address</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Enter your full address"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <FormField
-                      control={form.control}
-                      name="message"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Special Instructions</FormLabel>
-                          <FormControl>
-                            <Textarea
-                              placeholder="Any special requests or notes for pickup..."
-                              className="min-h-[120px]"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-primary hover:bg-primary-dark"
-                      disabled={form.formState.isSubmitting}
-                    >
-                      {form.formState.isSubmitting ? (
-                        <>
-                          <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                          Scheduling...
-                        </>
-                      ) : (
-                        "Schedule Pickup"
-                      )}
-                    </Button>
-                  </form>
-                </Form>
-              )}
+            <div className="bg-neutral-50 rounded-lg shadow-md p-6 md:p-8 max-w-3xl mx-auto">
+              <div className="w-full h-[800px]">
+                <iframe
+                  src="https://bv6w3pwoi5y.typeform.com/to/q9sU2p56"
+                  style={{ width: "100%", height: "100%", border: "0" }}
+                  allow="camera; microphone; autoplay; encrypted-media;"
+                  data-qa="iframe-container"
+                  data-remove-element-on-mobile="true"
+                  data-disable-scroll="true"
+                  loading="lazy"
+                />
+              </div>
             </div>
           )}
         </div>
