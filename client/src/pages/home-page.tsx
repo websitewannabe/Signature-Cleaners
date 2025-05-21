@@ -164,7 +164,7 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center">
-        <div className="absolute inset-0 bg-[url('/src/images/interior.webp')] md:bg-[url('/src/images/interior.webp')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/images/interior.webp')] md:bg-[url('/images/interior-hero.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 to-transparent"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -490,7 +490,7 @@ export default function HomePage() {
           <div className="md:hidden mb-8">
             <div className="relative h-[300px] rounded-lg overflow-hidden shadow-xl">
               <img
-                src="/images/theTeam.jpg"
+                src="/images/theTeam.webp"
                 alt="Signature Cleaners Team"
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -528,7 +528,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl hidden md:block">
               <img
-                src="/images/theTeam.jpg"
+                src="/images/theTeam.webp"
                 alt="Signature Cleaners Team"
                 className="absolute inset-0 w-full h-full object-cover"
               />
