@@ -88,12 +88,12 @@ export class Storage implements IStorage {
 
   // Initialize the database with default sample data
   async initializeDatabase(): Promise<void> {
-    try {
-      // Check if services table has data
-      const serviceCount = await db.select().from(services);
-      if (serviceCount.length === 0) {
-        // Add sample services
-        await db.insert(services).values([
+    // Using in-memory storage, just return for now
+    return Promise.resolve();
+    /* 
+    Sample data initialization removed since we're no longer using a database.
+    Will be reimplemented when new storage solution is added.
+    */
           {
             name: "Professional Dry Cleaning",
             description:
