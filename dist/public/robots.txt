@@ -1,7 +1,0 @@
-# Sitemaps
-Sitemap: https://mysignaturecleaners.com/sitemap.xml
-
-User-agent: *
-Allow: /
-
-

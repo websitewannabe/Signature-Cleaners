@@ -1,0 +1,23 @@
+Our app no longer uses PostgreSQL, but several files still contain Postgres code. Please help remove these references.
+
+Files/locations:
+
+1. `server/db.ts` lines 1‑14 create a postgres client and export a drizzle instance.  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=1 line_range_end=14 path=server/db.ts git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/server/db.ts#L1-L14"}​
+
+2. `server/storage.ts` imports and configures `connect-pg-simple` and `pg` (lines 18‑28) and sets up the session store in the constructor (lines 69‑78).  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=18 line_range_end=28 path=server/storage.ts git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/server/storage.ts#L18-L28"}​​:codex-file-citation[codex-file-citation]{line_range_start=69 line_range_end=78 path=server/storage.ts git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/server/storage.ts#L69-L78"}​
+
+3. `.replit` line 1 enables the `postgresql-16` module.  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=1 line_range_end=null path=.replit git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/.replit#L1-Lnull"}​
+
+4. `drizzle.config.ts` uses the `postgresql` dialect and expects `DATABASE_URL` (lines 3‑13).  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=3 line_range_end=13 path=drizzle.config.ts git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/drizzle.config.ts#L3-L13"}​
+
+5. `package.json` lists Postgres‑related dependencies such as `pg`, `postgres`, `connect-pg-simple`, and `@types/pg` (around lines 45‑66 and 86‑88).  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=45 line_range_end=66 path=package.json git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/package.json#L45-L66"}​​:codex-file-citation[codex-file-citation]{line_range_start=86 line_range_end=88 path=package.json git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/package.json#L86-L88"}​
+
+6. The built file `dist/index.js` still contains Postgres imports and session store setup (lines 105‑125).  
+   Source: ​:codex-file-citation[codex-file-citation]{line_range_start=105 line_range_end=125 path=dist/index.js git_url="https://github.com/websitewannabe/Signature-Cleaners/blob/main/dist/index.js#L105-L125"}​
+
+Please refactor or delete this unused Postgres code and update any configs accordingly so the project no longer pulls in Postgres modules or environment variables.
