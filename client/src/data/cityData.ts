@@ -645,4 +645,94 @@ export const cityData: Record<string, CityData> = {
       },
     ],
   },
+  ottsville: {
+    name: "Ottsville",
+    title: "Professional Dry Cleaning in Ottsville",
+    subtitle:
+      "Proudly serving Ottsville with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Ottsville, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Ottsville. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Ottsville, laundry service Ottsville, Signature Cleaners Ottsville",
+      canonical: "https://www.mysignaturecleaners.com/ottsville",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12140.380957227839!2d-75.16615655014398!3d40.47315798572203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c41aaea31fa3e3%3A0xb12400221793368f!2sOttsville%2C%20PA%2018942!5e0!3m2!1sen!2sus!4v1747851316140!5m2!1sen!2sus",
+    about:
+      "Ottsville, Pennsylvania is a peaceful village nestled in the rolling hills of upper Bucks County. Known for its scenic farmland, country roads, and rustic charm, Ottsville offers a tranquil retreat with a strong sense of rural heritage. Its blend of natural beauty and quiet living makes it a haven for those seeking simplicity and connection to the land.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Ottsville",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Ottsville do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Ottsville, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Ottsville?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Ottsville?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Ottsville?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  perkasie: {
+    name: "Perkasie",
+    title: "Professional Dry Cleaning in Perkasie",
+    subtitle:
+      "Proudly serving Perkasie with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Perkasie, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Ottsville. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Perkasie, laundry service Perkasie, Signature Cleaners Perkasie",
+      canonical: "https://www.mysignaturecleaners.com/perkasie",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24317.77057648941!2d-75.31380250673055!3d40.3707031725901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c41e5341101ed9%3A0xcaea757af06fa9b8!2sPerkasie%2C%20PA%2018944!5e0!3m2!1sen!2sus!4v1747851524145!5m2!1sen!2sus",
+    about:
+      "Perkasie, Pennsylvania is a vibrant small town in upper Bucks County, known for its historic downtown, tree-lined streets, and strong community spirit. With a blend of classic Americana and modern revitalization, Perkasie features local shops, parks, and year-round events that bring neighbors together. It’s a welcoming town that celebrates tradition while embracing growth and creativity.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Perkasie",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Perkasie do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Perkasie, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Perkasie?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Perkasie?",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Perkasie?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
 };

@@ -595,7 +595,10 @@ export default function AlterationTailoringPage() {
                       src="/icons/bubbles.svg"
                       alt="Delivery Service"
                       className="w-8 h-8 text-[#790003]"
-                      style={{ filter: 'invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)' }}
+                      style={{
+                        filter:
+                          "invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)",
+                      }}
                       aria-hidden="true"
                     />
                   </div>
