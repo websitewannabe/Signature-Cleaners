@@ -336,7 +336,7 @@ export default function ServicesPage() {
             </div>
             {/* Alterations & Tailoring */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/tailor.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/tailor.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
@@ -373,7 +373,7 @@ export default function ServicesPage() {
             </div>
             {/* Delivery */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/delivery.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/delivery.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">Delivery</h3>
@@ -405,7 +405,7 @@ export default function ServicesPage() {
             </div>
             {/* Shoe Repair */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/shoeRepair.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/shoeRepair.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">

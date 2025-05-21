@@ -962,7 +962,8 @@ export const cityData: Record<string, CityData> = {
   warminster: {
     name: "Warminster",
     title: "Professional Dry Cleaning in Warminster",
-    subtitle: "Proudly serving Warminster with trusted dry cleaning for decades.",
+    subtitle:
+      "Proudly serving Warminster with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Warminster, PA | Signature Cleaners",
       description:
@@ -998,6 +999,96 @@ export const cityData: Record<string, CityData> = {
       },
       {
         question: "What is your turnaround time for alterations in Warminster",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  warrington: {
+    name: "Warrington",
+    title: "Professional Dry Cleaning in Warrington",
+    subtitle:
+      "Proudly serving Warrington with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Warrington, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Warrington. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Warrington, laundry service Warrington, Signature Cleaners Warrington",
+      canonical: "https://www.mysignaturecleaners.com/warrington",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6090.383161558516!2d-75.13921025017319!3d40.249273435868396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a8b9037b6c11%3A0xa6cdf70deda33c43!2sWarrington%2C%20PA%2018976!5e0!3m2!1sen!2sus!4v1747854527452!5m2!1sen!2sus",
+    about:
+      "Warrington, Pennsylvania is a thriving township in central Bucks County, celebrated for its blend of suburban comfort, modern amenities, and scenic open spaces. With top-rated schools, bustling shopping centers, and a variety of parks and trails, Warrington offers a high quality of life for families and professionals alike. Its strong community spirit and convenient location make it a welcoming and vibrant place to call home.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Warrington",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Warrington do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Warrington, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Warrington?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Warrington",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Warringtonr",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  washington_crossing: {
+    name: "Washington Crossing",
+    title: "Professional Dry Cleaning in Washington Crossing",
+    subtitle:
+      "Proudly serving Washington Crossing with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Washington Crossing, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Washington Crossing. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Washington Crossing, laundry service Washington Crossing, Signature Cleaners Washington Crossing",
+      canonical: "https://www.mysignaturecleaners.com/washington_crossing",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24348.483129132357!2d-74.89741995691142!3d40.28551462348399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3fde3d94ae627%3A0x89c9db2e544db0d0!2sWashington%20Crossing%2C%20PA%2018977!5e0!3m2!1sen!2sus!4v1747854775940!5m2!1sen!2sus",
+    about:
+      "Washington Crossing, Pennsylvania is a historic gem nestled along the Delaware River in Bucks County, best known as the site of George Washington’s daring 1776 river crossing. Rich in Revolutionary War heritage and timeless beauty, the village features colonial-era buildings, preserved parklands, and scenic river views. With its blend of national significance and quiet charm, Washington Crossing offers a unique and inspiring setting where history and natural splendor come together.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Washington Crossing",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Washington Crossing do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Washington Crossing, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Washington Crossing?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Washington Crossing",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Washington Crossing",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
