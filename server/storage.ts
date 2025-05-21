@@ -66,6 +66,14 @@ export interface IStorage {
   initializeDatabase(): Promise<void>;
 }
 
+// Define in-memory storage
+const memoryStore = {
+  services: [],
+  testimonials: [],
+  chatMessages: [],
+  orders: [],
+};
+
 // Database storage implementation
 export class DatabaseStorage implements IStorage {
   sessionStore: any;
@@ -81,68 +89,21 @@ export class DatabaseStorage implements IStorage {
   // Initialize the database with default sample data
   async initializeDatabase(): Promise<void> {
     try {
-      // Check if services table has data
-      const serviceCount = await db.select().from(services);
-      if (serviceCount.length === 0) {
-        // Add sample services
-        await db.insert(services).values([
-          {
-            name: "Professional Dry Cleaning",
-            description:
-              "The process of dry cleaning usually begins with the treatment of soils and spots by hand. After this is complete, the clothing is put inside of a machine which work up the clothing in a manner similar to a washing machine. Cleaning product is added to the process, of course, and the stains are removed from the clothing. When this is done, the final process begins, that of drying and then “pressing”, the process which gives your shirts that crisp, smooth feel upon pick-up.",
-            price: "From $8.99 per item",
-            imageUrl:
-              "https://images.unsplash.com/photo-1604335398150-fe580a7d8d18?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-          },
-          {
-            name: "Wash & Fold",
-            description:
-              "Convenient laundry service with professional washing, drying, and folding.",
-            price: "$2.99 per pound",
-            imageUrl:
-              "https://images.unsplash.com/photo-1604335398980-ededcadcc37d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RHJ5JTIwY2xlYW5lcnN8ZW58MHx8MHx8fDA%3D",
-          },
-          {
-            name: "Alterations & Tailoring",
-            description:
-              "Expert tailoring, hemming, repairs, and custom alterations for perfect fit.",
-            price: "Starting at $12.99",
-            imageUrl:
-              "https://images.unsplash.com/photo-1623000850261-6972be2fe6c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-          },
-        ]);
-      }
-
-      // Check if testimonials table has data
-      const testimonialCount = await db.select().from(testimonials);
-      if (testimonialCount.length === 0) {
-        // Add sample testimonials
-        await db.insert(testimonials).values([
-          {
-            name: "Sarah Johnson",
-            role: "Regular Customer",
-            content:
-              "Their pickup and delivery service has made my life so much easier. The quality of cleaning is exceptional, and my clothes always look brand new.",
-            rating: 5,
-          },
-          {
-            name: "Rebecca Miller",
-            role: "Bride",
-            content:
-              "I had a delicate wedding dress that needed cleaning, and they treated it with such care. Their attention to detail is outstanding, and I couldn't be happier with the results.",
-            rating: 5,
-          },
-          {
-            name: "Michael Thompson",
-            role: "Business Executive",
-            content:
-              "As a business professional with a busy schedule, Signature Cleaners has been a lifesaver. Their customer portal makes it easy to track my orders and schedule new pickups.",
-            rating: 5,
-          },
-        ]);
-      }
+      // Initialize with default data
+      memoryStore.services = [
+        {
+          id: 1,
+          name: "Professional Dry Cleaning",
+          description: "Expert dry cleaning services"
+        }
+      ];
+      memoryStore.testimonials = [];
+      memoryStore.chatMessages = [];
+      memoryStore.orders = [];
+      return Promise.resolve();
     } catch (error) {
-      console.error("Error initializing database:", error);
+      console.error("Failed to initialize storage:", error);
+      return Promise.resolve();
     }
   }
 
