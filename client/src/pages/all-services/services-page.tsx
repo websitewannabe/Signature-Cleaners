@@ -183,16 +183,18 @@ export default function ServicesPage() {
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="mb-6">
-            <Breadcrumbs
-              items={[
-                { label: "Home", path: "/" },
-                {
-                  label: "Services",
-                  path: "/all-services/all-services",
-                  current: true,
-                },
-              ]}
-            />
+            <div className="text-black">
+              <Breadcrumbs
+                items={[
+                  { label: "Home", path: "/" },
+                  {
+                    label: "Services",
+                    path: "/all-services/all-services",
+                    current: true,
+                  },
+                ]}
+              />
+            </div>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
