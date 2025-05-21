@@ -977,12 +977,9 @@ export default function HomePage() {
                   >
                     <span className="mr-2">•</span>Carversville
                   </Link>
-                  <Link
-                    href="/chalfont"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Chalfont
-                  </Link>
+                  </p>
                   <Link
                     href="/doylestown"
                     className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"

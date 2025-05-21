@@ -589,10 +589,7 @@ export default function CleanHouseholdItemsPage() {
                       src="/icons/bubbles.svg"
                       alt="Delivery Service"
                       className="w-8 h-8 text-[#790003]"
-                      style={{
-                        filter:
-                          "invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)",
-                      }}
+                      style={{ filter: 'invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)' }}
                       aria-hidden="true"
                     />
                   </div>
@@ -608,7 +605,7 @@ export default function CleanHouseholdItemsPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">

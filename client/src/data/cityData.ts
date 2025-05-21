@@ -1083,58 +1083,12 @@ export const cityData: Record<string, CityData> = {
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question:
-          "Do you offer wedding gown preservation in Washington Crossing",
+        question: "Do you offer wedding gown preservation in Washington Crossing",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question:
-          "What is your turnaround time for alterations in Washington Crossing",
-        answer:
-          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
-      },
-    ],
-  },
-  yardley: {
-    name: "Yardley",
-    title: "Professional Dry Cleaning in Yardley",
-    subtitle: "Proudly serving Yardley with trusted dry cleaning for decades.",
-    seo: {
-      title: "Dry Cleaning in Yardley, PA | Signature Cleaners",
-      description:
-        "Trusted dry cleaning services in Yardley. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
-      keywords:
-        "dry cleaning Yardley, laundry service Yardley, Signature Cleaners Yardley",
-      canonical: "https://www.mysignaturecleaners.com/yardley",
-    },
-    mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12182.225197650589!2d-74.84816276807365!3d40.241166543492085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c156574695d7e1%3A0x71c54adcd665120!2sYardley%2C%20PA%2019067!5e0!3m2!1sen!2sus!4v1747858037394!5m2!1sen!2sus",
-    about:
-      "Yardley, Pennsylvania is a charming riverside town in lower Bucks County, known for its historic character, walkable downtown, and vibrant community life. Nestled along the Delaware River and the scenic Delaware Canal, Yardley offers a perfect blend of small-town warmth and natural beauty. With cozy cafes, local boutiques, and a calendar full of community events, Yardley captures the essence of relaxed, connected living with a timeless appeal.",
-    faq: [
-      {
-        question: "Do you offer same-day service in Yardley",
-        answer:
-          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
-      },
-      {
-        question: "What areas of Yardley do you service?",
-        answer:
-          "We provide pickup and delivery services throughout all of Yardley, including the surrounding communities and neighborhoods.",
-      },
-      {
-        question: "What payment methods do you accept in Yardley?",
-        answer:
-          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
-      },
-      {
-        question: "Do you offer wedding gown preservation in Yardley?",
-        answer:
-          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
-      },
-      {
-        question: "What is your turnaround time for alterations in Yardley?",
+        question: "What is your turnaround time for alterations in Washington Crossing",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
