@@ -1,13 +1,20 @@
+
 import session from "express-session";
 import MemoryStore from "memorystore";
-import { eq } from 'drizzle-orm';
 
 const ONE_DAY = 1000 * 60 * 60 * 24;
 const MemoryStoreSession = MemoryStore(session);
 
 // In-memory data stores
 const memoryStore = {
-  services: [],
+  users: [],
+  services: [
+    {
+      id: 1,
+      name: "Professional Dry Cleaning",
+      description: "Expert dry cleaning services"
+    }
+  ],
   testimonials: [],
   chatMessages: [],
   orders: []
@@ -15,6 +22,10 @@ const memoryStore = {
 
 export interface IStorage {
   initializeDatabase(): Promise<void>;
+  getUser(id: string): Promise<any>;
+  getUserByUsername(username: string): Promise<any>;
+  getUserByEmail(email: string): Promise<any>;
+  createUser(userData: any): Promise<any>;
   getServices(): Promise<any[]>;
   getService(id: number): Promise<any>;
   getTestimonials(): Promise<any[]>;
@@ -37,23 +48,25 @@ export class Storage implements IStorage {
   }
 
   async initializeDatabase(): Promise<void> {
-    try {
-      // Initialize with some sample data
-      memoryStore.services = [
-        {
-          id: 1,
-          name: "Professional Dry Cleaning",
-          description: "Expert dry cleaning services"
-        }
-      ];
-      memoryStore.testimonials = [];
-      memoryStore.chatMessages = [];
-      memoryStore.orders = [];
-      return Promise.resolve();
-    } catch (error) {
-      console.error('Failed to initialize storage:', error);
-      return Promise.resolve();
-    }
+    return Promise.resolve();
+  }
+
+  async getUser(id: string): Promise<any> {
+    return memoryStore.users.find(u => u.id === id);
+  }
+
+  async getUserByUsername(username: string): Promise<any> {
+    return memoryStore.users.find(u => u.username === username);
+  }
+
+  async getUserByEmail(email: string): Promise<any> {
+    return memoryStore.users.find(u => u.email === email);
+  }
+
+  async createUser(userData: any): Promise<any> {
+    const user = { ...userData, id: Date.now().toString() };
+    memoryStore.users.push(user);
+    return user;
   }
 
   async getServices(): Promise<any[]> {
@@ -90,6 +103,19 @@ export class Storage implements IStorage {
 
   async getOrder(id: number): Promise<any> {
     return memoryStore.orders.find(o => o.id === id);
+  }
+
+  getSessionMiddleware() {
+    return session({
+      secret: process.env.SESSION_SECRET || 'dev-secret-key',
+      resave: false,
+      saveUninitialized: false,
+      store: this.sessionStore,
+      cookie: {
+        maxAge: ONE_DAY,
+        secure: process.env.NODE_ENV === 'production'
+      }
+    });
   }
 }
 
