@@ -208,9 +208,8 @@ export default function ContactPage() {
           <h1
             className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 min-h-[2.5em]"
             style={{
-              fontDisplay: 'swap',
               lineHeight: '1.2',
-              fontFamily: 'Inter, sans-serif',
+              fontFamily: 'system-ui, -apple-system, sans-serif',
             }}
           >
             Contact Us
