@@ -222,11 +222,12 @@ export default function ContactPage() {
           </div>
         )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 
+          <h1
             className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 font-sans min-h-[2.5em]"
             style={{
-              fontFamily: 'system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
-              lineHeight: '1.2',
+              fontFamily:
+                "system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+              lineHeight: "1.2",
             }}
           >
             Contact Us
@@ -682,7 +683,7 @@ export default function ContactPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/70"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">

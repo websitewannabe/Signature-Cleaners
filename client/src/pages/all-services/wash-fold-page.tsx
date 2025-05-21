@@ -343,7 +343,8 @@ export default function WashFoldPage() {
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
+                    Don't fill this out if you're human:{" "}
+                    <input name="bot-field" />
                   </label>
                 </p>
 
@@ -351,11 +352,11 @@ export default function WashFoldPage() {
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Full Name
                   </label>
-                  <Input 
+                  <Input
                     name="name"
-                    placeholder="Your name" 
-                    className="w-full" 
-                    required 
+                    placeholder="Your name"
+                    className="w-full"
+                    required
                   />
                 </div>
 
@@ -408,12 +409,12 @@ export default function WashFoldPage() {
                   />
                 </div>
 
-                <Button 
-                    className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
-                    aria-label="Learn more about our wash and fold laundry services"
-                  >
-                    Learn About Wash & Fold Services
-                  </Button>
+                <Button
+                  className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                  aria-label="Learn more about our wash and fold laundry services"
+                >
+                  Learn About Wash & Fold Services
+                </Button>
               </form>
 
               {/* <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
@@ -590,7 +591,10 @@ export default function WashFoldPage() {
                       src="/icons/bubbles.svg"
                       alt="Delivery Service"
                       className="w-8 h-8 text-[#790003]"
-                      style={{ filter: 'invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)' }}
+                      style={{
+                        filter:
+                          "invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)",
+                      }}
                       aria-hidden="true"
                     />
                   </div>
@@ -606,7 +610,7 @@ export default function WashFoldPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/src/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/src/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
