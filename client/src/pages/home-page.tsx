@@ -955,7 +955,7 @@ export default function HomePage() {
                 />
               ) : (
                 <img
-                  src="/images/map-placeholder.jpg"
+                  src="/images/map-placeholder.png"
                   alt="Map of Signature Cleaners Doylestown"
                   className="w-full h-full object-cover"
                 />
