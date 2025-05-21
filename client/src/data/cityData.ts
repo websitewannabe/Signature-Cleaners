@@ -315,7 +315,7 @@ export const cityData: Record<string, CityData> = {
       {
         question: "What areas of Fountainville do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Dublin, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Fountainville, including the surrounding communities and neighborhoods.",
       },
       {
         question: "What payment methods do you accept in Fountainville?",
@@ -328,7 +328,8 @@ export const cityData: Record<string, CityData> = {
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question: "What is your turnaround time for alterations in Fountainville?",
+        question:
+          "What is your turnaround time for alterations in Fountainville?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
@@ -337,43 +338,42 @@ export const cityData: Record<string, CityData> = {
   holland: {
     name: "Holland",
     title: "Professional Dry Cleaning in Holland",
-    subtitle:
-      "Proudly serving Holland with trusted dry cleaning for decades.",
+    subtitle: "Proudly serving Holland with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Holland, PA | Signature Cleaners",
       description:
-        "Trusted dry cleaning services in Dublin. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+        "Trusted dry cleaning services in Holland. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
       keywords:
-        "dry cleaning Fountainville, laundry service Fountainville, Signature Cleaners Fountainville",
-      canonical: "https://www.mysignaturecleaners.com/fountainville",
+        "dry cleaning Holland, laundry service Holland, Signature Cleaners Holland",
+      canonical: "https://www.mysignaturecleaners.com/holland",
     },
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6094.8520066023975!2d-74.97762975017996!3d40.19958583590114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6acb3ea7b0981%3A0xc856bc6944a516dd!2sHolland%2C%20Northampton%20Township%2C%20PA%2018966!5e0!3m2!1sen!2sus!4v1747839300933!5m2!1sen!2sus",
     about:
-      "Fountainville, Pennsylvania is a quiet village at the crossroads of Bucks County, where rural landscapes meet suburban convenience. Surrounded by open fields and gently winding roads, Fountainville offers a peaceful setting with easy access to nearby towns. Its laid-back atmosphere and community-oriented spirit make it a charming retreat in the heart of the county.",
+      "Holland, Pennsylvania is a serene suburban community located in Northampton Township, Bucks County. Known for its tree-lined neighborhoods, top-rated schools, and family-friendly atmosphere, Holland combines quiet residential living with convenient access to nearby towns and amenities. Its strong sense of community and well-kept charm make it a desirable place to call home.",
     faq: [
       {
-        question: "Do you offer same-day service in Fountainville?",
+        question: "Do you offer same-day service in Holland?",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Fountainville do you service?",
+        question: "What areas of Holland do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Dublin, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Holland, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Fountainville?",
+        question: "What payment methods do you accept in Holland?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Fountainville?",
+        question: "Do you offer wedding gown preservation in Holland?",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question: "What is your turnaround time for alterations in Fountainville?",
+        question: "What is your turnaround time for alterations in Holland?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
