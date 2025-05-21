@@ -1,14 +1,13 @@
 
 import session from "express-session";
 import MemoryStore from "memorystore";
-import { User, Order } from '../shared/schema';
-import { db } from './db';
 
 const ONE_DAY = 1000 * 60 * 60 * 24;
 const MemoryStoreSession = MemoryStore(session);
 
-// In-memory data stores for non-user/order data
+// In-memory data stores
 const memoryStore = {
+  users: [],
   services: [
     {
       id: 1,
@@ -17,24 +16,24 @@ const memoryStore = {
     }
   ],
   testimonials: [],
-  chatMessages: []
+  chatMessages: [],
+  orders: []
 };
 
 export interface IStorage {
   initializeDatabase(): Promise<void>;
-  getUser(id: string): Promise<User | undefined>;
-  getUserByEmail(email: string): Promise<User | undefined>;
-  createUser(userData: Omit<User, 'id' | 'createdAt'>): Promise<User>;
-  updateUser(id: string, data: Partial<User>): Promise<User | undefined>;
-  getOrder(id: string): Promise<Order | undefined>;
-  getOrdersByUserId(userId: string): Promise<Order[]>;
-  createOrder(orderData: Omit<Order, 'id' | 'createdAt'>): Promise<Order>;
-  updateOrder(id: string, data: Partial<Order>): Promise<Order | undefined>;
-  deleteOrder(id: string): Promise<boolean>;
+  getUser(id: string): Promise<any>;
+  getUserByUsername(username: string): Promise<any>;
+  getUserByEmail(email: string): Promise<any>;
+  createUser(userData: any): Promise<any>;
   getServices(): Promise<any[]>;
+  getService(id: number): Promise<any>;
   getTestimonials(): Promise<any[]>;
   getChatMessages(userId: string): Promise<any[]>;
   addChatMessage(message: any): Promise<any>;
+  createOrder(orderData: any): Promise<any>;
+  getOrdersByUserId(userId: string): Promise<any[]>;
+  getOrder(id: number): Promise<any>;
 }
 
 export class Storage implements IStorage {
@@ -52,57 +51,30 @@ export class Storage implements IStorage {
     return Promise.resolve();
   }
 
-  // User operations
-  async getUser(id: string): Promise<User | undefined> {
-    return db.findUserById(id);
+  async getUser(id: string): Promise<any> {
+    return memoryStore.users.find(u => u.id === id);
   }
 
-  async getUserByEmail(email: string): Promise<User | undefined> {
-    return db.findUserByEmail(email);
+  async getUserByUsername(username: string): Promise<any> {
+    return memoryStore.users.find(u => u.username === username);
   }
 
-  async createUser(userData: Omit<User, 'id' | 'createdAt'>): Promise<User> {
-    const user: User = {
-      ...userData,
-      id: Date.now().toString(),
-      createdAt: new Date()
-    };
-    return db.createUser(user);
+  async getUserByEmail(email: string): Promise<any> {
+    return memoryStore.users.find(u => u.email === email);
   }
 
-  async updateUser(id: string, data: Partial<User>): Promise<User | undefined> {
-    return db.updateUser(id, data);
+  async createUser(userData: any): Promise<any> {
+    const user = { ...userData, id: Date.now().toString() };
+    memoryStore.users.push(user);
+    return user;
   }
 
-  // Order operations
-  async getOrder(id: string): Promise<Order | undefined> {
-    return db.findOrderById(id);
-  }
-
-  async getOrdersByUserId(userId: string): Promise<Order[]> {
-    return db.findOrdersByUserId(userId);
-  }
-
-  async createOrder(orderData: Omit<Order, 'id' | 'createdAt'>): Promise<Order> {
-    const order: Order = {
-      ...orderData,
-      id: Date.now().toString(),
-      createdAt: new Date()
-    };
-    return db.createOrder(order);
-  }
-
-  async updateOrder(id: string, data: Partial<Order>): Promise<Order | undefined> {
-    return db.updateOrder(id, data);
-  }
-
-  async deleteOrder(id: string): Promise<boolean> {
-    return db.deleteOrder(id);
-  }
-
-  // Other data operations
   async getServices(): Promise<any[]> {
     return memoryStore.services;
+  }
+
+  async getService(id: number): Promise<any> {
+    return memoryStore.services.find(s => s.id === id);
   }
 
   async getTestimonials(): Promise<any[]> {
@@ -117,6 +89,20 @@ export class Storage implements IStorage {
     const newMessage = { ...message, id: Date.now() };
     memoryStore.chatMessages.push(newMessage);
     return newMessage;
+  }
+
+  async createOrder(orderData: any): Promise<any> {
+    const order = { ...orderData, id: Date.now() };
+    memoryStore.orders.push(order);
+    return order;
+  }
+
+  async getOrdersByUserId(userId: string): Promise<any[]> {
+    return memoryStore.orders.filter(o => o.userId === userId);
+  }
+
+  async getOrder(id: number): Promise<any> {
+    return memoryStore.orders.find(o => o.id === id);
   }
 
   getSessionMiddleware() {
