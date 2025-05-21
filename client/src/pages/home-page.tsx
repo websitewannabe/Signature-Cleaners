@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "wouter";
 import { Shirt, Car, Footprints, Shield, Leaf } from "lucide-react";
 import Header from "@/components/layout/header";
@@ -55,6 +56,7 @@ const services = [
 ];
 
 export default function HomePage() {
+  const [mapLoaded, setMapLoaded] = useState(false);
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
@@ -937,16 +939,27 @@ export default function HomePage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div 
+              className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md cursor-pointer" 
+              onClick={() => setMapLoaded(true)}
+            >
+              {mapLoaded ? (
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <img
+                  src="/images/map-placeholder.jpg"
+                  alt="Map of Signature Cleaners Doylestown"
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
 
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
