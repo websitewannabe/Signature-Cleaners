@@ -68,8 +68,8 @@ export default function AuthPage() {
             {/* Login Section */}
             <Card>
               <CardHeader>
-                <CardTitle>Log In</CardTitle>
-                <CardDescription>
+                <CardTitle className="font-sans">Log In</CardTitle>
+                <CardDescription className="font-sans">
                   Access your account or pay your bill
                 </CardDescription>
               </CardHeader>
