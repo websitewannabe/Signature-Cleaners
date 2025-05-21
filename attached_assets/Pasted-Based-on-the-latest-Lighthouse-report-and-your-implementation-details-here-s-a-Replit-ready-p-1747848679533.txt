@@ -1,0 +1,68 @@
+Based on the **latest Lighthouse report** and your implementation details, here’s a **Replit-ready prompt** that focuses on resolving the **next set of performance issues** while making sure **Google Fonts are not used**, as requested:
+
+---
+
+### ✅ Replit Prompt: Apply the Next Wave of Performance Fixes (No Google Fonts)
+
+**Goal**: Improve mobile and overall performance by addressing key remaining Lighthouse issues while using only local or React-native fonts (no Google Fonts).
+
+#### 🔧 1. Remove or Reduce Unused JavaScript
+
+* Audit and remove any components, libraries, or legacy utilities that are no longer used.
+* Apply tree-shaking where possible.
+* Example: If you're importing a full icon or utility library, try replacing it with direct imports of only the used items.
+
+```tsx
+// BAD (bulk import)
+import * as icons from 'some-icon-lib'
+
+// GOOD (individual import)
+import { IconOne, IconTwo } from 'some-icon-lib'
+```
+
+#### 🔧 2. Inline Critical CSS or Use CSS Modules Efficiently
+
+* Identify styles that are above-the-fold and inline them using `styled-components`, `emotion`, or static CSS inside the component if needed.
+* For reusable styles, ensure CSS modules or Tailwind utility classes are properly scoped and not overly broad.
+
+#### 🔧 3. Ensure Font Loading is Efficient (NO Google Fonts)
+
+* Verify that the external link to Google Fonts has been removed from `index.html`.
+* Replace `font-family` declarations with system fonts or local fonts via Tailwind:
+
+```css
+/* tailwind.config.js */
+theme: {
+  fontFamily: {
+    sans: ['ui-sans-serif', 'system-ui', 'Helvetica', 'Arial'],
+    serif: ['ui-serif', 'Georgia'],
+    mono: ['ui-monospace', 'SFMono-Regular']
+  }
+}
+```
+
+* Double-check no other components are importing Google Fonts via `<link>` or `@import` rules.
+
+#### 🔧 4. Optimize LCP (Largest Contentful Paint)
+
+* Preload critical images and convert large static assets to optimized formats like WebP.
+* Use the `next/image` component or a responsive `<img loading="lazy" decoding="async" />` pattern.
+* Reduce render-blocking logic in your `<ContactUs>` page, especially where the `<h1>` and hero images are used.
+
+#### 🔧 5. Serve Static Assets with Efficient Cache Policies
+
+* Configure Netlify headers or Replit HTTP headers to add long-term caching for static assets (e.g., images, fonts, scripts).
+
+```bash
+# netlify.toml example
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+```
+
+---
+
+If you want, I can help you generate the actual code updates based on your current project files. Just confirm which areas you'd like me to help with: CSS modules, font fallback stack, asset caching, or code splitting.
+
+Let me know how you'd like to proceed.
