@@ -214,7 +214,7 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 min-h-[2.5em] font-sans">
             Contact Us
           </h1>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
