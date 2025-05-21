@@ -560,44 +560,43 @@ export const cityData: Record<string, CityData> = {
   new_hope: {
     name: "New Hope",
     title: "Professional Dry Cleaning in New Hope",
-    subtitle:
-      "Proudly serving Morrisville with trusted dry cleaning for decades.",
+    subtitle: "Proudly serving New Hope with trusted dry cleaning for decades.",
     seo: {
-      title: "Dry Cleaning in Morrisville, PA | Signature Cleaners",
+      title: "Dry Cleaning in New Hope, PA | Signature Cleaners",
       description:
-        "Trusted dry cleaning services in Morrisville. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+        "Trusted dry cleaning services in New Hope. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
       keywords:
-        "dry cleaning Morrisville, laundry service Morrisville, Signature Cleaners Morrisville",
-      canonical: "https://www.mysignaturecleaners.com/morrisville",
+        "dry cleaning New Hope, laundry service New Hope, Signature Cleaners New Hope",
+      canonical: "https://www.mysignaturecleaners.com/new_hope",
     },
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12188.199050570667!2d-74.79232916809117!3d40.20795599358111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c157593255b2cb%3A0xe9481c0e42a5c7da!2sMorrisville%2C%20PA%2019067!5e0!3m2!1sen!2sus!4v1747842540417!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12160.52366147891!2d-74.96722626801014!3d40.36162144317431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3ff5a5c12480b%3A0x616b79bb638353bc!2sNew%20Hope%2C%20PA%2018938!5e0!3m2!1sen!2sus!4v1747848485200!5m2!1sen!2sus",
     about:
-      "Morrisville, Pennsylvania is a historic borough nestled along the Delaware River in lower Bucks County. With roots dating back to the colonial era, Morrisville boasts charming older homes, riverside parks, and a proud, tight-knit community. Its rich heritage and convenient location near major urban centers make it a unique blend of small-town character and metropolitan access.",
+      "New Hope, Pennsylvania is a vibrant riverside town in Bucks County, renowned for its artistic spirit, eclectic shops, and scenic beauty. Steeped in history and culture, New Hope offers a lively blend of galleries, theaters, and fine dining, all set against the backdrop of the Delaware River. With its charming streets and creative energy, it’s a beloved destination for visitors and residents alike.",
     faq: [
       {
-        question: "Do you offer same-day service in Morrisville",
+        question: "Do you offer same-day service in New Hope",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Morrisville do you service?",
+        question: "What areas of New Hope do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Morrisville, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of New Hope, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Morrisville?",
+        question: "What payment methods do you accept in New Hope?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Morrisville?",
+        question: "Do you offer wedding gown preservation in New Hope?",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
         question:
-          "What is your turnaround time for alterations in Morrisville?",
+          "What is your turnaround time for alterations in New Hope?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
