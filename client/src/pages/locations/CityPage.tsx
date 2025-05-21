@@ -54,103 +54,73 @@ export default function CityPage() {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Dry Cleaning */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/interior-two.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Dry Cleaning in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Professional dry cleaning services with expert care for your garments.</p>
-                <Link href="/all-services/dry-cleaning" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
+      {/* Services Z-Pattern Sections */}
+      {[
+        {
+          title: `Dry Cleaning in ${city.name}`,
+          description: "Professional dry cleaning services with expert care for your garments.",
+          image: "/images/interior-two.jpg",
+          link: "/all-services/dry-cleaning",
+        },
+        {
+          title: `Wash & Fold in ${city.name}`,
+          description: "Convenient wash and fold service for your everyday laundry needs.",
+          image: "/images/washFold.jpg",
+          link: "/all-services/wash-fold",
+        },
+        {
+          title: `Alterations & Tailoring in ${city.name}`,
+          description: "Expert tailoring and alterations for the perfect fit.",
+          image: "/images/tailor.jpg",
+          link: "/all-services/alteration-tailoring",
+        },
+        {
+          title: `Wedding Gown Services in ${city.name}`,
+          description: "Specialized cleaning and preservation for wedding gowns.",
+          image: "/images/weddingGown.jpg",
+          link: "/all-services/wedding-gown",
+        },
+        {
+          title: `Shoe Repair in ${city.name}`,
+          description: "Professional shoe repair and restoration services.",
+          image: "/images/shoeRepair.jpg",
+          link: "/all-services/shoe-repair",
+        },
+        {
+          title: `Household Item Cleaning in ${city.name}`,
+          description: "Professional cleaning for comforters, drapes, and more.",
+          image: "/images/householdItems.jpg",
+          link: "/all-services/clean-household-items",
+        },
+        {
+          title: `Pickup & Delivery in ${city.name}`,
+          description: `Free pickup and delivery service throughout ${city.name}.`,
+          image: "/images/delivery.jpg",
+          link: "/all-services/delivery",
+        },
+      ].map((service, index) => {
+        const isReversed = index % 2 === 1;
+        return (
+          <section key={index} className="py-16 bg-white">
+            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse" : ""} items-center gap-10`}>
+              <div className="md:w-1/2">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-80 object-cover rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="md:w-1/2">
+                <h2 className="text-3xl font-bold mb-4 text-[#790003]">{service.title}</h2>
+                <p className="mb-6 text-neutral-700">{service.description}</p>
+                <Link href={service.link}>
+                  <Button className="bg-[#790003] text-white hover:bg-[#F6AE2D]">Learn More</Button>
                 </Link>
               </div>
             </div>
-
-            {/* Wash & Fold */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/washFold.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Wash & Fold in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Convenient wash and fold service for your everyday laundry needs.</p>
-                <Link href="/all-services/wash-fold" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Alterations & Tailoring */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/tailor.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Alterations & Tailoring in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Expert tailoring and alterations for the perfect fit.</p>
-                <Link href="/all-services/alteration-tailoring" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Wedding Gowns */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/weddingGown.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Wedding Gown Services in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Specialized cleaning and preservation for wedding gowns.</p>
-                <Link href="/all-services/wedding-gown" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Shoe Repair */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/shoeRepair.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Shoe Repair in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Professional shoe repair and restoration services.</p>
-                <Link href="/all-services/shoe-repair" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Household Items */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/householdItems.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Household Item Cleaning in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Professional cleaning for comforters, drapes, and more.</p>
-                <Link href="/all-services/clean-household-items" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-
-            {/* Delivery */}
-            <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/delivery.jpg')] bg-cover bg-center bg-no-repeat"></div>
-              <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white">Pickup & Delivery in {city.name}</h3>
-                <div className="w-12 h-0.5 bg-[#181818] my-4"></div>
-                <p className="text-white mb-6">Free pickup and delivery service throughout {city.name}.</p>
-                <Link href="/all-services/delivery" className="mt-auto">
-                  <Button className="w-full bg-white text-black hover:bg-[#F6AE2D]">Learn More</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        );
+      })}
 
       {/* Map & About Section */}
       <section className="py-16 bg-neutral-100">
