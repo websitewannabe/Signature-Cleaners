@@ -1,3 +1,9 @@
+var __defProp = Object.defineProperty;
+var __export = (target, all) => {
+  for (var name in all)
+    __defProp(target, name, { get: all[name], enumerable: true });
+};
+
 // server/index.ts
 import express2 from "express";
 
@@ -5,6 +11,18 @@ import express2 from "express";
 import { createServer } from "http";
 
 // shared/schema.ts
+var schema_exports = {};
+__export(schema_exports, {
+  chatMessages: () => chatMessages,
+  contacts: () => contacts,
+  insertContactSchema: () => insertContactSchema,
+  insertOrderSchema: () => insertOrderSchema,
+  insertUserSchema: () => insertUserSchema,
+  orders: () => orders,
+  services: () => services,
+  testimonials: () => testimonials,
+  users: () => users
+});
 import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 var users = pgTable("users", {
@@ -84,37 +102,29 @@ var chatMessages = pgTable("chat_messages", {
 });
 
 // server/db.ts
-var db = {
-  connect: () => {
-    console.log("Database functionality removed");
-  }
-};
+import { drizzle } from "drizzle-orm/postgres-js";
+import postgres from "postgres";
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL environment variable is not set");
+}
+var client = postgres(process.env.DATABASE_URL);
+var db = drizzle(client, { schema: schema_exports });
 
 // server/storage.ts
 import { eq, desc } from "drizzle-orm";
 import session from "express-session";
-import MemoryStore from "memorystore";
-var ONE_DAY = 1e3 * 60 * 60 * 24;
-var MemoryStoreSession = MemoryStore(session);
-var Storage = class {
-  store;
+import connectPg from "connect-pg-simple";
+import pg from "pg";
+var PostgresSessionStore = connectPg(session);
+var pool = new pg.Pool({
+  connectionString: process.env.DATABASE_URL
+});
+var DatabaseStorage = class {
   sessionStore;
   constructor() {
-    this.store = new MemoryStoreSession({
-      checkPeriod: ONE_DAY
-    });
-    this.sessionStore = this.store;
-  }
-  getSessionMiddleware() {
-    return session({
-      store: this.store,
-      secret: process.env.SESSION_SECRET || "default_secret",
-      resave: false,
-      saveUninitialized: false,
-      cookie: {
-        secure: process.env.NODE_ENV === "production",
-        maxAge: ONE_DAY
-      }
+    this.sessionStore = new PostgresSessionStore({
+      pool,
+      createTableIfMissing: true
     });
   }
   // Initialize the database with default sample data
@@ -233,7 +243,7 @@ var Storage = class {
     return chatMessage;
   }
 };
-var storage = new Storage();
+var storage = new DatabaseStorage();
 
 // server/auth.ts
 import passport from "passport";
