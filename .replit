@@ -70,4 +70,8 @@ args = "pkill -f \"node|tsx\" || true"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
+args = "rm -rf dist"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
 args = "npm run dev"

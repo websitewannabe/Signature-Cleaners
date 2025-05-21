@@ -36,16 +36,23 @@ export class Storage implements IStorage {
   }
 
   async initializeDatabase(): Promise<void> {
-    // Initialize with some sample data
-    memoryStore.services = [
-      {
-        id: 1,
-        name: "Professional Dry Cleaning",
-        description: "Expert dry cleaning services"
-      }
-    ];
-    memoryStore.testimonials = [];
-    return Promise.resolve();
+    try {
+      // Initialize with some sample data
+      memoryStore.services = [
+        {
+          id: 1,
+          name: "Professional Dry Cleaning",
+          description: "Expert dry cleaning services"
+        }
+      ];
+      memoryStore.testimonials = [];
+      memoryStore.chatMessages = [];
+      memoryStore.orders = [];
+      return Promise.resolve();
+    } catch (error) {
+      console.error('Failed to initialize storage:', error);
+      return Promise.resolve();
+    }
   }
 
   async getServices(): Promise<any[]> {
