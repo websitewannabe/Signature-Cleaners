@@ -245,20 +245,20 @@ export const cityData: Record<string, CityData> = {
       },
     ],
   },
-  chalfont: {
-    name: "Chalfont",
-    title: "Professional Dry Cleaning in Chalfont",
-    subtitle: "Proudly serving Chalfont with trusted dry cleaning for decades.",
+  furlong: {
+    name: "Furlong",
+    title: "Professional Dry Cleaning in Furlong",
+    subtitle: "Proudly serving Furlong with trusted dry cleaning for decades.",
     seo: {
-      title: "Dry Cleaning in Chalfont, PA | Signature Cleaners",
+      title: "Dry Cleaning in Furlong, PA | Signature Cleaners",
       description:
-        "Trusted dry cleaning services in Chalfont. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+        "Trusted dry cleaning services in Furlong. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
       keywords:
-        "dry cleaning Chalfont, laundry service Chalfont, Signature Cleaners Chalfont",
-      canonical: "https://www.mysignaturecleaners.com/chalfont",
+        "dry cleaning Furlong, laundry service Furlong, Signature Cleaners Furlong",
+      canonical: "https://www.mysignaturecleaners.com/Furlong",
     },
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3077.6013124401543!2d-75.21267568465866!3d40.288437179379794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a9d9e2f5051b%3A0x4e1a7b48be55f631!2sChalfont%2C%20PA%2018914!5e0!3m2!1sen!2sus!4v1653955180672!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6086.156882739395!2d-75.08726485016717!3d40.29621723583667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6a9945e5fcea3%3A0xf1d5196041bd2baf!2sFurlong%2C%20PA%2018925!5e0!3m2!1sen!2sus!4v1747838361431!5m2!1sen!2sus",
     about:
       "Chalfont, Pennsylvania is a quaint borough nestled in the heart of Bucks County. Rich in colonial history and small-town charm, Chalfont offers tree-lined streets, preserved Victorian architecture, and a welcoming, close-knit community. It’s a peaceful enclave that perfectly balances historic character with modern suburban comfort.",
     faq: [
@@ -292,7 +292,8 @@ export const cityData: Record<string, CityData> = {
   fountainville: {
     name: "Fountainvilel",
     title: "Professional Dry Cleaning in Fountainville",
-    subtitle: "Proudly serving Fountainville with trusted dry cleaning for decades.",
+    subtitle:
+      "Proudly serving Fountainville with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Fountainville, PA | Signature Cleaners",
       description:
@@ -302,32 +303,32 @@ export const cityData: Record<string, CityData> = {
       canonical: "https://www.mysignaturecleaners.com/fountainville",
     },
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6079.108072806314!2d-75.20907930015704!3d40.374411835785686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c41c56847dafeb%3A0xe56de7be5cdf5afc!2sDublin%2C%20PA%2018917!5e0!3m2!1sen!2sus!4v1747837593315!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12162.792430883908!2d-75.17173271801676!3d40.349042543207126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402cbb1eefaa5%3A0x36f8ca19df4366b4!2sFountainville%2C%20PA%2018923!5e0!3m2!1sen!2sus!4v1747838086549!5m2!1sen!2sus",
     about:
-      "Dublin, Pennsylvania is a small yet vibrant borough located in upper Bucks County. Known for its blend of historic charm and growing local culture, Dublin features a walkable town center, unique small businesses, and a strong sense of community. Surrounded by scenic countryside, it offers a welcoming atmosphere that embraces both tradition and progress.",
+      "Fountainville, Pennsylvania is a quiet village at the crossroads of Bucks County, where rural landscapes meet suburban convenience. Surrounded by open fields and gently winding roads, Fountainville offers a peaceful setting with easy access to nearby towns. Its laid-back atmosphere and community-oriented spirit make it a charming retreat in the heart of the county.",
     faq: [
       {
-        question: "Do you offer same-day service in Dublin?",
+        question: "Do you offer same-day service in Fountainville?",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Dublin do you service?",
+        question: "What areas of Fountainville do you service?",
         answer:
           "We provide pickup and delivery services throughout all of Dublin, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Dublin?",
+        question: "What payment methods do you accept in Fountainville?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Dublin?",
+        question: "Do you offer wedding gown preservation in Fountainville?",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question: "What is your turnaround time for alterations in Dublin?",
+        question: "What is your turnaround time for alterations in Fountainville?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
