@@ -930,30 +930,74 @@ export const cityData: Record<string, CityData> = {
     mapEmbedUrl:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12198.581833061713!2d-74.99248076812157!3d40.15018054373747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b2a7bee68003%3A0x131e9fd8f3c0d09c!2sTrevose%2C%20PA%2019053!5e0!3m2!1sen!2sus!4v1747853600313!5m2!1sen!2sus",
     about:
-      "Southampton, Pennsylvania is a well-established suburban community in Bucks County, known for its family-friendly neighborhoods, excellent schools, and convenient location. With a blend of historic charm and modern amenities, Southampton offers quiet residential living alongside easy access to shopping, dining, and major commuter routes. Its strong sense of community and balanced lifestyle make it a welcoming place to call home.",
+      "Trevose, Pennsylvania is a diverse and accessible community located in the southern edge of Bucks County. Blending suburban comfort with commercial convenience, Trevose features a mix of cozy neighborhoods, local businesses, and easy access to major highways and public transit. Its central location and welcoming atmosphere make it a practical and connected place to live, work, and explore.",
     faq: [
       {
-        question: "Do you offer same-day service in Southampton",
+        question: "Do you offer same-day service in Trevose",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Southampton do you service?",
+        question: "What areas of Trevose do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Southampton, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Trevose, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Southampton?",
+        question: "What payment methods do you accept in Trevose?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Southampton",
+        question: "Do you offer wedding gown preservation in Trevose",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question: "What is your turnaround time for alterations in Southampton",
+        question: "What is your turnaround time for alterations in Trevose",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  warminster: {
+    name: "Warminster",
+    title: "Professional Dry Cleaning in Warminster",
+    subtitle: "Proudly serving Warminster with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Warminster, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Warminster. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Warminster, laundry service Warminster, Signature Cleaners Warminster",
+      canonical: "https://www.mysignaturecleaners.com/warminster",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24377.669993828385!2d-75.1113915070832!3d40.20441922434993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6aeeea395da9f%3A0x10f12f4b29403d35!2sWarminster%20Township%2C%20PA%2018974!5e0!3m2!1sen!2sus!4v1747854167119!5m2!1sen!2sus",
+    about:
+      "Warminster, Pennsylvania is a dynamic suburban community in central Bucks County, known for its rich history, spacious parks, and strong civic spirit. With a blend of residential neighborhoods, thriving local businesses, and top-rated schools, Warminster offers a balanced lifestyle that’s both convenient and community-focused. Its blend of tradition and progress makes it a vibrant place to live, work, and grow.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Warminster",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Warminster do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Warminster, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Warminster?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Warminster",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Warminster",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },

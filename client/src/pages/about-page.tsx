@@ -35,7 +35,7 @@ export default function AboutPage() {
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
             url: "https://signaturecleaners.com/about",
-            image: "https://signaturecleaners.com/src/images/theTeam.jpg",
+            image: "https://signaturecleaners.com/src/images/theTeam.webp",
             logo: "https://signaturecleaners.com/src/images/logo.png",
             description:
               "Signature Cleaners is a trusted garment care provider in Bucks County, offering expert dry cleaning, tailoring, shoe repair, and preservation services.",
@@ -96,11 +96,12 @@ export default function AboutPage() {
           </div>
         )}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <h1 
+          <h1
             className="text-4xl md:text-6xl font-bold text-[#790003] text-center mb-16 font-sans min-h-[2.5em]"
             style={{
-              fontFamily: 'system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif',
-              lineHeight: '1.2',
+              fontFamily:
+                "system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif",
+              lineHeight: "1.2",
             }}
           >
             Our Story
@@ -157,7 +158,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="mt-10 lg:mt-0">
-              <img 
+              <img
                 src="/images/theTeam.webp"
                 alt="Signature Cleaners team"
                 loading="lazy"

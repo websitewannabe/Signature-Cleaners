@@ -197,7 +197,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Dry Cleaning */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/interior-two.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/interior-two.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
@@ -231,7 +231,7 @@ export default function ServicesPage() {
             </div>
             {/* Wash & Fold */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/washFold.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/washFold.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
@@ -265,7 +265,7 @@ export default function ServicesPage() {
             </div>
             {/* Wedding Gowns */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/weddingGown.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/weddingGown.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
@@ -299,7 +299,7 @@ export default function ServicesPage() {
             </div>
             {/* Household Items */}
             <div className="group bg-[#790003] shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full overflow-hidden">
-              <div className="h-40 bg-[url('/images/householdItems.jpg')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
+              <div className="h-40 bg-[url('/images/householdItems.webp')] bg-cover bg-center bg-no-repeat flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-105"></div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow flex flex-col space-y-3">
                   <h3 className="text-xl font-semibold text-white">
