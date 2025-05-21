@@ -829,8 +829,7 @@ export const cityData: Record<string, CityData> = {
   richboro: {
     name: "Richboro",
     title: "Professional Dry Cleaning in Richboro",
-    subtitle:
-      "Proudly serving Richboro with trusted dry cleaning for decades.",
+    subtitle: "Proudly serving Richboro with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Richboro, PA | Signature Cleaners",
       description:
@@ -840,33 +839,121 @@ export const cityData: Record<string, CityData> = {
       canonical: "https://www.mysignaturecleaners.com/richboro",
     },
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6074.758190690153!2d-75.0714316501507!3d40.42260383575414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4042bf00fd517%3A0x119e2dcb7de0bb59!2sPoint%20Pleasant%2C%20PA%2018938!5e0!3m2!1sen!2sus!4v1747852345497!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24368.58487498216!2d-75.02394150702972!3d40.22967667407865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6ab65135af61f%3A0xa979f016a06a6976!2sRichboro%2C%20PA%2018954!5e0!3m2!1sen!2sus!4v1747852837279!5m2!1sen!2sus",
     about:
-      "Point Pleasant, Pennsylvania is a charming riverside village nestled along the Delaware River in Bucks County. Known for its scenic beauty, historic canal locks, and outdoor adventure opportunities, Point Pleasant offers a peaceful retreat steeped in natural wonder. With rustic cottages, winding roads, and a laid-back atmosphere, it’s a beloved destination for nature lovers, kayakers, and those drawn to the simple, serene rhythm of life by the water.",
+      "Richboro, Pennsylvania is a charming riverside village nestled along the Delaware River in Bucks County. Known for its scenic beauty, historic canal locks, and outdoor adventure opportunities, Richboro offers a peaceful retreat steeped in natural wonder. With rustic cottages, winding roads, and a laid-back atmosphere, it’s a beloved destination for nature lovers, kayakers, and those drawn to the simple, serene rhythm of life by the water.",
     faq: [
       {
-        question: "Do you offer same-day service in Point Pleasant",
+        question: "Do you offer same-day service in Richboro",
         answer:
           "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
       },
       {
-        question: "What areas of Point Pleasant do you service?",
+        question: "What areas of Richboro do you service?",
         answer:
-          "We provide pickup and delivery services throughout all of Point Pleasant, including the surrounding communities and neighborhoods.",
+          "We provide pickup and delivery services throughout all of Richboro, including the surrounding communities and neighborhoods.",
       },
       {
-        question: "What payment methods do you accept in Point Pleasant?",
+        question: "What payment methods do you accept in Richboro?",
         answer:
           "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
       },
       {
-        question: "Do you offer wedding gown preservation in Point Pleasant",
+        question: "Do you offer wedding gown preservation in Richboro",
         answer:
           "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
       },
       {
-        question:
-          "What is your turnaround time for alterations in Point Pleasant?",
+        question: "What is your turnaround time for alterations in Richboro",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  southampton: {
+    name: "Southampton",
+    title: "Professional Dry Cleaning in Southampton",
+    subtitle:
+      "Proudly serving Southampton with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Southampton, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Southampton. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Southampton, laundry service Southampton, Signature Cleaners Southampton",
+      canonical: "https://www.mysignaturecleaners.com/southampton",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24386.87935252876!2d-75.0617414071374!3d40.178802924626474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6adc5c7c3bead%3A0x8587f5639bdcab38!2sSouthampton%2C%20Upper%20Southampton%20Township%2C%20PA!5e0!3m2!1sen!2sus!4v1747853234188!5m2!1sen!2sus",
+    about:
+      "Southampton, Pennsylvania is a well-established suburban community in Bucks County, known for its family-friendly neighborhoods, excellent schools, and convenient location. With a blend of historic charm and modern amenities, Southampton offers quiet residential living alongside easy access to shopping, dining, and major commuter routes. Its strong sense of community and balanced lifestyle make it a welcoming place to call home.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Southampton",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Southampton do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Southampton, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Southampton?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Southampton",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Southampton",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  trevose: {
+    name: "Trevose",
+    title: "Professional Dry Cleaning in Trevose",
+    subtitle: "Proudly serving Trevose with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Trevose, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Trevose. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Trevose, laundry service Trevose, Signature Cleaners Trevose",
+      canonical: "https://www.mysignaturecleaners.com/trevose",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12198.581833061713!2d-74.99248076812157!3d40.15018054373747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6b2a7bee68003%3A0x131e9fd8f3c0d09c!2sTrevose%2C%20PA%2019053!5e0!3m2!1sen!2sus!4v1747853600313!5m2!1sen!2sus",
+    about:
+      "Southampton, Pennsylvania is a well-established suburban community in Bucks County, known for its family-friendly neighborhoods, excellent schools, and convenient location. With a blend of historic charm and modern amenities, Southampton offers quiet residential living alongside easy access to shopping, dining, and major commuter routes. Its strong sense of community and balanced lifestyle make it a welcoming place to call home.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Southampton",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Southampton do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Southampton, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Southampton?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Southampton",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question: "What is your turnaround time for alterations in Southampton",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
