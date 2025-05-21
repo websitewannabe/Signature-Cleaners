@@ -693,8 +693,7 @@ export const cityData: Record<string, CityData> = {
   perkasie: {
     name: "Perkasie",
     title: "Professional Dry Cleaning in Perkasie",
-    subtitle:
-      "Proudly serving Perkasie with trusted dry cleaning for decades.",
+    subtitle: "Proudly serving Perkasie with trusted dry cleaning for decades.",
     seo: {
       title: "Dry Cleaning in Perkasie, PA | Signature Cleaners",
       description:
@@ -730,6 +729,144 @@ export const cityData: Record<string, CityData> = {
       },
       {
         question: "What is your turnaround time for alterations in Perkasie?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  pipersville: {
+    name: "Pipersville",
+    title: "Professional Dry Cleaning in Pipersville",
+    subtitle:
+      "Proudly serving Pipersville with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Pipersville, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Ottsville. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Pipersville, laundry service Pipersville, Signature Cleaners Pipersville",
+      canonical: "https://www.mysignaturecleaners.com/pipersville",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12149.62153186154!2d-75.15003761797821!3d40.422021643017985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c404c4dd6cd6f7%3A0x35d3961a8e9f853d!2sPipersville%2C%20Bedminster%20Township%2C%20PA%2018947!5e0!3m2!1sen!2sus!4v1747852083195!5m2!1sen!2sus",
+    about:
+      "Pipersville, Pennsylvania is a picturesque hamlet tucked into the rolling hills and farmlands of central Bucks County. Steeped in pastoral beauty and rural tranquility, Pipersville is a haven for those seeking a slower pace and a deep connection to nature. Winding country roads lead to historic stone farmhouses, vibrant orchards, and hidden artists' studios, creating a landscape that feels timeless and inspiring. With its unspoiled charm, strong agricultural roots, and a quiet, enduring elegance, Pipersville captures the very essence of Bucks County’s countryside living.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Pipersville",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Pipersville do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Pipersville, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Pipersville?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Pipersville",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question:
+          "What is your turnaround time for alterations in Pipersville?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  point_pleasant: {
+    name: "Point Pleasant",
+    title: "Professional Dry Cleaning in Point Pleasant",
+    subtitle:
+      "Proudly serving Point Pleasant with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Point Pleasant, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Point Pleasant. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Point Pleasant, laundry service Point Pleasant, Signature Cleaners Point Pleasant",
+      canonical: "https://www.mysignaturecleaners.com/point_pleasant",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6074.758190690153!2d-75.0714316501507!3d40.42260383575414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4042bf00fd517%3A0x119e2dcb7de0bb59!2sPoint%20Pleasant%2C%20PA%2018938!5e0!3m2!1sen!2sus!4v1747852345497!5m2!1sen!2sus",
+    about:
+      "Point Pleasant, Pennsylvania is a charming riverside village nestled along the Delaware River in Bucks County. Known for its scenic beauty, historic canal locks, and outdoor adventure opportunities, Point Pleasant offers a peaceful retreat steeped in natural wonder. With rustic cottages, winding roads, and a laid-back atmosphere, it’s a beloved destination for nature lovers, kayakers, and those drawn to the simple, serene rhythm of life by the water.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Point Pleasant",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Point Pleasant do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Point Pleasant, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Point Pleasant?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Point Pleasant",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question:
+          "What is your turnaround time for alterations in Point Pleasant?",
+        answer:
+          "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
+      },
+    ],
+  },
+  richboro: {
+    name: "Richboro",
+    title: "Professional Dry Cleaning in Richboro",
+    subtitle:
+      "Proudly serving Richboro with trusted dry cleaning for decades.",
+    seo: {
+      title: "Dry Cleaning in Richboro, PA | Signature Cleaners",
+      description:
+        "Trusted dry cleaning services in Richboro. Free pickup & delivery, eco-friendly cleaning, and expert garment care.",
+      keywords:
+        "dry cleaning Richboro, laundry service Richboro, Signature Cleaners Richboro",
+      canonical: "https://www.mysignaturecleaners.com/richboro",
+    },
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6074.758190690153!2d-75.0714316501507!3d40.42260383575414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4042bf00fd517%3A0x119e2dcb7de0bb59!2sPoint%20Pleasant%2C%20PA%2018938!5e0!3m2!1sen!2sus!4v1747852345497!5m2!1sen!2sus",
+    about:
+      "Point Pleasant, Pennsylvania is a charming riverside village nestled along the Delaware River in Bucks County. Known for its scenic beauty, historic canal locks, and outdoor adventure opportunities, Point Pleasant offers a peaceful retreat steeped in natural wonder. With rustic cottages, winding roads, and a laid-back atmosphere, it’s a beloved destination for nature lovers, kayakers, and those drawn to the simple, serene rhythm of life by the water.",
+    faq: [
+      {
+        question: "Do you offer same-day service in Point Pleasant",
+        answer:
+          "Yes, we offer same-day service for items dropped off before 9 AM, Monday through Friday. Some specialty items may require additional time.",
+      },
+      {
+        question: "What areas of Point Pleasant do you service?",
+        answer:
+          "We provide pickup and delivery services throughout all of Point Pleasant, including the surrounding communities and neighborhoods.",
+      },
+      {
+        question: "What payment methods do you accept in Point Pleasant?",
+        answer:
+          "We accept all major credit cards, including Visa, Mastercard, American Express, and Discover. We also offer convenient auto-pay options.",
+      },
+      {
+        question: "Do you offer wedding gown preservation in Point Pleasant",
+        answer:
+          "Yes, we specialize in wedding gown preservation with our expert cleaning and preservation process to protect your cherished garment.",
+      },
+      {
+        question:
+          "What is your turnaround time for alterations in Point Pleasant?",
         answer:
           "Standard alterations typically take 3-5 business days. Rush service is available upon request for an additional fee.",
       },
