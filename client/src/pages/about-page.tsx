@@ -159,7 +159,7 @@ export default function AboutPage() {
             <div className="mt-10 lg:mt-0">
               <img 
                 src="/images/theTeam.webp"
-                alt="The professional team at Signature Cleaners standing in front of the store"
+                alt="Signature Cleaners team"
                 loading="lazy"
                 decoding="async"
                 className="h-[600px] w-full object-cover rounded-lg shadow-lg"

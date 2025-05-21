@@ -66,7 +66,6 @@ const Footer = () => {
                   }
                 }}
                 className="text-[#F6AE2D] hover:text-white transition-colors flex items-center gap-2"
-                aria-label="Enable Accessibility Tools"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

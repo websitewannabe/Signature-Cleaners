@@ -49,13 +49,12 @@ const Header = () => {
           </div>
 
           {/* Center: Nav Links */}
-          <nav aria-label="Main navigation" className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
+          <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
             <Link
               href="/"
               className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
-              aria-label="Home"
             >
-              <Home className="w-4 h-4" aria-hidden="true" />
+              <Home className="w-4 h-4" />
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
