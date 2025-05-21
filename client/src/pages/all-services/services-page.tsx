@@ -210,7 +210,7 @@ export default function ServicesPage() {
                   </p>
                   <Link href="/all-services/dry-cleaning" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Why Dry Cleaning
                     </Button>
                   </Link>
                 </div>
@@ -244,7 +244,7 @@ export default function ServicesPage() {
                   </p>
                   <Link href="/all-services/wash-fold" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Laundry Made Easy
                     </Button>
                   </Link>
                 </div>
@@ -278,7 +278,7 @@ export default function ServicesPage() {
                   </p>
                   <Link href="/all-services/wedding-gown" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Gown Care Guide
                     </Button>
                   </Link>
                 </div>
@@ -315,7 +315,7 @@ export default function ServicesPage() {
                     className="block"
                   >
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Clean Your Homewear
                     </Button>
                   </Link>
                 </div>
@@ -352,7 +352,7 @@ export default function ServicesPage() {
                     className="block"
                   >
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Perfect the Fit
                     </Button>
                   </Link>
                 </div>
@@ -384,7 +384,7 @@ export default function ServicesPage() {
                   </p>
                   <Link href="/all-services/delivery" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Pickup & Delivery
                     </Button>
                   </Link>
                 </div>
@@ -418,7 +418,7 @@ export default function ServicesPage() {
                   </p>
                   <Link href="/all-services/shoe-repair" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Learn More
+                      Fix Your Footwear
                     </Button>
                   </Link>
                 </div>
@@ -476,7 +476,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-8 items-start">
             <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
