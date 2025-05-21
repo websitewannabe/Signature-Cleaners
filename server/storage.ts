@@ -18,14 +18,10 @@ import {
 import { db } from "./db";
 import { eq, and, desc } from "drizzle-orm";
 import session from "express-session";
-import connectPg from "connect-pg-simple";
-import pg from "pg";
+import MemoryStore from "memorystore";
 
-// Create a PostgreSQL session store
-const PostgresSessionStore = connectPg(session);
-const pool = new pg.Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+const ONE_DAY = 1000 * 60 * 60 * 24;
+const MemoryStoreSession = MemoryStore(session);
 
 // Interface for all storage operations
 export interface IStorage {
@@ -66,15 +62,27 @@ export interface IStorage {
   initializeDatabase(): Promise<void>;
 }
 
-// Database storage implementation
-export class DatabaseStorage implements IStorage {
+export class Storage implements IStorage {
+  private store: any;
   sessionStore: any;
 
   constructor() {
-    // Initialize PostgreSQL session store
-    this.sessionStore = new PostgresSessionStore({
-      pool,
-      createTableIfMissing: true,
+    this.store = new MemoryStoreSession({
+      checkPeriod: ONE_DAY
+    });
+    this.sessionStore = this.store;
+  }
+
+  getSessionMiddleware() {
+    return session({
+      store: this.store,
+      secret: process.env.SESSION_SECRET || 'default_secret',
+      resave: false,
+      saveUninitialized: false,
+      cookie: {
+        secure: process.env.NODE_ENV === 'production',
+        maxAge: ONE_DAY
+      }
     });
   }
 
@@ -259,4 +267,4 @@ export class DatabaseStorage implements IStorage {
 }
 
 // Create and export storage instance
-export const storage = new DatabaseStorage();
+export const storage = new Storage();
