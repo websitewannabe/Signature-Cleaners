@@ -39,7 +39,7 @@ export default function CityPage() {
 
       {/* Hero Section */}
       <section className="relative py-40">
-        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -47,7 +47,10 @@ export default function CityPage() {
           </h1>
           <p className="text-xl text-white mb-8">{city.subtitle}</p>
           <Link href="/schedule">
-            <Button size="lg" className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
               Schedule Pickup in {city.name}
             </Button>
           </Link>
@@ -58,51 +61,57 @@ export default function CityPage() {
       {[
         {
           title: `Dry Cleaning in ${city.name}`,
-          description: "Professional dry cleaning services with expert care for your garments.",
-          image: "/images/interior-two.jpg",
+          description:
+            "Professional dry cleaning services with expert care for your garments.",
+          image: "/images/interior-two.webp",
           link: "/all-services/dry-cleaning",
         },
         {
           title: `Wash & Fold in ${city.name}`,
-          description: "Convenient wash and fold service for your everyday laundry needs.",
-          image: "/images/washFold.jpg",
+          description:
+            "Convenient wash and fold service for your everyday laundry needs.",
+          image: "/images/washFold.webp",
           link: "/all-services/wash-fold",
         },
         {
           title: `Alterations & Tailoring in ${city.name}`,
           description: "Expert tailoring and alterations for the perfect fit.",
-          image: "/images/tailor.jpg",
+          image: "/images/tailor.webp",
           link: "/all-services/alteration-tailoring",
         },
         {
           title: `Wedding Gown Services in ${city.name}`,
-          description: "Specialized cleaning and preservation for wedding gowns.",
-          image: "/images/weddingGown.jpg",
+          description:
+            "Specialized cleaning and preservation for wedding gowns.",
+          image: "/images/weddingGown.webp",
           link: "/all-services/wedding-gown",
         },
         {
           title: `Shoe Repair in ${city.name}`,
           description: "Professional shoe repair and restoration services.",
-          image: "/images/shoeRepair.jpg",
+          image: "/images/shoeRepair.webp",
           link: "/all-services/shoe-repair",
         },
         {
           title: `Household Item Cleaning in ${city.name}`,
-          description: "Professional cleaning for comforters, drapes, and more.",
-          image: "/images/householdItems.jpg",
+          description:
+            "Professional cleaning for comforters, drapes, and more.",
+          image: "/images/householdItems.webp",
           link: "/all-services/clean-household-items",
         },
         {
           title: `Pickup & Delivery in ${city.name}`,
           description: `Free pickup and delivery service throughout ${city.name}.`,
-          image: "/images/delivery.jpg",
+          image: "/images/delivery.webp",
           link: "/all-services/delivery",
         },
       ].map((service, index) => {
         const isReversed = index % 2 === 1;
         return (
           <section key={index} className="py-16 bg-white">
-            <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse" : ""} items-center gap-10`}>
+            <div
+              className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row ${isReversed ? "md:flex-row-reverse" : ""} items-center gap-10`}
+            >
               <div className="md:w-1/2">
                 <img
                   src={service.image}
@@ -111,10 +120,14 @@ export default function CityPage() {
                 />
               </div>
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold mb-4 text-[#790003]">{service.title}</h2>
+                <h2 className="text-3xl font-bold mb-4 text-[#790003]">
+                  {service.title}
+                </h2>
                 <p className="mb-6 text-neutral-700">{service.description}</p>
                 <Link href={service.link}>
-                  <Button className="bg-[#790003] text-white hover:bg-[#F6AE2D]">Learn More</Button>
+                  <Button className="bg-[#790003] text-white hover:bg-[#F6AE2D]">
+                    Learn More
+                  </Button>
                 </Link>
               </div>
             </div>
@@ -165,14 +178,17 @@ export default function CityPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/70"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to experience premium garment care in {city.name}?
           </h2>
           <Link href="/schedule">
-            <Button size="lg" className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg">
+            <Button
+              size="lg"
+              className="bg-white hover:bg-[#F6AE2D] text-black px-12 py-6 text-lg"
+            >
               Schedule a Pickup
             </Button>
           </Link>

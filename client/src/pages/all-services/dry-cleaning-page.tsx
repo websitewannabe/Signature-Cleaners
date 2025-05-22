@@ -49,6 +49,7 @@ export default function DryCleaningPage() {
         "Thorough cleaning and precise creasing for trousers and slacks.",
     },
   ];
+  const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -351,7 +352,8 @@ export default function DryCleaningPage() {
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
+                    Don't fill this out if you're human:{" "}
+                    <input name="bot-field" />
                   </label>
                 </p>
 
@@ -359,11 +361,11 @@ export default function DryCleaningPage() {
                   <label className="block text-sm font-medium text-neutral-700 mb-1">
                     Full Name
                   </label>
-                  <Input 
+                  <Input
                     name="name"
-                    placeholder="Your name" 
-                    className="w-full" 
-                    required 
+                    placeholder="Your name"
+                    className="w-full"
+                    required
                   />
                 </div>
 
@@ -416,7 +418,10 @@ export default function DryCleaningPage() {
                   />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white">
+                <Button
+                  type="submit"
+                  className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                >
                   Schedule Service
                 </Button>
               </form>
@@ -551,7 +556,10 @@ export default function DryCleaningPage() {
                       src="/icons/bubbles.svg"
                       alt="Delivery Service"
                       className="w-8 h-8 text-[#790003]"
-                      style={{ filter: 'invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)' }}
+                      style={{
+                        filter:
+                          "invert(11%) sepia(82%) saturate(3575%) hue-rotate(345deg) brightness(87%) contrast(109%)",
+                      }}
                       aria-hidden="true"
                     />
                   </div>
@@ -567,7 +575,7 @@ export default function DryCleaningPage() {
 
       {/* CTA Section */}
       <section className="relative py-24">
-        <div className="absolute inset-0 bg-[url('/images/Background.png')] bg-cover bg-center bg-no-repeat"></div>
+        <div className="absolute inset-0 bg-[url('/images/Background.webp')] bg-cover bg-center bg-no-repeat"></div>
         <div className="absolute inset-0 bg-[#790003]/80"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
@@ -598,40 +606,62 @@ export default function DryCleaningPage() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md">
-              <iframe
-                title="Signature Cleaners Dry Cleaning Service Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+            <div
+              className="bg-neutral-200 rounded-lg overflow-hidden h-[400px] shadow-md cursor-pointer"
+              onClick={() => setMapLoaded(true)}
+            >
+              {mapLoaded ? (
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194626.6239363241!2d-75.43258756718754!3d40.3414365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c402caed310f67%3A0x4739bde141ae22d1!2sSignature%20Cleaners%20at%20Doylestown!5e0!3m2!1sen!2sus!4v1747319798707!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <img
+                  src="/images/map-placeholder.webp"
+                  alt="Map of Signature Cleaners Doylestown"
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
 
             <div className="rounded-lg p-8 h-[400px] overflow-y-auto">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-2">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2 auto-rows-auto">
                 <div className="space-y-2">
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/buckingham"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Buckingham
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/carversville"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Carversville
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/chalfont"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Chalfont
-                  </p>
+                  </Link>
                   <Link
                     href="/doylestown"
                     className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
                   >
                     <span className="mr-2">•</span>Doylestown
                   </Link>
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/dublin"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Dublin
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Fountainville
                   </p>
@@ -641,14 +671,14 @@ export default function DryCleaningPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Holland
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Ivyland
                   </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Jamison
                   </p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Lahaska
                   </p>
@@ -667,14 +697,14 @@ export default function DryCleaningPage() {
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Perkasie
                   </p>
-                </div>
-                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Pipersville
                   </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Point Pleasant
                   </p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Richboro
                   </p>
