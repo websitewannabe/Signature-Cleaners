@@ -365,6 +365,7 @@ export default function HomePage() {
               >
                 <div
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
+                  role="img"
                   aria-label="Delivery Service"
                 >
                   <Car className="h-12 w-12 text-[#790003]" />
@@ -381,6 +382,7 @@ export default function HomePage() {
               >
                 <div
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
+                  role="img"
                   aria-label="Alterations and Tailoring Service"
                 >
                   <Shirt className="h-12 w-12 text-[#790003]" />
@@ -397,6 +399,7 @@ export default function HomePage() {
               >
                 <div
                   className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
+                  role="img"
                   aria-label="Shoe Repair Service"
                 >
                   <Footprints className="h-12 w-12 text-[#790003]" />
@@ -645,7 +648,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
