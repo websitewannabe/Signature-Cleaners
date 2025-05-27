@@ -1,0 +1,82 @@
+Implement Hero Section Search Bar for Services and Cities
+
+**Objective:**
+Add a search bar to the **Home page hero section** that allows users to search for both **services** (e.g., "Dry Cleaning", "Alterations") and **cities** (e.g., "Doylestown", "New Hope"). Initially, this will be powered by a static dataset but should be structured to support dynamic updates in the future.
+
+---
+
+### ✅ Requirements
+
+#### 1. **UI Design**
+
+* Place a prominently styled search input in the hero section.
+* Use a single input field that accepts user-typed text.
+* Show placeholder text: `"Search for services or cities..."`.
+* Display auto-suggest dropdown as the user types (basic filtering).
+* Show suggestions grouped by type:
+
+  * **Services**
+  * **Cities**
+
+#### 2. **Search Functionality**
+
+* Implement a basic **fuzzy matching** or **"startsWith"** logic on the frontend.
+* Match user input against two static arrays:
+
+  ```ts
+  const SERVICES = ["Dry Cleaning", "Alterations", "Laundry", "Pressing"];
+  const CITIES = ["Doylestown", "New Hope", "Lansdale", "Warrington"];
+  ```
+* Structure the code so that in the future, the data source (e.g., API or database query) can be swapped in with minimal changes.
+
+#### 3. **Suggested Results Dropdown**
+
+* Use a dropdown or popover to show matches grouped by:
+
+  ```
+  Services
+  - Dry Cleaning
+  - Laundry
+
+  Cities
+  - Doylestown
+  - New Hope
+  ```
+* Each result should be clickable (for now, `console.log()` the clicked item).
+
+#### 4. **Future Flexibility**
+
+* Code should be modular and abstracted to easily support:
+
+  * Fetching search data from an API
+  * Navigating to service/city-specific pages on result selection
+  * Debouncing user input
+
+---
+
+### 📁 File & Component Structure Suggestion
+
+```
+/components/
+  HeroSearchBar.jsx  ← UI + logic
+/data/
+  searchData.js       ← static SERVICES and CITIES arrays
+/utils/
+  searchUtils.js      ← filter/match logic
+```
+
+---
+
+### ⚙️ Tech Stack
+
+* React (already used in project)
+* Optional: `react-select`, `downshift`, or a simple custom dropdown
+* No database/backend required for MVP
+
+---
+
+### 🎯 Goals
+
+* Build a functional and styled search bar with placeholder results.
+* Prepare code structure for future real-time search integrations.
+* Enhance user experience by guiding input and highlighting relevant terms.
