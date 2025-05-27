@@ -71,11 +71,7 @@ export default function HomePage() {
   ];
 
   const allCities = [
-    "Doylestown", "New Hope", "Newtown", "Warrington", "Furlong", "Richboro",
-    "Warminster", "Buckingham", "Yardley", "Jamison", "Carversville", "Chalfont",
-    "Dublin", "Fountainville", "Holland", "Ivyland", "Lahaska", "Morrisville",
-    "Ottsville", "Perkasie", "Pipersville", "Point Pleasant", "Southampton",
-    "Trevose", "Washington Crossing"
+    "Buckingham", "Carversville", "Chalfont", "Doylestown", "Dublin", "Fountainville"
   ];
 
   const handleSearchChange = (e: any) => {
