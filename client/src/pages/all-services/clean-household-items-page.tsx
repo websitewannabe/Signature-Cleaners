@@ -38,6 +38,11 @@ export default function CleanHouseholdItemsPage() {
           name="keywords"
           content="household item cleaning, comforter cleaning, rug cleaning, curtain cleaning, blanket laundry, Signature Cleaners, Bucks County home textile care"
         />
+        <meta property="og:title" content="Household Item Cleaning | Signature Cleaners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/clean-household-items" />
+        <meta property="og:description" content="Trust Signature Cleaners to clean your comforters, curtains, blankets, and rugs with expert care. We handle your household items with safe and effective techniques." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

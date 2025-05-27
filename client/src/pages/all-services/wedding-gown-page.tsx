@@ -38,6 +38,11 @@ export default function WeddingGownPage() {
           name="keywords"
           content="wedding gown cleaning, wedding dress preservation, bridal dress care, anti-yellowing fabric treatment, gown boxing, Signature Cleaners, Bucks County bridal services"
         />
+        <meta property="og:title" content="Wedding Gown Cleaning & Preservation | Signature Cleaners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/wedding-gown" />
+        <meta property="og:description" content="Preserve your wedding gown with expert care from Signature Cleaners. We use museum-quality materials and techniques to clean and store gowns for generations." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
