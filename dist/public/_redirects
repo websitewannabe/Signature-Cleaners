@@ -24,20 +24,6 @@ https://www.signaturecleaners.com/* https://signaturecleaners.com/:splat 301!
 /sample-page/green / 301
 /wp-content/uploads/2016/04/DLICC-Press-Release-Hangers-2016.pdf / 301
 /sitemap.xml /sitemap.xml 301
-/login-in-2/ /my-account 301
-/?s=2024 / 301
-/?s= / 301
-/welcome-to-our-blog-2/ / 301
-/sign-up-2/ /my-account 301
-/tailoring-alterations/ /all-services/alteration-tailoring 301
-/shoe-repair/ /all-services/shoe-repair 301
-/services/professional-dry-cleaning/ /all-services/dry-cleaning 301
-/services/wedding-gowns/ /all-services/wedding-gown 301
-/services/alteration-tailoring/ /all-services/alteration-tailoring 301
-/cleaning_of_household_items/ /all-services/clean-household-items 301
-/locations /contact-us 301
-/about-us/ /about-us 301
-/contact-us/ /contact-us 301
 
 # History fallback for React SPA
 /* /index.html 200
