@@ -446,9 +446,12 @@ export default function AboutPage() {
                   >
                     <span className="mr-2">•</span>Dublin
                   </Link>
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/fountainville"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Fountainville
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Furlong
                   </p>
