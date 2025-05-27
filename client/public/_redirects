@@ -1,2 +1,29 @@
-https://signaturecleaners.com/* https://www.signaturecleaners.com/:splat 301!
-/*    /index.html   200
+# Redirect www to non-www
+https://www.signaturecleaners.com/* https://signaturecleaners.com/:splat 301!
+
+# Legacy URL redirects
+/green/ / 301
+/our-wash-fold-service/ /all-services/wash-fold 301
+/our-wash-fold-service /all-services/wash-fold 301
+/our-wash-fold-service/feed/ /all-services/wash-fold 301
+/services/all-services/wash-fold/ /all-services/wash-fold 301
+/folding-dress-shirt /all-services/wash-fold 301
+/services/all-services/folding-dress-shirt-service-2/ /all-services/wash-fold 301
+/wedding-gown /all-services/wedding-gown 301
+/pick-up-delivery/ /all-services/delivery 301
+/accessibility /legal/accessibility-statement 301
+/privacy /legal/privacy-policy 301
+/terms /legal/terms-and-conditions 301
+/sign-up/ /my-account 301
+/my-account/sign-up/ /my-account 301
+/auth /my-account 301
+/all-services/services /all-services/all-services 301
+/services /all-services/all-services 301
+/category/uncategorized/ / 301
+/sample-page/green/ / 301
+/sample-page/green / 301
+/wp-content/uploads/2016/04/DLICC-Press-Release-Hangers-2016.pdf / 301
+/sitemap.xml /sitemap.xml 301
+
+# History fallback for React SPA
+/* /index.html 200
