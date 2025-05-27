@@ -1,0 +1,47 @@
+### Add Open Graph Meta Tags to SEO `<Helmet>` Blocks
+
+> **Task:** Improve SEO metadata on three React pages: `shoe-repair-page.tsx`, `wash-fold-page.tsx`, and `alteration-tailoring-page.tsx` by adding **Open Graph meta tags**.
+>
+> For each page, locate the `<Helmet>` block and **add the following tags** beneath the existing `<title>` and `<meta>` tags.
+>
+> ---
+>
+> ### 1. `shoe-repair-page.tsx`
+>
+> ```tsx
+> <meta property="og:title" content="Shoe Repair Services | Signature Cleaners" />
+> <meta property="og:type" content="website" />
+> <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+> <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/shoe-repair" />
+> <meta property="og:description" content="Extend the life of your shoes with professional repair services from Signature Cleaners. We offer heel replacement, sole repair, polishing, and stretching." />
+> ```
+>
+> ---
+>
+> ### 2. `wash-fold-page.tsx`
+>
+> ```tsx
+> <meta property="og:title" content="Wash & Fold Laundry Service | Signature Cleaners" />
+> <meta property="og:type" content="website" />
+> <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+> <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/wash-fold" />
+> <meta property="og:description" content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available." />
+> ```
+>
+> ---
+>
+> ### 3. `alteration-tailoring-page.tsx`
+>
+> ```tsx
+> <meta property="og:title" content="Alterations & Tailoring in Doylestown | Signature Cleaners" />
+> <meta property="og:type" content="website" />
+> <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+> <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring" />
+> <meta property="og:description" content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit." />
+> ```
+>
+> ---
+>
+> ✅ Keep existing SEO elements (title, description, JSON-LD script) intact.
+> 🚫 Do not duplicate tags.
+> 🎯 Goal: Fix missing Open Graph tags flagged in SEO audits and improve link previews on social platforms.
