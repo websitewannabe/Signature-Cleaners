@@ -57,6 +57,33 @@ const services = [
 
 export default function HomePage() {
   const [mapLoaded, setMapLoaded] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [showResults, setShowResults] = useState(false);
+
+  const allServices = ["Dry Cleaning", "Alterations", "Laundry", "Pressing"];
+  const allCities = ["Doylestown", "New Hope", "Lansdale", "Warrington"];
+
+  const handleSearchChange = (e: any) => {
+    const query = e.target.value;
+    setSearchQuery(query);
+    setShowResults(query.length > 0);
+  };
+
+  const handleResultClick = (item: string) => {
+    console.log(item);
+    setSearchQuery("");
+    setShowResults(false);
+  };
+
+  const filteredResults = {
+    services: allServices.filter((service) =>
+      service.toLowerCase().includes(searchQuery.toLowerCase())
+    ),
+    cities: allCities.filter((city) =>
+      city.toLowerCase().includes(searchQuery.toLowerCase())
+    ),
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
@@ -174,6 +201,53 @@ export default function HomePage() {
             <p className="mt-6 text-xl text-white/90 leading-relaxed max-w-2xl mx-auto">
               Old Fashioned Service. Guaranteed.
             </p>
+
+            {/* Search Bar */}
+            <div className="mt-8 max-w-md mx-auto relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={handleSearchChange}
+                placeholder="Search for services or cities..."
+                className="w-full bg-white rounded-md shadow-lg p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#F6AE2D] focus:border-transparent"
+              />
+
+              {/* Search Results */}
+              {showResults && (filteredResults.services.length > 0 || filteredResults.cities.length > 0) && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
+                  {filteredResults.services.length > 0 && (
+                    <div className="p-2">
+                      <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Services</h3>
+                      {filteredResults.services.map((service, index) => (
+                        <button
+                          key={`service-${index}`}
+                          onClick={() => handleResultClick(service)}
+                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
+                        >
+                          {service}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  {filteredResults.cities.length > 0 && (
+                    <div className="p-2 border-t border-gray-200">
+                      <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Cities</h3>
+                      {filteredResults.cities.map((city, index) => (
+                        <button
+                          key={`city-${index}`}
+                          onClick={() => handleResultClick(city)}
+                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
+                        >
+                          {city}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
               <Link href="/schedule">
                 <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
