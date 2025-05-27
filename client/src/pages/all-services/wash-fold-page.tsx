@@ -60,8 +60,13 @@ export default function WashFoldPage() {
         />
         <meta
           name="keywords"
-          content="wash and fold, laundry service, regular wash, delicate laundry, towel washing, bedding cleaning, Signature Cleaners, Bucks County laundry pickup"
+          content="wash and fold, laundry service, wash fold, regular wash, delicate laundry, towel washing, bedding cleaning, Signature Cleaners, Bucks County laundry pickup"
         />
+        <meta property="og:title" content="Wash & Fold Laundry Service | Signature Cleaners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/wash-fold" />
+        <meta property="og:description" content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

@@ -63,8 +63,13 @@ export default function AlterationTailoringPage() {
         />
         <meta
           name="keywords"
-          content="tailoring, alterations, hemming, clothing resizing, garment repairs, fitting service, custom tailoring, Signature Cleaners, Bucks County tailoring"
+          content="alterations, tailoring, hemming, resizing, custom fitting, clothing repairs, Signature Cleaners, Bucks County tailoring"
         />
+        <meta property="og:title" content="Alterations & Tailoring in Doylestown | Signature Cleaners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring" />
+        <meta property="og:description" content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit." />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
