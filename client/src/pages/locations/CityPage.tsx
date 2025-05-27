@@ -60,43 +60,43 @@ export default function CityPage() {
       {/* Services Z-Pattern Sections */}
       {[
         {
-          title: `Dry Cleaning in ${city.name}`,
+          title: "Dry Cleaning",
           description: `Preserve the life of your wardrobe with premium dry cleaning services in ${city.name}. We treat your garments with the highest care using advanced, eco-friendly cleaning technology.`,
           image: "/images/interior-two.webp",
           link: "/all-services/dry-cleaning",
         },
         {
-          title: `Wash & Fold in ${city.name}`,
+          title: "Wash & Fold",
           description: `Let us handle your weekly laundry. Our Wash & Fold service in ${city.name} offers same-day turnaround and exceptional attention to detail—perfect for busy households.`,
           image: "/images/washFold.webp",
           link: "/all-services/wash-fold",
         },
         {
-          title: `Alterations & Tailoring in ${city.name}`,
+          title: "Alterations & Tailoring",
           description: `From minor adjustments to full garment redesigns, our tailoring experts in ${city.name} ensure you get the perfect fit for every occasion.`,
           image: "/images/tailor.webp",
           link: "/all-services/alteration-tailoring",
         },
         {
-          title: `Wedding Gown Services in ${city.name}`,
+          title: "Wedding Gown Services",
           description: `Entrust your wedding dress to our specialists in ${city.name}. We provide meticulous cleaning, restoration, and preservation for your most treasured gown.`,
           image: "/images/weddingGown.webp",
           link: "/all-services/wedding-gown",
         },
         {
-          title: `Shoe Repair in ${city.name}`,
+          title: "Shoe Repair",
           description: `Bring new life to your favorite footwear. Our expert cobblers in ${city.name} fix soles, heels, and everything in between.`,
           image: "/images/shoeRepair.webp",
           link: "/all-services/shoe-repair",
         },
         {
-          title: `Household Item Cleaning in ${city.name}`,
+          title: "Household Item Cleaning",
           description: `Keep your home clean and allergen-free. We clean bulky items like duvets, drapes, and rugs right here in ${city.name}.`,
           image: "/images/householdItems.webp",
           link: "/all-services/clean-household-items",
         },
         {
-          title: `Pickup & Delivery in ${city.name}`,
+          title: "Pickup & Delivery",
           description: `Enjoy door-to-door convenience with our no-cost laundry pickup and delivery service across ${city.name}. Just schedule and relax.`,
           image: "/images/delivery.webp",
           link: "/all-services/delivery",
