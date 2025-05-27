@@ -61,7 +61,7 @@ export default function DryCleaningPage() {
         <title>Dry Cleaning Services | Signature Cleaners</title>
         <meta
           name="description"
-          content="Expert dry cleaning at Signature Cleaners—stain removal, pressing, and care for suits, dresses, and shirts in Bucks County."
+          content="Expert dry cleaning for suits, dresses, and delicates. Signature Cleaners offers safe and reliable service with pickup and delivery."
         />
         <meta
           property="og:title"

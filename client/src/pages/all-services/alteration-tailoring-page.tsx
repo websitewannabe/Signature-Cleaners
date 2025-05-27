@@ -59,7 +59,7 @@ export default function AlterationTailoringPage() {
         </title>
         <meta
           name="description"
-          content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit."
+          content="Get professional tailoring and alterations at Signature Cleaners. Hemming, resizing, and custom fittings in Bucks County."
         />
         <meta
           name="keywords"

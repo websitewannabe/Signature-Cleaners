@@ -56,7 +56,7 @@ export default function WashFoldPage() {
         <title>Wash & Fold Laundry Service | Signature Cleaners</title>
         <meta
           name="description"
-          content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available."
+          content="Professional Wash & Fold laundry by Signature Cleaners. Safe for all fabrics. Pickup & delivery available across Bucks County."
         />
         <meta
           name="keywords"
