@@ -244,16 +244,14 @@ export default function HomePage() {
                     <div className="p-2 border-t border-gray-200">
                       <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Cities</h3>
                       {filteredResults.cities.map((city, index) => (
-                        <button
+                        <Link
                           key={`city-${index}`}
-                          onClick={() => {
-                            console.log(`City clicked: ${city}`);
-                            setShowResults(false);
-                          }}
-                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
+                          href={`/${city.toLowerCase().replace(/\s+/g, "-")}`}
+                          onClick={() => setShowResults(false)}
+                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
                         >
                           {city}
-                        </button>
+                        </Link>
                       ))}
                     </div>
                   )}
