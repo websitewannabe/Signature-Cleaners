@@ -150,9 +150,9 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/contact",
-            image: "https://signaturecleaners.com/src/images/logo.png",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/contact",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Contact Signature Cleaners in Doylestown, PA for expert dry cleaning, laundry services, and personalized garment care. Reach us by phone, email, or visit our store.",
             address: {

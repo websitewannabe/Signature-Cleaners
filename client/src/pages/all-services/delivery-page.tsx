@@ -43,9 +43,9 @@ export default function DeliveryPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/delivery",
-            image: "https://signaturecleaners.com/src/images/logo.png",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/delivery",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners provides free pickup and delivery services for dry cleaning and laundry in Doylestown and surrounding Bucks County areas. Flexible scheduling and reliable text updates included.",
             address: {

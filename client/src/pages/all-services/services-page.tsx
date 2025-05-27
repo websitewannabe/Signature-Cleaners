@@ -35,9 +35,9 @@ export default function ServicesPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/services",
-            image: "https://signaturecleaners.com/images/logo.png",
-            logo: "https://signaturecleaners.com/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/services",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers expert garment care and delivery services throughout Bucks County.",
             address: {
@@ -141,13 +141,13 @@ export default function ServicesPage() {
               "@type": "ListItem",
               position: 1,
               name: "Home",
-              item: "https://signaturecleaners.com",
+              item: "https://www.mysignaturecleaners.com",
             },
             {
               "@type": "ListItem",
               position: 2,
               name: "Services",
-              item: "https://signaturecleaners.com/all-services/all-services",
+              item: "https://www.mysignaturecleaners.com/all-services/all-services",
             },
           ],
         })}

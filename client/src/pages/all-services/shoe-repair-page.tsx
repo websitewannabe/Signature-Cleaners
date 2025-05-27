@@ -38,19 +38,31 @@ export default function ShoeRepairPage() {
           name="keywords"
           content="shoe repair, sole replacement, heel repair, shoe polishing, shoe stretching, footwear restoration, Signature Cleaners, Bucks County shoe service"
         />
-        <meta property="og:title" content="Shoe Repair Services | Signature Cleaners" />
+        <meta
+          property="og:title"
+          content="Shoe Repair Services | Signature Cleaners"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
-        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/shoe-repair" />
-        <meta property="og:description" content="Extend the life of your shoes with professional repair services from Signature Cleaners. We offer heel replacement, sole repair, polishing, and stretching." />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/all-services/shoe-repair"
+        />
+        <meta
+          property="og:description"
+          content="Extend the life of your shoes with professional repair services from Signature Cleaners. We offer heel replacement, sole repair, polishing, and stretching."
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/shoe-repair",
-            image: "https://signaturecleaners.com/src/images/logo.png",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/shoe-repair",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers expert shoe repair services including sole and heel replacement, color restoration, polishing, and stretching. Bring life back to your favorite footwear.",
             address: {

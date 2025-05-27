@@ -44,16 +44,16 @@ export default function AuthPage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Customer Login and Signup",
-            url: "https://signaturecleaners.com/account",
+            url: "https://www.mysignaturecleaners.com/account",
             description:
               "Existing customers can log in to their Signature Cleaners account to pay bills, schedule services, and update preferences. New users can sign up online and get $10 off their first order.",
             publisher: {
               "@type": "Organization",
               name: "Signature Cleaners",
-              url: "https://signaturecleaners.com",
+              url: "https://www.mysignaturecleaners.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://signaturecleaners.com/src/images/logo.png",
+                url: "https://www.mysignaturecleaners.com/images/logo.png",
               },
             },
           })}
@@ -115,9 +115,13 @@ export default function AuthPage() {
             <div className="inline-block relative bg-white border-2 border-dashed border-[#790003] px-8 py-4 mx-4">
               <div className="absolute -left-3 top-1/2 -mt-3 w-6 h-6 bg-[#181818] rounded-full"></div>
               <div className="absolute -right-3 top-1/2 -mt-3 w-6 h-6 bg-[#181818] rounded-full"></div>
-              <div className="text-2xl font-bold text-[#790003] mb-1">$10 OFF</div>
+              <div className="text-2xl font-bold text-[#790003] mb-1">
+                $10 OFF
+              </div>
               <div className="text-[#181818] font-medium">Your First Order</div>
-              <div className="text-sm text-neutral-600 mt-1">Sign up online or mention in store</div>
+              <div className="text-sm text-neutral-600 mt-1">
+                Sign up online or mention in store
+              </div>
             </div>
           </div>
 

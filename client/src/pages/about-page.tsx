@@ -35,9 +35,10 @@ export default function AboutPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/about",
-            image: "https://signaturecleaners.com/src/images/theTeam.webp",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/about",
+            image:
+              "https://www.mysignaturecleaners.com/images/theTeam.webp",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners is a trusted garment care provider in Bucks County, offering expert dry cleaning, tailoring, shoe repair, and preservation services.",
             address: {

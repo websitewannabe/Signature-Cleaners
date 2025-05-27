@@ -62,19 +62,31 @@ export default function WashFoldPage() {
           name="keywords"
           content="wash and fold, laundry service, wash fold, regular wash, delicate laundry, towel washing, bedding cleaning, Signature Cleaners, Bucks County laundry pickup"
         />
-        <meta property="og:title" content="Wash & Fold Laundry Service | Signature Cleaners" />
+        <meta
+          property="og:title"
+          content="Wash & Fold Laundry Service | Signature Cleaners"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
-        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/wash-fold" />
-        <meta property="og:description" content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available." />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/all-services/wash-fold"
+        />
+        <meta
+          property="og:description"
+          content="Get your everyday laundry done right with Signature Cleaners' professional Wash & Fold service. Safe for regular, delicate, and household items. Pickup & delivery available."
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/wash-fold",
-            image: "https://signaturecleaners.com/src/images/logo.png",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/wash-fold",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers a full-service wash and fold experience with expert sorting, premium detergents, and folding for regular laundry, delicates, towels, and bedding.",
             address: {

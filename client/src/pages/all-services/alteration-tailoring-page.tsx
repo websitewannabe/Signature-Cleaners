@@ -65,19 +65,31 @@ export default function AlterationTailoringPage() {
           name="keywords"
           content="alterations, tailoring, hemming, resizing, custom fitting, clothing repairs, Signature Cleaners, Bucks County tailoring"
         />
-        <meta property="og:title" content="Alterations & Tailoring in Doylestown | Signature Cleaners" />
+        <meta
+          property="og:title"
+          content="Alterations & Tailoring in Doylestown | Signature Cleaners"
+        />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
-        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring" />
-        <meta property="og:description" content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit." />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/logo.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring"
+        />
+        <meta
+          property="og:description"
+          content="Get professional alterations and expert tailoring at Signature Cleaners. From hemming and resizing to custom fittings and clothing repairs, we ensure the perfect fit."
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com/alteration-tailoring",
-            image: "https://signaturecleaners.com/src/images/logo.png",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com/alteration-tailoring",
+            image: "https://www.mysignaturecleaners.com/images/logo.png",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers precision tailoring and alterations for a perfect fit. Services include hemming, resizing, fittings, and high-quality garment repairs.",
             address: {

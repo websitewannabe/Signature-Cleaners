@@ -28,7 +28,7 @@ const services = [
     description:
       "State-of-the-art dry cleaning services for all your delicate and special garments.",
     price: "From $8.99",
-    imageUrl: "/src/images/cleaners.gif",
+    imageUrl: "/images/cleaners.gif",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const services = [
     description:
       "Convenient laundry service with professional washing, drying, and folding.",
     price: "$2.99/lb",
-    imageUrl: "/src/images/wash-fold.webp",
+    imageUrl: "/images/wash-fold.webp",
   },
   {
     id: 3,
@@ -44,14 +44,14 @@ const services = [
     description:
       "Specialized cleaning and preservation services for wedding gowns.",
     price: "From $99.99",
-    imageUrl: "/src/images/wedding-gown.gif",
+    imageUrl: "/images/wedding-gown.gif",
   },
   {
     id: 4,
     name: "Household Items",
     description: "Comprehensive cleaning solutions for household items.",
     price: "From $24.99",
-    imageUrl: "/src/images/household-items.webp",
+    imageUrl: "/images/household-items.webp",
   },
 ];
 
@@ -67,11 +67,16 @@ export default function HomePage() {
     { name: "Household Items", path: "/all-services/clean-household-items" },
     { name: "Delivery", path: "/all-services/delivery" },
     { name: "Tailoring", path: "/all-services/alteration-tailoring" },
-    { name: "Shoe Repair", path: "/all-services/shoe-repair" }
+    { name: "Shoe Repair", path: "/all-services/shoe-repair" },
   ];
 
   const allCities = [
-    "Buckingham", "Carversville", "Chalfont", "Doylestown", "Dublin", "Fountainville"
+    "Buckingham",
+    "Carversville",
+    "Chalfont",
+    "Doylestown",
+    "Dublin",
+    "Fountainville",
   ];
 
   const handleSearchChange = (e: any) => {
@@ -82,10 +87,10 @@ export default function HomePage() {
 
   const filteredResults = {
     services: allServices.filter((service) =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase())
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()),
     ),
     cities: allCities.filter((city) =>
-      city.toLowerCase().includes(searchQuery.toLowerCase())
+      city.toLowerCase().includes(searchQuery.toLowerCase()),
     ),
   };
 
@@ -109,9 +114,10 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
-            url: "https://signaturecleaners.com",
-            image: "https://signaturecleaners.com/src/images/interior.webp",
-            logo: "https://signaturecleaners.com/src/images/logo.png",
+            url: "https://www.mysignaturecleaners.com",
+            image:
+              "https://www.mysignaturecleaners.com/images/interior.webp",
+            logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
             telephone: "+1-215-345-1470",
@@ -218,41 +224,47 @@ export default function HomePage() {
               />
 
               {/* Search Results */}
-              {showResults && (filteredResults.services.length > 0 || filteredResults.cities.length > 0) && (
-                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
-                  {filteredResults.services.length > 0 && (
-                    <div className="p-2">
-                      <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Services</h3>
-                      {filteredResults.services.map((service, index) => (
-                        <Link
-                          key={`service-${index}`}
-                          href={service.path}
-                          onClick={() => setShowResults(false)}
-                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+              {showResults &&
+                (filteredResults.services.length > 0 ||
+                  filteredResults.cities.length > 0) && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
+                    {filteredResults.services.length > 0 && (
+                      <div className="p-2">
+                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
+                          Services
+                        </h3>
+                        {filteredResults.services.map((service, index) => (
+                          <Link
+                            key={`service-${index}`}
+                            href={service.path}
+                            onClick={() => setShowResults(false)}
+                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
+                          >
+                            {service.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
 
-                  {filteredResults.cities.length > 0 && (
-                    <div className="p-2 border-t border-gray-200">
-                      <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Cities</h3>
-                      {filteredResults.cities.map((city, index) => (
-                        <Link
-                          key={`city-${index}`}
-                          href={`/${city.toLowerCase().replace(/\s+/g, "-")}`}
-                          onClick={() => setShowResults(false)}
-                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
-                        >
-                          {city}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
+                    {filteredResults.cities.length > 0 && (
+                      <div className="p-2 border-t border-gray-200">
+                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
+                          Cities
+                        </h3>
+                        {filteredResults.cities.map((city, index) => (
+                          <Link
+                            key={`city-${index}`}
+                            href={`/${city.toLowerCase().replace(/\s+/g, "-")}`}
+                            onClick={() => setShowResults(false)}
+                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
+                          >
+                            {city}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">

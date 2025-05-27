@@ -72,16 +72,16 @@ export default function SchedulePage() {
             "@context": "https://schema.org",
             "@type": "WebPage",
             name: "Schedule a Pickup",
-            url: "https://signaturecleaners.com/schedule",
+            url: "https://www.mysignaturecleaners.com/schedule",
             description:
               "Use this page to schedule your dry cleaning, wash & fold, or alterations pickup service with Signature Cleaners. Flexible time slots and simple online booking.",
             publisher: {
               "@type": "Organization",
               name: "Signature Cleaners",
-              url: "https://signaturecleaners.com",
+              url: "https://www.mysignaturecleaners.com",
               logo: {
                 "@type": "ImageObject",
-                url: "https://signaturecleaners.com/src/images/logo.png",
+                url: "https://www.mysignaturecleaners.com/images/logo.png",
               },
             },
           })}
