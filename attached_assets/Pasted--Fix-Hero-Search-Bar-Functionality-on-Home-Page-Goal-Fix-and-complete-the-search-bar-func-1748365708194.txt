@@ -1,0 +1,93 @@
+### Fix Hero Search Bar Functionality on Home Page
+
+**Goal:**
+Fix and complete the **search bar functionality** in the Hero section of the `HomePage`. Currently, service names are hardcoded but not linked, and the list of cities is incomplete or not functional.
+
+---
+
+### ✅ Requirements
+
+#### 1. **Fix Services Data**
+
+* Replace the outdated static list in `allServices` with accurate service names from the homepage:
+
+  ```ts
+  const allServices = [
+    { name: "Dry Cleaning", path: "/all-services/dry-cleaning" },
+    { name: "Wash & Fold", path: "/all-services/wash-fold" },
+    { name: "Wedding Gowns", path: "/all-services/wedding-gown" },
+    { name: "Household Items", path: "/all-services/clean-household-items" },
+    { name: "Delivery", path: "/all-services/delivery" },
+    { name: "Tailoring", path: "/all-services/alteration-tailoring" },
+    { name: "Shoe Repair", path: "/all-services/shoe-repair" }
+  ];
+  ```
+
+#### 2. **Fix Cities Data**
+
+* Replace the current `allCities` array with:
+
+  ```ts
+  const allCities = [
+    "Doylestown", "New Hope", "Newtown", "Warrington", "Furlong", "Richboro",
+    "Warminster", "Buckingham", "Yardley", "Jamison", "Carversville", "Chalfont",
+    "Dublin", "Fountainville", "Holland", "Ivyland", "Lahaska", "Morrisville",
+    "Ottsville", "Perkasie", "Pipersville", "Point Pleasant", "Southampton",
+    "Trevose", "Washington Crossing"
+  ];
+  ```
+
+* For now, just `console.log()` the selected city. You can later link these to location pages if available (e.g., `/buckingham`, `/newtown`).
+
+---
+
+### 🧠 Search Logic Adjustments
+
+Update the filtering logic to work with the new array of objects:
+
+```ts
+const filteredResults = {
+  services: allServices.filter((service) =>
+    service.name.toLowerCase().includes(searchQuery.toLowerCase())
+  ),
+  cities: allCities.filter((city) =>
+    city.toLowerCase().includes(searchQuery.toLowerCase())
+  ),
+};
+```
+
+Update the result rendering:
+
+```tsx
+{filteredResults.services.map((service, index) => (
+  <Link
+    key={`service-${index}`}
+    href={service.path}
+    onClick={() => setShowResults(false)}
+    className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
+  >
+    {service.name}
+  </Link>
+))}
+
+{filteredResults.cities.map((city, index) => (
+  <button
+    key={`city-${index}`}
+    onClick={() => {
+      console.log(`City clicked: ${city}`);
+      setShowResults(false);
+    }}
+    className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
+  >
+    {city}
+  </button>
+))}
+```
+
+---
+
+### 🎯 Outcomes
+
+* The **search results will now display real services with working links**.
+* Cities will show correctly, and clicking a city will log it for now (future: link to city-specific pages).
+* No more placeholder values or broken results.
