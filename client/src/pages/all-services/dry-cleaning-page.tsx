@@ -61,8 +61,17 @@ export default function DryCleaningPage() {
         <title>Dry Cleaning Services | Signature Cleaners</title>
         <meta
           name="description"
-          content="Experience expert dry cleaning at Signature Cleaners. We offer stain removal, pressing, and gentle care for suits, dresses, shirts, and more across Bucks County."
+          content="Expert dry cleaning at Signature Cleaners—stain removal, pressing, and care for suits, dresses, and shirts in Bucks County."
         />
+        <meta property="og:title" content="Dry Cleaning Services | Signature Cleaners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://signaturecleaners.com/src/images/logo.png" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com/all-services/dry-cleaning" />
+        <meta property="og:description" content="Expert dry cleaning for suits, dresses, shirts & more in Bucks County. Stain removal & gentle care from Signature Cleaners." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dry Cleaning Services | Signature Cleaners" />
+        <meta name="twitter:description" content="Expert dry cleaning for suits, dresses, shirts & more in Bucks County." />
+        <meta name="twitter:image" content="https://signaturecleaners.com/src/images/logo.png" />
         <meta
           name="keywords"
           content="dry cleaning, professional garment care, suit cleaning, dress cleaning, shirt pressing, stain removal, Signature Cleaners, Bucks County laundry service"
