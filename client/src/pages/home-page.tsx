@@ -60,8 +60,23 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showResults, setShowResults] = useState(false);
 
-  const allServices = ["Dry Cleaning", "Alterations", "Laundry", "Pressing"];
-  const allCities = ["Doylestown", "New Hope", "Lansdale", "Warrington"];
+  const allServices = [
+    { name: "Dry Cleaning", path: "/all-services/dry-cleaning" },
+    { name: "Wash & Fold", path: "/all-services/wash-fold" },
+    { name: "Wedding Gowns", path: "/all-services/wedding-gown" },
+    { name: "Household Items", path: "/all-services/clean-household-items" },
+    { name: "Delivery", path: "/all-services/delivery" },
+    { name: "Tailoring", path: "/all-services/alteration-tailoring" },
+    { name: "Shoe Repair", path: "/all-services/shoe-repair" }
+  ];
+
+  const allCities = [
+    "Doylestown", "New Hope", "Newtown", "Warrington", "Furlong", "Richboro",
+    "Warminster", "Buckingham", "Yardley", "Jamison", "Carversville", "Chalfont",
+    "Dublin", "Fountainville", "Holland", "Ivyland", "Lahaska", "Morrisville",
+    "Ottsville", "Perkasie", "Pipersville", "Point Pleasant", "Southampton",
+    "Trevose", "Washington Crossing"
+  ];
 
   const handleSearchChange = (e: any) => {
     const query = e.target.value;
@@ -69,15 +84,9 @@ export default function HomePage() {
     setShowResults(query.length > 0);
   };
 
-  const handleResultClick = (item: string) => {
-    console.log(item);
-    setSearchQuery("");
-    setShowResults(false);
-  };
-
   const filteredResults = {
     services: allServices.filter((service) =>
-      service.toLowerCase().includes(searchQuery.toLowerCase())
+      service.name.toLowerCase().includes(searchQuery.toLowerCase())
     ),
     cities: allCities.filter((city) =>
       city.toLowerCase().includes(searchQuery.toLowerCase())
@@ -219,13 +228,14 @@ export default function HomePage() {
                     <div className="p-2">
                       <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">Services</h3>
                       {filteredResults.services.map((service, index) => (
-                        <button
+                        <Link
                           key={`service-${index}`}
-                          onClick={() => handleResultClick(service)}
-                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
+                          href={service.path}
+                          onClick={() => setShowResults(false)}
+                          className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
                         >
-                          {service}
-                        </button>
+                          {service.name}
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -236,7 +246,10 @@ export default function HomePage() {
                       {filteredResults.cities.map((city, index) => (
                         <button
                           key={`city-${index}`}
-                          onClick={() => handleResultClick(city)}
+                          onClick={() => {
+                            console.log(`City clicked: ${city}`);
+                            setShowResults(false);
+                          }}
                           className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm"
                         >
                           {city}
