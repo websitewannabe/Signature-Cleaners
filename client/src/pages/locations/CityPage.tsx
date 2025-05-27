@@ -33,6 +33,11 @@ export default function CityPage() {
         <meta name="description" content={city.seo.description} />
         <meta name="keywords" content={city.seo.keywords} />
         <link rel="canonical" href={city.seo.canonical} />
+        <meta property="og:title" content={city.seo.title} />
+        <meta property="og:description" content={city.seo.description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={city.seo.canonical} />
+        <meta property="og:image" content="https://www.mysignaturecleaners.com/images/logo.png" />
       </Helmet>
 
       <Header />
