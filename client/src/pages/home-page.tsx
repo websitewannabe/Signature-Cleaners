@@ -442,10 +442,10 @@ export default function HomePage() {
                 className="group flex flex-col items-center"
               >
                 <div
-                  className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
-                  role="img"
-                  aria-label="Alterations and Tailoring Service"
-                >
+                    className="w-20 h-20 flex items-center justify-center transition-transform group-hover:scale-110"
+                    role="img"
+                    aria-label="Alterations and Tailoring Service"
+                  >
                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#790003" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 17l-3-3-3 3"/><path d="M7 7l3 3 3-3"/><path d="M21 14.3v-2.6a1 1 0 0 0-1-1h-3.5l-1.4-4.2a1 1 0 0 0-1-.8H9.9a1 1 0 0 0-1 .8L7.5 10.7H4a1 1 0 0 0-1 1v2.6a1 1 0 0 0 1 1h3.5l1.4 4.2a1 1 0 0 0 1 .8h4.2a1 1 0 0 0 1-.8l1.4-4.2H20a1 1 0 0 0 1-1z"/></svg>
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
