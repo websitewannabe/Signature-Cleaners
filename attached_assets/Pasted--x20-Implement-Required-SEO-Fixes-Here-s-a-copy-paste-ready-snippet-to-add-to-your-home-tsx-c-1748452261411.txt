@@ -1,0 +1,62 @@
+## &#x20;Implement Required SEO Fixes
+
+Here's a copy-paste-ready snippet to add to your `home.tsx` component:
+
+### 1. **Install react-helmet-async (if not already):**
+
+```bash
+npm install react-helmet-async
+```
+
+### 2. \*\*Wrap your app with \*\***`HelmetProvider`**
+
+In your main app entry point (e.g. `_app.tsx` or `App.tsx`):
+
+```tsx
+import { HelmetProvider } from 'react-helmet-async';
+
+function App() {
+  return (
+    <HelmetProvider>
+      <YourRoutesOrComponents />
+    </HelmetProvider>
+  );
+}
+```
+
+### 3. **Add this inside your ********`Home`******** component in ********`home.tsx`********:**
+
+Right after the `function Home() {` line, include:
+
+```tsx
+import { Helmet } from 'react-helmet-async';
+```
+
+Then, insert the following inside the `return` block at the top of your JSX (just above `<main>`):
+
+```tsx
+<Helmet>
+  <title>Signature Cleaners | Premium Dry Cleaning & Pickup Service</title>
+  <meta name="description" content="Eco-friendly, expert dry cleaning with free pickup and delivery. Signature Cleaners offers trusted care for garments and home textiles." />
+
+  {/* Open Graph Meta Tags */}
+  <meta property="og:title" content="Signature Cleaners | Premium Dry Cleaning & Pickup Service" />
+  <meta property="og:description" content="Eco-friendly, expert dry cleaning with free pickup and delivery. Signature Cleaners offers trusted care for garments and home textiles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://doylestowncardinal.com" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80" />
+</Helmet>
+```
+
+---
+
+## 🛠 SEO Fixes Summary
+
+| Issue                    | Fix Applied                                 |
+| ------------------------ | ------------------------------------------- |
+| Truncated Title in SERPs | Updated `<title>` tag with optimized length |
+| Missing `og:title`       | ✅ Added                                     |
+| Missing `og:type`        | ✅ Added                                     |
+| Missing `og:image`       | ✅ Added                                     |
+| Missing `og:url`         | ✅ Added                                     |
+| Missing `og:description` | ✅ Added                                     |
