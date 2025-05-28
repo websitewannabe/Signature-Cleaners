@@ -23,10 +23,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useForm } from "react-hook-form";
-import { useIsMobile } from "@/hooks/use-mobile";
 
 export default function SchedulePage() {
-  const isMobile = useIsMobile();
   const [isSuccess, setIsSuccess] = useState(false);
 
   const form = useForm({
@@ -304,3 +302,7 @@ export default function SchedulePage() {
     </div>
   );
 }
+```
+
+```
+</replit_final_file>

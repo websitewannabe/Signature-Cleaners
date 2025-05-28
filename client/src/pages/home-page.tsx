@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints, Shield, Leaf, Search } from "lucide-react";
+import { Car, Footprints, Shield, Leaf, Search } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -446,7 +446,7 @@ export default function HomePage() {
                   role="img"
                   aria-label="Alterations and Tailoring Service"
                 >
-                  <Shirt className="h-12 w-12 text-[#790003]" />
+                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#790003" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 17l-3-3-3 3"/><path d="M7 7l3 3 3-3"/><path d="M21 14.3v-2.6a1 1 0 0 0-1-1h-3.5l-1.4-4.2a1 1 0 0 0-1-.8H9.9a1 1 0 0 0-1 .8L7.5 10.7H4a1 1 0 0 0-1 1v2.6a1 1 0 0 0 1 1h3.5l1.4 4.2a1 1 0 0 0 1 .8h4.2a1 1 0 0 0 1-.8l1.4-4.2H20a1 1 0 0 0 1-1z"/></svg>
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
@@ -750,7 +750,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
@@ -794,7 +794,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
@@ -833,7 +833,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
@@ -873,7 +873,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns="http://www.w3.org/w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
