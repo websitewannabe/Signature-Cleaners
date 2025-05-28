@@ -429,7 +429,11 @@ export default function HomePage() {
                   role="img"
                   aria-label="Shoe Repair Service"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#790003" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="m2 2 20 20"/></svg>
+                  <img
+                    src="/images/shoes.png"
+                    alt="Shoe Repair"
+                    className="w-12 h-12"
+                  />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair
