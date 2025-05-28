@@ -1,11 +1,7 @@
 
 {
-  "name": "Signature Cleaners Theme",
-  "version": "1.0.0",
-  "colors": {
-    "primary": "#790003",
-    "secondary": "#F6AE2D",
-    "background": "#F8F5F0",
-    "text": "#181818"
-  }
+  "variant": "professional",
+  "primary": "hsl(359, 100%, 24%)",
+  "appearance": "light",
+  "radius": 0.5
 }
