@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints, Shield, Leaf } from "lucide-react";
+import { Shirt, Car, Footprints, Shield, Leaf, Search } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -70,15 +70,6 @@ export default function HomePage() {
     { name: "Shoe Repair", path: "/all-services/shoe-repair" },
   ];
 
-  const allCities = [
-    "Buckingham",
-    "Carversville",
-    "Chalfont",
-    "Doylestown",
-    "Dublin",
-    "Fountainville",
-  ];
-
   const handleSearchChange = (e: any) => {
     const query = e.target.value;
     setSearchQuery(query);
@@ -88,9 +79,6 @@ export default function HomePage() {
   const filteredResults = {
     services: allServices.filter((service) =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()),
-    ),
-    cities: allCities.filter((city) =>
-      city.toLowerCase().includes(searchQuery.toLowerCase()),
     ),
   };
 
@@ -215,56 +203,37 @@ export default function HomePage() {
 
             {/* Search Bar */}
             <div className="mt-8 max-w-md mx-auto relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={handleSearchChange}
-                placeholder="Search for services or cities..."
-                className="w-full bg-white rounded-md shadow-lg p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#F6AE2D] focus:border-transparent"
-              />
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={handleSearchChange}
+                  placeholder="Search for services..."
+                  className="w-full bg-white rounded-md shadow-lg pl-10 pr-3 py-3 text-gray-900 placeholder-gray-500 border border-red-500 focus:outline-none focus:ring-2 focus:ring-[#F6AE2D] focus:border-transparent"
+                />
+              </div>
 
               {/* Search Results */}
-              {showResults &&
-                (filteredResults.services.length > 0 ||
-                  filteredResults.cities.length > 0) && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
-                    {filteredResults.services.length > 0 && (
-                      <div className="p-2">
-                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
-                          Services
-                        </h3>
-                        {filteredResults.services.map((service, index) => (
-                          <Link
-                            key={`service-${index}`}
-                            href={service.path}
-                            onClick={() => setShowResults(false)}
-                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-
-                    {filteredResults.cities.length > 0 && (
-                      <div className="p-2 border-t border-gray-200">
-                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
-                          Cities
-                        </h3>
-                        {filteredResults.cities.map((city, index) => (
-                          <Link
-                            key={`city-${index}`}
-                            href={`/${city.toLowerCase().replace(/\s+/g, "-")}`}
-                            onClick={() => setShowResults(false)}
-                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
-                          >
-                            {city}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+              {showResults && filteredResults.services.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
+                  <div className="p-2">
+                    <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
+                      Services
+                    </h3>
+                    {filteredResults.services.map((service, index) => (
+                      <Link
+                        key={`service-${index}`}
+                        href={service.path}
+                        onClick={() => setShowResults(false)}
+                        className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
                   </div>
-                )}
+                </div>
+              )}
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
