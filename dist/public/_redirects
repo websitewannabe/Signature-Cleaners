@@ -35,7 +35,6 @@ https://www.signaturecleaners.com/* https://signaturecleaners.com/:splat 301!
 /services/alteration-tailoring/ /all-services/alteration-tailoring 301
 /cleaning_of_household_items/ /all-services/clean-household-items 301
 /locations /contact-us 301
-/about-us/ /about-us 301
 /contact-us/ /contact-us 301
 
 # History fallback for React SPA
