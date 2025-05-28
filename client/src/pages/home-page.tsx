@@ -1,201 +1,103 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints, Shield, Leaf } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
-import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet-async";
-
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselPrevious,
   CarouselNext,
+  CarouselPrevious,
 } from "@/components/ui/carousel";
-
-// Static services data
-const services = [
-  {
-    id: 1,
-    name: "Professional Dry Cleaning",
-    description:
-      "State-of-the-art dry cleaning services for all your delicate and special garments.",
-    price: "From $8.99",
-    imageUrl: "/images/cleaners.gif",
-  },
-  {
-    id: 2,
-    name: "Wash & Fold",
-    description:
-      "Convenient laundry service with professional washing, drying, and folding.",
-    price: "$2.99/lb",
-    imageUrl: "/images/wash-fold.webp",
-  },
-  {
-    id: 3,
-    name: "Wedding Gowns",
-    description:
-      "Specialized cleaning and preservation services for wedding gowns.",
-    price: "From $99.99",
-    imageUrl: "/images/wedding-gown.gif",
-  },
-  {
-    id: 4,
-    name: "Household Items",
-    description: "Comprehensive cleaning solutions for household items.",
-    price: "From $24.99",
-    imageUrl: "/images/household-items.webp",
-  },
-];
+import {
+  Search,
+  Truck,
+  MapPin,
+  Clock,
+  Shield,
+  Award,
+  Leaf,
+  Heart,
+  Users,
+  Star,
+} from "lucide-react";
 
 export default function HomePage() {
-  const [mapLoaded, setMapLoaded] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [showResults, setShowResults] = useState(false);
+  const [searchResults, setSearchResults] = useState<string[]>([]);
 
-  const allServices = [
-    { name: "Dry Cleaning", path: "/all-services/dry-cleaning" },
-    { name: "Wash & Fold", path: "/all-services/wash-fold" },
-    { name: "Wedding Gowns", path: "/all-services/wedding-gown" },
-    { name: "Household Items", path: "/all-services/clean-household-items" },
-    { name: "Delivery", path: "/all-services/delivery" },
-    { name: "Tailoring", path: "/all-services/alteration-tailoring" },
-    { name: "Shoe Repair", path: "/all-services/shoe-repair" },
+  const services = [
+    { name: "Dry Cleaning", slug: "dry-cleaning" },
+    { name: "Wash & Fold", slug: "wash-fold" },
+    { name: "Alterations", slug: "alteration-tailoring" },
+    { name: "Wedding Gowns", slug: "wedding-gown" },
+    { name: "Shoe Repair", slug: "shoe-repair" },
+    { name: "Household Items", slug: "clean-household-items" },
+    { name: "Pickup & Delivery", slug: "delivery" },
   ];
 
-  const allCities = [
-    "Buckingham",
-    "Carversville",
-    "Chalfont",
-    "Doylestown",
-    "Dublin",
-    "Fountainville",
+  const cities = [
+    { name: "Doylestown", slug: "doylestown" },
+    { name: "New Hope", slug: "new-hope" },
+    { name: "Newtown", slug: "newtown" },
+    { name: "Warminster", slug: "warminster" },
+    { name: "Perkasie", slug: "perkasie" },
+    { name: "Furlong", slug: "furlong" },
+    { name: "Richboro", slug: "richboro" },
+    { name: "Jamison", slug: "jamison" },
+    { name: "Southampton", slug: "southampton" },
+    { name: "Warrington", slug: "warrington" },
   ];
 
-  const handleSearchChange = (e: any) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-    setShowResults(query.length > 0);
-  };
+  const handleSearch = (query: string) => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
 
-  const filteredResults = {
-    services: allServices.filter((service) =>
-      service.name.toLowerCase().includes(searchQuery.toLowerCase()),
-    ),
-    cities: allCities.filter((city) =>
-      city.toLowerCase().includes(searchQuery.toLowerCase()),
-    ),
+    const allOptions = [
+      ...services.map((s) => ({ type: "service", ...s })),
+      ...cities.map((c) => ({ type: "city", ...c })),
+    ];
+
+    const results = allOptions
+      .filter((option) =>
+        option.name.toLowerCase().includes(query.toLowerCase())
+      )
+      .slice(0, 5)
+      .map((option) => {
+        if (option.type === "service") {
+          return `/all-services/${option.slug}`;
+        } else {
+          return `/locations/${option.slug}`;
+        }
+      });
+
+    setSearchResults(results);
   };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <link rel="canonical" href="https://www.mysignaturecleaners.com/" />
-        <title>
-          Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA
-        </title>
-        <meta
-          name="description"
-          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
-        />
+        <title>Signature Cleaners | Premium Dry Cleaning & Pickup Service</title>
+        <meta name="description" content="Eco-friendly, expert dry cleaning with free pickup and delivery. Signature Cleaners offers trusted care for garments and home textiles." />
+
+        {/* Open Graph Meta Tags */}
+        <meta property="og:title" content="Signature Cleaners | Premium Dry Cleaning & Pickup Service" />
+        <meta property="og:description" content="Eco-friendly, expert dry cleaning with free pickup and delivery. Signature Cleaners offers trusted care for garments and home textiles." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mysignaturecleaners.com" />
+        <meta property="og:image" content="https://www.mysignaturecleaners.com/images/logo.png" />
+
+        <link rel="canonical" href="https://www.mysignaturecleaners.com" />
         <meta
           name="keywords"
           content="dry cleaning, wash and fold, laundry service, garment care, wedding gown cleaning, tailoring, Doylestown cleaners, Bucks County laundry"
         />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Signature Cleaners",
-            url: "https://www.mysignaturecleaners.com",
-            image:
-              "https://www.mysignaturecleaners.com/images/interior.webp",
-            logo: "https://www.mysignaturecleaners.com/images/logo.png",
-            description:
-              "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
-            telephone: "+1-215-345-1470",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "1456 Ferry Road #10",
-              addressLocality: "Doylestown",
-              addressRegion: "PA",
-              postalCode: "18901",
-              addressCountry: "US",
-            },
-            openingHours: "Mo-Fr 08:00-18:00",
-            areaServed: {
-              "@type": "Place",
-              name: [
-                "Doylestown",
-                "New Hope",
-                "Newtown",
-                "Warrington",
-                "Furlong",
-                "Richboro",
-                "Warminster",
-                "Buckingham",
-                "Yardley",
-                "Jamison",
-              ],
-            },
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Signature Cleaners Services",
-              itemListElement: [
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Dry Cleaning",
-                    description:
-                      "State-of-the-art dry cleaning for suits, dresses, and more.",
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      priceCurrency: "USD",
-                      price: "6.99",
-                    },
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Wash & Fold",
-                    description:
-                      "Convenient wash and fold service for everyday laundry.",
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      priceCurrency: "USD",
-                      price: "2.99",
-                      unitText: "Pound",
-                    },
-                  },
-                },
-                {
-                  "@type": "Offer",
-                  itemOffered: {
-                    "@type": "Service",
-                    name: "Wedding Gown Cleaning",
-                    description:
-                      "Preservation and detailed cleaning of wedding gowns.",
-                    priceSpecification: {
-                      "@type": "PriceSpecification",
-                      priceCurrency: "USD",
-                      price: "99.99",
-                    },
-                  },
-                },
-              ],
-            },
-          })}
-        </script>
       </Helmet>
 
       <Header />
@@ -218,53 +120,30 @@ export default function HomePage() {
               <input
                 type="text"
                 value={searchQuery}
-                onChange={handleSearchChange}
+                onChange={(e) => handleSearch(e.target.value)}
                 placeholder="Search for services or cities..."
                 className="w-full bg-white rounded-md shadow-lg p-3 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#F6AE2D] focus:border-transparent"
               />
 
               {/* Search Results */}
-              {showResults &&
-                (filteredResults.services.length > 0 ||
-                  filteredResults.cities.length > 0) && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
-                    {filteredResults.services.length > 0 && (
-                      <div className="p-2">
-                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
-                          Services
-                        </h3>
-                        {filteredResults.services.map((service, index) => (
+              {searchResults.length > 0 && (
+                <Card className="absolute top-full left-0 right-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50">
+                  <CardContent className="p-2">
+                    <ul>
+                      {searchResults.map((result, index) => (
+                        <li key={index} className="p-0">
                           <Link
-                            key={`service-${index}`}
-                            href={service.path}
-                            onClick={() => setShowResults(false)}
-                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
+                            href={result}
+                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
-                            {service.name}
+                            {result}
                           </Link>
-                        ))}
-                      </div>
-                    )}
-
-                    {filteredResults.cities.length > 0 && (
-                      <div className="p-2 border-t border-gray-200">
-                        <h3 className="text-sm font-semibold text-gray-600 px-2 py-1">
-                          Cities
-                        </h3>
-                        {filteredResults.cities.map((city, index) => (
-                          <Link
-                            key={`city-${index}`}
-                            href={`/${city.toLowerCase().replace(/\s+/g, "-")}`}
-                            onClick={() => setShowResults(false)}
-                            className="w-full text-left px-2 py-2 hover:bg-gray-100 text-gray-900 rounded text-sm block"
-                          >
-                            {city}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                )}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              )}
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -461,7 +340,7 @@ export default function HomePage() {
                   role="img"
                   aria-label="Delivery Service"
                 >
-                  <Car className="h-12 w-12 text-[#790003]" />
+                  <Truck className="h-12 w-12 text-[#790003]" />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Delivery
@@ -546,7 +425,7 @@ export default function HomePage() {
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Car className="h-8 w-8 text-white" />
+                <Truck className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Convenient Service
@@ -741,7 +620,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/w3.org/2000/svg"
+                            xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
