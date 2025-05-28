@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints, Shield, Leaf, Search } from "lucide-react";
+import { Shirt, Car, Search } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -19,41 +19,6 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-
-// Static services data
-const services = [
-  {
-    id: 1,
-    name: "Professional Dry Cleaning",
-    description:
-      "State-of-the-art dry cleaning services for all your delicate and special garments.",
-    price: "From $8.99",
-    imageUrl: "/images/cleaners.gif",
-  },
-  {
-    id: 2,
-    name: "Wash & Fold",
-    description:
-      "Convenient laundry service with professional washing, drying, and folding.",
-    price: "$2.99/lb",
-    imageUrl: "/images/wash-fold.webp",
-  },
-  {
-    id: 3,
-    name: "Wedding Gowns",
-    description:
-      "Specialized cleaning and preservation services for wedding gowns.",
-    price: "From $99.99",
-    imageUrl: "/images/wedding-gown.gif",
-  },
-  {
-    id: 4,
-    name: "Household Items",
-    description: "Comprehensive cleaning solutions for household items.",
-    price: "From $24.99",
-    imageUrl: "/images/household-items.webp",
-  },
-];
 
 export default function HomePage() {
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -464,7 +429,7 @@ export default function HomePage() {
                   role="img"
                   aria-label="Shoe Repair Service"
                 >
-                  <Footprints className="h-12 w-12 text-[#790003]" />
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#790003" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22"/><path d="m18 2 4 4-4 4"/><path d="m2 2 20 20"/></svg>
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Shoe Repair
@@ -489,7 +454,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-white" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Expert Care
@@ -502,7 +469,9 @@ export default function HomePage() {
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
-                <Leaf className="h-8 w-8 text-white" />
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
                 Eco-Friendly
