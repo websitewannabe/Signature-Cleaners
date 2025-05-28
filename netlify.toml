@@ -1,0 +1,211 @@
+
+[build]
+  publish = "dist/public"
+  command = "npm run build"
+
+# Static asset caching with long-term cache control
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers for all pages
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# SPA fallback for React Router
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Legacy URL redirects from _redirects file
+[[redirects]]
+  from = "https://www.signaturecleaners.com/*"
+  to = "https://signaturecleaners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/green/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/our-wash-fold-service/"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/our-wash-fold-service"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/our-wash-fold-service/feed/"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/services/all-services/wash-fold/"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/folding-dress-shirt"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/services/all-services/folding-dress-shirt-service-2/"
+  to = "/all-services/wash-fold"
+  status = 301
+
+[[redirects]]
+  from = "/wedding-gown"
+  to = "/all-services/wedding-gown"
+  status = 301
+
+[[redirects]]
+  from = "/pick-up-delivery/"
+  to = "/all-services/delivery"
+  status = 301
+
+[[redirects]]
+  from = "/accessibility"
+  to = "/legal/accessibility-statement"
+  status = 301
+
+[[redirects]]
+  from = "/privacy"
+  to = "/legal/privacy-policy"
+  status = 301
+
+[[redirects]]
+  from = "/terms"
+  to = "/legal/terms-and-conditions"
+  status = 301
+
+[[redirects]]
+  from = "/sign-up/"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/my-account/sign-up/"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/auth"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/all-services/services"
+  to = "/all-services/all-services"
+  status = 301
+
+[[redirects]]
+  from = "/services"
+  to = "/all-services/all-services"
+  status = 301
+
+[[redirects]]
+  from = "/category/uncategorized/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sample-page/green/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sample-page/green"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-content/uploads/2016/04/DLICC-Press-Release-Hangers-2016.pdf"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/login-in-2/"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/?s=2024"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/?s="
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/welcome-to-our-blog-2/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sign-up-2/"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/tailoring-alterations/"
+  to = "/all-services/alteration-tailoring"
+  status = 301
+
+[[redirects]]
+  from = "/shoe-repair/"
+  to = "/all-services/shoe-repair"
+  status = 301
+
+[[redirects]]
+  from = "/services/professional-dry-cleaning/"
+  to = "/all-services/dry-cleaning"
+  status = 301
+
+[[redirects]]
+  from = "/services/wedding-gowns/"
+  to = "/all-services/wedding-gown"
+  status = 301
+
+[[redirects]]
+  from = "/services/alteration-tailoring/"
+  to = "/all-services/alteration-tailoring"
+  status = 301
+
+[[redirects]]
+  from = "/cleaning_of_household_items/"
+  to = "/all-services/clean-household-items"
+  status = 301
+
+[[redirects]]
+  from = "/locations"
+  to = "/contact-us"
+  status = 301
