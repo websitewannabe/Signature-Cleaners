@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints, Shield, Leaf, Search } from "lucide-react";
+import { Car, Footprints, Shield, Leaf, Search } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -447,7 +447,9 @@ export default function HomePage() {
                   role="img"
                   aria-label="Alterations and Tailoring Service"
                 >
-                  <Shirt className="h-12 w-12 text-[#790003]" />
+                 <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
@@ -640,7 +642,7 @@ export default function HomePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5V3.935M3 20.488V8.212a2 2 0 011.696-1.977l5-1.039a2 2 0 01.608 0l5 1.039a2 2 0 011.696 1.977v12.276l-6.5-2.536a2 2 0 00-1.5 0L3 20.488z"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h.5A2.5 2.5 0 0020 5.5V3.935M3 20.488V8.212a2 2 0 011.696-1.977l5-1.039a2 2 0 01.608 0l5 1.039a2 2 0 011.6961.977v12.276l-6.5-2.536a2 2 0 00-1.5 0L3 20.488z"
                   />
                 </svg>
               </div>
@@ -710,7 +712,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/w3.org/2000/svg"
+                            xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
