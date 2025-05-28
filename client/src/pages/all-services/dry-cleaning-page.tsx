@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
-import { Shirt, Car, Footprints } from "lucide-react";
+import { Car, Footprints } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import {
   Accordion,

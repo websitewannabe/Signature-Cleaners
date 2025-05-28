@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Shirt, Car, Footprints } from "lucide-react";
+import { Car, Footprints } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
