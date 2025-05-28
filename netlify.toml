@@ -40,8 +40,8 @@
 
 # Legacy URL redirects from _redirects file
 [[redirects]]
-  from = "https://www.signaturecleaners.com/*"
-  to = "https://signaturecleaners.com/:splat"
+  from = "https://mysignaturecleaners.com/*"
+  to = "https://www.mysignaturecleaners.com/:splat"
   status = 301
   force = true
 
