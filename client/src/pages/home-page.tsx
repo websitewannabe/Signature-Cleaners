@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Shirt, Car, Search } from "lucide-react";
+import { Car, Search } from "lucide-react";
 import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
@@ -412,7 +412,11 @@ export default function HomePage() {
                   role="img"
                   aria-label="Alterations and Tailoring Service"
                 >
-                  <Shirt className="h-12 w-12 text-[#790003]" />
+                  <img
+                    src="/images/shirt.png"
+                    alt="Tailoring"
+                    className="w-12 h-12"
+                  />
                 </div>
                 <span className="mt-2 text-black text-sm font-medium">
                   Tailoring
@@ -683,7 +687,7 @@ export default function HomePage() {
                       {[...Array(5)].map((_, i) => (
                         <div key={i} className="text-[#FFFFFF]">
                           <svg
-                            xmlns="http://www.w3.org/w3.org/2000/svg"
+                            xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
                             viewBox="0 0 20 20"
                             fill="currentColor"
