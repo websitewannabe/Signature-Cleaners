@@ -103,8 +103,7 @@ export default function HomePage() {
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
             url: "https://www.mysignaturecleaners.com",
-            image:
-              "https://www.mysignaturecleaners.com/images/interior.webp",
+            image: "https://www.mysignaturecleaners.com/images/interior.webp",
             logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
