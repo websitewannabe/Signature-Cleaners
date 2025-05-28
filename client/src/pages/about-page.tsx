@@ -3,6 +3,7 @@ import Footer from "@/components/layout/footer";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 export default function AboutPage() {

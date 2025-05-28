@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -206,7 +206,7 @@ const Header = () => {
                       src="/icons/bubbles.svg"
                       alt="Wash & Fold"
                       className="w-4 h-4 text-white"
-                      style={{ filter: "brightness(0) invert(1)" }}
+                      style={{ filter: 'brightness(0) invert(1)' }}
                     />
                     Wash & Fold
                   </Link>
