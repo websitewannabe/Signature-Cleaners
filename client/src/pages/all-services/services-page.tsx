@@ -186,7 +186,7 @@ export default function ServicesPage() {
           <div className="mb-6">
             <Breadcrumbs
               items={[
-                { label: "Home", path: "/" },
+                { label: "Home", path: "/", className: "text-black hover:text-black" },
                 {
                   label: "Services",
                   path: "/all-services/all-services",

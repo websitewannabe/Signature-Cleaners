@@ -1,10 +1,10 @@
-
 import { Link } from "wouter";
 
 interface BreadcrumbItem {
   label: string;
   path: string;
   current?: boolean;
+  className?: string;
 }
 
 interface BreadcrumbsProps {
@@ -38,7 +38,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
             ) : (
               <Link 
                 href={item.path}
-                className="hover:text-[#790003] transition-colors"
+                className={item.className || "hover:text-[#790003] transition-colors"}
               >
                 {item.label}
               </Link>
