@@ -62,14 +62,36 @@ export default function HomePage() {
           name="keywords"
           content="dry cleaning, wash and fold, laundry service, garment care, wedding gown cleaning, tailoring, Doylestown cleaners, Bucks County laundry"
         />
+
+        {/* Open Graph Metadata */}
+        <meta
+          property="og:title"
+          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+        />
+        <meta
+          property="og:description"
+          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/interior.webp"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* JSON-LD Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
             url: "https://www.mysignaturecleaners.com",
-            image:
-              "https://www.mysignaturecleaners.com/images/interior.webp",
+            image: "https://www.mysignaturecleaners.com/images/interior.webp",
             logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners offers expert dry cleaning, laundry, tailoring, and garment care with pickup and delivery services throughout Bucks County, PA.",
@@ -462,8 +484,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
@@ -477,8 +510,19 @@ export default function HomePage() {
 
             <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg transform hover:-translate-y-1 transition-all duration-300">
               <div className="w-16 h-16 bg-[#790003] rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-4 text-center">
