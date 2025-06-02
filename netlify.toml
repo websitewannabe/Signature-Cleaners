@@ -51,6 +51,16 @@
   status = 301
 
 [[redirects]]
+  from = "/sample-page/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/sample-page"
+  to = "/"
+  status = 301
+
+[[redirects]]
   from = "/our-wash-fold-service/"
   to = "/all-services/wash-fold"
   status = 301
