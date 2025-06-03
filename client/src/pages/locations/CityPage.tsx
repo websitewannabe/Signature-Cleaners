@@ -20,14 +20,12 @@ export default function CityPage() {
   const citySlug = params.city;
   const city = cityData[citySlug];
 
-  useEffect(() => {
-    if (!city) {
-      setLocation("/not-found");
-    }
-  }, [city, setLocation]);
-
   if (!city) {
-    return null;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <h1 className="text-2xl">City not found</h1>
+      </div>
+    );
   }
 
   return (
@@ -41,7 +39,10 @@ export default function CityPage() {
         <meta property="og:description" content={city.seo.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={city.seo.canonical} />
-        <meta property="og:image" content="https://www.mysignaturecleaners.com/images/logo.png" />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/logo.png"
+        />
       </Helmet>
 
       <Header />
