@@ -1,4 +1,4 @@
-import { useParams } from "wouter";
+import { useParams, useLocation } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { cityData } from "@/data/cityData";
@@ -12,18 +12,22 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
+import { useEffect } from "react";
 
 export default function CityPage() {
   const params = useParams();
+  const [, setLocation] = useLocation();
   const citySlug = params.city;
   const city = cityData[citySlug];
 
+  useEffect(() => {
+    if (!city) {
+      setLocation("/404");
+    }
+  }, [city, setLocation]);
+
   if (!city) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-2xl">City not found</h1>
-      </div>
-    );
+    return null;
   }
 
   return (
