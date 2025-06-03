@@ -145,6 +145,26 @@ export default function ContactPage() {
           name="keywords"
           content="contact Signature Cleaners, dry cleaning Doylestown, laundry pickup, garment care, store hours, customer support, Bucks County cleaners"
         />
+        {/* Open Graph Metadata */}
+        <meta
+          property="og:title"
+          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+        />
+        <meta
+          property="og:description"
+          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/contact-us"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/interior.webp"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+        <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

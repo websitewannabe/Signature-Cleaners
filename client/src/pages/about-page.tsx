@@ -30,14 +30,33 @@ export default function AboutPage() {
           name="keywords"
           content="about Signature Cleaners, dry cleaning experts, Doylestown garment care, Bucks County laundry service, wedding gown cleaning, stain removal professionals"
         />
+        {/* Open Graph Metadata */}
+        <meta
+          property="og:title"
+          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+        />
+        <meta
+          property="og:description"
+          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/about-us"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/interior.webp"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+        <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Signature Cleaners",
             url: "https://www.mysignaturecleaners.com/about",
-            image:
-              "https://www.mysignaturecleaners.com/images/theTeam.webp",
+            image: "https://www.mysignaturecleaners.com/images/theTeam.webp",
             logo: "https://www.mysignaturecleaners.com/images/logo.png",
             description:
               "Signature Cleaners is a trusted garment care provider in Bucks County, offering expert dry cleaning, tailoring, shoe repair, and preservation services.",

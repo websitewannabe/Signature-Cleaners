@@ -39,6 +39,26 @@ export default function AuthPage() {
           name="keywords"
           content="login, create account, Signature Cleaners login, dry cleaning account, schedule pickup, pay bill, manage preferences, new customer signup"
         />
+        {/* Open Graph Metadata */}
+        <meta
+          property="og:title"
+          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+        />
+        <meta
+          property="og:description"
+          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/my-account"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/interior.webp"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+        <meta property="og:locale" content="en_US" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

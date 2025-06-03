@@ -30,6 +30,40 @@ export default function ServicesPage() {
           name="keywords"
           content="dry cleaning, wash and fold, tailoring, household cleaning, wedding gown preservation, shoe repair, garment care, laundry service, Signature Cleaners, Bucks County laundry"
         />
+        {/* Open Graph Meta */}
+        <meta
+          property="og:title"
+          content="Signature Cleaners Services in Bucks County"
+        />
+        <meta
+          property="og:description"
+          content="From dry cleaning to wedding gown preservation, Signature Cleaners offers expert garment care and laundry services across Bucks County."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.mysignaturecleaners.com/all-services/all-services"
+        />
+        <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/services-og.jpg"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+
+        {/* Twitter Card Meta */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Signature Cleaners Services in Bucks County"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover top-quality dry cleaning, tailoring, laundry, and preservation services from Signature Cleaners."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mysignaturecleaners.com/images/services-og.jpg"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -186,7 +220,11 @@ export default function ServicesPage() {
           <div className="mb-6">
             <Breadcrumbs
               items={[
-                { label: "Home", path: "/", className: "text-black hover:text-black" },
+                {
+                  label: "Home",
+                  path: "/",
+                  className: "text-black hover:text-black",
+                },
                 {
                   label: "Services",
                   path: "/all-services/all-services",

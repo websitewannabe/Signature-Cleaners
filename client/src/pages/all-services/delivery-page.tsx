@@ -38,6 +38,40 @@ export default function DeliveryPage() {
           name="keywords"
           content="laundry delivery, dry cleaning delivery, free pickup, residential laundry service, office garment delivery, Signature Cleaners, Bucks County laundry service"
         />
+        {/* Open Graph Meta */}
+        <meta
+          property="og:title"
+          content="Dry Cleaning Delivery | Signature Cleaners"
+        />
+        <meta
+          property="og:description"
+          content="Experience hassle-free dry cleaning with our pickup and delivery service. Signature Cleaners makes clean clothes convenient."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.signaturecleaners.com/delivery"
+        />
+        <meta
+          property="og:image"
+          content="https://www.signaturecleaners.com/assets/og-delivery.jpg"
+        />
+        <meta property="og:site_name" content="Signature Cleaners" />
+
+        {/* Optional: Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Dry Cleaning Delivery | Signature Cleaners"
+        />
+        <meta
+          name="twitter:description"
+          content="Dry cleaning made easy with Signature Cleaners' reliable pickup and delivery service."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.signaturecleaners.com/assets/og-delivery.jpg"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
