@@ -54,7 +54,7 @@ export default function DeliveryPage() {
         />
         <meta
           property="og:image"
-          content="https://www.signaturecleaners.com/assets/og-delivery.jpg"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
         />
         <meta property="og:site_name" content="Signature Cleaners" />
 

@@ -46,7 +46,7 @@ export default function ServicesPage() {
         />
         <meta
           property="og:image"
-          content="https://www.mysignaturecleaners.com/images/services-og.jpg"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
         />
         <meta property="og:site_name" content="Signature Cleaners" />
 

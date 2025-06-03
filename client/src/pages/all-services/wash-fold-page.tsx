@@ -69,7 +69,7 @@ export default function WashFoldPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content="https://www.mysignaturecleaners.com/images/logo.png"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
         />
         <meta
           property="og:url"

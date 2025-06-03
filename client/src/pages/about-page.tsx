@@ -41,12 +41,16 @@ export default function AboutPage() {
         />
         <meta property="og:type" content="website" />
         <meta
+          property="og:image"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
+        />
+        <meta
           property="og:url"
           content="https://www.mysignaturecleaners.com/about-us/"
         />
         <meta
           property="og:image"
-          content="https://www.mysignaturecleaners.com/images/interior.webp"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
         />
         <meta property="og:site_name" content="Signature Cleaners" />
         <meta property="og:locale" content="en_US" />
