@@ -49,7 +49,7 @@ export default function WeddingGownPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/wedding-gown"
+          content="https://www.mysignaturecleaners.com/all-services/wedding-gown/"
         />
         <meta
           property="og:description"
