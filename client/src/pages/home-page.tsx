@@ -230,7 +230,7 @@ export default function HomePage() {
                 </Button>
               </Link>
               <Link href="/all-services/all-services" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+                <Button className="w-full sm:w-auto bg-[#F6AE2D] hover:bg-[#790103] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   View Services
                 </Button>
               </Link>
