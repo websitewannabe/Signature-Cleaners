@@ -52,7 +52,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
             <Link
               href="/"
-              className={`${isOpaque ? "hover:text-[#790003]" : "hover:text-[#181818]"} h-10 flex items-center transition-colors duration-200`}
+              className="hover:text-[#F6AE2D] h-10 flex items-center transition-colors duration-200"
             >
               <Home className="w-4 h-4" />
             </Link>
