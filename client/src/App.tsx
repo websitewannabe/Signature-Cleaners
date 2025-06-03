@@ -24,8 +24,6 @@ import TermsPage from "@/pages/legal/terms-page";
 import PrivacyPage from "@/pages/legal/privacy-page";
 
 // Location-based pages
-import DoylestownPage from "@/pages/locations/doylestown";
-import BuckinghamPage from "@/pages/locations/buckingham";
 import CityPage from "@/pages/locations/CityPage";
 
 function Router() {
