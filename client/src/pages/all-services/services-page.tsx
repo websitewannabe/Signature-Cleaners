@@ -575,30 +575,18 @@ export default function ServicesPage() {
                   >
                     <span className="mr-2">•</span>Fountainville
                   </Link>
-                  <Link
-                    href="/furlong"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Furlong
-                  </Link>
-                  <Link
-                    href="/holland"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Holland
-                  </Link>
-                  <Link
-                    href="/ivyland"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Ivyland
-                  </Link>
-                  <Link
-                    href="/jamison"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Jamison
-                  </Link>
+                  </p>
                 </div>
                 <div className="space-y-2">
                   <p className="text-white flex items-center">

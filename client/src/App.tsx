@@ -24,6 +24,8 @@ import TermsPage from "@/pages/legal/terms-page";
 import PrivacyPage from "@/pages/legal/privacy-page";
 
 // Location-based pages
+import DoylestownPage from "@/pages/locations/doylestown";
+import BuckinghamPage from "@/pages/locations/buckingham";
 import CityPage from "@/pages/locations/CityPage";
 
 function Router() {
@@ -43,7 +45,6 @@ function Router() {
         path="/all-services/alteration-tailoring"
         component={AlterationTailoringPage}
       />
-      <Route path="/not-found" component={NotFound} />
       <Route path="/all-services/shoe-repair" component={ShoeRepairPage} />
       <Route path="/all-services/delivery" component={DeliveryPage} />
       <Route path="/all-services/wedding-gown" component={WeddingGownPage} />

@@ -1,4 +1,4 @@
-import { useParams, useLocation } from "wouter";
+import { useParams } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
 import { cityData } from "@/data/cityData";
@@ -12,11 +12,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
-import { useEffect } from "react";
 
 export default function CityPage() {
   const params = useParams();
-  const [, setLocation] = useLocation();
   const citySlug = params.city;
   const city = cityData[citySlug];
 
@@ -39,10 +37,7 @@ export default function CityPage() {
         <meta property="og:description" content={city.seo.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={city.seo.canonical} />
-        <meta
-          property="og:image"
-          content="https://www.mysignaturecleaners.com/images/logo.png"
-        />
+        <meta property="og:image" content="https://www.mysignaturecleaners.com/images/logo.png" />
       </Helmet>
 
       <Header />
