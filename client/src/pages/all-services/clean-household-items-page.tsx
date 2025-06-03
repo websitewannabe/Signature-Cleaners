@@ -720,18 +720,30 @@ export default function CleanHouseholdItemsPage() {
                   >
                     <span className="mr-2">•</span>Fountainville
                   </Link>
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/furlong"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Furlong
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/holland"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Holland
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/ivyland"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Ivyland
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/jamison"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Jamison
-                  </p>
+                  </Link>
                 </div>
                 <div className="space-y-2">
                   <p className="text-white flex items-center">
