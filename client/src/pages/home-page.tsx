@@ -278,7 +278,7 @@ export default function HomePage() {
                   </p>
                   <Link href="/all-services/dry-cleaning" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Why Dry Cleaning
+                      Dry Cleaning
                     </Button>
                   </Link>
                 </div>
@@ -346,7 +346,7 @@ export default function HomePage() {
                   </p>
                   <Link href="/all-services/wedding-gown" className="block">
                     <Button className="w-full bg-white text-black hover:bg-white hover:text-black transition-colors duration-300 rounded-none">
-                      Gown Care Guide
+                      Gown Care
                     </Button>
                   </Link>
                 </div>
