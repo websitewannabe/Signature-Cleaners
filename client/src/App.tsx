@@ -45,6 +45,7 @@ function Router() {
         path="/all-services/alteration-tailoring"
         component={AlterationTailoringPage}
       />
+      <Route path="/not-found" component={NotFound} />
       <Route path="/all-services/shoe-repair" component={ShoeRepairPage} />
       <Route path="/all-services/delivery" component={DeliveryPage} />
       <Route path="/all-services/wedding-gown" component={WeddingGownPage} />

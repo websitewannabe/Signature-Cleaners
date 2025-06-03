@@ -22,7 +22,7 @@ export default function CityPage() {
 
   useEffect(() => {
     if (!city) {
-      setLocation("/404");
+      setLocation("/not-found");
     }
   }, [city, setLocation]);
 
