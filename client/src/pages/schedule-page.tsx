@@ -79,7 +79,7 @@ export default function SchedulePage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/schedule"
+          content="https://www.mysignaturecleaners.com/schedule/"
         />
         <meta
           property="og:image"

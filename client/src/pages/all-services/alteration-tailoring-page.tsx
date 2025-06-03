@@ -76,7 +76,7 @@ export default function AlterationTailoringPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring"
+          content="https://www.mysignaturecleaners.com/all-services/alteration-tailoring/"
         />
         <meta
           property="og:description"

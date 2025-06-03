@@ -42,7 +42,7 @@ export default function AboutPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/about-us"
+          content="https://www.mysignaturecleaners.com/about-us/"
         />
         <meta
           property="og:image"

@@ -49,7 +49,7 @@ export default function CleanHouseholdItemsPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/clean-household-items"
+          content="https://www.mysignaturecleaners.com/all-services/clean-household-items/"
         />
         <meta
           property="og:description"

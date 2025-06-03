@@ -157,7 +157,7 @@ export default function ContactPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/contact-us"
+          content="https://www.mysignaturecleaners.com/contact-us/"
         />
         <meta
           property="og:image"

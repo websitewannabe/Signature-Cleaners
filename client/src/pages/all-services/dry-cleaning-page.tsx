@@ -74,7 +74,7 @@ export default function DryCleaningPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/dry-cleaning"
+          content="https://www.mysignaturecleaners.com/all-services/dry-cleaning/"
         />
         <meta
           property="og:description"

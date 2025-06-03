@@ -50,7 +50,7 @@ export default function DeliveryPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.signaturecleaners.com/all-services/delivery"
+          content="https://www.signaturecleaners.com/all-services/delivery/"
         />
         <meta
           property="og:image"

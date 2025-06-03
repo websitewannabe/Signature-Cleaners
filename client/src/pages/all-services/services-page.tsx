@@ -42,7 +42,7 @@ export default function ServicesPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/all-services"
+          content="https://www.mysignaturecleaners.com/all-services/all-services/"
         />
         <meta
           property="og:image"

@@ -73,7 +73,7 @@ export default function WashFoldPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/wash-fold"
+          content="https://www.mysignaturecleaners.com/all-services/wash-fold/"
         />
         <meta
           property="og:description"
