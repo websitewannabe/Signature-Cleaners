@@ -224,13 +224,13 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/schedule">
-                <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+              <Link href="/schedule" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   Schedule Pickup
                 </Button>
               </Link>
-              <Link href="/all-services/all-services">
-                <Button className=" hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+              <Link href="/all-services/all-services" className="w-full sm:w-auto">
+                <Button className="w-full sm:w-auto hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
                   View Services
                 </Button>
               </Link>
