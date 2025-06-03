@@ -31,7 +31,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
             {item.current ? (
               <span 
                 aria-current="page"
-                className="font-medium text-[#F6AE2D]"
+                className={item.className || "font-medium text-[#F6AE2D]"}
               >
                 {item.label}
               </span>

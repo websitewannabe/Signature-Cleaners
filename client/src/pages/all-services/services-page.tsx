@@ -229,6 +229,7 @@ export default function ServicesPage() {
                   label: "Services",
                   path: "/all-services/all-services",
                   current: true,
+                  className: "text-[#790003]",
                 },
               ]}
             />
