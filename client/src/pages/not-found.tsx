@@ -9,8 +9,8 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow flex items-center justify-center bg-neutral-50 px-6 sm:px-4 mt-16">
-        <div className="text-center px-4 sm:px-0">
+      <main className="flex-grow flex items-center justify-center bg-neutral-50 px-6 sm:px-4 mt-16 py-16">
+        <div className="text-center px-4 sm:px-0 py-12">
           <div className="flex justify-center mb-6">
             <AlertCircle className="h-24 w-24 text-red-500" />
           </div>
