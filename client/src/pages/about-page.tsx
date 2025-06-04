@@ -157,7 +157,7 @@ export default function AboutPage() {
                 the area, Signature Cleaners stays current on the latest fabrics
                 and care methods. The team is always seeking new ways to improve
                 their services, from adopting more efficient equipment to
-                refining cleaning techniques. With three convenient locations,
+                refining cleaning techniques. With our convenient Doylestown location,
                 Signature Cleaners offers a full range of garment care
                 services—from dry cleaning and tailoring to stain removal and
                 shoe repair—with unmatched reliability and results.
