@@ -157,8 +157,8 @@ export default function AboutPage() {
                 the area, Signature Cleaners stays current on the latest fabrics
                 and care methods. The team is always seeking new ways to improve
                 their services, from adopting more efficient equipment to
-                refining cleaning techniques. With our convenient Doylestown location,
-                Signature Cleaners offers a full range of garment care
+                refining cleaning techniques. With our convenient Doylestown
+                location, Signature Cleaners offers a full range of garment care
                 services—from dry cleaning and tailoring to stain removal and
                 shoe repair—with unmatched reliability and results.
               </p>
@@ -502,21 +502,36 @@ export default function AboutPage() {
                   </Link>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/lahaska"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Lahaska
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/morrisville"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Morrisville
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/new_hope"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>New Hope
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/newtown"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Newtown
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/ottsville"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Ottsville
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Perkasie
                   </p>
