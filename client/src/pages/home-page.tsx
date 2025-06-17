@@ -1116,36 +1116,21 @@ export default function HomePage() {
                   </Link>
                 </div>
                 <div className="space-y-2">
-                  <Link
-                    href="/lahaska"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Lahaska
-                  </Link>
-                  <Link
-                    href="/morrisville"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Morrisville
-                  </Link>
-                  <Link
-                    href="/new_hope"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>New Hope
-                  </Link>
-                  <Link
-                    href="/newtown"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Newtown
-                  </Link>
-                  <Link
-                    href="/ottsville"
-                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
-                  >
+                  </p>
+                  <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Ottsville
-                  </Link></div>
+                  </p>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Perkasie
                   </p>
