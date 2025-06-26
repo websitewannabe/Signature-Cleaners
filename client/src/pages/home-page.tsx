@@ -1146,23 +1146,38 @@ export default function HomePage() {
                   >
                     <span className="mr-2">•</span>Ottsville
                   </Link>
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/perkasie"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Perkasie
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/pipersville"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Pipersville
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/point_pleasant"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Point Pleasant
-                  </p>
+                  </Link>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-white flex items-center">
+                  <Link
+                    href="/richboro"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Richboro
-                  </p>
-                  <p className="text-white flex items-center">
+                  </Link>
+                  <Link
+                    href="/southampton"
+                    className="text-white hover:text-[#F6AE2D] transition-colors flex items-center"
+                  >
                     <span className="mr-2">•</span>Southampton
-                  </p>
+                  </Link>
                   <p className="text-white flex items-center">
                     <span className="mr-2">•</span>Trevose
                   </p>
