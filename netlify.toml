@@ -32,10 +32,25 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-# SPA fallback for React Router
+# Handle common missing files
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/favicon.ico"
+  to = "/images/favicon.png"
+  status = 200
+
+[[redirects]]
+  from = "/apple-touch-icon.png"
+  to = "/images/favicon.png"
+  status = 200
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
   status = 200
 
 # Legacy URL redirects from _redirects file
@@ -190,6 +205,12 @@
   to = "/all-services/alteration-tailoring"
   status = 301
 
+# SPA fallback for React Router - MUST BE LAST
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 [[redirects]]
   from = "/shoe-repair/"
   to = "/all-services/shoe-repair"
@@ -218,4 +239,60 @@
 [[redirects]]
   from = "/locations"
   to = "/contact-us"
+  status = 301
+
+# Common WordPress legacy patterns
+[[redirects]]
+  from = "/wp-content/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/xmlrpc.php"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/my-account"
+  status = 301
+
+[[redirects]]
+  from = "/feed/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/index.php/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-includes/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/date/*"
+  to = "/"
   status = 301
