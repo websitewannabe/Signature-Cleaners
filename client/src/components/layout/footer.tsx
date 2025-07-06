@@ -56,13 +56,29 @@ const Footer = () => {
               </div>
               <button
                 onClick={() => {
+                  // Only load the script if it hasn't been loaded yet
                   if (!window.EqualWebScriptLoaded) {
                     const script = document.createElement('script');
                     script.src = 'https://cdn.equalweb.com/widget/script.js';
                     script.setAttribute('data-acct', 'jn62B6XXXX');
                     script.defer = true;
+                    script.onload = () => {
+                      // After script loads, try to trigger the accessibility widget
+                      setTimeout(() => {
+                        if (window.EqualWeb && window.EqualWeb.init) {
+                          window.EqualWeb.init();
+                        }
+                      }, 100);
+                    };
                     document.body.appendChild(script);
                     window.EqualWebScriptLoaded = true;
+                  } else {
+                    // If script is already loaded, just trigger the widget
+                    if (window.EqualWeb && window.EqualWeb.show) {
+                      window.EqualWeb.show();
+                    } else if (window.EqualWeb && window.EqualWeb.toggle) {
+                      window.EqualWeb.toggle();
+                    }
                   }
                 }}
                 className="text-[#F6AE2D] hover:text-white transition-colors flex items-center gap-2"
