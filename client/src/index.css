@@ -93,3 +93,24 @@
   transform: skew(-15deg);
   opacity: 0.7;
 }
+
+/* EqualWeb accessibility widget fixes */
+[id*="equalweb"],
+[class*="equalweb"],
+[id*="interdeal"],
+[class*="interdeal"] {
+  z-index: 9999 !important;
+  position: fixed !important;
+}
+
+/* Prevent any overflow issues that could cause content below footer */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure footer stays at bottom and nothing appears below it */
+footer {
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}

@@ -107,21 +107,20 @@ export const useEqualweb = () => {
 
   const loadAccessibilityWidget = useCallback(() => {
     try {
-      console.log("🔧 Loading EqualWeb accessibility widget...");
+      console.log("🔧 Starting EqualWeb accessibility widget loading...");
+      console.log("🌍 Current window.interdeal:", window.interdeal);
 
       // Clean up any existing instances first
       cleanupEqualweb();
 
       // Wait a moment for cleanup to complete
       setTimeout(() => {
+        console.log("🧹 Cleanup completed, setting up new configuration...");
+        
         // Set up the interdeal configuration object
         window.interdeal = {
-          get sitekey() {
-            return EQUALWEB_CONFIG.sitekey;
-          },
-          get domains() {
-            return EQUALWEB_CONFIG.domains;
-          },
+          sitekey: EQUALWEB_CONFIG.sitekey,
+          domains: EQUALWEB_CONFIG.domains,
           Position: EQUALWEB_CONFIG.Position,
           Menulang: EQUALWEB_CONFIG.Menulang,
           draggable: EQUALWEB_CONFIG.draggable,
@@ -129,13 +128,16 @@ export const useEqualweb = () => {
         };
 
         console.log("✅ EqualWeb configuration set:", window.interdeal);
+        console.log("🔗 Script URL:", ACCESSIBILITY_SCRIPT_URL);
 
         // Create and load the accessibility script
         const script = document.createElement("script");
         script.src = ACCESSIBILITY_SCRIPT_URL;
         script.defer = true;
         script.async = true;
-        script.integrity = SCRIPT_INTEGRITY;
+        if (SCRIPT_INTEGRITY) {
+          script.integrity = SCRIPT_INTEGRITY;
+        }
         script.crossOrigin = "anonymous";
         script.setAttribute("data-cfasync", "true");
         script.setAttribute("data-equalweb-widget", "true");
@@ -143,21 +145,38 @@ export const useEqualweb = () => {
         script.onload = () => {
           console.log("✅ EqualWeb accessibility script loaded successfully");
           console.log("🎯 Widget should now be visible on the page");
+          console.log("🔍 Checking for widget elements...");
+          
+          // Check if widget was created
+          setTimeout(() => {
+            const widgets = document.querySelectorAll('[id*="equalweb"], [class*="equalweb"], [id*="interdeal"]');
+            console.log("🎨 Widget elements found:", widgets.length);
+            widgets.forEach((widget, index) => {
+              console.log(`Widget ${index + 1}:`, widget.id || widget.className);
+            });
+          }, 1000);
         };
 
         script.onerror = (error) => {
-          console.error(
-            "❌ Failed to load EqualWeb accessibility script:",
-            error
-          );
+          console.error("❌ Failed to load EqualWeb accessibility script:", error);
+          console.error("🔗 Script URL that failed:", script.src);
         };
+
+        // Check if script already exists
+        const existingScript = document.querySelector(`script[src="${ACCESSIBILITY_SCRIPT_URL}"]`);
+        if (existingScript) {
+          console.log("⚠️ Script already exists, removing first...");
+          existingScript.remove();
+        }
 
         // Append to body
         document.body.appendChild(script);
         console.log("📜 EqualWeb script tag added to document body");
+        console.log("🏗️ Script element:", script);
       }, 100);
     } catch (error) {
       console.error("💥 Error loading EqualWeb accessibility widget:", error);
+      console.error("💥 Error details:", error.message, error.stack);
     }
   }, [cleanupEqualweb]);
 
