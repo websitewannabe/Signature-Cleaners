@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isOpaque ? "bg-[#181818]/90 backdrop-blur-sm" : "bg-[#790003]"
+        isOpaque ? "bg-[#5D0002]/90 backdrop-blur-sm" : "bg-[#790003]"
       }`}
     >
       <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
