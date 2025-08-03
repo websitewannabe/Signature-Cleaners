@@ -1,31 +1,49 @@
 import {
-  users,
-  type User,
-  type InsertUser,
-  orders,
-  type Order,
-  type InsertOrder,
+  chatMessages,
   contacts,
+  orders,
+  services,
+  testimonials,
+  users,
+  type ChatMessage,
   type Contact,
   type InsertContact,
-  services,
+  type InsertOrder,
+  type InsertUser,
+  type Order,
   type Service,
-  testimonials,
   type Testimonial,
-  chatMessages,
-  type ChatMessage,
+  type User,
 } from "@shared/schema";
-import { db } from "./db";
-import { eq, and, desc } from "drizzle-orm";
-import session from "express-session";
 import connectPg from "connect-pg-simple";
+import { desc, eq } from "drizzle-orm";
+import session from "express-session";
+import MemoryStore from "memorystore";
 import pg from "pg";
+import { db, isUsingPostgres } from "./db";
 
-// Create a PostgreSQL session store
-const PostgresSessionStore = connectPg(session);
-const pool = new pg.Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+// Create session store based on database type
+let sessionStore: any;
+
+if (isUsingPostgres && process.env.DATABASE_URL) {
+  // Use PostgreSQL session store
+  const PostgresSessionStore = connectPg(session);
+  const pool = new pg.Pool({
+    connectionString: process.env.DATABASE_URL,
+  });
+  sessionStore = new PostgresSessionStore({
+    pool,
+    createTableIfMissing: true,
+  });
+  console.log("📦 Using PostgreSQL session store");
+} else {
+  // Use memory store for development
+  const MemoryStoreConstructor = MemoryStore(session);
+  sessionStore = new MemoryStoreConstructor({
+    checkPeriod: 86400000, // prune expired entries every 24h
+  });
+  console.log("📦 Using memory session store for development");
+}
 
 // Interface for all storage operations
 export interface IStorage {
@@ -42,7 +60,7 @@ export interface IStorage {
   createOrder(order: InsertOrder): Promise<Order>;
   updateOrder(
     id: number,
-    order: Partial<InsertOrder>,
+    order: Partial<InsertOrder>
   ): Promise<Order | undefined>;
 
   // Contact methods
@@ -71,18 +89,101 @@ export class DatabaseStorage implements IStorage {
   sessionStore: any;
 
   constructor() {
-    // Initialize PostgreSQL session store
-    this.sessionStore = new PostgresSessionStore({
-      pool,
-      createTableIfMissing: true,
-    });
+    // Use the appropriate session store
+    this.sessionStore = sessionStore;
   }
 
   // Initialize the database with default sample data
   async initializeDatabase(): Promise<void> {
     try {
+      // For SQLite, tables will be created automatically on first insert
+      if (!isUsingPostgres) {
+        console.log("🏗️  Using SQLite in-memory database for development");
+
+        // For SQLite in-memory, we need to manually create the schema
+        try {
+          console.log("📝 Creating SQLite tables...");
+
+          // Get the raw SQLite database connection to run CREATE TABLE statements
+          const sqliteDb = (db as any).session.client;
+
+          // Create tables manually using raw SQL
+          sqliteDb.exec(`
+            CREATE TABLE IF NOT EXISTS services (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT NOT NULL,
+              description TEXT NOT NULL,
+              price TEXT NOT NULL,
+              image_url TEXT
+            );
+            
+            CREATE TABLE IF NOT EXISTS users (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              username TEXT NOT NULL UNIQUE,
+              password TEXT NOT NULL,
+              full_name TEXT NOT NULL,
+              email TEXT NOT NULL,
+              phone TEXT,
+              address TEXT
+            );
+            
+            CREATE TABLE IF NOT EXISTS orders (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              user_id INTEGER NOT NULL,
+              status TEXT NOT NULL,
+              service_type TEXT NOT NULL,
+              pickup_date TEXT NOT NULL,
+              pickup_time TEXT NOT NULL,
+              delivery_date TEXT,
+              delivery_time TEXT,
+              notes TEXT,
+              created_at TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL
+            );
+            
+            CREATE TABLE IF NOT EXISTS contacts (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT NOT NULL,
+              email TEXT NOT NULL,
+              subject TEXT NOT NULL,
+              message TEXT NOT NULL,
+              created_at TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL,
+              resolved INTEGER DEFAULT 0
+            );
+            
+            CREATE TABLE IF NOT EXISTS testimonials (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              name TEXT NOT NULL,
+              role TEXT,
+              content TEXT NOT NULL,
+              rating INTEGER NOT NULL
+            );
+            
+            CREATE TABLE IF NOT EXISTS chat_messages (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              user_id INTEGER,
+              content TEXT NOT NULL,
+              is_agent INTEGER DEFAULT 0,
+              timestamp TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL
+            );
+          `);
+
+          console.log("✅ SQLite tables created successfully");
+        } catch (tableError) {
+          console.error("❌ Error creating tables:", tableError);
+          throw tableError;
+        }
+      }
+
       // Check if services table has data
-      const serviceCount = await db.select().from(services);
+      let serviceCount: any[] = [];
+      try {
+        serviceCount = await db.select().from(services);
+        console.log(`📊 Found ${serviceCount.length} existing services`);
+      } catch (error) {
+        console.error("❌ Error querying services table:", error);
+        throw error;
+      }
+
       if (serviceCount.length === 0) {
         // Add sample services
         await db.insert(services).values([
@@ -114,7 +215,14 @@ export class DatabaseStorage implements IStorage {
       }
 
       // Check if testimonials table has data
-      const testimonialCount = await db.select().from(testimonials);
+      let testimonialCount: any[] = [];
+      try {
+        testimonialCount = await db.select().from(testimonials);
+      } catch (error) {
+        // Table doesn't exist yet
+        console.log("📝 Testimonials table will be created on first use");
+      }
+
       if (testimonialCount.length === 0) {
         // Add sample testimonials
         await db.insert(testimonials).values([
@@ -143,6 +251,10 @@ export class DatabaseStorage implements IStorage {
       }
     } catch (error) {
       console.error("Error initializing database:", error);
+      // Don't crash the app if database initialization fails
+      if (!isUsingPostgres) {
+        console.log("⚠️  Running without database persistence (memory only)");
+      }
     }
   }
 
@@ -172,7 +284,7 @@ export class DatabaseStorage implements IStorage {
 
   async updateUser(
     id: number,
-    userData: Partial<InsertUser>,
+    userData: Partial<InsertUser>
   ): Promise<User | undefined> {
     const [updatedUser] = await db
       .update(users)
@@ -203,7 +315,7 @@ export class DatabaseStorage implements IStorage {
 
   async updateOrder(
     id: number,
-    orderData: Partial<InsertOrder>,
+    orderData: Partial<InsertOrder>
   ): Promise<Order | undefined> {
     const [updatedOrder] = await db
       .update(orders)

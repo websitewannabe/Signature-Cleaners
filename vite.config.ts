@@ -1,24 +1,9 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
 import path from "path";
-import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
-
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [
-    react(),
-    runtimeErrorOverlay(),
-    themePlugin(),
-    ...(process.env.NODE_ENV !== "production" &&
-    process.env.REPL_ID !== undefined
-      ? [
-          await import("@replit/vite-plugin-cartographer").then((m) =>
-            m.cartographer(),
-          ),
-        ]
-      : []),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -32,12 +17,12 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    host: "0.0.0.0",
-    port: 5000,
+    host: "127.0.0.1", // Force IPv4
+    port: 3001,
     hmr: {
       protocol: "ws",
-      port: 5000,
-      timeout: 120000
+      port: 3002, // Use separate port for WebSocket to avoid conflicts
+      timeout: 120000,
     },
   },
 });

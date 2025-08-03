@@ -1,12 +1,52 @@
-import express, { type Request, Response, NextFunction } from "express";
+import express, { NextFunction, Response, type Request } from "express";
+import { config, validateConfig } from "./config";
 import { registerRoutes } from "./routes";
-import { setupVite, serveStatic, log } from "./vite";
 import { storage } from "./storage";
-import { db } from "./db";
+import { log, serveStatic, setupVite } from "./vite";
 
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+
+// Security headers middleware
+app.use((req, res, next) => {
+  // Content Security Policy
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'self'; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com; " +
+      "style-src 'self' 'unsafe-inline' https://cdn.equalweb.com; " +
+      "img-src 'self' data: https:; " +
+      "font-src 'self' data:; " +
+      "connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com wss: ws:; " +
+      "frame-ancestors 'none';"
+  );
+
+  // Additional security headers
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("X-Frame-Options", "DENY");
+  res.setHeader("X-XSS-Protection", "1; mode=block");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
+  res.setHeader(
+    "Permissions-Policy",
+    "camera=(), microphone=(), geolocation=()"
+  );
+
+  // HTTPS enforcement in production
+  if (
+    process.env.NODE_ENV === "production" &&
+    req.header("x-forwarded-proto") !== "https"
+  ) {
+    res.setHeader(
+      "Strict-Transport-Security",
+      "max-age=31536000; includeSubDomains; preload"
+    );
+    return res.redirect(301, `https://${req.header("host")}${req.url}`);
+  }
+
+  next();
+});
+
+app.use(express.json({ limit: "10mb" })); // Add request size limit
+app.use(express.urlencoded({ extended: false, limit: "10mb" }));
 
 app.use((req, res, next) => {
   const start = Date.now();
@@ -39,14 +79,23 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Initialize database with graceful error handling
   try {
-    // Initialize database with default data
+    console.log("🔄 Starting database initialization...");
     await storage.initializeDatabase();
-    log("Database initialized successfully");
+    log("✅ Database initialized successfully");
   } catch (error) {
-    console.error("Failed to initialize database:", error);
+    console.error("Error initializing database:", error);
+    if (error instanceof Error) {
+      console.error("Error details:", {
+        name: error.name,
+        message: error.message,
+        stack: error.stack,
+      });
+    }
+    console.log("⚠️  Running without database persistence (memory only)");
   }
-  
+
   const server = await registerRoutes(app);
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
@@ -66,15 +115,17 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
+  // Validate configuration
+  validateConfig();
+
+  // Serve the app on configured port
   // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
+  const port = config.port;
+  server.listen(port, config.host, () => {
+    log(`🚀 Server running on http://${config.host}:${port}`);
+    if (config.isDevelopment) {
+      log(`📖 Frontend: http://${config.host}:${port}`);
+      log(`🔌 API: http://${config.host}:${port}/api`);
+    }
   });
 })();
