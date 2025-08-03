@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 const EQUALWEB_CONFIG = {
   sitekey: "9207c65ae73d46e832525f3e1fed4463",
@@ -32,74 +32,137 @@ const SCRIPT_INTEGRITY =
   "sha512-IuFBhiBlQSJQU8muh9DCDRAPPfo0jqX3OXD7fBvmzPt7K0InWtrkQ662YgJWeG5zSu94WoonZn61uUUDII00eA==";
 
 export const useEqualweb = () => {
+  // Clean up function to remove all EqualWeb elements and references
+  const cleanupEqualweb = useCallback(() => {
+    try {
+      console.log("🧹 Cleaning up existing EqualWeb instances...");
+
+      // Remove all EqualWeb scripts
+      const existingScripts = document.querySelectorAll(
+        'script[src*="equalweb.com"], script[src*="accessibility.js"], script[id*="equalweb"]'
+      );
+      existingScripts.forEach((script) => {
+        console.log("🗑️ Removing script:", script.src || script.id);
+        script.remove();
+      });
+
+      // Remove all EqualWeb widget elements with more comprehensive selectors
+      const widgetSelectors = [
+        '[id*="equalweb"]',
+        '[class*="equalweb"]',
+        '[id*="interdeal"]',
+        '[class*="interdeal"]',
+        "[data-equalweb]",
+        ".accessibility-widget",
+        "#accessibility-widget",
+        'div[style*="accessibility"]',
+      ];
+
+      widgetSelectors.forEach((selector) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach((element) => {
+          console.log(
+            "🗑️ Removing widget element:",
+            element.className || element.id
+          );
+          element.remove();
+        });
+      });
+
+      // Clear window references more thoroughly
+      const windowRefs = [
+        "interdeal",
+        "equalweb",
+        "accessibilityWidget",
+        "__equalweb",
+      ];
+      windowRefs.forEach((ref) => {
+        if (window[ref]) {
+          console.log("🗑️ Clearing window reference:", ref);
+          delete window[ref];
+        }
+      });
+
+      // Clear any stored accessibility settings in localStorage/sessionStorage
+      const storageKeys = ["equalweb", "accessibility", "interdeal"];
+      storageKeys.forEach((key) => {
+        try {
+          localStorage.removeItem(key);
+          sessionStorage.removeItem(key);
+        } catch (e) {
+          // Ignore storage errors
+        }
+      });
+
+      console.log("✅ EqualWeb cleanup completed");
+    } catch (error) {
+      console.error("❌ Error during EqualWeb cleanup:", error);
+    }
+  }, []);
+
+  // Clean up on component mount to ensure fresh state
+  useEffect(() => {
+    cleanupEqualweb();
+  }, [cleanupEqualweb]);
+
   const loadAccessibilityWidget = useCallback(() => {
     try {
       console.log("🔧 Loading EqualWeb accessibility widget...");
 
-      // Clean up any existing EqualWeb scripts and widgets first
-      const existingScripts = document.querySelectorAll(
-        'script[src*="equalweb.com"], script[src*="accessibility.js"]'
-      );
-      existingScripts.forEach((script) => script.remove());
+      // Clean up any existing instances first
+      cleanupEqualweb();
 
-      // Remove any existing EqualWeb widget elements
-      const existingWidgets = document.querySelectorAll(
-        '[id*="equalweb"], [class*="equalweb"], [id*="interdeal"], [class*="interdeal"]'
-      );
-      existingWidgets.forEach((widget) => widget.remove());
+      // Wait a moment for cleanup to complete
+      setTimeout(() => {
+        // Set up the interdeal configuration object
+        window.interdeal = {
+          get sitekey() {
+            return EQUALWEB_CONFIG.sitekey;
+          },
+          get domains() {
+            return EQUALWEB_CONFIG.domains;
+          },
+          Position: EQUALWEB_CONFIG.Position,
+          Menulang: EQUALWEB_CONFIG.Menulang,
+          draggable: EQUALWEB_CONFIG.draggable,
+          btnStyle: EQUALWEB_CONFIG.btnStyle,
+        };
 
-      // Clear any existing EqualWeb references
-      if (window.interdeal) {
-        delete window.interdeal;
-      }
+        console.log("✅ EqualWeb configuration set:", window.interdeal);
 
-      // Set up the interdeal configuration object
-      window.interdeal = {
-        get sitekey() {
-          return EQUALWEB_CONFIG.sitekey;
-        },
-        get domains() {
-          return EQUALWEB_CONFIG.domains;
-        },
-        Position: EQUALWEB_CONFIG.Position,
-        Menulang: EQUALWEB_CONFIG.Menulang,
-        draggable: EQUALWEB_CONFIG.draggable,
-        btnStyle: EQUALWEB_CONFIG.btnStyle,
-      };
+        // Create and load the accessibility script
+        const script = document.createElement("script");
+        script.src = ACCESSIBILITY_SCRIPT_URL;
+        script.defer = true;
+        script.async = true;
+        script.integrity = SCRIPT_INTEGRITY;
+        script.crossOrigin = "anonymous";
+        script.setAttribute("data-cfasync", "true");
+        script.setAttribute("data-equalweb-widget", "true");
 
-      console.log("✅ EqualWeb configuration set:", window.interdeal);
+        script.onload = () => {
+          console.log("✅ EqualWeb accessibility script loaded successfully");
+          console.log("🎯 Widget should now be visible on the page");
+        };
 
-      // Load the accessibility script
-      const script = document.createElement("script");
-      script.src = ACCESSIBILITY_SCRIPT_URL;
-      script.defer = true;
-      script.integrity = SCRIPT_INTEGRITY;
-      script.crossOrigin = "anonymous";
-      script.setAttribute("data-cfasync", "true");
+        script.onerror = (error) => {
+          console.error(
+            "❌ Failed to load EqualWeb accessibility script:",
+            error
+          );
+        };
 
-      script.onload = () => {
-        console.log("✅ EqualWeb accessibility script loaded successfully");
-        console.log("🎯 Widget should now be visible on the page");
-      };
-
-      script.onerror = (error) => {
-        console.error(
-          "❌ Failed to load EqualWeb accessibility script:",
-          error
-        );
-      };
-
-      // Append to body if available, otherwise to head
-      const targetElement = document.body || document.head;
-      targetElement.appendChild(script);
-
-      console.log("📜 EqualWeb script tag added to document");
+        // Append to body
+        document.body.appendChild(script);
+        console.log("📜 EqualWeb script tag added to document body");
+      }, 100);
     } catch (error) {
       console.error("💥 Error loading EqualWeb accessibility widget:", error);
     }
-  }, []);
+  }, [cleanupEqualweb]);
 
   return {
     loadAccessibilityWidget,
+    cleanupEqualweb,
   };
 };
