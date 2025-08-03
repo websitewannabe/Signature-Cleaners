@@ -137,6 +137,34 @@ export default function ShoeRepairPage() {
 
       <Header />
 
+      {/* Breadcrumb Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.mysignaturecleaners.com"
+            },
+            {
+              "@type": "ListItem", 
+              position: 2,
+              name: "Services",
+              item: "https://www.mysignaturecleaners.com/all-services/all-services"
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Shoe Repair",
+              item: "https://www.mysignaturecleaners.com/all-services/shoe-repair"
+            }
+          ]
+        })}
+      </script>
+
       {/* Hero Section */}
       <section className="relative py-40">
         <div className="absolute inset-0 bg-[url('/images/shoe-repair.gif')] bg-cover bg-center bg-no-repeat"></div>

@@ -7,48 +7,6 @@ var __export = (target, all) => {
 // server/index.ts
 import express2 from "express";
 
-// server/config.ts
-var config = {
-  // Server configuration
-  port: process.env.PORT ? parseInt(process.env.PORT) : 3001,
-  host: process.env.HOST || "127.0.0.1",
-  // Force IPv4 to avoid IPv6 binding issues
-  nodeEnv: process.env.NODE_ENV || "development",
-  // Database configuration
-  databaseUrl: process.env.DATABASE_URL || null,
-  // Session configuration
-  sessionSecret: process.env.SESSION_SECRET || "dev-session-secret-change-in-production",
-  // External services (optional)
-  sendgridApiKey: process.env.SENDGRID_API_KEY || null,
-  accountKey: process.env.ACCOUNT_KEY || null,
-  securityId: process.env.SECURITY_ID || null,
-  // Feature flags
-  enableDatabase: process.env.ENABLE_DATABASE !== "false",
-  enableAuth: process.env.ENABLE_AUTH !== "false",
-  // Development helpers
-  isDevelopment: process.env.NODE_ENV !== "production",
-  isProduction: process.env.NODE_ENV === "production"
-};
-function validateConfig() {
-  if (config.isProduction) {
-    const requiredInProduction = [
-      { key: "DATABASE_URL", value: config.databaseUrl },
-      { key: "SESSION_SECRET", value: config.sessionSecret }
-    ];
-    const missing = requiredInProduction.filter(({ value }) => !value);
-    if (missing.length > 0) {
-      const missingKeys = missing.map(({ key }) => key).join(", ");
-      throw new Error(
-        `Missing required environment variables in production: ${missingKeys}`
-      );
-    }
-    if (config.sessionSecret === "dev-session-secret-change-in-production") {
-      throw new Error("SESSION_SECRET must be changed in production");
-    }
-  }
-  return config;
-}
-
 // server/routes.ts
 import { createServer } from "http";
 
@@ -143,234 +101,36 @@ var chatMessages = pgTable("chat_messages", {
   timestamp: timestamp("timestamp").defaultNow().notNull()
 });
 
-// server/storage.ts
-import connectPg from "connect-pg-simple";
-import { desc, eq } from "drizzle-orm";
-import session from "express-session";
-import MemoryStore from "memorystore";
-import pg from "pg";
-
-// shared/sqlite-schema.ts
-var sqlite_schema_exports = {};
-__export(sqlite_schema_exports, {
-  chatMessages: () => chatMessages2,
-  contacts: () => contacts2,
-  insertContactSchema: () => insertContactSchema2,
-  insertOrderSchema: () => insertOrderSchema2,
-  insertUserSchema: () => insertUserSchema2,
-  orders: () => orders2,
-  services: () => services2,
-  testimonials: () => testimonials2,
-  users: () => users2
-});
-import { integer as integer2, sqliteTable, text as text2 } from "drizzle-orm/sqlite-core";
-import { createInsertSchema as createInsertSchema2 } from "drizzle-zod";
-var users2 = sqliteTable("users", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  username: text2("username").notNull().unique(),
-  password: text2("password").notNull(),
-  fullName: text2("full_name").notNull(),
-  email: text2("email").notNull(),
-  phone: text2("phone"),
-  address: text2("address")
-});
-var insertUserSchema2 = createInsertSchema2(users2).pick({
-  username: true,
-  password: true,
-  fullName: true,
-  email: true,
-  phone: true,
-  address: true
-});
-var orders2 = sqliteTable("orders", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  userId: integer2("user_id").notNull(),
-  status: text2("status").notNull(),
-  serviceType: text2("service_type").notNull(),
-  pickupDate: text2("pickup_date").notNull(),
-  pickupTime: text2("pickup_time").notNull(),
-  deliveryDate: text2("delivery_date"),
-  deliveryTime: text2("delivery_time"),
-  notes: text2("notes"),
-  createdAt: text2("created_at").default("CURRENT_TIMESTAMP").notNull()
-});
-var insertOrderSchema2 = createInsertSchema2(orders2).pick({
-  userId: true,
-  status: true,
-  serviceType: true,
-  pickupDate: true,
-  pickupTime: true,
-  deliveryDate: true,
-  deliveryTime: true,
-  notes: true
-});
-var contacts2 = sqliteTable("contacts", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  name: text2("name").notNull(),
-  email: text2("email").notNull(),
-  subject: text2("subject").notNull(),
-  message: text2("message").notNull(),
-  createdAt: text2("created_at").default("CURRENT_TIMESTAMP").notNull(),
-  resolved: integer2("resolved", { mode: "boolean" }).default(false)
-});
-var insertContactSchema2 = createInsertSchema2(contacts2).pick({
-  name: true,
-  email: true,
-  subject: true,
-  message: true
-});
-var services2 = sqliteTable("services", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  name: text2("name").notNull(),
-  description: text2("description").notNull(),
-  price: text2("price").notNull(),
-  imageUrl: text2("image_url")
-});
-var testimonials2 = sqliteTable("testimonials", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  name: text2("name").notNull(),
-  role: text2("role"),
-  content: text2("content").notNull(),
-  rating: integer2("rating").notNull()
-});
-var chatMessages2 = sqliteTable("chat_messages", {
-  id: integer2("id").primaryKey({ autoIncrement: true }),
-  userId: integer2("user_id"),
-  content: text2("content").notNull(),
-  isAgent: integer2("is_agent", { mode: "boolean" }).default(false),
-  timestamp: text2("timestamp").default("CURRENT_TIMESTAMP").notNull()
-});
-
 // server/db.ts
-import Database from "better-sqlite3";
-import { drizzle as drizzleSqlite } from "drizzle-orm/better-sqlite3";
 import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-var isDevelopment = process.env.NODE_ENV !== "production";
-var databaseUrl = process.env.DATABASE_URL;
-var db;
-var isUsingPostgres = false;
-if (databaseUrl) {
-  console.log("\u{1F5C3}\uFE0F  Using PostgreSQL database");
-  const client = postgres(databaseUrl);
-  db = drizzle(client, { schema: schema_exports });
-  isUsingPostgres = true;
-} else if (isDevelopment) {
-  console.log("\u{1F5C3}\uFE0F  Using SQLite database for development");
-  const sqlite = new Database(":memory:");
-  db = drizzleSqlite(sqlite, { schema: sqlite_schema_exports });
-  isUsingPostgres = false;
-} else {
-  throw new Error(
-    "DATABASE_URL environment variable is required in production"
-  );
+if (!process.env.DATABASE_URL) {
+  throw new Error("DATABASE_URL environment variable is not set");
 }
+var client = postgres(process.env.DATABASE_URL);
+var db = drizzle(client, { schema: schema_exports });
 
 // server/storage.ts
-var sessionStore;
-if (isUsingPostgres && process.env.DATABASE_URL) {
-  const PostgresSessionStore = connectPg(session);
-  const pool = new pg.Pool({
-    connectionString: process.env.DATABASE_URL
-  });
-  sessionStore = new PostgresSessionStore({
-    pool,
-    createTableIfMissing: true
-  });
-  console.log("\u{1F4E6} Using PostgreSQL session store");
-} else {
-  const MemoryStoreConstructor = MemoryStore(session);
-  sessionStore = new MemoryStoreConstructor({
-    checkPeriod: 864e5
-    // prune expired entries every 24h
-  });
-  console.log("\u{1F4E6} Using memory session store for development");
-}
+import { eq, desc } from "drizzle-orm";
+import session from "express-session";
+import connectPg from "connect-pg-simple";
+import pg from "pg";
+var PostgresSessionStore = connectPg(session);
+var pool = new pg.Pool({
+  connectionString: process.env.DATABASE_URL
+});
 var DatabaseStorage = class {
   sessionStore;
   constructor() {
-    this.sessionStore = sessionStore;
+    this.sessionStore = new PostgresSessionStore({
+      pool,
+      createTableIfMissing: true
+    });
   }
   // Initialize the database with default sample data
   async initializeDatabase() {
     try {
-      if (!isUsingPostgres) {
-        console.log("\u{1F3D7}\uFE0F  Using SQLite in-memory database for development");
-        try {
-          console.log("\u{1F4DD} Creating SQLite tables...");
-          const sqliteDb = db.session.client;
-          sqliteDb.exec(`
-            CREATE TABLE IF NOT EXISTS services (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              name TEXT NOT NULL,
-              description TEXT NOT NULL,
-              price TEXT NOT NULL,
-              image_url TEXT
-            );
-            
-            CREATE TABLE IF NOT EXISTS users (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              username TEXT NOT NULL UNIQUE,
-              password TEXT NOT NULL,
-              full_name TEXT NOT NULL,
-              email TEXT NOT NULL,
-              phone TEXT,
-              address TEXT
-            );
-            
-            CREATE TABLE IF NOT EXISTS orders (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              user_id INTEGER NOT NULL,
-              status TEXT NOT NULL,
-              service_type TEXT NOT NULL,
-              pickup_date TEXT NOT NULL,
-              pickup_time TEXT NOT NULL,
-              delivery_date TEXT,
-              delivery_time TEXT,
-              notes TEXT,
-              created_at TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL
-            );
-            
-            CREATE TABLE IF NOT EXISTS contacts (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              name TEXT NOT NULL,
-              email TEXT NOT NULL,
-              subject TEXT NOT NULL,
-              message TEXT NOT NULL,
-              created_at TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL,
-              resolved INTEGER DEFAULT 0
-            );
-            
-            CREATE TABLE IF NOT EXISTS testimonials (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              name TEXT NOT NULL,
-              role TEXT,
-              content TEXT NOT NULL,
-              rating INTEGER NOT NULL
-            );
-            
-            CREATE TABLE IF NOT EXISTS chat_messages (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              user_id INTEGER,
-              content TEXT NOT NULL,
-              is_agent INTEGER DEFAULT 0,
-              timestamp TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL
-            );
-          `);
-          console.log("\u2705 SQLite tables created successfully");
-        } catch (tableError) {
-          console.error("\u274C Error creating tables:", tableError);
-          throw tableError;
-        }
-      }
-      let serviceCount = [];
-      try {
-        serviceCount = await db.select().from(services);
-        console.log(`\u{1F4CA} Found ${serviceCount.length} existing services`);
-      } catch (error) {
-        console.error("\u274C Error querying services table:", error);
-        throw error;
-      }
+      const serviceCount = await db.select().from(services);
       if (serviceCount.length === 0) {
         await db.insert(services).values([
           {
@@ -393,12 +153,7 @@ var DatabaseStorage = class {
           }
         ]);
       }
-      let testimonialCount = [];
-      try {
-        testimonialCount = await db.select().from(testimonials);
-      } catch (error) {
-        console.log("\u{1F4DD} Testimonials table will be created on first use");
-      }
+      const testimonialCount = await db.select().from(testimonials);
       if (testimonialCount.length === 0) {
         await db.insert(testimonials).values([
           {
@@ -423,9 +178,6 @@ var DatabaseStorage = class {
       }
     } catch (error) {
       console.error("Error initializing database:", error);
-      if (!isUsingPostgres) {
-        console.log("\u26A0\uFE0F  Running without database persistence (memory only)");
-      }
     }
   }
   // User methods
@@ -494,10 +246,10 @@ var DatabaseStorage = class {
 var storage = new DatabaseStorage();
 
 // server/auth.ts
-import { randomBytes, scrypt, timingSafeEqual } from "crypto";
-import session2 from "express-session";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
+import session2 from "express-session";
+import { scrypt, randomBytes, timingSafeEqual } from "crypto";
 import { promisify } from "util";
 var scryptAsync = promisify(scrypt);
 async function hashPassword(password) {
@@ -512,24 +264,14 @@ async function comparePasswords(supplied, stored) {
   return timingSafeEqual(hashedBuf, suppliedBuf);
 }
 function setupAuth(app2) {
-  if (!config.enableAuth) {
-    console.log("\u{1F512} Authentication disabled");
-    return;
-  }
   const sessionSettings = {
-    secret: config.sessionSecret,
+    secret: process.env.SESSION_SECRET || "signature-cleaners-secret",
     resave: false,
     saveUninitialized: false,
     store: storage.sessionStore,
     cookie: {
-      maxAge: 30 * 24 * 60 * 60 * 1e3,
+      maxAge: 30 * 24 * 60 * 60 * 1e3
       // 30 days
-      httpOnly: true,
-      // Prevent XSS attacks
-      secure: config.isProduction,
-      // HTTPS only in production
-      sameSite: "strict"
-      // CSRF protection
     }
   };
   app2.set("trust proxy", 1);
@@ -577,8 +319,7 @@ function setupAuth(app2) {
   app2.post("/api/login", (req, res, next) => {
     passport.authenticate("local", (err, user, info) => {
       if (err) return next(err);
-      if (!user)
-        return res.status(401).json({ message: "Invalid username or password" });
+      if (!user) return res.status(401).json({ message: "Invalid username or password" });
       req.login(user, (err2) => {
         if (err2) return next(err2);
         const { password, ...userWithoutPassword } = user;
@@ -602,13 +343,12 @@ function setupAuth(app2) {
 // server/routes.ts
 import { WebSocketServer, WebSocket } from "ws";
 import { z } from "zod";
-import { randomBytes as randomBytes2 } from "crypto";
 async function registerRoutes(app2) {
   setupAuth(app2);
   app2.get("/api/services", async (req, res) => {
     try {
-      const services3 = await storage.getServices();
-      res.json(services3);
+      const services2 = await storage.getServices();
+      res.json(services2);
     } catch (error) {
       res.status(500).json({ message: "Error fetching services" });
     }
@@ -626,19 +366,18 @@ async function registerRoutes(app2) {
   });
   app2.get("/api/testimonials", async (req, res) => {
     try {
-      const testimonials3 = await storage.getTestimonials();
-      res.json(testimonials3);
+      const testimonials2 = await storage.getTestimonials();
+      res.json(testimonials2);
     } catch (error) {
       res.status(500).json({ message: "Error fetching testimonials" });
     }
   });
   app2.post("/api/contact", async (req, res) => {
     try {
-      const contactData = insertContactSchema.parse(req.body);
-      const { name, email, subject, message } = contactData;
+      const { name, email, subject, message } = req.body;
       const [firstName, ...lastNameParts] = name.trim().split(" ");
       const lastName = lastNameParts.join(" ");
-      const password = randomBytes2(16).toString("hex");
+      const password = Math.random().toString(36).slice(-12) + Math.random().toString(36).slice(-12);
       const tokenResponse = await fetch("https://api.mydrycleaner.com/q", {
         method: "POST",
         headers: {
@@ -675,24 +414,20 @@ async function registerRoutes(app2) {
         })
       });
       if (!response.ok) {
-        console.error("External API request failed:", {
+        console.error("API Response:", {
           status: response.status,
-          endpoint: "mydrycleaner.com/q"
+          statusText: response.statusText,
+          body: await response.text()
         });
-        throw new Error("Failed to process contact form submission");
+        throw new Error(`Failed to send message: ${response.statusText}`);
       }
       const data = await response.json();
       res.status(201).json(data);
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({
-          message: "Invalid input data",
-          errors: error.errors
-        });
-      }
-      console.error("Error submitting contact form:", error instanceof Error ? error.message : "Unknown error");
+      console.error("Error submitting contact form:", error);
       res.status(500).json({
-        message: "Error submitting contact form. Please try again later."
+        message: "Error submitting contact form",
+        details: error instanceof Error ? error.message : "Unknown error"
       });
     }
   });
@@ -720,8 +455,8 @@ async function registerRoutes(app2) {
       return res.status(401).json({ message: "Authentication required" });
     }
     try {
-      const orders3 = await storage.getOrdersByUserId(req.user.id);
-      res.json(orders3);
+      const orders2 = await storage.getOrdersByUserId(req.user.id);
+      res.json(orders2);
     } catch (error) {
       res.status(500).json({ message: "Error fetching orders" });
     }
@@ -825,11 +560,22 @@ import path2 from "path";
 import { createServer as createViteServer, createLogger } from "vite";
 
 // vite.config.ts
-import react from "@vitejs/plugin-react";
-import path from "path";
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import themePlugin from "@replit/vite-plugin-shadcn-theme-json";
+import path from "path";
+import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 var vite_config_default = defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    runtimeErrorOverlay(),
+    themePlugin(),
+    ...process.env.NODE_ENV !== "production" && process.env.REPL_ID !== void 0 ? [
+      await import("@replit/vite-plugin-cartographer").then(
+        (m) => m.cartographer()
+      )
+    ] : []
+  ],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "client", "src"),
@@ -843,13 +589,11 @@ var vite_config_default = defineConfig({
     emptyOutDir: true
   },
   server: {
-    host: "127.0.0.1",
-    // Force IPv4
-    port: 3001,
+    host: "0.0.0.0",
+    port: 5e3,
     hmr: {
       protocol: "ws",
-      port: 3002,
-      // Use separate port for WebSocket to avoid conflicts
+      port: 5e3,
       timeout: 12e4
     }
   }
@@ -930,30 +674,8 @@ function serveStatic(app2) {
 
 // server/index.ts
 var app = express2();
-app.use((req, res, next) => {
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com; style-src 'self' 'unsafe-inline' https://cdn.equalweb.com; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com wss: ws:; frame-ancestors 'none';"
-  );
-  res.setHeader("X-Content-Type-Options", "nosniff");
-  res.setHeader("X-Frame-Options", "DENY");
-  res.setHeader("X-XSS-Protection", "1; mode=block");
-  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
-  res.setHeader(
-    "Permissions-Policy",
-    "camera=(), microphone=(), geolocation=()"
-  );
-  if (process.env.NODE_ENV === "production" && req.header("x-forwarded-proto") !== "https") {
-    res.setHeader(
-      "Strict-Transport-Security",
-      "max-age=31536000; includeSubDomains; preload"
-    );
-    return res.redirect(301, `https://${req.header("host")}${req.url}`);
-  }
-  next();
-});
-app.use(express2.json({ limit: "10mb" }));
-app.use(express2.urlencoded({ extended: false, limit: "10mb" }));
+app.use(express2.json());
+app.use(express2.urlencoded({ extended: false }));
 app.use((req, res, next) => {
   const start = Date.now();
   const path3 = req.path;
@@ -980,19 +702,10 @@ app.use((req, res, next) => {
 });
 (async () => {
   try {
-    console.log("\u{1F504} Starting database initialization...");
     await storage.initializeDatabase();
-    log("\u2705 Database initialized successfully");
+    log("Database initialized successfully");
   } catch (error) {
-    console.error("Error initializing database:", error);
-    if (error instanceof Error) {
-      console.error("Error details:", {
-        name: error.name,
-        message: error.message,
-        stack: error.stack
-      });
-    }
-    console.log("\u26A0\uFE0F  Running without database persistence (memory only)");
+    console.error("Failed to initialize database:", error);
   }
   const server = await registerRoutes(app);
   app.use((err, _req, res, _next) => {
@@ -1006,13 +719,12 @@ app.use((req, res, next) => {
   } else {
     serveStatic(app);
   }
-  validateConfig();
-  const port = config.port;
-  server.listen(port, config.host, () => {
-    log(`\u{1F680} Server running on http://${config.host}:${port}`);
-    if (config.isDevelopment) {
-      log(`\u{1F4D6} Frontend: http://${config.host}:${port}`);
-      log(`\u{1F50C} API: http://${config.host}:${port}/api`);
-    }
+  const port = 5e3;
+  server.listen({
+    port,
+    host: "0.0.0.0",
+    reusePort: true
+  }, () => {
+    log(`serving on port ${port}`);
   });
 })();

@@ -1,16 +1,19 @@
-import { Link } from "wouter";
+import { useEqualweb } from "@/hooks/use-equalweb";
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Link } from "wouter";
 
 const Footer = () => {
+  const { loadAccessibilityWidget } = useEqualweb();
+
   return (
-    <footer className="bg-[#181818] text-ivory py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-[#181818] py-12 text-ivory">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-4">
           <div>
             <div className="mb-4">
               <Link href="/" className="flex items-center">
                 <div
-                  className="h-20 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                  className="h-20 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-center bg-no-repeat"
                   role="img"
                   aria-label="Signature Cleaners"
                 />
@@ -21,7 +24,7 @@ const Footer = () => {
                 className="h-20 w-auto"
               /> */}
             </div>
-            <p className="text-neutral-300 mb-4">
+            <p className="mb-4 text-neutral-300">
               Old Fashioned Service. Guaranteed.
             </p>
             <div className="space-y-4">
@@ -55,37 +58,28 @@ const Footer = () => {
                 </a>
               </div>
               <button
-                onClick={() => {
-                  // Only load the script if it hasn't been loaded yet
-                  if (!window.EqualWebScriptLoaded) {
-                    const script = document.createElement('script');
-                    script.src = 'https://cdn.equalweb.com/widget/script.js';
-                    script.setAttribute('data-acct', 'jn62B6XXXX');
-                    script.defer = true;
-                    script.onload = () => {
-                      // After script loads, try to trigger the accessibility widget
-                      setTimeout(() => {
-                        if (window.EqualWeb && window.EqualWeb.init) {
-                          window.EqualWeb.init();
-                        }
-                      }, 100);
-                    };
-                    document.body.appendChild(script);
-                    window.EqualWebScriptLoaded = true;
-                  } else {
-                    // If script is already loaded, just trigger the widget
-                    if (window.EqualWeb && window.EqualWeb.show) {
-                      window.EqualWeb.show();
-                    } else if (window.EqualWeb && window.EqualWeb.toggle) {
-                      window.EqualWeb.toggle();
-                    }
-                  }
-                }}
-                className="text-[#F6AE2D] hover:text-white transition-colors flex items-center gap-2"
+                onClick={loadAccessibilityWidget}
+                className="flex items-center gap-2 text-[#F6AE2D] transition-colors hover:text-white"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
                 </svg>
                 Accessibility Tools
               </button>
@@ -93,7 +87,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-neutral-300 hover:text-white">
@@ -136,7 +130,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="mb-4 text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -190,11 +184,11 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <ul className="space-y-2 text-neutral-300">
               <li className="flex items-start">
                 <svg
-                  className="h-5 w-5 mr-2 mt-0.5 text-neutral-400"
+                  className="mr-2 mt-0.5 h-5 w-5 text-neutral-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -217,7 +211,7 @@ const Footer = () => {
                   href="https://www.google.com/maps/place/Signature+Cleaners+at+Doylestown/@40.3414365,-75.1344387,17z/data=!3m1!4b1!4m6!3m5!1s0x89c6a8674873a9d9:0x4c3105276c27f6a4!8m2!3d40.3414365!4d-75.1318638!16s%2Fg%2F1td7jphd"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   1456 Ferry Road #10
                   <br />
@@ -226,7 +220,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <svg
-                  className="h-5 w-5 mr-2 text-neutral-400"
+                  className="mr-2 h-5 w-5 text-neutral-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -241,14 +235,14 @@ const Footer = () => {
                 </svg>
                 <a
                   href="tel:+12153451470"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-white"
                 >
                   (215) 345-1470
                 </a>
               </li>
               <li className="flex items-center">
                 <svg
-                  className="h-5 w-5 mr-2 text-neutral-400"
+                  className="mr-2 h-5 w-5 text-neutral-400"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -263,7 +257,7 @@ const Footer = () => {
                 </svg>
                 <a
                   href="mailto:customerservice@mysignaturecleaners.com"
-                  className="break-words overflow-hidden hover:text-white transition-colors"
+                  className="overflow-hidden break-words transition-colors hover:text-white"
                   style={{ wordBreak: "break-word", hyphens: "auto" }}
                 >
                   customerservice@mysignaturecleaners.com
@@ -273,33 +267,33 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-neutral-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-neutral-400 text-sm">
+        <div className="mt-12 flex flex-col items-center justify-between border-t border-neutral-800 pt-8 md:flex-row">
+          <p className="text-sm text-neutral-400">
             © {new Date().getFullYear()} Signature Cleaners. All rights
             reserved.
           </p>
-          <div className="mt-4 md:mt-0 flex space-x-6">
+          <div className="mt-4 flex space-x-6 md:mt-0">
             <a
               href="/sitemap.xml"
-              className="text-neutral-400 hover:text-neutral-300 text-sm"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Sitemap
             </a>
             <Link
               href="/legal/privacy-policy"
-              className="text-neutral-400 hover:text-neutral-300 text-sm"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Privacy Policy
             </Link>
             <Link
               href="/legal/terms-and-conditions"
-              className="text-neutral-400 hover:text-neutral-300 text-sm"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Terms of Service
             </Link>
             <Link
               href="/legal/accessibility-statement"
-              className="text-neutral-400 hover:text-neutral-300 text-sm"
+              className="text-sm text-neutral-400 hover:text-neutral-300"
             >
               Accessibility
             </Link>

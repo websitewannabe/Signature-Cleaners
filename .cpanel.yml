@@ -1,3 +1,0 @@
-deployment:
-  tasks:
-    - /usr/local/bin/php /home/wwwmysignaturecl/public_html/deploy.php

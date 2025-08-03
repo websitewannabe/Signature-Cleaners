@@ -58,10 +58,10 @@ export default function DryCleaningPage() {
           rel="canonical"
           href="https://www.mysignaturecleaners.com/all-services/dry-cleaning"
         />
-        <title>Dry Cleaning Services | Signature Cleaners</title>
+        <title>Professional Dry Cleaning | Signature Cleaners Doylestown</title>
         <meta
           name="description"
-          content="Expert dry cleaning for suits, dresses, and delicates. Signature Cleaners offers safe and reliable service with pickup and delivery."
+          content="Best dry cleaning near me in Doylestown, PA. Expert care for suits, dresses, and delicates with same-day service and free pickup delivery throughout Bucks County."
         />
         <meta
           property="og:title"

@@ -38,6 +38,41 @@ export default function CityPage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={city.seo.canonical} />
         <meta property="og:image" content="https://www.mysignaturecleaners.com/images/logo.png" />
+        
+        {/* Geographic Targeting */}
+        <meta name="geo.region" content="US-PA" />
+        <meta name="geo.placename" content={`${city.name}, PA`} />
+        <meta name="geo.position" content="40.310005;-75.129097" />
+        <meta name="ICBM" content="40.310005, -75.129097" />
+        <link rel="alternate" hrefLang="en-us" href={city.seo.canonical} />
+        
+        {/* Local Business Schema for City Pages */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": ["LocalBusiness", "DryCleaner"],
+            name: `Signature Cleaners - ${city.name} Service Area`,
+            description: `Professional dry cleaning and laundry services serving ${city.name}, PA and surrounding Bucks County communities.`,
+            areaServed: {
+              "@type": "City",
+              name: `${city.name}, PA`
+            },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "1456 Ferry Road #10",
+              addressLocality: "Doylestown",
+              addressRegion: "PA", 
+              postalCode: "18901",
+              addressCountry: "US"
+            },
+            telephone: "+1-215-345-1470",
+            url: city.seo.canonical,
+            sameAs: [
+              "https://www.facebook.com/SignatureCleanersDoylestown",
+              "https://www.google.com/maps/place/Signature+Cleaners+at+Doylestown"
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header />

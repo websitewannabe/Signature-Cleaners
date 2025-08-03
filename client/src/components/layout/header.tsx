@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
-import { Home, Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { AirVent, Car, Footprints, Gem, Home, Shirt } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link } from "wouter";
 
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
@@ -31,17 +30,17 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full fixed top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isOpaque ? "bg-[#181818]/90 backdrop-blur-sm" : "bg-[#790003]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Left: Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <div
-                className="h-14 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-no-repeat bg-center"
+                className="h-14 w-48 bg-[url('/images/signature-cleaners-logo-white.png')] bg-contain bg-center bg-no-repeat"
                 role="img"
                 aria-label="Signature Cleaners"
               />
@@ -49,74 +48,73 @@ const Header = () => {
           </div>
 
           {/* Center: Nav Links */}
-          <nav className="hidden md:flex items-center justify-center flex-1 gap-8 text-white text-sm font-medium tracking-wider uppercase">
+          <nav className="hidden flex-1 items-center justify-center gap-8 text-sm font-medium uppercase tracking-wider text-white md:flex">
             <Link
               href="/"
-              className="hover:text-[#F6AE2D] h-10 flex items-center transition-colors duration-200"
+              className="flex h-10 items-center transition-colors duration-200 hover:text-[#F6AE2D]"
             >
-              <Home className="w-4 h-4" />
+              <Home className="h-4 w-4" />
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <div className="flex items-center h-10">
+                  <div className="flex h-10 items-center">
                     <Link href="/all-services/all-services">
-                      <NavigationMenuTrigger
-                        className="bg-transparent text-white hover:text-[#F6AE2D] hover:bg-transparent text-sm font-medium h-10 flex items-center tracking-wider uppercase"
-                      >
+                      <NavigationMenuTrigger className="flex h-10 items-center bg-transparent text-sm font-medium uppercase tracking-wider text-white hover:bg-transparent hover:text-[#F6AE2D]">
                         Services
                       </NavigationMenuTrigger>
                     </Link>
                   </div>
-                  <NavigationMenuContent className="bg-white/95 backdrop-blur-sm p-4 shadow-lg">
-                    <div className="grid grid-cols-2 gap-3 p-4 w-[600px] text-xs">
+                  <NavigationMenuContent className="bg-white/95 p-4 shadow-lg backdrop-blur-sm">
+                    <div className="grid w-[600px] grid-cols-2 gap-3 p-4 text-xs text-black">
                       <Link
                         href="/all-services/dry-cleaning"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <AirVent className="w-5 h-5 mr-2 text-black" />
+                        <AirVent className="mr-2 h-5 w-5 text-[#790003]" />
                         <div>Dry Cleaning</div>
                       </Link>
                       <Link
                         href="/all-services/wash-fold"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <div className="w-5 h-5 mr-2">
+                        <div className="mr-2 h-5 w-5">
                           <img
                             src="/icons/bubbles.svg"
                             alt="Wash & Fold"
-                            className="w-full h-full text-[#790003]"
+                            className="h-full w-full"
+                            style={{ filter: "hue-rotate(180deg) saturate(2)" }}
                           />
                         </div>
                         <div>Wash & Fold</div>
                       </Link>
                       <Link
                         href="/all-services/alteration-tailoring"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <Shirt className="w-5 h-5 mr-2 text-black" />
+                        <Shirt className="mr-2 h-5 w-5 text-[#790003]" />
                         <div>Alterations & Tailoring</div>
                       </Link>
                       <Link
                         href="/all-services/wedding-gown"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <Gem className="w-5 h-5 mr-2 text-black" />
+                        <Gem className="mr-2 h-5 w-5 text-[#790003]" />
                         <div>Wedding Gowns</div>
                       </Link>
                       <Link
                         href="/all-services/shoe-repair"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <Footprints className="w-5 h-5 mr-2 text-black" />
+                        <Footprints className="mr-2 h-5 w-5 text-[#790003]" />
                         <div>Shoe Repair</div>
                       </Link>
                       <Link
                         href="/all-services/clean-household-items"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
                         <svg
-                          className="w-5 h-5 mr-2 text-black"
+                          className="mr-2 h-5 w-5 text-[#790003]"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -132,9 +130,9 @@ const Header = () => {
                       </Link>
                       <Link
                         href="/all-services/delivery"
-                        className="flex items-center p-2 hover:bg-neutral-100 rounded"
+                        className="flex items-center rounded p-2 text-black transition-colors hover:bg-neutral-100 hover:text-[#790003]"
                       >
-                        <Car className="w-5 h-5 mr-2 text-black" />
+                        <Car className="mr-2 h-5 w-5 text-[#790003]" />
                         <div>Delivery</div>
                       </Link>
                     </div>
@@ -144,19 +142,19 @@ const Header = () => {
             </NavigationMenu>
             <Link
               href="/about-us"
-              className="hover:text-[#F6AE2D] h-10 flex items-center transition-colors duration-200"
+              className="flex h-10 items-center transition-colors duration-200 hover:text-[#F6AE2D]"
             >
               About Us
             </Link>
             <Link
               href="/contact-us"
-              className="hover:text-[#F6AE2D] h-10 flex items-center transition-colors duration-200"
+              className="flex h-10 items-center transition-colors duration-200 hover:text-[#F6AE2D]"
             >
               Contact
             </Link>
             <Link
               href="/my-account"
-              className="border border-[#181818] hover:bg-[#181818] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase"
+              className="rounded border border-[#181818] px-4 py-2 text-sm uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#181818]"
             >
               My Account
             </Link>
@@ -165,9 +163,9 @@ const Header = () => {
           {/* Right: Mobile Menu */}
           <div className="md:hidden">
             <Sheet>
-              <SheetTrigger className="text-white p-2" aria-label="Open menu">
+              <SheetTrigger className="p-2 text-white" aria-label="Open menu">
                 <svg
-                  className="w-6 h-6"
+                  className="h-6 w-6"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -181,62 +179,62 @@ const Header = () => {
                   />
                 </svg>
               </SheetTrigger>
-              <SheetContent className="w-[300px] bg-[#181818] border-neutral-800">
+              <SheetContent className="w-[300px] border-neutral-800 bg-[#181818]">
                 <nav className="flex flex-col gap-4">
                   <Link
                     href="/"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <Home className="w-4 h-4" />
+                    <Home className="h-4 w-4" />
                     Home
                   </Link>
                   <div className="border-t border-neutral-700" />
                   <Link
                     href="/all-services/dry-cleaning"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <AirVent className="w-4 h-4" />
+                    <AirVent className="h-4 w-4" />
                     Dry Cleaning
                   </Link>
                   <Link
                     href="/all-services/wash-fold"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
                     <img
                       src="/icons/bubbles.svg"
                       alt="Wash & Fold"
-                      className="w-4 h-4 text-white"
-                      style={{ filter: 'brightness(0) invert(1)' }}
+                      className="h-4 w-4 text-white"
+                      style={{ filter: "brightness(0) invert(1)" }}
                     />
                     Wash & Fold
                   </Link>
                   <Link
                     href="/all-services/alteration-tailoring"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <Shirt className="w-4 h-4" />
+                    <Shirt className="h-4 w-4" />
                     Alterations & Tailoring
                   </Link>
                   <Link
                     href="/all-services/wedding-gown"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <Gem className="w-4 h-4" />
+                    <Gem className="h-4 w-4" />
                     Wedding Gowns
                   </Link>
                   <Link
                     href="/all-services/shoe-repair"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <Footprints className="w-4 h-4" />
+                    <Footprints className="h-4 w-4" />
                     Shoe Repair
                   </Link>
                   <Link
                     href="/all-services/clean-household-items"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
                     <svg
-                      className="w-4 h-4"
+                      className="h-4 w-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -252,26 +250,26 @@ const Header = () => {
                   </Link>
                   <Link
                     href="/all-services/delivery"
-                    className="text-white hover:text-[#F6AE2D] py-2 flex items-center gap-2"
+                    className="flex items-center gap-2 py-2 text-white hover:text-[#F6AE2D]"
                   >
-                    <Car className="w-4 h-4" />
+                    <Car className="h-4 w-4" />
                     Delivery
                   </Link>
                   <div className="border-t border-neutral-700" />
                   <Link
                     href="/about-us"
-                    className="text-white hover:text-[#F6AE2D] py-2"
+                    className="py-2 text-white hover:text-[#F6AE2D]"
                   >
                     About Us
                   </Link>
                   <Link
                     href="/contact-us"
-                    className="text-white hover:text-[#F6AE2D] py-2"
+                    className="py-2 text-white hover:text-[#F6AE2D]"
                   >
                     Contact
                   </Link>
                   <Link href="/my-account" className="mt-4">
-                    <button className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white px-4 py-2 rounded transition-colors duration-200 text-sm tracking-wider uppercase">
+                    <button className="w-full rounded bg-[#790003] px-4 py-2 text-sm uppercase tracking-wider text-white transition-colors duration-200 hover:bg-[#F6AE2D]">
                       My Account
                     </button>
                   </Link>

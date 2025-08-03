@@ -1,29 +1,13 @@
-import { useState } from "react";
-import { Link } from "wouter";
-import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useForm } from "react-hook-form";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useForm } from "react-hook-form";
 
 export default function SchedulePage() {
   const isMobile = useIsMobile();
@@ -43,7 +27,7 @@ export default function SchedulePage() {
   });
 
   const onSubmit = (data: any) => {
-    console.log("Form submitted:", data);
+    // Form submitted successfully
     setIsSuccess(true);
     window.scrollTo(0, 0);
   };
@@ -52,7 +36,7 @@ export default function SchedulePage() {
   const today = new Date().toISOString().split("T")[0];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col">
       <Helmet>
         <link
           rel="canonical"
@@ -70,16 +54,16 @@ export default function SchedulePage() {
         {/* Open Graph Metadata */}
         <meta
           property="og:title"
-          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+          content="Schedule Pickup | Signature Cleaners"
         />
         <meta
           property="og:description"
-          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we'll handle the rest with care and reliability."
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/schedule/"
+          content="https://www.mysignaturecleaners.com/schedule"
         />
         <meta
           property="og:image"
@@ -87,6 +71,21 @@ export default function SchedulePage() {
         />
         <meta property="og:site_name" content="Signature Cleaners" />
         <meta property="og:locale" content="en_US" />
+
+        {/* Twitter Card Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Schedule Pickup | Signature Cleaners"
+        />
+        <meta
+          name="twitter:description"
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we'll handle the rest with care and reliability."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
+        />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -111,21 +110,21 @@ export default function SchedulePage() {
       <Header />
 
       {/* Scheduling Form */}
-      <section className="pt-40 pb-16 relative overflow-hidden">
+      <section className="relative overflow-hidden pb-16 pt-40">
         <div className="absolute inset-0 bg-[#F8F5F0]">
           {/* Primary radial gradient for soft light effect */}
-          <div className="absolute inset-0 opacity-30 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(70%_50%_at_50%_50%,#fff_0%,transparent_100%)] opacity-30"></div>
 
           {/* Parallel diagonal streaks */}
-          <div className="absolute inset-0 opacity-25 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)]"></div>
+          <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_50px,rgba(0,0,0,0.05)_50px,rgba(0,0,0,0.05)_100px)] opacity-25"></div>
 
           {/* Soft overlay gradient */}
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(248,245,240,0.1)_0%,rgba(248,245,240,0.2)_100%)]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {isSuccess ? (
-            <div className="bg-green-50 border border-green-200 rounded-lg p-8 max-w-3xl mx-auto text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="mx-auto max-w-3xl rounded-lg border border-green-200 bg-green-50 p-8 text-center">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
                 <svg
                   className="h-8 w-8 text-green-600"
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,30 +140,30 @@ export default function SchedulePage() {
                   />
                 </svg>
               </div>
-              <h2 className="text-2xl font-bold text-green-800 mb-2">
+              <h2 className="mb-2 text-2xl font-bold text-green-800">
                 Pickup Scheduled Successfully!
               </h2>
-              <p className="text-green-700 mb-4">
+              <p className="mb-4 text-green-700">
                 Thank you for scheduling a pickup with Signature Cleaners. We'll
                 be there at your selected time.
               </p>
-              <p className="text-green-700 mb-6">
+              <p className="mb-6 text-green-700">
                 Your confirmation number:{" "}
                 <span className="font-bold">DEMO12345</span>
               </p>
               <div className="space-y-4">
                 <Button
                   onClick={() => setIsSuccess(false)}
-                  className="bg-primary hover:bg-primary-dark text-white"
+                  className="hover:bg-primary-dark bg-primary text-white"
                 >
                   Schedule Another Pickup
                 </Button>
               </div>
             </div>
           ) : (
-            <div className="bg-neutral-50 rounded-lg shadow-md p-6 md:p-8 max-w-3xl mx-auto">
-              <div className="bg-neutral-100 rounded-lg p-8">
-                <h3 className="text-2xl font-semibold text-neutral-900 mb-6">
+            <div className="mx-auto max-w-3xl rounded-lg bg-neutral-50 p-6 shadow-md md:p-8">
+              <div className="rounded-lg bg-neutral-100 p-8">
+                <h3 className="mb-6 text-2xl font-semibold text-neutral-900">
                   Schedule Pickup Service
                 </h3>
                 <form
@@ -183,69 +182,69 @@ export default function SchedulePage() {
                   </p>
 
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label className="mb-1 block text-sm font-medium text-neutral-700">
                       Full Name
                     </label>
                     <Input
                       name="name"
                       placeholder="Your name"
-                      className="w-full"
+                      className="w-full bg-white"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label className="mb-1 block text-sm font-medium text-neutral-700">
                       Phone Number
                     </label>
                     <Input
                       name="phone"
                       type="tel"
                       placeholder="(215) 555-0123"
-                      className="w-full"
+                      className="w-full bg-white"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label className="mb-1 block text-sm font-medium text-neutral-700">
                       Email
                     </label>
                     <Input
                       name="email"
                       type="email"
                       placeholder="you@example.com"
-                      className="w-full"
+                      className="w-full bg-white"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label className="mb-1 block text-sm font-medium text-neutral-700">
                       Address
                     </label>
                     <Textarea
                       name="address"
                       placeholder="Your pickup address"
-                      className="min-h-[100px] w-full"
+                      className="min-h-[100px] w-full bg-white"
                       required
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-1">
+                    <label className="mb-1 block text-sm font-medium text-neutral-700">
                       Message
                     </label>
                     <Textarea
                       name="message"
                       placeholder="Additional notes or special instructions..."
-                      className="min-h-[100px] w-full"
+                      className="min-h-[100px] w-full bg-white"
                     />
                   </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-[#790003] hover:bg-[#F6AE2D] text-white"
+                    className="w-full bg-[#790003] text-white hover:bg-[#F6AE2D]"
                   >
                     Schedule Pickup
                   </Button>

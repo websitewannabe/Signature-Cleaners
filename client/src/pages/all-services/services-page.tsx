@@ -20,7 +20,7 @@ export default function ServicesPage() {
           href="https://www.mysignaturecleaners.com/all-services/all-services"
         />
         <title>
-          Services | Signature Cleaners – Dry Cleaning, Wash & Fold, Tailoring
+          All Services | Signature Cleaners Doylestown, PA
         </title>
         <meta
           name="description"

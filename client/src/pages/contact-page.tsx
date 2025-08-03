@@ -96,11 +96,7 @@ export default function ContactPage() {
         description: errorMessage,
         variant: "destructive",
       });
-      console.error("Contact form error details:", {
-        error,
-        message: errorMessage,
-        timestamp: new Date().toISOString(),
-      });
+              console.error("Contact form submission failed:", errorMessage);
     },
   });
 
@@ -157,7 +153,7 @@ export default function ContactPage() {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/contact-us/"
+          content="https://www.mysignaturecleaners.com/contact-us"
         />
         <meta
           property="og:image"
@@ -165,6 +161,49 @@ export default function ContactPage() {
         />
         <meta property="og:site_name" content="Signature Cleaners" />
         <meta property="og:locale" content="en_US" />
+        
+        {/* FAQ Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How do I sign up?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Click here or Call (215) 345-1470 – Include your sign up form with your name, address and phone number on your first order indicating that you signed up online."
+                }
+              },
+              {
+                "@type": "Question", 
+                name: "Where are my clothes picked up and delivered?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We will pick up and deliver your clothes to your home, your office or to the concierge in your building."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "Is there a minimum order?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No need to wait for a full bag of dirty clothes, we will pick up and deliver any amount."
+                }
+              },
+              {
+                "@type": "Question",
+                name: "What do I put my clothes in?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Call us and we will deliver 2 Signature Cleaners bags with name tags to your designated drop off location."
+                }
+              }
+            ]
+          })}
+        </script>
+        
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -190,18 +229,24 @@ export default function ContactPage() {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: [
                   "Monday",
-                  "Tuesday",
+                  "Tuesday", 
                   "Wednesday",
                   "Thursday",
                   "Friday",
                 ],
                 opens: "07:00",
-                closes: "18:00",
+                closes: "19:00",
               },
               {
                 "@type": "OpeningHoursSpecification",
                 dayOfWeek: "Saturday",
                 opens: "08:00",
+                closes: "17:00",
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: "Sunday",
+                opens: "10:00", 
                 closes: "15:00",
               },
             ],

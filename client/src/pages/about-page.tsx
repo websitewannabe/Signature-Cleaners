@@ -33,11 +33,11 @@ export default function AboutPage() {
         {/* Open Graph Metadata */}
         <meta
           property="og:title"
-          content="Signature Cleaners | Expert Dry Cleaning & Laundry in Doylestown, PA"
+          content="About Us | Signature Cleaners in Doylestown, PA"
         />
         <meta
           property="og:description"
-          content="Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with pickup and delivery throughout Doylestown, PA and Bucks County."
+          content="Learn more about Signature Cleaners, our history, team, and commitment to high-quality dry cleaning and garment care services in Bucks County."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -46,14 +46,16 @@ export default function AboutPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/about-us/"
-        />
-        <meta
-          property="og:image"
-          content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png"
+          content="https://www.mysignaturecleaners.com/about-us"
         />
         <meta property="og:site_name" content="Signature Cleaners" />
         <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Signature Cleaners in Doylestown, PA" />
+        <meta name="twitter:description" content="Learn more about Signature Cleaners, our history, team, and commitment to high-quality dry cleaning and garment care services in Bucks County." />
+        <meta name="twitter:image" content="https://www.mysignaturecleaners.com/images/signature-cleaners-logo-white.png" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

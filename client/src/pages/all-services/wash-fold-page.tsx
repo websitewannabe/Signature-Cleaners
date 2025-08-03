@@ -56,7 +56,7 @@ export default function WashFoldPage() {
         <title>Wash & Fold Laundry Service | Signature Cleaners</title>
         <meta
           name="description"
-          content="Professional Wash & Fold laundry by Signature Cleaners. Safe for all fabrics. Pickup & delivery available across Bucks County."
+          content="Top wash & fold laundry service near me in Doylestown, PA. Professional laundry care for all fabrics with same-day pickup & delivery across Bucks County."
         />
         <meta
           name="keywords"
@@ -73,7 +73,7 @@ export default function WashFoldPage() {
         />
         <meta
           property="og:url"
-          content="https://www.mysignaturecleaners.com/all-services/wash-fold/"
+          content="https://www.mysignaturecleaners.com/all-services/wash-fold"
         />
         <meta
           property="og:description"
@@ -160,6 +160,34 @@ export default function WashFoldPage() {
       </Helmet>
 
       <Header />
+
+      {/* Breadcrumb Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: "https://www.mysignaturecleaners.com"
+            },
+            {
+              "@type": "ListItem", 
+              position: 2,
+              name: "Services",
+              item: "https://www.mysignaturecleaners.com/all-services/all-services"
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: "Wash & Fold",
+              item: "https://www.mysignaturecleaners.com/all-services/wash-fold"
+            }
+          ]
+        })}
+      </script>
 
       {/* Hero Section */}
       <section className="relative py-40">

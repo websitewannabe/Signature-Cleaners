@@ -116,7 +116,7 @@ export const useEqualweb = () => {
       // Wait a moment for cleanup to complete
       setTimeout(() => {
         console.log("🧹 Cleanup completed, setting up new configuration...");
-        
+
         // Set up the interdeal configuration object
         window.interdeal = {
           sitekey: EQUALWEB_CONFIG.sitekey,
@@ -146,24 +146,34 @@ export const useEqualweb = () => {
           console.log("✅ EqualWeb accessibility script loaded successfully");
           console.log("🎯 Widget should now be visible on the page");
           console.log("🔍 Checking for widget elements...");
-          
+
           // Check if widget was created
           setTimeout(() => {
-            const widgets = document.querySelectorAll('[id*="equalweb"], [class*="equalweb"], [id*="interdeal"]');
+            const widgets = document.querySelectorAll(
+              '[id*="equalweb"], [class*="equalweb"], [id*="interdeal"]'
+            );
             console.log("🎨 Widget elements found:", widgets.length);
             widgets.forEach((widget, index) => {
-              console.log(`Widget ${index + 1}:`, widget.id || widget.className);
+              console.log(
+                `Widget ${index + 1}:`,
+                widget.id || widget.className
+              );
             });
           }, 1000);
         };
 
         script.onerror = (error) => {
-          console.error("❌ Failed to load EqualWeb accessibility script:", error);
+          console.error(
+            "❌ Failed to load EqualWeb accessibility script:",
+            error
+          );
           console.error("🔗 Script URL that failed:", script.src);
         };
 
         // Check if script already exists
-        const existingScript = document.querySelector(`script[src="${ACCESSIBILITY_SCRIPT_URL}"]`);
+        const existingScript = document.querySelector(
+          `script[src="${ACCESSIBILITY_SCRIPT_URL}"]`
+        );
         if (existingScript) {
           console.log("⚠️ Script already exists, removing first...");
           existingScript.remove();

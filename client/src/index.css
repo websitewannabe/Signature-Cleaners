@@ -104,7 +104,8 @@
 }
 
 /* Prevent any overflow issues that could cause content below footer */
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 

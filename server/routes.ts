@@ -5,6 +5,7 @@ import { setupAuth } from "./auth";
 import { WebSocketServer, WebSocket } from "ws";
 import { z } from "zod";
 import { insertContactSchema, insertOrderSchema } from "@shared/schema";
+import { randomBytes } from "crypto";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Set up authentication routes
@@ -46,12 +47,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form
   app.post("/api/contact", async (req, res) => {
     try {
-      const { name, email, subject, message } = req.body;
+      // Validate input data
+      const contactData = insertContactSchema.parse(req.body);
+      const { name, email, subject, message } = contactData;
       const [firstName, ...lastNameParts] = name.trim().split(" ");
       const lastName = lastNameParts.join(" ");
       
-      // Generate a secure random password
-      const password = Math.random().toString(36).slice(-12) + Math.random().toString(36).slice(-12);
+      // Generate a cryptographically secure random password
+      const password = randomBytes(16).toString('hex');
 
       // First get the token
       const tokenResponse = await fetch("https://api.mydrycleaner.com/q", {
@@ -95,21 +98,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
 
       if (!response.ok) {
-        console.error("API Response:", {
+        // Log error for debugging without exposing sensitive information
+        console.error("External API request failed:", {
           status: response.status,
-          statusText: response.statusText,
-          body: await response.text(),
+          endpoint: "mydrycleaner.com/q"
         });
-        throw new Error(`Failed to send message: ${response.statusText}`);
+        throw new Error("Failed to process contact form submission");
       }
 
       const data = await response.json();
       res.status(201).json(data);
     } catch (error) {
-      console.error("Error submitting contact form:", error);
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({ 
+          message: "Invalid input data", 
+          errors: error.errors 
+        });
+      }
+      console.error("Error submitting contact form:", error instanceof Error ? error.message : "Unknown error");
       res.status(500).json({
-        message: "Error submitting contact form",
-        details: error instanceof Error ? error.message : "Unknown error",
+        message: "Error submitting contact form. Please try again later.",
       });
     }
   });
