@@ -1,7 +1,11 @@
 
 [build]
   publish = "dist/public"
-  command = "npm run build"
+  command = "npm run build:client"
+
+[build.environment]
+  NODE_VERSION = "22.17.1"
+  NPM_VERSION = "10.9.2"
 
 # Static asset caching with long-term cache control
 [[headers]]
