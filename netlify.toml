@@ -124,6 +124,11 @@
   to = "/legal/accessibility-statement"
   status = 301
 
+  [[redirects]]
+  from = "/accessibility-statement"
+  to = "/legal/accessibility-statement"
+  status = 301
+
 [[redirects]]
   from = "/privacy"
   to = "/legal/privacy-policy"
@@ -209,6 +214,11 @@
   to = "/all-services/alteration-tailoring"
   status = 301
 
+  [[redirects]]
+  from = "/alteration-tailoring"
+  to = "/all-services/alteration-tailoring"
+  status = 301
+
 # SPA fallback for React Router - MUST BE LAST
 [[redirects]]
   from = "/*"
@@ -227,6 +237,11 @@
 
 [[redirects]]
   from = "/services/wedding-gowns/"
+  to = "/all-services/wedding-gown"
+  status = 301
+
+[[redirects]]
+  from = "/wedding-gowns/"
   to = "/all-services/wedding-gown"
   status = 301
 
