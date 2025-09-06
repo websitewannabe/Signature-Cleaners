@@ -353,7 +353,7 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl">
-              Doylestown's #1 Rated Dry Cleaner Near You
+              Doylestown's Best Old Fashion Dry Cleaner
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-white/90">
               Old Fashioned Service. Guaranteed.
