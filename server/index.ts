@@ -5,6 +5,7 @@ import { storage } from "./storage";
 import { log, serveStatic, setupVite } from "./vite";
 
 const app = express();
+app.set("trust proxy", 1);
 
 // Security headers middleware
 app.use((req, res, next) => {
@@ -38,16 +39,19 @@ app.use((req, res, next) => {
     "camera=(), microphone=(), geolocation=()"
   );
 
-  // HTTPS enforcement in production
-  if (
-    process.env.NODE_ENV === "production" &&
-    req.header("x-forwarded-proto") !== "https"
-  ) {
+  // HTTPS enforcement and HSTS in production
+  if (process.env.NODE_ENV === "production") {
     res.setHeader(
       "Strict-Transport-Security",
       "max-age=31536000; includeSubDomains; preload"
     );
-    return res.redirect(301, `https://${req.header("host")}${req.url}`);
+
+    const forwardedProto = req.header("x-forwarded-proto");
+    const isSecureRequest = req.secure || forwardedProto === "https";
+
+    if (!isSecureRequest) {
+      return res.redirect(301, `https://${req.header("host")}${req.url}`);
+    }
   }
 
   next();
@@ -110,8 +114,11 @@ app.use((req, res, next) => {
     const status = err.status || err.statusCode || 500;
     const message = err.message || "Internal Server Error";
 
+    log(
+      `Unhandled error (${status}): ${message}`,
+      "error"
+    );
     res.status(status).json({ message });
-    throw err;
   });
 
   // importantly only setup vite in development and after

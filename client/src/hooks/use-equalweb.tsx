@@ -38,7 +38,7 @@ export const useEqualweb = () => {
       console.log("🧹 Cleaning up existing EqualWeb instances...");
 
       // Remove all EqualWeb scripts
-      const existingScripts = document.querySelectorAll(
+      const existingScripts = document.querySelectorAll<HTMLScriptElement>(
         'script[src*="equalweb.com"], script[src*="accessibility.js"], script[id*="equalweb"]'
       );
       existingScripts.forEach((script) => {
@@ -76,10 +76,11 @@ export const useEqualweb = () => {
         "accessibilityWidget",
         "__equalweb",
       ];
+      const windowRecord = window as unknown as Record<string, unknown>;
       windowRefs.forEach((ref) => {
-        if (window[ref]) {
+        if (windowRecord[ref]) {
           console.log("🗑️ Clearing window reference:", ref);
-          delete window[ref];
+          delete windowRecord[ref];
         }
       });
 
@@ -186,7 +187,9 @@ export const useEqualweb = () => {
       }, 100);
     } catch (error) {
       console.error("💥 Error loading EqualWeb accessibility widget:", error);
-      console.error("💥 Error details:", error.message, error.stack);
+      if (error instanceof Error) {
+        console.error("💥 Error details:", error.message, error.stack);
+      }
     }
   }, [cleanupEqualweb]);
 

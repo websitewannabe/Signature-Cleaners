@@ -18,11 +18,11 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
 
-  const login = (email: string, _password: string) => {
+  const login = async (email: string, _password: string) => {
     setUser({
       id: 1,
       name: "Demo User",
-      email: email
+      email,
     });
   };
 

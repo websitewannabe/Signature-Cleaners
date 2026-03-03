@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { setupAuth } from "./auth";
@@ -6,10 +6,31 @@ import { WebSocketServer, WebSocket } from "ws";
 import { z } from "zod";
 import { insertContactSchema, insertOrderSchema } from "@shared/schema";
 import { randomBytes } from "crypto";
+import { config } from "./config";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Set up authentication routes
   setupAuth(app);
+
+  const requireAuth = (req: Request, res: Response): boolean => {
+    if (!config.enableAuth) {
+      res
+        .status(503)
+        .json({ message: "Authentication is disabled for this environment" });
+      return false;
+    }
+
+    if (
+      typeof req.isAuthenticated !== "function" ||
+      !req.isAuthenticated() ||
+      !req.user
+    ) {
+      res.status(401).json({ message: "Authentication required" });
+      return false;
+    }
+
+    return true;
+  };
 
   // API Routes
   // Services
@@ -124,8 +145,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Order management - protected routes
   app.post("/api/orders", async (req, res) => {
-    if (!req.isAuthenticated()) {
-      return res.status(401).json({ message: "Authentication required" });
+    if (!requireAuth(req, res)) {
+      return;
     }
 
     try {
@@ -148,8 +169,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   app.get("/api/orders", async (req, res) => {
-    if (!req.isAuthenticated()) {
-      return res.status(401).json({ message: "Authentication required" });
+    if (!requireAuth(req, res)) {
+      return;
     }
 
     try {
@@ -161,8 +182,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   app.get("/api/orders/:id", async (req, res) => {
-    if (!req.isAuthenticated()) {
-      return res.status(401).json({ message: "Authentication required" });
+    if (!requireAuth(req, res)) {
+      return;
     }
 
     try {
@@ -224,8 +245,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // Chat messages
   app.get("/api/chat", async (req, res) => {
-    if (!req.isAuthenticated()) {
-      return res.status(401).json({ message: "Authentication required" });
+    if (!requireAuth(req, res)) {
+      return;
     }
 
     try {
@@ -245,33 +266,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
   wss.on("connection", (ws) => {
     ws.on("message", async (message) => {
       try {
-        // Parse incoming message
         const data = JSON.parse(message.toString());
+        const content =
+          typeof data.content === "string" ? data.content.trim() : "";
 
-        // If user is authenticated, save the message
-        if (data.userId) {
-          await storage.addChatMessage({
-            userId: data.userId,
-            content: data.content,
-            isAgent: false,
+        if (!content) {
+          return;
+        }
+
+        // Never trust client-supplied user identifiers for persistence.
+        // This endpoint now returns an ephemeral response only.
+        setTimeout(() => {
+          const agentResponse = {
+            id: Date.now(),
+            content:
+              "Thank you for your message. A customer service representative will respond shortly.",
+            isAgent: true,
             timestamp: new Date(),
-          });
+          };
 
-          // Simulate a response from an agent after a short delay
-          setTimeout(async () => {
-            const agentResponse = await storage.addChatMessage({
-              userId: data.userId,
-              content:
-                "Thank you for your message. A customer service representative will respond shortly.",
-              isAgent: true,
-              timestamp: new Date(),
-            });
+          if (ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify(agentResponse));
+          }
+        }, 1000);
 
-            // Send response back to the client if still connected
-            if (ws.readyState === WebSocket.OPEN) {
-              ws.send(JSON.stringify(agentResponse));
-            }
-          }, 1000);
+        if (data.userId !== undefined) {
+          console.warn(
+            "Ignoring client-supplied userId for chat websocket message"
+          );
         }
       } catch (error) {
         console.error("Error processing WebSocket message:", error);

@@ -25,10 +25,9 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState, useEffect } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import type { BaseSyntheticEvent } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { InsertContact } from "@shared/schema";
+import { submitNetlifyForm } from "@/lib/netlify-forms";
 
 // Define form schema with validation
 const contactFormSchema = z.object({
@@ -49,7 +48,8 @@ export default function ContactPage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setIsLoaded(true), 250); // Delay background to prioritize LCP
+    const timer = window.setTimeout(() => setIsLoaded(true), 250);
+    return () => window.clearTimeout(timer);
   }, []);
 
   // Initialize form with validation
@@ -64,22 +64,48 @@ export default function ContactPage() {
     },
   });
 
-  // API mutation for form submission
-  const contactMutation = useMutation({
-    mutationFn: async (data: ContactFormValues) => {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        throw new Error("Failed to send message");
+  // Handle form submission
+  const onSubmit = async (
+    data: ContactFormValues,
+    event?: BaseSyntheticEvent
+  ) => {
+    try {
+      const formElement =
+        event?.target instanceof HTMLFormElement ? event.target : null;
+      const botFieldValue = formElement
+        ? String(new FormData(formElement).get("bot-field") ?? "")
+        : "";
+
+      if (botFieldValue) {
+        setSubmitted(true);
+        form.reset();
+        return;
       }
-      return response.json();
-    },
-    onSuccess: () => {
+
+      const netlifyAccepted = await submitNetlifyForm("contact", {
+        ...data,
+        "bot-field": botFieldValue,
+      });
+      if (!netlifyAccepted) {
+        // Fallback keeps submissions working in non-Netlify environments.
+        const fallbackResponse = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: data.name,
+            email: data.email,
+            phone: data.phone,
+            address: data.address,
+            subject: "Website Contact Form",
+            message: data.message,
+          }),
+        });
+
+        if (!fallbackResponse.ok) {
+          throw new Error("Failed to send message");
+        }
+      }
+
       toast({
         title: "Message Sent",
         description: "We've received your message and will respond shortly.",
@@ -87,41 +113,17 @@ export default function ContactPage() {
       });
       setSubmitted(true);
       form.reset();
-    },
-    onError: (error) => {
+    } catch (error) {
       const errorMessage =
         error instanceof Error ? error.message : "Unknown error";
       toast({
         title: "Error",
-        description: errorMessage,
+        description: "Failed to send message. Please try again later.",
         variant: "destructive",
       });
-              console.error("Contact form submission failed:", errorMessage);
-    },
-  });
-
-  // Handle form submission
-  const onSubmit = async (data: ContactFormValues) => {
-    try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          "form-name": "contact",
-          ...data,
-        }).toString(),
-      });
-      setSubmitted(true);
-      form.reset();
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-        variant: "destructive",
-      });
+      console.error("Contact form submission failed:", errorMessage);
     }
   };
-  const [mapLoaded, setMapLoaded] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -299,117 +301,6 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <div className="lg:grid lg:grid-cols-2 lg:gap-12">
-            {/* <div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                {submitted ? (
-                  <div className="flex flex-col items-center justify-center py-8 space-y-4">
-                    <CheckCircle2 className="h-16 w-16 text-green-500" />
-                    <h3 className="text-2xl font-semibold text-center">
-                      Thank You!
-                    </h3>
-                    <p className="text-center text-neutral-600">
-                      Your message has been sent successfully. We'll get back to
-                      you as soon as possible.
-                    </p>
-                    <Button
-                      onClick={() => setSubmitted(false)}
-                      className="mt-4"
-                    >
-                      Send Another Message
-                    </Button>
-                  </div>
-                ) : (
-                  <Form {...form}>
-                    <form
-                      onSubmit={form.handleSubmit(onSubmit)}
-                      className="space-y-6"
-                    >
-                      <FormField
-                        control={form.control}
-                        name="name"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Your Name</FormLabel>
-                            <FormControl>
-                              <Input placeholder="John Doe" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Email Address</FormLabel>
-                            <FormControl>
-                              <Input
-                                type="email"
-                                placeholder="john@example.com"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="subject"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Subject</FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder="How can we help you?"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <FormField
-                        control={form.control}
-                        name="message"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>Message</FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Please provide details about your inquiry..."
-                                className="min-h-[120px]"
-                                {...field}
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-
-                      <Button
-                        type="submit"
-                        className="w-full bg-primary hover:bg-primary-dark"
-                        disabled={contactMutation.isPending}
-                      >
-                        {contactMutation.isPending ? (
-                          <>
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                            Sending...
-                          </>
-                        ) : (
-                          "Send Message"
-                        )}
-                      </Button>
-                    </form>
-                  </Form>
-                )}
-              </div>
-            </div> */}
             <div className="lg:mt-0">
               <div className="bg-white rounded-lg shadow-md p-6">
                 {submitted ? (
@@ -770,16 +661,3 @@ export default function ContactPage() {
     </div>
   );
 }
-
-const FaqItem = ({
-  question,
-  answer,
-}: {
-  question: string;
-  answer: string;
-}) => (
-  <div className="bg-white rounded-lg shadow-sm p-6">
-    <h3 className="text-lg font-semibold text-neutral-900 mb-2">{question}</h3>
-    <p className="text-neutral-600">{answer}</p>
-  </div>
-);

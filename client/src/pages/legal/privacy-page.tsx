@@ -23,8 +23,7 @@ export default function PrivacyPage() {
           <h1 className="text-3xl font-bold mb-8">Privacy Policy</h1>
           <div
             id="policy"
-            width="640"
-            height="480"
+            style={{ maxWidth: "640px", minHeight: "480px" }}
             data-policy-key="YjI1UVZHVnZjMlZLVjNWaGJYYzlQUT09"
           >
             Please wait while the policy is loaded. If it does not load, please{" "}

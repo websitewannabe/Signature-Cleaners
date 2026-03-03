@@ -1,6 +1,7 @@
 import { useParams } from "wouter";
 import { Helmet } from "react-helmet-async";
 import { Link } from "wouter";
+import { useRouter } from "next/router";
 import { cityData } from "@/data/cityData";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/layout/header";
@@ -14,9 +15,14 @@ import {
 import { Shirt, Car, Footprints, Gem, AirVent } from "lucide-react";
 
 export default function CityPage() {
-  const params = useParams();
+  const router = useRouter();
+  const params = useParams<{ city?: string }>();
   const citySlug = params.city;
-  const city = cityData[citySlug];
+  const city = citySlug ? cityData[citySlug] : undefined;
+
+  if (!citySlug && !router.isReady) {
+    return null;
+  }
 
   if (!city) {
     return (

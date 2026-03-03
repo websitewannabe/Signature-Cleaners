@@ -1,39 +1,68 @@
 import Footer from "@/components/layout/footer";
 import Header from "@/components/layout/header";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { type FormEvent, useState } from "react";
 import { Helmet } from "react-helmet-async";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useIsMobile } from "@/hooks/use-mobile";
-import { useForm } from "react-hook-form";
+import { submitNetlifyForm } from "@/lib/netlify-forms";
 
 export default function SchedulePage() {
-  const isMobile = useIsMobile();
   const [isSuccess, setIsSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmationNumber, setConfirmationNumber] = useState<string | null>(
+    null
+  );
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const form = useForm({
-    defaultValues: {
-      fullName: "",
-      email: "",
-      phone: "",
-      address: "",
-      serviceType: "",
-      pickupDate: "",
-      pickupTime: "",
-      notes: "",
-    },
-  });
+  const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage(null);
 
-  const onSubmit = (data: any) => {
-    // Form submitted successfully
-    setIsSuccess(true);
-    window.scrollTo(0, 0);
+    const formData = new FormData(event.currentTarget);
+    const payload: Record<string, string> = {};
+    formData.forEach((value, key) => {
+      if (typeof value === "string") {
+        payload[key] = value;
+      }
+    });
+
+    try {
+      const netlifyAccepted = await submitNetlifyForm("schedule", payload);
+      let resolvedConfirmation = `SC-${Date.now().toString().slice(-6)}`;
+
+      if (!netlifyAccepted) {
+        // Fallback keeps local/non-Netlify environments functional.
+        const fallbackResponse = await fetch("/api/schedule", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        if (!fallbackResponse.ok) {
+          throw new Error("Failed to submit schedule form");
+        }
+
+        const fallbackData = (await fallbackResponse.json()) as {
+          confirmationNumber?: string;
+        };
+        resolvedConfirmation =
+          fallbackData.confirmationNumber ?? resolvedConfirmation;
+      }
+
+      setConfirmationNumber(resolvedConfirmation);
+      setIsSuccess(true);
+      window.scrollTo(0, 0);
+      event.currentTarget.reset();
+    } catch (error) {
+      console.error("Schedule form submission failed:", error);
+      setErrorMessage("We couldn't schedule your pickup. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
-
-  // Get today's date for min date on date picker
-  const today = new Date().toISOString().split("T")[0];
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -149,11 +178,14 @@ export default function SchedulePage() {
               </p>
               <p className="mb-6 text-green-700">
                 Your confirmation number:{" "}
-                <span className="font-bold">DEMO12345</span>
+                <span className="font-bold">{confirmationNumber}</span>
               </p>
               <div className="space-y-4">
                 <Button
-                  onClick={() => setIsSuccess(false)}
+                  onClick={() => {
+                    setIsSuccess(false);
+                    setConfirmationNumber(null);
+                  }}
                   className="hover:bg-primary-dark bg-primary text-white"
                 >
                   Schedule Another Pickup
@@ -167,6 +199,7 @@ export default function SchedulePage() {
                   Schedule Pickup Service
                 </h3>
                 <form
+                  onSubmit={onSubmit}
                   className="space-y-4"
                   data-netlify="true"
                   name="schedule"
@@ -244,10 +277,15 @@ export default function SchedulePage() {
 
                   <Button
                     type="submit"
+                    disabled={isSubmitting}
                     className="w-full bg-[#790003] text-white hover:bg-[#F6AE2D]"
                   >
-                    Schedule Pickup
+                    {isSubmitting ? "Scheduling..." : "Schedule Pickup"}
                   </Button>
+
+                  {errorMessage ? (
+                    <p className="text-sm text-red-700">{errorMessage}</p>
+                  ) : null}
                 </form>
               </div>
             </div>

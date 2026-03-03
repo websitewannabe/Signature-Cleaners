@@ -1,7 +1,9 @@
 
 [build]
-  publish = "dist/public"
-  command = "npm run build:client"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "22.17.1"
@@ -218,12 +220,6 @@
   from = "/alteration-tailoring"
   to = "/all-services/alteration-tailoring"
   status = 301
-
-# SPA fallback for React Router - MUST BE LAST
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 [[redirects]]
   from = "/shoe-repair/"
