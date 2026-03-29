@@ -9,17 +9,27 @@ export default function SchedulePage() {
   const addressRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY;
-    if (!apiKey || !addressRef.current) return;
+    if (!addressRef.current) return;
 
-    if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
-      const script = document.createElement("script");
-      script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
-      script.async = true;
-      script.onload = initAutocomplete;
-      document.head.appendChild(script);
-    } else if (window.google?.maps?.places) {
-      initAutocomplete();
+    async function loadPlaces() {
+      try {
+        const res = await fetch("/api/places-key");
+        if (!res.ok) return;
+        const { key } = await res.json();
+        if (!key) return;
+
+        if (!document.querySelector('script[src*="maps.googleapis.com"]')) {
+          const script = document.createElement("script");
+          script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places`;
+          script.async = true;
+          script.onload = initAutocomplete;
+          document.head.appendChild(script);
+        } else if (window.google?.maps?.places) {
+          initAutocomplete();
+        }
+      } catch {
+        // Places autocomplete unavailable, form still works without it
+      }
     }
 
     function initAutocomplete() {
@@ -29,6 +39,8 @@ export default function SchedulePage() {
         componentRestrictions: { country: "us" },
       });
     }
+
+    loadPlaces();
   }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
