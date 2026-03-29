@@ -20,5 +20,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "dist", "server", "client", "shared", "drizzle.config.ts", ".next"]
+  "exclude": ["node_modules", "dist", "server", "client", "shared", "drizzle.config.ts", "vite.config.ts", ".claude", ".next"]
 }
