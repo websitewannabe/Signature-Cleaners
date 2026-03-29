@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Wash & Fold Laundry Service at Signature Cleaners Doylestown, PA",
+  title: "Wash & Fold Service at Signature Cleaners Doylestown",
   description:
     "Convenient wash and fold laundry service at $2.95/lb in Doylestown, PA. Professional washing, drying, and folding with free pickup and delivery.",
   canonical: "/all-services/wash-fold",

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Alterations & Tailoring Services at Signature Cleaners Doylestown, PA",
+  title: "Alterations & Tailoring at Signature Cleaners Doylestown",
   description:
     "Professional alterations and tailoring in Doylestown, PA. Hemming, fit adjustments, and repairs starting at $24.99 with 3-5 business day turnaround.",
   canonical: "/all-services/alteration-tailoring",

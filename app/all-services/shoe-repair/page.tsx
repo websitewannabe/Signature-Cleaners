@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Professional Shoe Repair at Signature Cleaners Doylestown, PA",
+  title: "Shoe Repair at Signature Cleaners Doylestown",
   description:
     "Expert shoe repair services in Doylestown, PA. Heel replacement, sole repair, leather conditioning, and restoration starting at $24.99.",
   canonical: "/all-services/shoe-repair",

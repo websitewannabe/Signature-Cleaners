@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Household Items Cleaning at Signature Cleaners Doylestown, PA",
+  title: "Household Cleaning at Signature Cleaners Doylestown",
   description:
     "Expert cleaning for comforters, blankets, draperies, curtains, rugs, and household textiles in Doylestown, PA. Starting at $39.95.",
   canonical: "/all-services/clean-household-items",

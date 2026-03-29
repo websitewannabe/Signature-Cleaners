@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Professional Dry Cleaning Services at Signature Cleaners Doylestown, PA",
+  title: "Dry Cleaning Services at Signature Cleaners Doylestown",
   description:
     "Expert dry cleaning for suits, dresses, shirts, and delicate garments in Doylestown, PA. Same-day service available. Eco-friendly solvents.",
   canonical: "/all-services/dry-cleaning",

@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 
 export const metadata = generatePageMetadata({
-  title: "Wedding Gown Preservation & Cleaning at Signature Cleaners Doylestown, PA",
+  title: "Wedding Gown Preservation at Signature Cleaners Doylestown",
   description:
     "Museum-quality wedding gown cleaning and preservation starting at $325. Protect your cherished gown for years to come with expert care in Doylestown, PA.",
   canonical: "/all-services/wedding-gown",
