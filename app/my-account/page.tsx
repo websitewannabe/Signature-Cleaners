@@ -40,7 +40,7 @@ export default function MyAccountPage() {
               Access your account or pay your bill.
             </p>
             <a
-              href="https://account.mydrycleaner.com/SIGNATUREPA/"
+              href="https://account.mydrycleaner.com/SIGNATUREPA/#/login"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary"
@@ -59,7 +59,7 @@ export default function MyAccountPage() {
               Create a new account and save $10 on your first order.
             </p>
             <a
-              href="https://account.mydrycleaner.com/SIGNATUREPA/signup"
+              href="https://account.mydrycleaner.com/SIGNATUREPA/#/customer-signup"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline"
