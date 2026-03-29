@@ -8,6 +8,15 @@ export const metadata: Metadata = {
     canonical:
       "https://www.mysignaturecleaners.com/legal/accessibility-statement",
   },
+  openGraph: {
+    title: "Accessibility Statement for Signature Cleaners",
+    description:
+      "Signature Cleaners is committed to ensuring digital accessibility for people with disabilities. Learn about our accessibility efforts.",
+    url: "https://www.mysignaturecleaners.com/legal/accessibility-statement",
+    type: "website",
+    locale: "en_US",
+    siteName: "Signature Cleaners",
+  },
 };
 
 export default function AccessibilityStatementPage() {

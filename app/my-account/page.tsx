@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "My Account | Signature Cleaners",
   description:
     "Log in or create your Signature Cleaners account. Manage pickups, pay bills, and save $10 on your first order.",
+  openGraph: {
+    title: "My Account | Signature Cleaners",
+    description:
+      "Log in or create your Signature Cleaners account. Manage pickups, pay bills, and save $10 on your first order.",
+    url: "https://www.mysignaturecleaners.com/my-account",
+    type: "website",
+    locale: "en_US",
+    siteName: "Signature Cleaners",
+  },
 };
 
 const benefits = [

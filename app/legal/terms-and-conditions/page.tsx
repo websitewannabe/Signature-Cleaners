@@ -3,10 +3,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Terms and Conditions for Signature Cleaners",
   description:
-    "Review the terms and conditions for using Signature Cleaners services and website.",
+    "Review the terms and conditions for using Signature Cleaners services and website in Doylestown, PA. Covers garment care liability, pickup and delivery, and pricing policies.",
   alternates: {
     canonical:
       "https://www.mysignaturecleaners.com/legal/terms-and-conditions",
+  },
+  openGraph: {
+    title: "Terms and Conditions for Signature Cleaners",
+    description:
+      "Review the terms and conditions for using Signature Cleaners services and website in Doylestown, PA. Covers garment care liability, pickup and delivery, and pricing policies.",
+    url: "https://www.mysignaturecleaners.com/legal/terms-and-conditions",
+    type: "website",
+    locale: "en_US",
+    siteName: "Signature Cleaners",
   },
 };
 

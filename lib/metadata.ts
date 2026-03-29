@@ -4,7 +4,7 @@ export const siteConfig = {
   name: "Signature Cleaners",
   url: "https://www.mysignaturecleaners.com",
   description:
-    "Top-rated dry cleaning near me in Doylestown, PA. Signature Cleaners provides expert dry cleaning, wash & fold, tailoring, and more with free pickup and delivery throughout Bucks County.",
+    "Top-rated dry cleaning in Doylestown, PA. Expert dry cleaning, wash and fold, tailoring, and free pickup and delivery throughout Bucks County.",
   keywords: [
     "dry cleaning near me",
     "laundry service near me",

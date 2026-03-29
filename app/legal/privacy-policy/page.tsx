@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.mysignaturecleaners.com/legal/privacy-policy",
   },
+  openGraph: {
+    title: "Privacy Policy for Signature Cleaners",
+    description:
+      "Read the privacy policy of Signature Cleaners. Learn how we collect, use, and protect your personal information.",
+    url: "https://www.mysignaturecleaners.com/legal/privacy-policy",
+    type: "website",
+    locale: "en_US",
+    siteName: "Signature Cleaners",
+  },
 };
 
 export default function PrivacyPolicyPage() {
