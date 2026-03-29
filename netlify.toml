@@ -49,17 +49,7 @@
   to = "/images/favicon.png"
   status = 200
 
-[[redirects]]
-  from = "/robots.txt"
-  to = "/robots.txt"
-  status = 200
-
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/sitemap.xml"
-  status = 200
-
-# Legacy URL redirects from _redirects file
+# Legacy URL redirects
 [[redirects]]
   from = "https://mysignaturecleaners.com/*"
   to = "https://www.mysignaturecleaners.com/:splat"
@@ -126,7 +116,7 @@
   to = "/legal/accessibility-statement"
   status = 301
 
-  [[redirects]]
+[[redirects]]
   from = "/accessibility-statement"
   to = "/legal/accessibility-statement"
   status = 301
@@ -143,18 +133,19 @@
 
 [[redirects]]
   from = "/sign-up/"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
 
 [[redirects]]
   from = "/my-account/sign-up/"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
 
 [[redirects]]
   from = "/auth"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
+
 
 [[redirects]]
   from = "/all-services/services"
@@ -188,7 +179,7 @@
 
 [[redirects]]
   from = "/login-in-2/"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
 
 [[redirects]]
@@ -208,7 +199,7 @@
 
 [[redirects]]
   from = "/sign-up-2/"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
 
 [[redirects]]
@@ -216,7 +207,7 @@
   to = "/all-services/alteration-tailoring"
   status = 301
 
-  [[redirects]]
+[[redirects]]
   from = "/alteration-tailoring"
   to = "/all-services/alteration-tailoring"
   status = 301
@@ -274,7 +265,7 @@
 
 [[redirects]]
   from = "/wp-login.php"
-  to = "/my-account"
+  to = "/contact-us"
   status = 301
 
 [[redirects]]

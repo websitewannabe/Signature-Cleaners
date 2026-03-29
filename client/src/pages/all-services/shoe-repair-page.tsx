@@ -201,7 +201,7 @@ export default function ShoeRepairPage() {
                 Expert Shoe Care Services
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Your shoes carry you through life—make sure they’re in top
+                Your shoes carry you through life,make sure they’re in top
                 condition. At Signature Cleaners, our skilled cobblers offer
                 comprehensive shoe repair services designed to extend the life
                 and appearance of your favorite footwear. From restoring worn

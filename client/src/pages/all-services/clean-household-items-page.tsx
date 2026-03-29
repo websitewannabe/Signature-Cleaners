@@ -261,7 +261,7 @@ export default function CleanHouseholdItemsPage() {
                       type: "img",
                       icon: "/icons/rug.svg",
                       details:
-                        "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
+                        "We handle area rugs with care,using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
                     },
                     {
                       name: "Blankets",
@@ -332,7 +332,7 @@ export default function CleanHouseholdItemsPage() {
                               {
                                 name: "Rugs",
                                 details:
-                                  "We handle area rugs with care—using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
+                                  "We handle area rugs with care,using stain-lifting treatments and protective finishes to extend their lifespan and vibrancy.",
                               },
                               {
                                 name: "Blankets",

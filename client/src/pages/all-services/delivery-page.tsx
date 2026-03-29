@@ -191,13 +191,13 @@ export default function DeliveryPage() {
               <p className="text-lg text-white/90 mb-6">
                 Getting your garments cleaned has never been easier. With our
                 convenient pickup and delivery service, Signature Cleaners
-                brings expert care straight to your doorstep—at home or the
+                brings expert care straight to your doorstep,at home or the
                 office. Our professional team ensures your items are handled
                 with care from start to finish, offering scheduled pickups,
                 real-time tracking, and prompt returns. Whether you’re managing
                 a busy family or a packed professional calendar, our delivery
                 service saves you time without compromising quality. It's
-                garment care on your terms—seamless, reliable, and stress-free.
+                garment care on your terms,seamless, reliable, and stress-free.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">

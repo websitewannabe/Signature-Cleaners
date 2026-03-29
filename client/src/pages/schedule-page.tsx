@@ -74,7 +74,7 @@ export default function SchedulePage() {
         <title>Schedule Pickup | Signature Cleaners</title>
         <meta
           name="description"
-          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we’ll handle the rest with care and reliability."
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time , we’ll handle the rest with care and reliability."
         />
         <meta
           name="keywords"
@@ -87,7 +87,7 @@ export default function SchedulePage() {
         />
         <meta
           property="og:description"
-          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we'll handle the rest with care and reliability."
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time , we'll handle the rest with care and reliability."
         />
         <meta property="og:type" content="website" />
         <meta
@@ -109,7 +109,7 @@ export default function SchedulePage() {
         />
         <meta
           name="twitter:description"
-          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time — we'll handle the rest with care and reliability."
+          content="Schedule your dry cleaning or laundry pickup online with Signature Cleaners. Choose your service, date, and time , we'll handle the rest with care and reliability."
         />
         <meta
           name="twitter:image"

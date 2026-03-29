@@ -113,7 +113,7 @@ export default function CityPage() {
         },
         {
           title: "Wash & Fold",
-          description: `Let us handle your weekly laundry. Our Wash & Fold service in ${city.name} offers same-day turnaround and exceptional attention to detail—perfect for busy households.`,
+          description: `Let us handle your weekly laundry. Our Wash & Fold service in ${city.name} offers same-day turnaround and exceptional attention to detail,perfect for busy households.`,
           image: "/images/washFold.webp",
           link: "/all-services/wash-fold",
         },

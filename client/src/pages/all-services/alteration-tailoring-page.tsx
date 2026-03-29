@@ -26,7 +26,7 @@ export default function AlterationTailoringPage() {
     {
       name: "Hemming",
       details:
-        "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish.",
+        "We provide clean, precise hemming for pants, skirts, and dresses,tailored to your preferred length and finish.",
     },
     {
       name: "Resizing",
@@ -274,7 +274,7 @@ export default function AlterationTailoringPage() {
                       type: "img",
                       icon: "/icons/hemming.svg",
                       details:
-                        "We provide clean, precise hemming for pants, skirts, and dresses—tailored to your preferred length and finish.",
+                        "We provide clean, precise hemming for pants, skirts, and dresses,tailored to your preferred length and finish.",
                     },
                     {
                       name: "Resizing",

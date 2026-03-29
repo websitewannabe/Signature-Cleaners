@@ -173,7 +173,7 @@ export default function WeddingGownPage() {
                 Professional Wedding Gown Care
               </h2>
               <p className="text-lg text-white/90 mb-6">
-                Your wedding gown is more than just a dress — it’s a treasured
+                Your wedding gown is more than just a dress , it’s a treasured
                 memory. At Signature Cleaners, we treat each gown with the care
                 it deserves, using delicate, museum-grade preservation
                 techniques to safeguard its beauty for decades. Whether you're

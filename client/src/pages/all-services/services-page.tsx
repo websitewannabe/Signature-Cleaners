@@ -384,7 +384,7 @@ export default function ServicesPage() {
                   </h3>
                   <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
-                    Perfect fit, perfected style — our expert tailoring brings
+                    Perfect fit, perfected style , our expert tailoring brings
                     your garments to life.
                   </p>
                   <Link
@@ -419,7 +419,7 @@ export default function ServicesPage() {
                   <h3 className="text-xl font-semibold text-white">Delivery</h3>
                   <div className="w-12 h-0.5 bg-[#181818]"></div>
                   <p className="text-white line-clamp-3 flex-grow">
-                    Clean clothes, delivered to your door — convenience you can
+                    Clean clothes, delivered to your door , convenience you can
                     count on.
                   </p>
                   <Link href="/all-services/delivery" className="block">

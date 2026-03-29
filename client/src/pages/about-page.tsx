@@ -151,7 +151,7 @@ export default function AboutPage() {
                 hours, and if more time is needed, customers are notified
                 immediately. Wedding gowns are preserved using museum-quality
                 techniques designed to maintain their condition for years to
-                come—ensuring that cherished garments stay as beautiful as the
+                come,ensuring that cherished garments stay as beautiful as the
                 day they were worn.
               </p>
               <p className="mt-4 text-lg text-black/80">
@@ -161,8 +161,8 @@ export default function AboutPage() {
                 their services, from adopting more efficient equipment to
                 refining cleaning techniques. With our convenient Doylestown
                 location, Signature Cleaners offers a full range of garment care
-                services—from dry cleaning and tailoring to stain removal and
-                shoe repair—with unmatched reliability and results.
+                services,from dry cleaning and tailoring to stain removal and
+                shoe repair,with unmatched reliability and results.
               </p>
 
               <div className="mt-8 grid grid-cols-2 gap-4">

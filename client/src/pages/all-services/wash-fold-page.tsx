@@ -26,7 +26,7 @@ export default function WashFoldPage() {
     {
       name: "Regular Wash",
       details:
-        "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
+        "Perfect for your daily wear,our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
     },
     {
       name: "Delicates",
@@ -304,7 +304,7 @@ export default function WashFoldPage() {
                         />
                       ),
                       details:
-                        "Perfect for your daily wear—our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
+                        "Perfect for your daily wear,our regular wash uses optimal temperature settings and gentle cycles for a deep yet safe clean.",
                     },
                     {
                       name: "Delicates",
