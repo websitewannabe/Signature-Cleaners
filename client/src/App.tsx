@@ -1,6 +1,5 @@
 import ScrollToTop from "@/components/ui/scroll-to-top";
 import { Toaster } from "@/components/ui/toaster";
-import { useEqualweb } from "@/hooks/use-equalweb";
 import AboutPage from "@/pages/about-page";
 import AlterationTailoringPage from "@/pages/all-services/alteration-tailoring-page";
 import CleanHouseholdItemsPage from "@/pages/all-services/clean-household-items-page";
@@ -19,9 +18,8 @@ import TermsPage from "@/pages/legal/terms-page";
 import NotFound from "@/pages/not-found";
 import SchedulePage from "@/pages/schedule-page";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
-import { Route, Switch, useLocation } from "wouter";
+import { Route, Switch } from "wouter";
 import { AuthProvider } from "./hooks/use-auth";
 const queryClient = new QueryClient();
 
@@ -29,14 +27,6 @@ const queryClient = new QueryClient();
 import CityPage from "@/pages/locations/CityPage";
 
 function Router() {
-  const [location] = useLocation();
-  const { cleanupEqualweb } = useEqualweb();
-
-  // Clean up EqualWeb on every route change to ensure fresh state
-  useEffect(() => {
-    cleanupEqualweb();
-  }, [location, cleanupEqualweb]);
-
   return (
     <Switch>
       <Route
@@ -81,27 +71,6 @@ function Router() {
 }
 
 function App() {
-  const { cleanupEqualweb } = useEqualweb();
-
-  // Clean up EqualWeb on page unload/refresh
-  useEffect(() => {
-    const handleBeforeUnload = () => {
-      cleanupEqualweb();
-    };
-
-    const handleUnload = () => {
-      cleanupEqualweb();
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-    window.addEventListener("unload", handleUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-      window.removeEventListener("unload", handleUnload);
-    };
-  }, [cleanupEqualweb]);
-
   return (
     <HelmetProvider>
       <QueryClientProvider client={queryClient}>

@@ -1,10 +1,7 @@
-import { useEqualweb } from "@/hooks/use-equalweb";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "wouter";
 
 const Footer = () => {
-  const { loadAccessibilityWidget } = useEqualweb();
-
   return (
     <footer className="bg-[#181818] py-12 text-ivory">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -58,7 +55,7 @@ const Footer = () => {
                 </a>
               </div>
               <button
-                onClick={loadAccessibilityWidget}
+                onClick={() => window.openAccessibilityTools()}
                 className="flex items-center gap-2 text-[#F6AE2D] transition-colors hover:text-white"
               >
                 <svg

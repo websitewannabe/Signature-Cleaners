@@ -32,96 +32,55 @@ export default function AccessibilityStatementPage() {
             <div className="space-y-8 text-white leading-relaxed">
               <div>
                 <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Declaration of Accessibility Introduction
+                  Our Commitment
                 </h2>
                 <p>
-                  The Internet constitutes the largest resource supporting
-                  freedom of information today for the user community in general
-                  and for users with disabilities in particular. For that reason
-                  we place emphasis on granting equal service to people with
-                  disabilities who use information displayed on the website, and
-                  on improving their browsing experience. We seek to ensure that
-                  our digital services will be accessible to people with
-                  disabilities, and accordingly, we have invested in the
-                  website&apos;s ease of use for people with disabilities, and
-                  continue to improve our web pages as needed.
+                  Signature Cleaners is committed to ensuring digital
+                  accessibility for people with disabilities. We are continually
+                  improving the user experience for everyone and applying the
+                  relevant accessibility standards to guarantee we provide equal
+                  access to all users.
                 </p>
               </div>
 
               <div>
                 <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Using the EqualWeb Website Accessibility Tool
+                  Conformance Status
                 </h2>
                 <p>
-                  This website employs the Nagich By Click accessibility software
-                  and is connected through a special accessibility server. The
-                  software complies with Israeli standard SI 5568 at AA level.
-                  The software is subject to the manufacturer&apos;s Terms of
-                  Use. The website owners and/or agents bear the responsibility
-                  for the usage and implementation on the website, including the
-                  content displayed on the website under the Terms of Use of the
-                  Software.
+                  The Web Content Accessibility Guidelines (WCAG) define
+                  requirements for designers and developers to improve
+                  accessibility for people with disabilities. It defines three
+                  levels of conformance: Level A, Level AA, and Level AAA. The
+                  Signature Cleaners website strives to conform to WCAG 2.1
+                  Level AA. We conduct regular reviews and remediation to
+                  maintain and improve compliance.
                 </p>
               </div>
 
               <div>
                 <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  How Does the Site&apos;s Accessibility Work?
+                  Accessibility Features
                 </h2>
                 <p>
-                  The website features an accessibility menu. A click on the menu
-                  makes accessibility buttons available. After selecting a menu
-                  item, the user should wait for the page to be loaded.
+                  We have taken the following measures to ensure accessibility of
+                  the Signature Cleaners website:
                 </p>
-              </div>
-
-              <div>
-                <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  What Are the Main Items?
-                </h2>
                 <ul className="mt-2 list-disc list-inside space-y-2 text-white/80">
-                  <li>Option for keyboard-based navigation</li>
-                  <li>Adaptation of the website for NVDA assistive technology</li>
+                  <li>Semantic HTML markup for clear document structure</li>
+                  <li>Sufficient color contrast ratios throughout the site</li>
+                  <li>Keyboard-navigable interactive elements</li>
+                  <li>Descriptive alt text for meaningful images</li>
+                  <li>ARIA labels and roles where appropriate</li>
                   <li>
-                    Enlargement of the font on the website to 4 levels of
-                    magnification
+                    Resizable text without loss of content or functionality
                   </li>
+                  <li>Accessible forms with proper labels and error messages</li>
                   <li>
-                    Immobilization of moving elements, and stoppage of blinking
+                    An on-site accessibility tools panel available via the
+                    &ldquo;Accessibility Tools&rdquo; button in the footer
                   </li>
-                  <li>Altered color contrast against dark background</li>
-                  <li>Altered color contrast against light background</li>
-                  <li>Adaptation for color-blind users</li>
-                  <li>Change of font for better readability</li>
-                  <li>
-                    Enlarged cursor, and change of color to black or white
-                  </li>
-                  <li>Enlargement of display to ~200%</li>
-                  <li>Emphasizing links on the website</li>
-                  <li>Emphasizing headings on the website</li>
-                  <li>Presentation of alt text to graphics</li>
-                  <li>Declaration of accessibility</li>
-                  <li>Sending of accessibility feedback</li>
                 </ul>
-              </div>
-
-              <div>
-                <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Clarification
-                </h2>
-                <p>
-                  Despite our efforts to apply accessibility to browsing on every
-                  webpage, it may be discovered that some of webpages have not
-                  yet received accessibility or are not suitable for any
-                  available accessibility solution.
-                </p>
-                <p className="mt-4">
-                  We are continuing the effort to improve the website&apos;s
-                  accessibility to the full extent possible, guided by our
-                  belief, and by our moral commitment, that the website should be
-                  usable by the entire population, including people with
-                  disabilities.
-                </p>
               </div>
 
               <div>
@@ -131,7 +90,7 @@ export default function AccessibilityStatementPage() {
                 <ul className="mt-2 list-disc list-inside space-y-2 text-white/80">
                   <li>
                     Include accessibility as a requirement for all web content.
-                    Content must meet WCAG 2.1 AA, and should meet AAA as
+                    Content must meet WCAG 2.1 AA, and should meet AAA where
                     feasible.
                   </li>
                   <li>
@@ -153,66 +112,23 @@ export default function AccessibilityStatementPage() {
 
               <div>
                 <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Conformance Status
+                  Compatibility
                 </h2>
                 <p>
-                  The Web Content Accessibility Guidelines (WCAG) standard
-                  defines requirements to improve accessibility for people with
-                  disabilities. It defines three levels of conformance: Level A,
-                  Level AA, and Level AAA. &ldquo;Fully conforms&rdquo; means
-                  that the content meets all of the WCAG requirements at the
-                  specified Level without exceptions. We strive to be/remain
-                  fully compliant with an annual review of our website.
+                  Our website is designed to be compatible with the following
+                  assistive technologies:
                 </p>
-              </div>
-
-              <div>
-                <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Feedback
-                </h2>
-                <p>
-                  We welcome your feedback on the accessibility of our website.
-                  Please let us know if you encounter accessibility barriers.
-                </p>
-                <div className="mt-4 card-luxury">
-                  <p className="mb-2">
-                    <strong className="text-white">Phone:</strong>{" "}
-                    <a
-                      href="tel:+12153451470"
-                      className="text-primary hover:underline"
-                    >
-                      (215) 345-1470
-                    </a>
-                  </p>
-                  <p className="mb-2">
-                    <strong className="text-white">Email:</strong>{" "}
-                    <a
-                      href="mailto:customerservice@mysignaturecleaners.com"
-                      className="text-primary hover:underline"
-                    >
-                      customerservice@mysignaturecleaners.com
-                    </a>
-                  </p>
-                  <p>
-                    <strong className="text-white">Address:</strong> 1456 Ferry
-                    Road #10, Doylestown, PA 18901
-                  </p>
-                </div>
-              </div>
-
-              <div>
-                <h2 className="font-serif text-2xl font-bold mb-4 text-white">
-                  Compatibility with Browsers and Assistive Technology
-                </h2>
-                <p>
-                  Our website is designed to be compatible with assistive
-                  technologies and the last two versions of major browsers.
-                </p>
-                <p className="mt-4">
-                  In Internet Explorer 10, 11, and older browsers, some aspects
-                  of the website may not display optimally. The website is not
-                  designed for Internet Explorer 9 and earlier versions.
-                </p>
+                <ul className="mt-2 list-disc list-inside space-y-2 text-white/80">
+                  <li>
+                    Screen readers (including NVDA, JAWS, and VoiceOver)
+                  </li>
+                  <li>Screen magnification software</li>
+                  <li>Speech recognition software</li>
+                  <li>
+                    The last two major versions of Chrome, Firefox, Safari, and
+                    Edge
+                  </li>
+                </ul>
               </div>
 
               <div>
@@ -220,20 +136,15 @@ export default function AccessibilityStatementPage() {
                   Technical Specifications
                 </h2>
                 <p>
-                  Our website relies upon the following technologies for
-                  conformance with WCAG 2.1:
+                  The accessibility of this website relies on the following
+                  technologies:
                 </p>
                 <ul className="mt-2 list-disc list-inside space-y-1 text-white/80">
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>SVG</li>
-                </ul>
-                <p className="mt-4">
-                  The following technologies are used to improve accessibility
-                  and the user experience for everyone:
-                </p>
-                <ul className="mt-2 list-disc list-inside space-y-1 text-white/80">
                   <li>JavaScript</li>
+                  <li>SVG</li>
+                  <li>WAI-ARIA</li>
                 </ul>
               </div>
 
@@ -242,8 +153,10 @@ export default function AccessibilityStatementPage() {
                   Limitations and Alternatives
                 </h2>
                 <p>
-                  Several videos on our website use YouTube. As an alternative,
-                  the videos are provided as MP4 files on our server.
+                  Despite our best efforts to ensure accessibility of the
+                  Signature Cleaners website, there may be some limitations.
+                  Please contact us if you observe an issue, and we will do our
+                  best to address it promptly.
                 </p>
               </div>
 
@@ -252,8 +165,34 @@ export default function AccessibilityStatementPage() {
                   Assessment Approach
                 </h2>
                 <p>
-                  We assess the accessibility of our website by self-evaluation
-                  and annual review.
+                  We assess the accessibility of our website through
+                  self-evaluation and periodic third-party review.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-serif text-2xl font-bold mb-4 text-white">
+                  Feedback
+                </h2>
+                <p>
+                  We welcome your feedback on the accessibility of the Signature
+                  Cleaners website. Please let us know if you encounter
+                  accessibility barriers:
+                </p>
+                <div className="mt-4 card-luxury">
+                  <p>
+                    <strong className="text-white">Email:</strong>{" "}
+                    <a
+                      href="mailto:support@websitewannabe.com"
+                      className="text-primary hover:underline"
+                    >
+                      support@websitewannabe.com
+                    </a>
+                  </p>
+                </div>
+                <p className="mt-4">
+                  We aim to respond to accessibility feedback within 2 business
+                  days.
                 </p>
               </div>
 
@@ -262,8 +201,11 @@ export default function AccessibilityStatementPage() {
                   Formal Approval of This Accessibility Statement
                 </h2>
                 <p>
-                  This Accessibility Statement is approved by Chris Tierney,
-                  Website Wannabe Technology Support.
+                  This Accessibility Statement is approved by Website Wannabe on
+                  behalf of Signature Cleaners.
+                </p>
+                <p className="mt-4 text-sm text-white/60">
+                  Last updated: March 31, 2026
                 </p>
               </div>
             </div>
