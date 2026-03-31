@@ -13,18 +13,18 @@ app.use((req, res, next) => {
   const isDevelopment = process.env.NODE_ENV !== "production";
   const cspPolicy = isDevelopment
     ? "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com https://app.termageddon.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com; " +
       "style-src 'self' 'unsafe-inline' https://cdn.equalweb.com; " +
       "img-src 'self' data: https:; " +
       "font-src 'self' data:; " +
-      "connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com https://app.termageddon.com ws://localhost:* wss://localhost:* ws://127.0.0.1:* wss://127.0.0.1:* wss: ws:; " +
+      "connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com ws://localhost:* wss://localhost:* ws://127.0.0.1:* wss://127.0.0.1:* wss: ws:; " +
       "frame-ancestors 'none';"
     : "default-src 'self'; " +
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com https://app.termageddon.com; " +
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.mydrycleaner.com https://cdn.equalweb.com; " +
       "style-src 'self' 'unsafe-inline' https://cdn.equalweb.com; " +
       "img-src 'self' data: https:; " +
       "font-src 'self' data:; " +
-      "connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com https://app.termageddon.com wss: ws:; " +
+      "connect-src 'self' https://api.mydrycleaner.com https://cdn.equalweb.com wss: ws:; " +
       "frame-ancestors 'none';";
 
   res.setHeader("Content-Security-Policy", cspPolicy);
