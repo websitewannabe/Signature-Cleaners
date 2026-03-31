@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import { QuoteModalProvider } from "@/components/QuoteModal";
 import Navbar from "@/components/Navbar";
@@ -37,6 +38,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Brain Cookie Consent (synchronous — sets GA4 consent defaults) */}
+        <script src="https://brain.websitewannabe.co/api/ww/cookie-consent" />
+      </head>
       <body
         className={`${inter.variable} ${playfair.variable} font-sans bg-black text-white`}
       >
@@ -46,6 +51,9 @@ export default function RootLayout({
           <Footer />
           <ChatWidgetLoader />
         </QuoteModalProvider>
+
+        {/* Brain Analytics (first-party tracking, respects cookie consent) */}
+        <Script src="https://brain.websitewannabe.co/api/ww/analytics" strategy="afterInteractive" />
       </body>
     </html>
   );
