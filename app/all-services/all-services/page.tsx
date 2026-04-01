@@ -137,14 +137,15 @@ export default function AllServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-black text-white">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link
                 key={service.name}
                 href={service.href}
-                className="card-luxury group transition-all duration-300 hover:border-primary/40 hover:bg-zinc-900"
+                className="group border border-zinc-200 bg-zinc-50 p-8 transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10"
+                style={{ borderRadius: "7px" }}
               >
                 <div className="mb-4 flex items-center justify-between">
                   <service.icon className="h-8 w-8 text-primary" />
@@ -152,10 +153,10 @@ export default function AllServicesPage() {
                     {service.price}
                   </span>
                 </div>
-                <h3 className="mb-2 font-serif text-xl font-bold">
+                <h3 className="mb-2 font-serif text-xl font-bold text-zinc-900">
                   {service.name}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/80">
+                <p className="text-sm leading-relaxed text-zinc-600">
                   {service.description}
                 </p>
                 <span className="mt-4 inline-block text-sm font-medium text-primary transition-colors group-hover:text-primary">

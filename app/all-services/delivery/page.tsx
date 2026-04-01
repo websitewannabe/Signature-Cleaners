@@ -194,9 +194,9 @@ export default function DeliveryPage() {
       </section>
 
       {/* Service Areas */}
-      <section className="section-padding bg-zinc-950 text-white">
+      <section className="section-padding bg-white">
         <div className="container-wide">
-          <h2 className="mb-12 text-center font-serif text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mb-12 text-center font-serif text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
             Service <span className="text-primary">Areas</span>
           </h2>
           <div className="mx-auto max-w-4xl">
@@ -204,14 +204,14 @@ export default function DeliveryPage() {
               {serviceAreas.map((city) => (
                 <div
                   key={city}
-                  className="flex items-center gap-2 text-white"
+                  className="flex items-center gap-2 text-zinc-700"
                 >
                   <MapPin className="h-4 w-4 flex-shrink-0 text-primary" />
                   <span>{city}</span>
                 </div>
               ))}
             </div>
-            <p className="mt-8 text-center text-sm text-white/60">
+            <p className="mt-8 text-center text-sm text-zinc-500">
               Don&apos;t see your area? Contact us and we may still be able to
               serve you.
             </p>

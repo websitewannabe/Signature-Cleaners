@@ -157,14 +157,14 @@ export default async function CityPage({
       </section>
 
       {/* Services Section */}
-      <section className="section-padding bg-zinc-950 text-white">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-12 text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight md:text-4xl">
+            <h2 className="font-serif text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
               Services Available in{" "}
               <span className="text-primary">{city.name}</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-white/80">
+            <p className="mx-auto mt-4 max-w-2xl text-zinc-600">
               We offer a full range of professional garment care services for{" "}
               {city.name} residents with free pickup and delivery.
             </p>
@@ -173,9 +173,9 @@ export default async function CityPage({
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link key={service.href} href={service.href}>
-                <div className="card-luxury group flex items-center gap-4 transition-colors hover:border-primary/30">
+                <div className="group flex items-center gap-4 border border-zinc-200 bg-zinc-50 p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
                   <service.icon className="h-6 w-6 flex-shrink-0 text-primary" />
-                  <h3 className="font-serif text-lg font-semibold text-white group-hover:text-primary transition-colors">
+                  <h3 className="font-serif text-lg font-semibold text-zinc-900 group-hover:text-primary transition-colors">
                     {service.name}
                   </h3>
                 </div>

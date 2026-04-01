@@ -184,13 +184,13 @@ export default function AboutPage() {
       </section>
 
       {/* Mission & Values */}
-      <section className="section-padding border-t border-white/10 bg-zinc-950">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-12 text-center">
-            <h2 className="heading-xl mb-4">
+            <h2 className="heading-xl mb-4 text-zinc-900">
               Mission &amp; <span className="text-primary">Values</span>
             </h2>
-            <p className="mx-auto max-w-2xl text-white/80">
+            <p className="mx-auto max-w-2xl text-zinc-600">
               The principles that guide every garment we touch and every customer
               we serve.
             </p>
@@ -198,12 +198,12 @@ export default function AboutPage() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {values.map((value) => (
-              <div key={value.title} className="card-luxury text-center">
+              <div key={value.title} className="border border-zinc-200 bg-zinc-50 p-8 text-center transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
                 <value.icon className="mx-auto mb-4 h-10 w-10 text-primary" />
-                <h3 className="mb-2 font-serif text-xl font-semibold text-white">
+                <h3 className="mb-2 font-serif text-xl font-semibold text-zinc-900">
                   {value.title}
                 </h3>
-                <p className="text-sm text-white/80">{value.description}</p>
+                <p className="text-sm text-zinc-600">{value.description}</p>
               </div>
             ))}
           </div>
@@ -270,13 +270,13 @@ export default function AboutPage() {
       </section>
 
       {/* Service Areas */}
-      <section className="section-padding border-t border-white/10 bg-zinc-950">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-12 text-center">
-            <h2 className="heading-xl mb-4">
+            <h2 className="heading-xl mb-4 text-zinc-900">
               Areas <span className="text-primary">We Serve</span>
             </h2>
-            <p className="mx-auto max-w-2xl text-white/80">
+            <p className="mx-auto max-w-2xl text-zinc-600">
               We service the following areas in Bucks County and surrounding
               regions with free pickup and delivery.
             </p>
@@ -289,7 +289,7 @@ export default function AboutPage() {
                 <Link
                   key={city}
                   href={`/${slug}`}
-                  className="flex items-center py-1 text-white transition-colors hover:text-primary"
+                  className="flex items-center py-1 text-zinc-700 transition-colors hover:text-primary"
                 >
                   <span className="mr-2 text-primary">&bull;</span>
                   {city}

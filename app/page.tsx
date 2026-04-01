@@ -156,10 +156,10 @@ export default function HomePage() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/15" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
-        <div className="container-wide relative z-10 pb-20 md:pb-28">
+        <div className="container-wide relative z-10 pb-[210px] md:pb-[230px]">
           <div className="mb-4 flex items-center gap-3">
             <span className="h-px w-8 bg-primary/60" />
             <p className="text-xs font-medium uppercase tracking-[0.25em] text-primary">
@@ -187,7 +187,7 @@ export default function HomePage() {
         </div>
 
         {/* Stats Bar - inside hero */}
-        <div className="relative z-10 border-t border-white/10 bg-black/60 backdrop-blur-sm">
+        <div className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm">
           <div className="container-wide grid grid-cols-2 gap-6 py-6 md:grid-cols-4 md:gap-0 md:divide-x md:divide-white/10">
             {[
               { value: "20+", label: "Years of Experience" },
@@ -209,17 +209,17 @@ export default function HomePage() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-16 text-center">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-primary">
               What We Offer
             </p>
-            <h2 className="heading-xl mb-5">
+            <h2 className="heading-xl mb-5 text-zinc-900">
               Our <span className="text-primary">Services</span>
             </h2>
             <hr className="divider-gold mb-6" />
-            <p className="mx-auto max-w-2xl text-white/80">
+            <p className="mx-auto max-w-2xl text-zinc-600">
               From everyday dry cleaning to museum-quality wedding gown
               preservation, we handle every garment with expert care.
             </p>
@@ -228,19 +228,19 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link key={service.href} href={service.href}>
-                <div className="card-luxury group flex h-full flex-col">
+                <div className="group flex h-full flex-col border border-zinc-200 bg-zinc-50 p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
                   <service.icon className="mb-5 h-7 w-7 text-primary transition-colors group-hover:text-primary-light" />
-                  <h3 className="mb-2 font-serif text-lg font-semibold text-white">
+                  <h3 className="mb-2 font-serif text-lg font-semibold text-zinc-900">
                     {service.name}
                   </h3>
-                  <p className="mb-5 hidden text-sm leading-relaxed text-white/80 sm:block">
+                  <p className="mb-5 hidden text-sm leading-relaxed text-zinc-600 sm:block">
                     {service.description}
                   </p>
-                  <div className="mt-auto space-y-4 pt-5 border-t border-white/[0.06]">
+                  <div className="mt-auto space-y-4 pt-5 border-t border-zinc-200">
                     <span className="block text-xs font-semibold uppercase tracking-wider text-primary">
                       {service.price}
                     </span>
-                    <span className="inline-flex items-center text-sm font-semibold text-white transition-colors group-hover:text-primary">
+                    <span className="inline-flex items-center text-sm font-semibold text-zinc-900 transition-colors group-hover:text-primary">
                       {service.cta} &rarr;
                     </span>
                   </div>
@@ -326,13 +326,13 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-16 text-center">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-primary">
               Testimonials
             </p>
-            <h2 className="heading-xl mb-5">
+            <h2 className="heading-xl mb-5 text-zinc-900">
               What Our <span className="text-primary">Customers</span> Say
             </h2>
             <hr className="divider-gold" />

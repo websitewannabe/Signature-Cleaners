@@ -43,7 +43,7 @@ export default function RootLayout({
         <script src="https://brain.websitewannabe.co/api/ww/cookie-consent" />
       </head>
       <body
-        className={`${inter.variable} ${playfair.variable} font-sans bg-black text-white`}
+        className={`${inter.variable} ${playfair.variable} font-sans bg-zinc-950 text-white`}
       >
         <QuoteModalProvider>
           <Navbar />

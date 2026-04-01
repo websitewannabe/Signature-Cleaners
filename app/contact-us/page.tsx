@@ -473,17 +473,17 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding border-t border-white/10 bg-zinc-950">
+      <section className="section-padding bg-white">
         <div className="container-wide">
-          <h2 className="heading-xl mb-12 text-center">
+          <h2 className="heading-xl mb-12 text-center text-zinc-900">
             Frequently Asked{" "}
             <span className="text-primary">Questions</span>
           </h2>
           <div className="mx-auto max-w-3xl">
             {faqs.map((faq, i) => (
-              <div key={i} className="border-b border-white/[0.06] py-5">
-                <h3 className="mb-2 font-medium text-white">{faq.q}</h3>
-                <p className="text-sm leading-relaxed text-white/80">{faq.a}</p>
+              <div key={i} className="border-b border-zinc-200 py-5">
+                <h3 className="mb-2 font-medium text-zinc-900">{faq.q}</h3>
+                <p className="text-sm leading-relaxed text-zinc-600">{faq.a}</p>
               </div>
             ))}
           </div>

@@ -5,11 +5,13 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 interface MobileCardSliderProps {
   children: ReactNode[];
   interval?: number;
+  light?: boolean;
 }
 
 export default function MobileCardSlider({
   children,
   interval = 3000,
+  light = false,
 }: MobileCardSliderProps) {
   const [current, setCurrent] = useState(0);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -44,7 +46,7 @@ export default function MobileCardSlider({
             key={i}
             onClick={() => setCurrent(i)}
             className={`h-2 rounded-full transition-all ${
-              i === current ? "w-6 bg-primary" : "w-2 bg-white/30"
+              i === current ? "w-6 bg-primary" : `w-2 ${light ? "bg-zinc-300" : "bg-white/30"}`
             }`}
             aria-label={`Go to slide ${i + 1}`}
           />

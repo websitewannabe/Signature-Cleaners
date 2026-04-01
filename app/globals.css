@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-white antialiased;
+    @apply bg-zinc-950 text-white antialiased;
   }
 
   ::selection {
@@ -24,7 +24,7 @@
   }
 
   .card-luxury {
-    @apply border border-white/[0.06] bg-zinc-900/60 p-8 transition-all duration-500 hover:border-primary/20 hover:shadow-lg hover:shadow-black/30;
+    @apply border border-white/10 bg-zinc-900/80 p-8 transition-all duration-500 hover:border-primary/20 hover:shadow-lg hover:shadow-black/30;
     border-radius: 7px;
   }
 
@@ -73,13 +73,18 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-zinc-950;
+  @apply bg-zinc-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-zinc-800;
+  @apply rounded-full bg-zinc-700;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-zinc-700;
+}
+
+/* Cookie consent widget overrides */
+.cc-btn.cc-btn-link {
+  color: #000 !important;
 }

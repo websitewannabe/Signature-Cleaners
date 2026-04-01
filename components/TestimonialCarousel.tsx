@@ -112,7 +112,7 @@ export default function TestimonialCarousel() {
           const isLong = review.text.length > 150;
 
           return (
-            <div key={globalIndex} className="card-luxury flex flex-col p-8">
+            <div key={globalIndex} className="flex flex-col border border-zinc-200 bg-zinc-50 p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
               {/* Stars */}
               <div className="mb-4 flex gap-1">
                 {[...Array(review.rating)].map((_, i) => (
@@ -125,7 +125,7 @@ export default function TestimonialCarousel() {
 
               {/* Text */}
               <div className="mb-4 flex-1">
-                <p className="text-sm leading-relaxed text-white">
+                <p className="text-sm leading-relaxed text-zinc-700">
                   &ldquo;
                   {isLong && !isExpanded
                     ? review.text.slice(0, 150) + "..."
@@ -143,13 +143,13 @@ export default function TestimonialCarousel() {
               </div>
 
               {/* Attribution */}
-              <div className="border-t border-zinc-800/50 pt-4">
+              <div className="border-t border-zinc-200 pt-4">
                 {review.name && (
-                  <p className="mb-1 text-sm font-medium text-white">
+                  <p className="mb-1 text-sm font-medium text-zinc-900">
                     {review.name}
                   </p>
                 )}
-                <div className="flex items-center gap-2 text-xs text-white/70">
+                <div className="flex items-center gap-2 text-xs text-zinc-500">
                   <GoogleIcon className="h-3.5 w-3.5" />
                   <span>Google Review</span>
                   {"service" in review && (
@@ -177,7 +177,7 @@ export default function TestimonialCarousel() {
           onClick={() =>
             setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages)
           }
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded border border-zinc-800 text-white/70 transition-all hover:border-primary/30 hover:text-primary"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded border border-zinc-300 text-zinc-500 transition-all hover:border-primary/30 hover:text-primary"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -190,7 +190,7 @@ export default function TestimonialCarousel() {
               className={`h-1.5 cursor-pointer rounded-full transition-all duration-300 ${
                 i === currentPage
                   ? "w-6 bg-primary"
-                  : "w-1.5 bg-zinc-700 hover:bg-zinc-500"
+                  : "w-1.5 bg-zinc-300 hover:bg-zinc-400"
               }`}
             />
           ))}
@@ -200,7 +200,7 @@ export default function TestimonialCarousel() {
           onClick={() =>
             setCurrentPage((prev) => (prev + 1) % totalPages)
           }
-          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded border border-zinc-800 text-white/70 transition-all hover:border-primary/30 hover:text-primary"
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded border border-zinc-300 text-zinc-500 transition-all hover:border-primary/30 hover:text-primary"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -212,7 +212,7 @@ export default function TestimonialCarousel() {
           href={GOOGLE_REVIEW_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-white/70 transition-colors hover:text-primary"
+          className="inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-primary"
         >
           <GoogleIcon className="h-4 w-4" />
           See all {reviewCount.toLocaleString()}+ reviews on Google

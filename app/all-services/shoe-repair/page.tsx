@@ -141,20 +141,20 @@ export default function ShoeRepairPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="section-padding bg-black text-white">
+      <section className="section-padding bg-white">
         <div className="container-wide">
-          <h2 className="mb-12 text-center font-serif text-3xl font-bold tracking-tight md:text-4xl">
+          <h2 className="mb-12 text-center font-serif text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
             Repair Services
           </h2>
           {/* Mobile: Auto-sliding cards */}
-          <MobileCardSlider>
+          <MobileCardSlider light>
             {services.map((service) => (
-              <div key={service.title} className="card-luxury">
+              <div key={service.title} className="border border-zinc-200 bg-zinc-50 p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
                 <service.icon className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="mb-2 font-serif text-lg font-bold">
+                <h3 className="mb-2 font-serif text-lg font-bold text-zinc-900">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/80">
+                <p className="text-sm leading-relaxed text-zinc-600">
                   {service.description}
                 </p>
               </div>
@@ -164,12 +164,12 @@ export default function ShoeRepairPage() {
           {/* Desktop: Grid layout */}
           <div className="hidden gap-6 sm:grid sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
-              <div key={service.title} className="card-luxury">
+              <div key={service.title} className="border border-zinc-200 bg-zinc-50 p-8 transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10" style={{ borderRadius: "7px" }}>
                 <service.icon className="mb-4 h-8 w-8 text-primary" />
-                <h3 className="mb-2 font-serif text-lg font-bold">
+                <h3 className="mb-2 font-serif text-lg font-bold text-zinc-900">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-white/80">
+                <p className="text-sm leading-relaxed text-zinc-600">
                   {service.description}
                 </p>
               </div>
