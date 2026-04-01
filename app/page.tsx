@@ -368,17 +368,17 @@ export default function HomePage() {
       </section>
 
       {/* Service Areas */}
-      <section className="section-padding border-t border-white/[0.06] bg-zinc-950">
+      <section className="section-padding bg-white">
         <div className="container-wide">
           <div className="mb-16 text-center">
             <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-primary">
               Coverage Area
             </p>
-            <h2 className="heading-xl mb-5">
+            <h2 className="heading-xl mb-5 text-zinc-900">
               Areas <span className="text-primary">We Serve</span>
             </h2>
             <hr className="divider-gold mb-6" />
-            <p className="mx-auto max-w-2xl text-white/80">
+            <p className="mx-auto max-w-2xl text-zinc-600">
               We service the following areas in Bucks County and surrounding
               regions with free pickup and delivery.
             </p>
@@ -391,9 +391,9 @@ export default function HomePage() {
                 <Link
                   key={city}
                   href={`/${slug}`}
-                  className="flex items-center py-1.5 text-white/80 transition-colors hover:text-primary"
+                  className="flex items-center py-1.5 text-zinc-700 transition-colors hover:text-primary"
                 >
-                  <span className="mr-2 text-primary/40">&bull;</span>
+                  <span className="mr-2 text-primary">&bull;</span>
                   {city}
                 </Link>
               );
