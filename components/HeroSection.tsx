@@ -13,6 +13,7 @@ interface HeroSectionProps {
   ctaText?: string;
   ctaHref?: string;
   useQuoteModal?: boolean;
+  imagePosition?: string;
 }
 
 export default function HeroSection({
@@ -25,6 +26,7 @@ export default function HeroSection({
   ctaText = "Schedule a Pickup",
   ctaHref = "/schedule",
   useQuoteModal: useModal = false,
+  imagePosition,
 }: HeroSectionProps) {
   const blurDataURL = blurDataMap[image];
 
@@ -37,6 +39,7 @@ export default function HeroSection({
         priority
         sizes="100vw"
         className="object-cover"
+        style={imagePosition ? { objectPosition: imagePosition } : undefined}
         {...(blurDataURL
           ? { placeholder: "blur" as const, blurDataURL }
           : {})}

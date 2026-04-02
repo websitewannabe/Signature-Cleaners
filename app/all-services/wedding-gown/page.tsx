@@ -107,6 +107,7 @@ export default function WeddingGownPage() {
         title="Wedding Gown Preservation"
         subtitle="Museum-quality cleaning and preservation for your most cherished garment."
         ctaHref="#quote-form"
+        imagePosition="center 20%"
       />
 
       {/* Overview + Quote Form */}
